@@ -11,14 +11,17 @@
 </Property>
 	<Item Name="APIs" Type="Folder">
 		<Item Name="EventAPI.lvclass" Type="LVClass" URL="../Event API/EventAPI.lvclass"/>
+		<Item Name="TelemetryAPI.lvclass" Type="LVClass" URL="../TelemetryAPI/TelemetryAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
 	<Item Name="Base" Type="Folder">
 		<Item Name="App.lvclass" Type="LVClass" URL="../App/App.lvclass"/>
+		<Item Name="EventHandlerTask.lvclass" Type="LVClass" URL="../EventHandlerTask/EventHandlerTask.lvclass"/>
 		<Item Name="Task.lvclass" Type="LVClass" URL="../Task/Task.lvclass"/>
 	</Item>
 	<Item Name="Core" Type="Folder">
 		<Item Name="BasicEventLogger.lvclass" Type="LVClass" URL="../BasicEventLogger/BasicEventLogger.lvclass"/>
+		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
 		<Item Name="VolatusCoreTask.lvclass" Type="LVClass" URL="../VolatusCoreTask/VolatusCoreTask.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
@@ -40,12 +43,16 @@
 	<Item Name="Messages" Type="Folder">
 		<Item Name="Handle Event Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Handle Event Msg/Handle Event Msg.lvclass"/>
 		<Item Name="Handle Vecto Message Msg.lvclass" Type="LVClass" URL="../VectoMessageHandler Messages/Handle Vecto Message Msg/Handle Vecto Message Msg.lvclass"/>
+		<Item Name="Launch New Task Msg.lvclass" Type="LVClass" URL="../VolatusCoreTask Messages/Launch New Task Msg/Launch New Task Msg.lvclass"/>
 		<Item Name="Register API Msg.lvclass" Type="LVClass" URL="../APIRegistrationHandler Messages/Register API Msg/Register API Msg.lvclass"/>
+		<Item Name="Request Events Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Request Events Msg/Request Events Msg.lvclass"/>
+		<Item Name="Shutdown Msg.lvclass" Type="LVClass" URL="../VolatusCoreTask Messages/Shutdown Msg/Shutdown Msg.lvclass"/>
 		<Item Name="Unregister API Msg.lvclass" Type="LVClass" URL="../APIRegistrationHandler Messages/Unregister API Msg/Unregister API Msg.lvclass"/>
 		<Item Name="Update Nested State Msg.lvclass" Type="LVClass" URL="../TaskStateHandler Messages/Update Nested State Msg/Update Nested State Msg.lvclass"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="EventsValue.lvclass" Type="LVClass" URL="../EventsValue/EventsValue.lvclass"/>
+		<Item Name="TaskEnQrValue.lvclass" Type="LVClass" URL="../TaskEnQrValue/TaskEnQrValue.lvclass"/>
 	</Item>
 	<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 </Library>
