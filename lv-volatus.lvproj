@@ -28,7 +28,9 @@
 			<Item Name="Stream-Websocket.lvlib" Type="Library" URL="../../lv-stream-websocket/Stream-Websocket/Stream-Websocket.lvlib"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="../../lv-stream/stream/Stream.lvlib"/>
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
+			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
 		</Item>
+		<Item Name="Running VIs.vi" Type="VI" URL="../Volatus/Running VIs.vi"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusDemo.lvlib" Type="Library" URL="../VolatusDemo/VolatusDemo.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">

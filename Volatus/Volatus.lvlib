@@ -22,7 +22,7 @@
 	<Item Name="Core" Type="Folder">
 		<Item Name="BasicEventLogger.lvclass" Type="LVClass" URL="../BasicEventLogger/BasicEventLogger.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
-		<Item Name="VolatusCoreTask.lvclass" Type="LVClass" URL="../VolatusCoreTask/VolatusCoreTask.lvclass"/>
+		<Item Name="VolatusCore.lvclass" Type="LVClass" URL="../VolatusCore/VolatusCore.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Core APIs.ctl" Type="VI" URL="../Core APIs.ctl"/>
@@ -32,13 +32,19 @@
 		<Item Name="Task Hierarchy.ctl" Type="VI" URL="../Task Hierarchy.ctl"/>
 		<Item Name="Task State.ctl" Type="VI" URL="../Task State.ctl"/>
 	</Item>
+	<Item Name="Identities" Type="Folder">
+		<Item Name="ApiIdentity.lvclass" Type="LVClass" URL="../ApiIdentity/ApiIdentity.lvclass"/>
+		<Item Name="TaskIdentity.lvclass" Type="LVClass" URL="../TaskIdentity/TaskIdentity.lvclass"/>
+	</Item>
 	<Item Name="Interfaces" Type="Folder">
 		<Item Name="API Provider.lvclass" Type="LVClass" URL="../API Provider/API Provider.lvclass"/>
 		<Item Name="API.lvclass" Type="LVClass" URL="../API/API.lvclass"/>
 		<Item Name="APIRegistrationHandler.lvclass" Type="LVClass" URL="../APIRegistrationHandler/APIRegistrationHandler.lvclass"/>
 		<Item Name="EventHandler.lvclass" Type="LVClass" URL="../EventHandler/EventHandler.lvclass"/>
+		<Item Name="Identity.lvclass" Type="LVClass" URL="../Identity/Identity.lvclass"/>
 		<Item Name="TaskStateHandler.lvclass" Type="LVClass" URL="../TaskStateHandler/TaskStateHandler.lvclass"/>
 		<Item Name="VectoMessageHandler.lvclass" Type="LVClass" URL="../VectoMessageHandler/VectoMessageHandler.lvclass"/>
+		<Item Name="VolatusHandler.lvclass" Type="LVClass" URL="../VolatusHandler/VolatusHandler.lvclass"/>
 	</Item>
 	<Item Name="Messages" Type="Folder">
 		<Item Name="Handle Event Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Handle Event Msg/Handle Event Msg.lvclass"/>
@@ -54,5 +60,5 @@
 		<Item Name="EventsValue.lvclass" Type="LVClass" URL="../EventsValue/EventsValue.lvclass"/>
 		<Item Name="TaskEnQrValue.lvclass" Type="LVClass" URL="../TaskEnQrValue/TaskEnQrValue.lvclass"/>
 	</Item>
-	<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
+	<Item Name="Volatus Main.vi" Type="VI" URL="../Volatus Main.vi"/>
 </Library>
