@@ -11,6 +11,7 @@
 </Property>
 	<Item Name="APIs" Type="Folder">
 		<Item Name="EventAPI.lvclass" Type="LVClass" URL="../Event API/EventAPI.lvclass"/>
+		<Item Name="Request API.vi" Type="VI" URL="../Request API.vi"/>
 		<Item Name="TelemetryAPI.lvclass" Type="LVClass" URL="../TelemetryAPI/TelemetryAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
@@ -50,13 +51,24 @@
 		<Item Name="Handle Event Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Handle Event Msg/Handle Event Msg.lvclass"/>
 		<Item Name="Handle Vecto Message Msg.lvclass" Type="LVClass" URL="../VectoMessageHandler Messages/Handle Vecto Message Msg/Handle Vecto Message Msg.lvclass"/>
 		<Item Name="Launch New Task Msg.lvclass" Type="LVClass" URL="../VolatusCoreTask Messages/Launch New Task Msg/Launch New Task Msg.lvclass"/>
+		<Item Name="Lookup API Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Lookup API Msg/Lookup API Msg.lvclass"/>
+		<Item Name="Lookup APIs of Type Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Lookup APIs of Type Msg/Lookup APIs of Type Msg.lvclass"/>
 		<Item Name="Register API Msg.lvclass" Type="LVClass" URL="../APIRegistrationHandler Messages/Register API Msg/Register API Msg.lvclass"/>
+		<Item Name="Request API Msg.lvclass" Type="LVClass" URL="../API Provider Messages/Request API Msg/Request API Msg.lvclass"/>
 		<Item Name="Request Events Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Request Events Msg/Request Events Msg.lvclass"/>
 		<Item Name="Shutdown Msg.lvclass" Type="LVClass" URL="../VolatusCoreTask Messages/Shutdown Msg/Shutdown Msg.lvclass"/>
 		<Item Name="Unregister API Msg.lvclass" Type="LVClass" URL="../APIRegistrationHandler Messages/Unregister API Msg/Unregister API Msg.lvclass"/>
 		<Item Name="Update Nested State Msg.lvclass" Type="LVClass" URL="../TaskStateHandler Messages/Update Nested State Msg/Update Nested State Msg.lvclass"/>
 	</Item>
+	<Item Name="Private" Type="Folder">
+		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+		<Item Name="Messages" Type="Folder">
+			<Item Name="Startup Init Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Startup Init Msg/Startup Init Msg.lvclass"/>
+		</Item>
+	</Item>
 	<Item Name="Promise Values" Type="Folder">
+		<Item Name="ApiArrayValue.lvclass" Type="LVClass" URL="../ApiArrayValue/ApiArrayValue.lvclass"/>
+		<Item Name="ApiValue.lvclass" Type="LVClass" URL="../ApiValue/ApiValue.lvclass"/>
 		<Item Name="EventsValue.lvclass" Type="LVClass" URL="../EventsValue/EventsValue.lvclass"/>
 		<Item Name="TaskEnQrValue.lvclass" Type="LVClass" URL="../TaskEnQrValue/TaskEnQrValue.lvclass"/>
 	</Item>
