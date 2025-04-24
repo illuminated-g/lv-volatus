@@ -14,12 +14,14 @@
 			<Item Name="Request API.vi" Type="VI" URL="../Request API.vi"/>
 		</Item>
 		<Item Name="ConfigAPI.lvclass" Type="LVClass" URL="../ConfigAPI/ConfigAPI.lvclass"/>
+		<Item Name="DataHandlerAPI.lvclass" Type="LVClass" URL="../DataHandlerAPI/DataHandlerAPI.lvclass"/>
 		<Item Name="EventAPI.lvclass" Type="LVClass" URL="../Event API/EventAPI.lvclass"/>
 		<Item Name="TelemetryAPI.lvclass" Type="LVClass" URL="../TelemetryAPI/TelemetryAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
 	<Item Name="Base" Type="Folder">
 		<Item Name="App.lvclass" Type="LVClass" URL="../App/App.lvclass"/>
+		<Item Name="DataHandlerTask.lvclass" Type="LVClass" URL="../DataHandlerTask/DataHandlerTask.lvclass"/>
 		<Item Name="EventHandlerTask.lvclass" Type="LVClass" URL="../EventHandlerTask/EventHandlerTask.lvclass"/>
 		<Item Name="Task.lvclass" Type="LVClass" URL="../Task/Task.lvclass"/>
 	</Item>
@@ -43,12 +45,14 @@
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="ApiIdentity.lvclass" Type="LVClass" URL="../ApiIdentity/ApiIdentity.lvclass"/>
+		<Item Name="DataHandlerIdentity.lvclass" Type="LVClass" URL="../DataHandlerIdentity/DataHandlerIdentity.lvclass"/>
 		<Item Name="TaskIdentity.lvclass" Type="LVClass" URL="../TaskIdentity/TaskIdentity.lvclass"/>
 		<Item Name="TaskTypeIdentity.lvclass" Type="LVClass" URL="../TaskTypeIdentity/TaskTypeIdentity.lvclass"/>
 	</Item>
 	<Item Name="Interfaces" Type="Folder">
 		<Item Name="API Provider.lvclass" Type="LVClass" URL="../API Provider/API Provider.lvclass"/>
 		<Item Name="API.lvclass" Type="LVClass" URL="../API/API.lvclass"/>
+		<Item Name="DataHandler.lvclass" Type="LVClass" URL="../DataHandler/DataHandler.lvclass"/>
 		<Item Name="EventHandler.lvclass" Type="LVClass" URL="../EventHandler/EventHandler.lvclass"/>
 		<Item Name="Identity.lvclass" Type="LVClass" URL="../Identity/Identity.lvclass"/>
 		<Item Name="TaskStateHandler.lvclass" Type="LVClass" URL="../TaskStateHandler/TaskStateHandler.lvclass"/>
@@ -60,6 +64,8 @@
 		<Item Name="Handle Vecto Message Msg.lvclass" Type="LVClass" URL="../VectoMessageHandler Messages/Handle Vecto Message Msg/Handle Vecto Message Msg.lvclass"/>
 		<Item Name="Launch New Task Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Launch New Task Msg/Launch New Task Msg.lvclass"/>
 		<Item Name="Load Config Msg.lvclass" Type="LVClass" URL="../VolatusConfigManager Messages/Load Config Msg/Load Config Msg.lvclass"/>
+		<Item Name="New Data Msg.lvclass" Type="LVClass" URL="../DataHandler Messages/New Data Msg/New Data Msg.lvclass"/>
+		<Item Name="Register Groups Msg.lvclass" Type="LVClass" URL="../DataHandler Messages/Register Groups Msg/Register Groups Msg.lvclass"/>
 		<Item Name="Request API Msg.lvclass" Type="LVClass" URL="../API Provider Messages/Request API Msg/Request API Msg.lvclass"/>
 		<Item Name="Request Events Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Request Events Msg/Request Events Msg.lvclass"/>
 		<Item Name="Shutdown Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Shutdown Msg/Shutdown Msg.lvclass"/>

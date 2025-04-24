@@ -30,6 +30,7 @@
 			<Item Name="Stream-TCP.lvlib" Type="Library" URL="../../lv-stream-tcp/Stream-TCP/Stream-TCP.lvlib"/>
 			<Item Name="Stream-Websocket.lvlib" Type="Library" URL="../../lv-stream-websocket/Stream-Websocket/Stream-Websocket.lvlib"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="../../lv-stream/stream/Stream.lvlib"/>
+			<Item Name="TreeTools.lvlib" Type="Library" URL="../../lv-tree-tools/TreeTools/TreeTools.lvlib"/>
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
 			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
 		</Item>
@@ -38,6 +39,7 @@
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
 		<Item Name="VolatusDataLogger.lvlib" Type="Library" URL="../VolatusDataLogger/VolatusDataLogger.lvlib"/>
+		<Item Name="VolatusDataProcessing.lvlib" Type="Library" URL="../VolatusDataProcessing/VolatusDataProcessing.lvlib"/>
 		<Item Name="VolatusDemo.lvlib" Type="Library" URL="../VolatusDemo/VolatusDemo.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -188,6 +190,7 @@
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{A6474FA9-AFC1-4E0F-88DA-9FDBF3C5BADF}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{AB9976B3-9B13-4C0C-B4D8-65AA6863B324}</Property>
+				<Property Name="App_INI_itemID" Type="Ref">/My Computer/config/volatus.ini</Property>
 				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
 				<Property Name="App_serverType" Type="Int">0</Property>
 				<Property Name="App_winsec.description" Type="Str">http://www.NI.com</Property>
@@ -203,7 +206,7 @@
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/VolatusBuild.lvlib/PrePost Actions/Volatus Post-Build Action.vi</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/VolatusBuild.lvlib/PrePost Actions/Volatus Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1EE8B398-2758-4770-8AC8-ED4F8E8C0311}</Property>
-				<Property Name="Bld_version.build" Type="Int">3</Property>
+				<Property Name="Bld_version.build" Type="Int">5</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">demoapp.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/DemoApp/demoapp.exe</Property>
@@ -212,7 +215,7 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/DemoApp/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{ACEA4C74-D3ED-432F-97BF-0765D63B0BE9}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{7481BD13-B23B-4EA8-BE03-9CB9E90AE4F0}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VolatusDemo.lvlib/Demo Main.vi</Property>

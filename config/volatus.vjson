@@ -82,6 +82,40 @@
                                                 }
                                             }
                                         }
+                                    },
+                                    "DataProcessor": {
+                                        "Meta": {
+                                            "VL_Type": "!VL_Task",
+                                            "VL_Task_Type": "Data_Processor"
+                                        },
+                                        "Order": ["Scaling", "Redlines", "Logging", "Publish"],
+                                        "Handlers": {
+                                            "Meta": {
+                                                "DH_Type": "DH_Handler_List"
+                                            },
+                                            "Scaling": {
+                                                "Meta": {
+                                                    "DH_Type": "Scaling"
+                                                }
+                                            },
+                                            "Redlines": {
+                                                "Meta": {
+                                                    "DH_Type": "Redlines"
+                                                }
+                                            },
+                                            "Logging": {
+                                                "Meta": {
+                                                    "DH_Type": "Logger"
+                                                }
+                                            },
+                                            "Publish": {
+                                                "Meta": {
+                                                    "DH_Type": "Publisher"
+                                                },
+                                                "PublishRate": "10",
+                                                "DecimationType": "Mean"
+                                            }
+                                        }
                                     }
                                 },
                                 "Sim2": {
