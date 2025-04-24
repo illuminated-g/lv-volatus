@@ -1,0 +1,57 @@
+{
+  "Home":{
+    "Albus":{"IP":"192.168.42.14"},
+    "Brevis":{"IP":"192.168.42.17"},
+    "Legio":{
+      "IP":["192.168.42.23","192.168.42.24"]
+    },
+    "Mux":{
+      "Lower":{
+        "IP":"192.168.42.12",
+        "Inputs":[
+          "Desktop 1",
+          "Desktop 2",
+          "Desktop 3",
+          "Dock 1",
+          "Dock 2",
+          "Capture",
+          "Unused",
+          "Mux In"
+        ],
+        "Outputs":[
+          "Main L",
+          "Main C",
+          "Main R",
+          "Work L",
+          "Work R",
+          "NC 6",
+          "NC 7",
+          "Mux Out"
+        ]
+      },
+      "Upper":{
+        "IP":"192.168.42.13",
+        "Inputs":[
+          "BluRay",
+          "NC 2",
+          "NC 3",
+          "NC 4",
+          "NC 5",
+          "Capture",
+          "Unused",
+          "Mux In"
+        ],
+        "Outputs":[
+          "Main L",
+          "Main C",
+          "Main R",
+          "Work L",
+          "Work R",
+          "NC 1",
+          "Capture",
+          "Mux Out"
+        ]
+      }
+    }
+  }
+}

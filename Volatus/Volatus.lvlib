@@ -10,8 +10,11 @@
 
 </Property>
 	<Item Name="APIs" Type="Folder">
+		<Item Name="Support" Type="Folder">
+			<Item Name="Request API.vi" Type="VI" URL="../Request API.vi"/>
+		</Item>
+		<Item Name="ConfigAPI.lvclass" Type="LVClass" URL="../ConfigAPI/ConfigAPI.lvclass"/>
 		<Item Name="EventAPI.lvclass" Type="LVClass" URL="../Event API/EventAPI.lvclass"/>
-		<Item Name="Request API.vi" Type="VI" URL="../Request API.vi"/>
 		<Item Name="TelemetryAPI.lvclass" Type="LVClass" URL="../TelemetryAPI/TelemetryAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
@@ -20,9 +23,14 @@
 		<Item Name="EventHandlerTask.lvclass" Type="LVClass" URL="../EventHandlerTask/EventHandlerTask.lvclass"/>
 		<Item Name="Task.lvclass" Type="LVClass" URL="../Task/Task.lvclass"/>
 	</Item>
+	<Item Name="Config" Type="Folder">
+		<Item Name="Create Volatus Group.vi" Type="VI" URL="../Create Volatus Group.vi"/>
+		<Item Name="Volatus Group Info.vi" Type="VI" URL="../Volatus Group Info.vi"/>
+	</Item>
 	<Item Name="Core" Type="Folder">
 		<Item Name="BasicEventLogger.lvclass" Type="LVClass" URL="../BasicEventLogger/BasicEventLogger.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
+		<Item Name="VolatusConfigManager.lvclass" Type="LVClass" URL="../VolatusConfigTask/VolatusConfigManager.lvclass"/>
 		<Item Name="VolatusCore.lvclass" Type="LVClass" URL="../VolatusCore/VolatusCore.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
@@ -36,11 +44,11 @@
 	<Item Name="Identities" Type="Folder">
 		<Item Name="ApiIdentity.lvclass" Type="LVClass" URL="../ApiIdentity/ApiIdentity.lvclass"/>
 		<Item Name="TaskIdentity.lvclass" Type="LVClass" URL="../TaskIdentity/TaskIdentity.lvclass"/>
+		<Item Name="TaskTypeIdentity.lvclass" Type="LVClass" URL="../TaskTypeIdentity/TaskTypeIdentity.lvclass"/>
 	</Item>
 	<Item Name="Interfaces" Type="Folder">
 		<Item Name="API Provider.lvclass" Type="LVClass" URL="../API Provider/API Provider.lvclass"/>
 		<Item Name="API.lvclass" Type="LVClass" URL="../API/API.lvclass"/>
-		<Item Name="APIRegistrationHandler.lvclass" Type="LVClass" URL="../APIRegistrationHandler/APIRegistrationHandler.lvclass"/>
 		<Item Name="EventHandler.lvclass" Type="LVClass" URL="../EventHandler/EventHandler.lvclass"/>
 		<Item Name="Identity.lvclass" Type="LVClass" URL="../Identity/Identity.lvclass"/>
 		<Item Name="TaskStateHandler.lvclass" Type="LVClass" URL="../TaskStateHandler/TaskStateHandler.lvclass"/>
@@ -50,27 +58,32 @@
 	<Item Name="Messages" Type="Folder">
 		<Item Name="Handle Event Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Handle Event Msg/Handle Event Msg.lvclass"/>
 		<Item Name="Handle Vecto Message Msg.lvclass" Type="LVClass" URL="../VectoMessageHandler Messages/Handle Vecto Message Msg/Handle Vecto Message Msg.lvclass"/>
-		<Item Name="Launch New Task Msg.lvclass" Type="LVClass" URL="../VolatusCoreTask Messages/Launch New Task Msg/Launch New Task Msg.lvclass"/>
-		<Item Name="Lookup API Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Lookup API Msg/Lookup API Msg.lvclass"/>
-		<Item Name="Lookup APIs of Type Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Lookup APIs of Type Msg/Lookup APIs of Type Msg.lvclass"/>
-		<Item Name="Register API Msg.lvclass" Type="LVClass" URL="../APIRegistrationHandler Messages/Register API Msg/Register API Msg.lvclass"/>
+		<Item Name="Launch New Task Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Launch New Task Msg/Launch New Task Msg.lvclass"/>
+		<Item Name="Load Config Msg.lvclass" Type="LVClass" URL="../VolatusConfigManager Messages/Load Config Msg/Load Config Msg.lvclass"/>
 		<Item Name="Request API Msg.lvclass" Type="LVClass" URL="../API Provider Messages/Request API Msg/Request API Msg.lvclass"/>
 		<Item Name="Request Events Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Request Events Msg/Request Events Msg.lvclass"/>
-		<Item Name="Shutdown Msg.lvclass" Type="LVClass" URL="../VolatusCoreTask Messages/Shutdown Msg/Shutdown Msg.lvclass"/>
-		<Item Name="Unregister API Msg.lvclass" Type="LVClass" URL="../APIRegistrationHandler Messages/Unregister API Msg/Unregister API Msg.lvclass"/>
+		<Item Name="Shutdown Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Shutdown Msg/Shutdown Msg.lvclass"/>
 		<Item Name="Update Nested State Msg.lvclass" Type="LVClass" URL="../TaskStateHandler Messages/Update Nested State Msg/Update Nested State Msg.lvclass"/>
 	</Item>
 	<Item Name="Private" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Messages" Type="Folder">
-			<Item Name="Startup Init Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Startup Init Msg/Startup Init Msg.lvclass"/>
+			<Item Name="Start Core Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Start Core Msg/Start Core Msg.lvclass"/>
+			<Item Name="Startup Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Startup Msg/Startup Msg.lvclass"/>
 		</Item>
+		<Item Name="Enumerate Task Types.vi" Type="VI" URL="../Enumerate Task Types.vi"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="ApiArrayValue.lvclass" Type="LVClass" URL="../ApiArrayValue/ApiArrayValue.lvclass"/>
 		<Item Name="ApiValue.lvclass" Type="LVClass" URL="../ApiValue/ApiValue.lvclass"/>
+		<Item Name="AppStartupValue.lvclass" Type="LVClass" URL="../AppStartupValue/AppStartupValue.lvclass"/>
+		<Item Name="ConfigElementValue.lvclass" Type="LVClass" URL="../ConfigElementValue/ConfigElementValue.lvclass"/>
 		<Item Name="EventsValue.lvclass" Type="LVClass" URL="../EventsValue/EventsValue.lvclass"/>
 		<Item Name="TaskEnQrValue.lvclass" Type="LVClass" URL="../TaskEnQrValue/TaskEnQrValue.lvclass"/>
+		<Item Name="VolatusNodeValue.lvclass" Type="LVClass" URL="../VolatusNodeValue/VolatusNodeValue.lvclass"/>
+	</Item>
+	<Item Name="Utilities" Type="Folder">
+		<Item Name="Task by Type.vi" Type="VI" URL="../Task by Type.vi"/>
 	</Item>
 	<Item Name="Volatus Main.vi" Type="VI" URL="../Volatus Main.vi"/>
 </Library>
