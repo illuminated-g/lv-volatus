@@ -85,14 +85,12 @@
                                     },
                                     "DataProcessor": {
                                         "Meta": {
-                                            "VL_Type": "!VL_Task",
+                                            "VL_Type": "VL_Task",
                                             "VL_Task_Type": "Data_Processor"
                                         },
+                                        "Autolaunch": "False",
                                         "Order": ["Scaling", "Redlines", "Logging", "Publish"],
                                         "Handlers": {
-                                            "Meta": {
-                                                "DH_Type": "DH_Handler_List"
-                                            },
                                             "Scaling": {
                                                 "Meta": {
                                                     "DH_Type": "Scaling"
@@ -106,6 +104,10 @@
                                             "Logging": {
                                                 "Meta": {
                                                     "DH_Type": "Logger"
+                                                },
+                                                "Split": {
+                                                    "Type": "Count",
+                                                    "Limit": "100000"
                                                 }
                                             },
                                             "Publish": {

@@ -15,7 +15,6 @@
 	</Item>
 	<Item Name="Logger" Type="Folder">
 		<Item Name="DataLogger.lvclass" Type="LVClass" URL="../DataLogger/DataLogger.lvclass"/>
-		<Item Name="DataLoggerAPI.lvclass" Type="LVClass" URL="../DataLoggerAPI/DataLoggerAPI.lvclass"/>
 		<Item Name="DataLoggerIdentity.lvclass" Type="LVClass" URL="../DataLoggerIdentity/DataLoggerIdentity.lvclass"/>
 	</Item>
 	<Item Name="Manager" Type="Folder">
@@ -24,8 +23,6 @@
 		<Item Name="LoggingManager.lvclass" Type="LVClass" URL="../LoggingManager/LoggingManager.lvclass"/>
 	</Item>
 	<Item Name="Messages" Type="Folder">
-		<Item Name="New Data Msg.lvclass" Type="LVClass" URL="../DataLogger Messages/New Data Msg/New Data Msg.lvclass"/>
-		<Item Name="Register Groups Msg.lvclass" Type="LVClass" URL="../DataLogger Messages/Register Groups Msg/Register Groups Msg.lvclass"/>
 		<Item Name="Register Logger Msg.lvclass" Type="LVClass" URL="../LoggingManager Messages/Register Logger Msg/Register Logger Msg.lvclass"/>
 		<Item Name="Start Log Msg.lvclass" Type="LVClass" URL="../LoggingManager Messages/Start Log Msg/Start Log Msg.lvclass"/>
 		<Item Name="Stop Log Msg.lvclass" Type="LVClass" URL="../LoggingHandler Messages/Stop Log Msg/Stop Log Msg.lvclass"/>
