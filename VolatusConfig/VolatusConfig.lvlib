@@ -13,12 +13,17 @@
 		<Item Name="Group Type.ctl" Type="VI" URL="../Group Type.ctl"/>
 		<Item Name="Meta Name.ctl" Type="VI" URL="../Meta Name.ctl"/>
 		<Item Name="Meta Type.ctl" Type="VI" URL="../Meta Type.ctl"/>
+		<Item Name="Scale Type.ctl" Type="VI" URL="../Scale Type.ctl"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
 		<Item Name="Channel.lvclass" Type="LVClass" URL="../Channel/Channel.lvclass"/>
 		<Item Name="Cluster.lvclass" Type="LVClass" URL="../Cluster/Cluster.lvclass"/>
 		<Item Name="Group.lvclass" Type="LVClass" URL="../Group/Group.lvclass"/>
 		<Item Name="Node.lvclass" Type="LVClass" URL="../Node/Node.lvclass"/>
+		<Item Name="Scale.lvclass" Type="LVClass" URL="../Scale/Scale.lvclass"/>
+		<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
+		<Item Name="Sensor.lvclass" Type="LVClass" URL="../Sensor/Sensor.lvclass"/>
+		<Item Name="SensorList.lvclass" Type="LVClass" URL="../SensorList/SensorList.lvclass"/>
 		<Item Name="System.lvclass" Type="LVClass" URL="../System/System.lvclass"/>
 		<Item Name="Task.lvclass" Type="LVClass" URL="../Task/Task.lvclass"/>
 	</Item>
@@ -30,8 +35,10 @@
 			<Item Name="Volatus Type Lookup.vi" Type="VI" URL="../Volatus Type Lookup.vi"/>
 		</Item>
 		<Item Name="Config Format.vi" Type="VI" URL="../Config Format.vi"/>
+		<Item Name="Element Factory.vi" Type="VI" URL="../Element Factory.vi"/>
 		<Item Name="Format Extension.vi" Type="VI" URL="../Format Extension.vi"/>
 		<Item Name="Storage Factory.vi" Type="VI" URL="../Storage Factory.vi"/>
 	</Item>
 	<Item Name="VolatusConfig.lvclass" Type="LVClass" URL="../VolatusConfig/VolatusConfig.lvclass"/>
+	<Item Name="VolatusConfigElement.lvclass" Type="LVClass" URL="../VolatusConfigElement/VolatusConfigElement.lvclass"/>
 </Library>

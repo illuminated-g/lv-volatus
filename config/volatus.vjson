@@ -3,12 +3,36 @@
         "Meta": {
             "VL_Config_Version": "0.0.0+1"
         },
-        "VolatusDemo": {
+        "DemoSystem": {
             "Meta": {
                 "VL_Type": "VL_System"
             },
+            "Sensors": {
+                "Meta": {
+                    "Overlay_Type": "Sensors",
+                    "VL_Type": "VL_Sensor_List"
+                },
+                "Value": [
+                    {
+                        "Model": "GP50",
+                        "Serial": "123456",
+                        "Scale": {
+                            "Type": "Polynomial",
+                            "Coefficients": ["0.01", "0.9967"]
+                        }
+                    },
+                    {
+                        "Model": "GP50",
+                        "Serial": "234567",
+                        "Scale": {
+                            "Type": "Polynomial",
+                            "Coefficients": ["-0.002", "1.00027"]
+                        }
+                    }
+                ]
+            },
             "Clusters": {
-                "VolatusDemo": {
+                "DemoCluster": {
                     "Meta": {
                         "VL_Type": "VL_Cluster"
                     },
@@ -20,12 +44,13 @@
                         "Meta": {
                             "VL_Type": "VL_Task_List"
                         },
-                        "VolatusDemo": {
+                        "DemoNode": {
                             "Meta": {
                                 "VL_Type": "VL_Node",
                                 "VL_Node_Type": "VolatusDemo"
                             },
                             "Node_ID": "1",
+                            "DebugGUIs": "False",
                             "Tasks": {
                                 "LoggingManager": {
                                     "Meta": {
@@ -34,12 +59,15 @@
                                     },
                                     "LoggingRoot": "c:/logs"
                                 },
-                                "Sim1": {
+                                "DemoControl": {
                                     "Meta": {
                                         "VL_Type": "VL_Task",
                                         "VL_Task_Type": "DemoSimTask"
                                     },
                                     "Data": {
+                                        "Meta": {
+                                            "Overlay_Type": "Wiring"
+                                        },
                                         "Sim1": {
                                             "Meta": {
                                                 "VL_Type": "VL_Group",
@@ -88,90 +116,74 @@
                                             "VL_Type": "VL_Task",
                                             "VL_Task_Type": "Data_Processor"
                                         },
-                                        "Autolaunch": "False",
-                                        "Order": ["Scaling", "Redlines", "Logging", "Publish"],
-                                        "Handlers": {
-                                            "Scaling": {
-                                                "Meta": {
-                                                    "DH_Type": "Scaling"
-                                                }
-                                            },
-                                            "Redlines": {
-                                                "Meta": {
-                                                    "DH_Type": "Redlines"
-                                                }
-                                            },
-                                            "Logging": {
-                                                "Meta": {
-                                                    "DH_Type": "Logger"
-                                                },
-                                                "Split": {
-                                                    "Type": "Count",
-                                                    "Limit": "100000"
-                                                }
-                                            },
-                                            "Publish": {
-                                                "Meta": {
-                                                    "DH_Type": "Publisher"
-                                                },
-                                                "PublishRate": "10",
-                                                "DecimationType": "Mean"
-                                            }
-                                        }
-                                    }
-                                },
-                                "Sim2": {
-                                    "Meta": {
-                                        "VL_Type": "VL_Task",
-                                        "VL_Task_Type": "DemoSimTask"
-                                    },
-                                    "Data": {
-                                        "Sim2": {
+                                        "Scaling": {
                                             "Meta": {
-                                                "VL_Type": "VL_Group",
-                                                "VL_Group_Type": "Double"
+                                                "Overlay_Type": "Scaling"
                                             },
-                                            "Sim2.A": {
-                                                "Meta": {
-                                                    "VL_Type": "VL_Channel"
-                                                },
-                                                "Default": "12"
+                                            "Sim1.A": {
+                                                "Type": "Sensor",
+                                                "Sensor": {
+                                                    "Model": "GP50",
+                                                    "Serial": "123456"
+                                                }
                                             },
-                                            "Sim2.B": {
-                                                "Meta": {
-                                                    "VL_Type": "VL_Channel"
-                                                },
-                                                "Default": "22"
+                                            "Sim1.B": {
+                                                "Type": "None",
+                                                "Threshold": "0.27"
                                             },
-                                            "Sim2.C": {
-                                                "Meta": {
-                                                    "VL_Type": "VL_Channel"
-                                                },
-                                                "Default": "32"
+                                            "Sim1.C": {
+                                                "Type": "Sensor",
+                                                "Sensor": {
+                                                    "Model": "GP50",
+                                                    "Serial": "234567"
+                                                }
                                             },
-                                            "Sim2.D": {
-                                                "Meta": {
-                                                    "VL_Type": "VL_Channel"
-                                                },
-                                                "Default": "42"
+                                            "Sim1.D": {
+                                                "Type": "Polynomial",
+                                                "Coefficients": ["5", "3", "2"]
                                             },
-                                            "Sim2.E": {
-                                                "Meta": {
-                                                    "VL_Type": "VL_Channel"
+                                            "Sim1.E": {
+                                                "Type": "None"
+                                            }
+                                        },
+                                        "Redlines": {
+                                            "Meta": {
+                                                "Overlay_Type": "Redlines"
+                                            },
+                                            "Sets": {
+                                                "Chill": {
+                                                    "Sim1.A": {"Min": "-20", "Max": "10"},
+                                                    "Sim1.C": {"Min": "-5", "Max": "50"}
                                                 },
-                                                "Default": "52"
+                                                "Startup": {
+                                                    "Sim1.A": {"Min": "-30", "Max": "-10"}
+                                                },
+                                                "Run": {
+                                                    "Sim1.A": {"Min": "-30", "Max": "0"},
+                                                    "Sim1.B": {"Min": "100", "Max": "150"}
+                                                }
+                                            }
+                                        },
+                                        "Logger": {
+                                            "Split": {
+                                                "Type": "Count",
+                                                "Limit": "100000"
+                                            }
+                                        },
+                                        "Publish": {
+                                            "Rate": "10",
+                                            "Decimation": {
+                                                "Type": "Mean"
                                             }
                                         }
                                     }
-                                },
-                                "Chart1": {
+                                },"Chart1": {
                                     "Meta": {
                                         "VL_Type": "VL_Task",
                                         "VL_Task_Type": "DemoChartGui"
                                     },
                                     "SourceGroups": [
-                                        "Sim1",
-                                        "Sim2"
+                                        "Sim1"
                                     ]
                                 }
                             }

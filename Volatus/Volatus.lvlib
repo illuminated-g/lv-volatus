@@ -13,9 +13,12 @@
 		<Item Name="Support" Type="Folder">
 			<Item Name="Request API.vi" Type="VI" URL="../Request API.vi"/>
 		</Item>
+		<Item Name="AbortAPI.lvclass" Type="LVClass" URL="../AbortAPI/AbortAPI.lvclass"/>
+		<Item Name="AbortManagerAPI.lvclass" Type="LVClass" URL="../AbortManagerAPI/AbortManagerAPI.lvclass"/>
 		<Item Name="ConfigAPI.lvclass" Type="LVClass" URL="../ConfigAPI/ConfigAPI.lvclass"/>
 		<Item Name="DataHandlerAPI.lvclass" Type="LVClass" URL="../DataHandlerAPI/DataHandlerAPI.lvclass"/>
 		<Item Name="EventAPI.lvclass" Type="LVClass" URL="../Event API/EventAPI.lvclass"/>
+		<Item Name="LoggingAPI.lvclass" Type="LVClass" URL="../LoggingAPI/LoggingAPI.lvclass"/>
 		<Item Name="TelemetryAPI.lvclass" Type="LVClass" URL="../TelemetryAPI/TelemetryAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
@@ -30,45 +33,81 @@
 		<Item Name="Volatus Group Info.vi" Type="VI" URL="../Volatus Group Info.vi"/>
 	</Item>
 	<Item Name="Core" Type="Folder">
-		<Item Name="BasicEventLogger.lvclass" Type="LVClass" URL="../BasicEventLogger/BasicEventLogger.lvclass"/>
-		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
+		<Item Name="DataHandling" Type="Folder">
+			<Item Name="DataLogger.lvclass" Type="LVClass" URL="../DataLogger/DataLogger.lvclass"/>
+			<Item Name="DataProcessor.lvclass" Type="LVClass" URL="../DataProcessor/DataProcessor.lvclass"/>
+			<Item Name="LoggingManager.lvclass" Type="LVClass" URL="../LoggingManager/LoggingManager.lvclass"/>
+		</Item>
+		<Item Name="Debug" Type="Folder">
+			<Item Name="DebugGUI.lvclass" Type="LVClass" URL="../DebugGUI/DebugGUI.lvclass"/>
+		</Item>
+		<Item Name="Events" Type="Folder">
+			<Item Name="BasicEventLogger.lvclass" Type="LVClass" URL="../BasicEventLogger/BasicEventLogger.lvclass"/>
+			<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
+		</Item>
+		<Item Name="Sequencing" Type="Folder">
+			<Item Name="SeqManager.lvclass" Type="LVClass" URL="../SeqManager/SeqManager.lvclass"/>
+		</Item>
+		<Item Name="AbortManager.lvclass" Type="LVClass" URL="../AbortManager/AbortManager.lvclass"/>
 		<Item Name="VolatusConfigManager.lvclass" Type="LVClass" URL="../VolatusConfigTask/VolatusConfigManager.lvclass"/>
 		<Item Name="VolatusCore.lvclass" Type="LVClass" URL="../VolatusCore/VolatusCore.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Core APIs.ctl" Type="VI" URL="../Core APIs.ctl"/>
 		<Item Name="Core Implementations.ctl" Type="VI" URL="../Core Implementations.ctl"/>
+		<Item Name="Data Logger Config.ctl" Type="VI" URL="../Data Logger Config.ctl"/>
+		<Item Name="Decimation Type.ctl" Type="VI" URL="../Decimation Type.ctl"/>
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
+		<Item Name="Process Step.ctl" Type="VI" URL="../Process Step.ctl"/>
+		<Item Name="Processing Type.ctl" Type="VI" URL="../Processing Type.ctl"/>
+		<Item Name="Redline Param.ctl" Type="VI" URL="../Redline Param.ctl"/>
+		<Item Name="Split Type.ctl" Type="VI" URL="../Split Type.ctl"/>
 		<Item Name="Task Hierarchy.ctl" Type="VI" URL="../Task Hierarchy.ctl"/>
+		<Item Name="Task Run Info.ctl" Type="VI" URL="../Task Run Info.ctl"/>
 		<Item Name="Task State.ctl" Type="VI" URL="../Task State.ctl"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
+		<Item Name="AbortIdentity.lvclass" Type="LVClass" URL="../AbortIdentity/AbortIdentity.lvclass"/>
+		<Item Name="AbortManagerIdentity.lvclass" Type="LVClass" URL="../AbortManagerIdentity/AbortManagerIdentity.lvclass"/>
 		<Item Name="ApiIdentity.lvclass" Type="LVClass" URL="../ApiIdentity/ApiIdentity.lvclass"/>
 		<Item Name="DataHandlerIdentity.lvclass" Type="LVClass" URL="../DataHandlerIdentity/DataHandlerIdentity.lvclass"/>
+		<Item Name="DataLoggerIdentity.lvclass" Type="LVClass" URL="../DataLoggerIdentity/DataLoggerIdentity.lvclass"/>
+		<Item Name="LoggingIdentity.lvclass" Type="LVClass" URL="../LoggingIdentity/LoggingIdentity.lvclass"/>
 		<Item Name="TaskIdentity.lvclass" Type="LVClass" URL="../TaskIdentity/TaskIdentity.lvclass"/>
 		<Item Name="TaskTypeIdentity.lvclass" Type="LVClass" URL="../TaskTypeIdentity/TaskTypeIdentity.lvclass"/>
 	</Item>
 	<Item Name="Interfaces" Type="Folder">
+		<Item Name="Abortable.lvclass" Type="LVClass" URL="../Abortable/Abortable.lvclass"/>
 		<Item Name="API Provider.lvclass" Type="LVClass" URL="../API Provider/API Provider.lvclass"/>
 		<Item Name="API.lvclass" Type="LVClass" URL="../API/API.lvclass"/>
 		<Item Name="DataHandler.lvclass" Type="LVClass" URL="../DataHandler/DataHandler.lvclass"/>
 		<Item Name="EventHandler.lvclass" Type="LVClass" URL="../EventHandler/EventHandler.lvclass"/>
 		<Item Name="Identity.lvclass" Type="LVClass" URL="../Identity/Identity.lvclass"/>
+		<Item Name="LoggingHandler.lvclass" Type="LVClass" URL="../LoggingHandler/LoggingHandler.lvclass"/>
+		<Item Name="Reconfigurable.lvclass" Type="LVClass" URL="../Reconfigurable/Reconfigurable.lvclass"/>
 		<Item Name="TaskStateHandler.lvclass" Type="LVClass" URL="../TaskStateHandler/TaskStateHandler.lvclass"/>
 		<Item Name="VectoMessageHandler.lvclass" Type="LVClass" URL="../VectoMessageHandler/VectoMessageHandler.lvclass"/>
 		<Item Name="VolatusHandler.lvclass" Type="LVClass" URL="../VolatusHandler/VolatusHandler.lvclass"/>
 	</Item>
 	<Item Name="Messages" Type="Folder">
+		<Item Name="Abort Msg.lvclass" Type="LVClass" URL="../AbortHandler Messages/Abort Msg/Abort Msg.lvclass"/>
 		<Item Name="Handle Event Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Handle Event Msg/Handle Event Msg.lvclass"/>
 		<Item Name="Handle Vecto Message Msg.lvclass" Type="LVClass" URL="../VectoMessageHandler Messages/Handle Vecto Message Msg/Handle Vecto Message Msg.lvclass"/>
 		<Item Name="Launch New Task Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Launch New Task Msg/Launch New Task Msg.lvclass"/>
 		<Item Name="Load Config Msg.lvclass" Type="LVClass" URL="../VolatusConfigManager Messages/Load Config Msg/Load Config Msg.lvclass"/>
 		<Item Name="New Data Msg.lvclass" Type="LVClass" URL="../DataHandler Messages/New Data Msg/New Data Msg.lvclass"/>
+		<Item Name="Register Abortable Msg.lvclass" Type="LVClass" URL="../AbortManager Messages/Register Abortable Msg/Register Abortable Msg.lvclass"/>
 		<Item Name="Register Groups Msg.lvclass" Type="LVClass" URL="../DataHandler Messages/Register Groups Msg/Register Groups Msg.lvclass"/>
+		<Item Name="Register Logger Msg.lvclass" Type="LVClass" URL="../LoggingManager Messages/Register Logger Msg/Register Logger Msg.lvclass"/>
+		<Item Name="Reload Config Msg.lvclass" Type="LVClass" URL="../Reconfigurable Messages/Reload Config Msg/Reload Config Msg.lvclass"/>
 		<Item Name="Request API Msg.lvclass" Type="LVClass" URL="../API Provider Messages/Request API Msg/Request API Msg.lvclass"/>
 		<Item Name="Request Events Msg.lvclass" Type="LVClass" URL="../EventHandler Messages/Request Events Msg/Request Events Msg.lvclass"/>
+		<Item Name="Request Task Run Info Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Request Task Run Info Msg/Request Task Run Info Msg.lvclass"/>
+		<Item Name="Reset Abort Msg.lvclass" Type="LVClass" URL="../AbortHandler Messages/Reset Abort Msg/Reset Abort Msg.lvclass"/>
 		<Item Name="Shutdown Msg.lvclass" Type="LVClass" URL="../VolatusCore Messages/Shutdown Msg/Shutdown Msg.lvclass"/>
+		<Item Name="Start Log Msg.lvclass" Type="LVClass" URL="../LoggingManager Messages/Start Log Msg/Start Log Msg.lvclass"/>
+		<Item Name="Stop Log Msg.lvclass" Type="LVClass" URL="../LoggingHandler Messages/Stop Log Msg/Stop Log Msg.lvclass"/>
 		<Item Name="Update Nested State Msg.lvclass" Type="LVClass" URL="../TaskStateHandler Messages/Update Nested State Msg/Update Nested State Msg.lvclass"/>
 	</Item>
 	<Item Name="Private" Type="Folder">
@@ -86,10 +125,12 @@
 		<Item Name="ConfigElementValue.lvclass" Type="LVClass" URL="../ConfigElementValue/ConfigElementValue.lvclass"/>
 		<Item Name="EventsValue.lvclass" Type="LVClass" URL="../EventsValue/EventsValue.lvclass"/>
 		<Item Name="TaskEnQrValue.lvclass" Type="LVClass" URL="../TaskEnQrValue/TaskEnQrValue.lvclass"/>
+		<Item Name="TaskRunInfoArrayValue.lvclass" Type="LVClass" URL="../TaskRunInfoArrayValue/TaskRunInfoArrayValue.lvclass"/>
 		<Item Name="VolatusNodeValue.lvclass" Type="LVClass" URL="../VolatusNodeValue/VolatusNodeValue.lvclass"/>
 	</Item>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="Task by Type.vi" Type="VI" URL="../Task by Type.vi"/>
 	</Item>
+	<Item Name="Set Logging Root Msg.lvclass" Type="LVClass" URL="../LoggingHandler Messages/Set Logging Root Msg/Set Logging Root Msg.lvclass"/>
 	<Item Name="Volatus Main.vi" Type="VI" URL="../Volatus Main.vi"/>
 </Library>
