@@ -18,7 +18,7 @@
                         "Serial": "123456",
                         "Scale": {
                             "Type": "Polynomial",
-                            "Coefficients": ["0.01", "0.9967"]
+                            "Coefficients": [0.01, 0.9967]
                         }
                     },
                     {
@@ -26,7 +26,7 @@
                         "Serial": "234567",
                         "Scale": {
                             "Type": "Polynomial",
-                            "Coefficients": ["-0.002", "1.00027"]
+                            "Coefficients": [-0.002, 1.00027]
                         }
                     }
                 ]
@@ -38,7 +38,7 @@
                     },
                     "Discovery": {
                         "Address": "239.0.0.10",
-                        "Port": "36987"
+                        "Port": 36987
                     },
                     "Nodes": {
                         "Meta": {
@@ -50,7 +50,7 @@
                                 "VL_Node_Type": "VolatusDemo"
                             },
                             "Node_ID": "1",
-                            "DebugGUIs": "False",
+                            "DebugGUIs": false,
                             "Tasks": {
                                 "LoggingManager": {
                                     "Meta": {
@@ -75,14 +75,14 @@
                                             },
                                             "Publish": {
                                                 "Address": "239.0.0.11",
-                                                "Port": "36987"
+                                                "Port": 36987
                                             },
                                             "Channels": {
                                                 "Sim1.A": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "10",
+                                                    "Default": 10,
                                                     "Scale": {
                                                         "Type": "Sensor",
                                                         "Sensor": {
@@ -95,17 +95,17 @@
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "20",
+                                                    "Default": 20,
                                                     "Scale": {
                                                         "Type": "None",
-                                                        "Threshold": "0.27"
+                                                        "Threshold": 0.27
                                                     }
                                                 },
                                                 "Sim1.C": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "30",
+                                                    "Default": 30,
                                                     "Scale": {
                                                         "Type": "Sensor",
                                                         "Sensor": {
@@ -118,17 +118,17 @@
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "40",
+                                                    "Default": 40,
                                                     "Scale": {
                                                         "Type": "Polynomial",
-                                                        "Coefficients": ["5", "3", "2"]
+                                                        "Coefficients": [5, 3, 2]
                                                     }
                                                 },
                                                 "Sim1.E": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "50",
+                                                    "Default": 50,
                                                     "ScalE": {
                                                         "Type": "None"
                                                     }
@@ -147,26 +147,26 @@
                                             },
                                             "Sets": {
                                                 "Chill": {
-                                                    "Sim1.A": {"Min": "-20", "Max": "10"},
-                                                    "Sim1.C": {"Min": "-5", "Max": "50"}
+                                                    "Sim1.A": {"Min": -20, "Max": 10},
+                                                    "Sim1.C": {"Min": -5, "Max": 50}
                                                 },
                                                 "Startup": {
-                                                    "Sim1.A": {"Min": "-30", "Max": "-10"}
+                                                    "Sim1.A": {"Min": -30, "Max": -10}
                                                 },
                                                 "Run": {
-                                                    "Sim1.A": {"Min": "-30", "Max": "0"},
-                                                    "Sim1.B": {"Min": "100", "Max": "150"}
+                                                    "Sim1.A": {"Min": -30, "Max": 0},
+                                                    "Sim1.B": {"Min": 100, "Max": 150}
                                                 }
                                             }
                                         },
                                         "Logger": {
                                             "Split": {
                                                 "Type": "Count",
-                                                "Limit": "100000"
+                                                "Limit": 100000
                                             }
                                         },
                                         "Publish": {
-                                            "Rate": "10",
+                                            "Rate": 10,
                                             "Decimation": {
                                                 "Type": "Mean"
                                             }
