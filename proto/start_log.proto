@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message StartLog {
+    string series = 1;
+    string timestamp = 2;
+}

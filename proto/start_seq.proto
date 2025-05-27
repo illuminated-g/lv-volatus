@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message StartSeq {
+    string seq_name = 1;
+    fixed32 start_ticks = 2;
+}

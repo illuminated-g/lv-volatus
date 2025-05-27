@@ -34,11 +34,20 @@
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
 			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
 		</Item>
+		<Item Name="messages" Type="Folder" URL="../messages">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="proto defs" Type="Folder">
+			<Item Name="proto" Type="Folder" URL="../proto">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
+		</Item>
 		<Item Name="Running VIs.vi" Type="VI" URL="../Volatus/Running VIs.vi"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
 		<Item Name="VolatusDaq.lvlib" Type="Library" URL="../VolatusDaq/VolatusDaq.lvlib"/>
+		<Item Name="VolatusData.lvlib" Type="Library" URL="../VolatusData/VolatusData.lvlib"/>
 		<Item Name="VolatusDemo.lvlib" Type="Library" URL="../VolatusDemo/VolatusDemo.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -261,7 +270,7 @@
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/VolatusBuild.lvlib/PrePost Actions/Volatus Post-Build Action.vi</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/VolatusBuild.lvlib/PrePost Actions/Volatus Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1EE8B398-2758-4770-8AC8-ED4F8E8C0311}</Property>
-				<Property Name="Bld_version.build" Type="Int">5</Property>
+				<Property Name="Bld_version.build" Type="Int">7</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">demoapp.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/DemoApp/demoapp.exe</Property>

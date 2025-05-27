@@ -82,31 +82,56 @@
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "10"
+                                                    "Default": "10",
+                                                    "Scale": {
+                                                        "Type": "Sensor",
+                                                        "Sensor": {
+                                                            "Model": "GP50",
+                                                            "Serial": "123456"
+                                                        }
+                                                    }
                                                 },
                                                 "Sim1.B": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "20"
+                                                    "Default": "20",
+                                                    "Scale": {
+                                                        "Type": "None",
+                                                        "Threshold": "0.27"
+                                                    }
                                                 },
                                                 "Sim1.C": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "30"
+                                                    "Default": "30",
+                                                    "Scale": {
+                                                        "Type": "Sensor",
+                                                        "Sensor": {
+                                                            "Model": "GP50",
+                                                            "Serial": "234567"
+                                                        }
+                                                    }
                                                 },
                                                 "Sim1.D": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "40"
+                                                    "Default": "40",
+                                                    "Scale": {
+                                                        "Type": "Polynomial",
+                                                        "Coefficients": ["5", "3", "2"]
+                                                    }
                                                 },
                                                 "Sim1.E": {
                                                     "Meta": {
                                                         "VL_Type": "VL_Channel"
                                                     },
-                                                    "Default": "50"
+                                                    "Default": "50",
+                                                    "ScalE": {
+                                                        "Type": "None"
+                                                    }
                                                 }
                                             }
                                         }
@@ -115,36 +140,6 @@
                                         "Meta": {
                                             "VL_Type": "VL_Task",
                                             "VL_Task_Type": "Data_Processor"
-                                        },
-                                        "Scaling": {
-                                            "Meta": {
-                                                "Overlay_Type": "Scaling"
-                                            },
-                                            "Sim1.A": {
-                                                "Type": "Sensor",
-                                                "Sensor": {
-                                                    "Model": "GP50",
-                                                    "Serial": "123456"
-                                                }
-                                            },
-                                            "Sim1.B": {
-                                                "Type": "None",
-                                                "Threshold": "0.27"
-                                            },
-                                            "Sim1.C": {
-                                                "Type": "Sensor",
-                                                "Sensor": {
-                                                    "Model": "GP50",
-                                                    "Serial": "234567"
-                                                }
-                                            },
-                                            "Sim1.D": {
-                                                "Type": "Polynomial",
-                                                "Coefficients": ["5", "3", "2"]
-                                            },
-                                            "Sim1.E": {
-                                                "Type": "None"
-                                            }
                                         },
                                         "Redlines": {
                                             "Meta": {

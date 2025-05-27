@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message CmdAnalog {
+    string group = 1;
+    string channel = 2;
+    double value = 3;
+}
