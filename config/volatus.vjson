@@ -129,7 +129,7 @@
                                                         "VL_Type": "VL_Channel"
                                                     },
                                                     "Default": 50,
-                                                    "ScalE": {
+                                                    "Scale": {
                                                         "Type": "None"
                                                     }
                                                 }
@@ -172,7 +172,8 @@
                                             }
                                         }
                                     }
-                                },"Chart1": {
+                                },
+                                "Chart1": {
                                     "Meta": {
                                         "VL_Type": "VL_Task",
                                         "VL_Task_Type": "DemoChartGui"
