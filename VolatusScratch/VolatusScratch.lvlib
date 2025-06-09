@@ -5,7 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
-	<Item Name="Launch Async.vi" Type="VI" URL="../Launch Async.vi"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
+	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
 	<Item Name="TestModule.lvclass" Type="LVClass" URL="../TestModule/TestModule.lvclass"/>
+	<Item Name="volatus.ini" Type="Document" URL="../volatus.ini"/>
 </Library>

@@ -45,6 +45,8 @@
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
+		<Item Name="VolatusDAQ.lvlib" Type="Library" URL="../VolatusDAQ/VolatusDAQ.lvlib"/>
+		<Item Name="VolatusData.lvlib" Type="Library" URL="../VolatusData/VolatusData.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -85,6 +87,7 @@
 				<Item Name="General Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler.vi"/>
 				<Item Name="Get File Extension.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Get File Extension.vi"/>
 				<Item Name="Get GObject Label.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/traverseref.llb/Get GObject Label.vi"/>
+				<Item Name="Get LV Class Default Value By Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Default Value By Name.vi"/>
 				<Item Name="Get LV Class Name.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/LVClass/Get LV Class Name.vi"/>
 				<Item Name="Get String Text Bounds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Get String Text Bounds.vi"/>
 				<Item Name="Get System Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/sysdir.llb/Get System Directory.vi"/>
@@ -112,6 +115,7 @@
 				<Item Name="LVMapReplaceAction.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVMapReplaceAction.ctl"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_App_Builder_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/AppBuilder/AB_API_Simple/NI_App_Builder_API.lvlib"/>
 				<Item Name="NI_Data Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/Data Type/NI_Data Type.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
@@ -155,6 +159,7 @@
 			<Item Name="CDK_Utility_GetSetStringVersion.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_Utility_GetSetStringVersion.vi"/>
 			<Item Name="Element to Type.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Element to Type.vim"/>
 			<Item Name="ItemRef.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/ItemRef.ctl"/>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="mxLvDebugDisplayCaller.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvDebugDisplayCaller.vi"/>
 			<Item Name="mxLvDeleteProperty.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvDeleteProperty.vi"/>
 			<Item Name="mxLvErrorHandler.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvErrorHandler.vi"/>
@@ -225,6 +230,52 @@
 				<Property Name="TgtF_productName" Type="Str">DemoApp</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{DD6C92F7-B718-47B0-AAF1-5CCFE4738F41}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">demoapp.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Test" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{5AD1DDC5-5185-4558-A269-F5F08597CB94}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{138D78C2-5B07-4C17-99D7-8677C94828C2}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.NI.com</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{E95C56EC-178B-4321-9E81-E837424900AA}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Test</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Test</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{22486F4F-BBBD-4AF2-A8AA-5EB2DA261A90}</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">test.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Test/test.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Test/data</Property>
+				<Property Name="Destination[2].destName" Type="Str">root</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Test</Property>
+				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{167C3D7D-4265-4B6D-AA2B-0F399851DDE3}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VolatusScratch.lvlib/Test Main.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/VolatusScratch.lvlib/volatus.ini</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="TgtF_companyName" Type="Str">NI</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Test</Property>
+				<Property Name="TgtF_internalName" Type="Str">Test</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 NI</Property>
+				<Property Name="TgtF_productName" Type="Str">Test</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{31D31149-2E4B-4286-A38A-5510367E47BA}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">test.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 		</Item>
