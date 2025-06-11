@@ -21,6 +21,8 @@
 	</Item>
 	<Item Name="Core" Type="Folder">
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
+		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
+		<Item Name="Vecto Message Bridge.lvclass" Type="LVClass" URL="../Vecto Message Bridge/Vecto Message Bridge.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
 		<Item Name="Volatus Core.lvclass" Type="LVClass" URL="../Volatus Core/Volatus Core.lvclass"/>
 	</Item>
@@ -33,6 +35,8 @@
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Event Reporter Identity.lvclass" Type="LVClass" URL="../Event Reporter Identity/Event Reporter Identity.lvclass"/>
+		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
+		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>
 		<Item Name="Volatus Core Identity.lvclass" Type="LVClass" URL="../Volatus Core Identity/Volatus Core Identity.lvclass"/>
 	</Item>
 	<Item Name="Interfaces" Type="Folder">

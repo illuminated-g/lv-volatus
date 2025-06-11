@@ -16,6 +16,7 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="libs" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="proto" Type="Folder" URL="../../lv-vecto/Vecto/proto">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
@@ -31,6 +32,7 @@
 			<Item Name="Stream-Websocket.lvlib" Type="Library" URL="../../lv-stream-websocket/Stream-Websocket/Stream-Websocket.lvlib"/>
 			<Item Name="Stream.lvlib" Type="Library" URL="../../lv-stream/stream/Stream.lvlib"/>
 			<Item Name="TreeTools.lvlib" Type="Library" URL="../../lv-tree-tools/TreeTools/TreeTools.lvlib"/>
+			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
 			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
 		</Item>
