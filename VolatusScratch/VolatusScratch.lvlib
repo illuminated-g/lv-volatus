@@ -7,8 +7,8 @@
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
 	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
+	<Item Name="TestGUI.vi" Type="VI" URL="../TestGUI.vi"/>
 	<Item Name="TestModule.lvclass" Type="LVClass" URL="../TestModule/TestModule.lvclass"/>
 	<Item Name="Toggle Main.vi" Type="VI" URL="../Toggle Main.vi"/>
 	<Item Name="ToggleTestModule.lvclass" Type="LVClass" URL="../ToggleTestModule/ToggleTestModule.lvclass"/>
-	<Item Name="volatus.ini" Type="Document" URL="../volatus.ini"/>
 </Library>

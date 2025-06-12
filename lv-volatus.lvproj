@@ -49,6 +49,7 @@
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
 		<Item Name="VolatusDAQ.lvlib" Type="Library" URL="../VolatusDAQ/VolatusDAQ.lvlib"/>
 		<Item Name="VolatusData.lvlib" Type="Library" URL="../VolatusData/VolatusData.lvlib"/>
+		<Item Name="VolatusGUI.lvlib" Type="Library" URL="../VolatusGUI/VolatusGUI.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -268,7 +269,7 @@
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/VolatusScratch.lvlib/volatus.ini</Property>
+				<Property Name="Source[2].itemID" Type="Ref"></Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">NI</Property>

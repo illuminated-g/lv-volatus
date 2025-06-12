@@ -114,6 +114,15 @@
 				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 				<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
 			</Item>
+			<Item Name="Launch Configured Tasks.vi" Type="VI" URL="../Launch Configured Tasks.vi">
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;)!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!%"!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!""7&lt;WRB&gt;(6T)%.P=G5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$Z!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!!^7&lt;WRB&gt;(6T)%.P=G5A;7Y!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
+				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+				<Property Name="NI.ClassItem.Flags" Type="Int">128</Property>
+				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+				<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+			</Item>
 			<Item Name="Launch Event Reporter.vi" Type="VI" URL="../Launch Event Reporter.vi">
 				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;)!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!%"!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!""7&lt;WRB&gt;(6T)%.P=G5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$Z!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!!^7&lt;WRB&gt;(6T)%.P=G5A;7Y!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
 				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -133,17 +142,7 @@
 				<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
 			</Item>
 		</Item>
-		<Item Name="Modules" Type="Folder">
-			<Item Name="Launch Top Level Modules.vi" Type="VI" URL="../Launch Top Level Modules.vi">
-				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;)!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!%"!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!""7&lt;WRB&gt;(6T)%.P=G5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$Z!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!!^7&lt;WRB&gt;(6T)%.P=G5A;7Y!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!%!!=$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!!!!!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#!!!!!!</Property>
-				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-				<Property Name="NI.ClassItem.Flags" Type="Int">128</Property>
-				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-				<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-				<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
-			</Item>
-		</Item>
+		<Item Name="Modules" Type="Folder"/>
 		<Item Name="Prelaunch" Type="Folder">
 			<Item Name="Read Volatus INI.vi" Type="VI" URL="../Read Volatus INI.vi">
 				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;E!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!%"!=!!?!!!E$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)56G^M982V=S"$&lt;X*F,GRW9WRB=X-!!""7&lt;WRB&gt;(6T)%.P=G5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"R!-P````]335Z*)&amp;"B&gt;'AA+%2F:G&amp;V&lt;(1J!!!_1(!!(A!!*!V7&lt;WRB&gt;(6T,GRW&lt;'FC&amp;&amp;:P&lt;'&amp;U&gt;8-A1W^S:3ZM&gt;G.M98.T!!!06G^M982V=S"$&lt;X*F)'FO!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"Q!)!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!")!!!!3!!!.!!!!$!!!!!!!!!!!!!!"!!E!!!!!</Property>
