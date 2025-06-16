@@ -17,6 +17,9 @@
 		<Item Name="Logger Identity.lvclass" Type="LVClass" URL="../Logger Identity/Logger Identity.lvclass"/>
 		<Item Name="Redlines Identity.lvclass" Type="LVClass" URL="../Redlines Identity/Redlines Identity.lvclass"/>
 	</Item>
+	<Item Name="Messaging" Type="Folder">
+		<Item Name="Send New Data.vi" Type="VI" URL="../Send New Data.vi"/>
+	</Item>
 	<Item Name="Nested" Type="Folder">
 		<Item Name="Data Logger Module.lvclass" Type="LVClass" URL="../Data Logger Module/Data Logger Module.lvclass"/>
 		<Item Name="Redlines Module.lvclass" Type="LVClass" URL="../Redlines Module/Redlines Module.lvclass"/>
