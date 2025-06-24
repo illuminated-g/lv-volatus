@@ -4,9 +4,11 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="DAQmxAI Test.vi" Type="VI" URL="../DAQmxAI Test.vi"/>
+	<Item Name="DAQmx Test.vi" Type="VI" URL="../DAQmx Test.vi"/>
+	<Item Name="Demo2.vi" Type="VI" URL="../Demo2.vi"/>
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
+	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
 	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
 	<Item Name="TestGUI.vi" Type="VI" URL="../TestGUI.vi"/>
 	<Item Name="TestModule.lvclass" Type="LVClass" URL="../TestModule/TestModule.lvclass"/>

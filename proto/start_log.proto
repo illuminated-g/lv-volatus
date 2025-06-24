@@ -3,4 +3,5 @@ syntax = "proto3";
 message StartLog {
     string series = 1;
     string timestamp = 2;
+    string started_by = 3;
 }
