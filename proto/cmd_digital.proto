@@ -1,7 +1,10 @@
 syntax = "proto3";
 
 message CmdDigital {
-    string group = 1;
-    string channel = 2;
-    bool value = 3;
+    string channel = 1;
+    bool value = 2;
+}
+
+message CmdDigitalMultiple {
+    repeated CmdDigital values = 1;
 }
