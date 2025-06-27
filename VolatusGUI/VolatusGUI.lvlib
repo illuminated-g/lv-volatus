@@ -12,7 +12,7 @@
 	<Item Name="_Private" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Available Indicator Types.vi" Type="VI" URL="../Available Indicator Types.vi"/>
-		<Item Name="Indicator Factory.vi" Type="VI" URL="../Indicator Factory.vi"/>
+		<Item Name="Element Factory.vi" Type="VI" URL="../Element Factory.vi"/>
 	</Item>
 	<Item Name="Base" Type="Folder">
 		<Item Name="Control.lvclass" Type="LVClass" URL="../Control/Control.lvclass"/>
