@@ -15,9 +15,18 @@
 		<Item Name="Element Factory.vi" Type="VI" URL="../Element Factory.vi"/>
 	</Item>
 	<Item Name="Base" Type="Folder">
+		<Item Name="Events" Type="Folder">
+			<Item Name="OnClickHandler.lvclass" Type="LVClass" URL="../OnClickHandler/OnClickHandler.lvclass"/>
+			<Item Name="OnShortcutMenuHandler.lvclass" Type="LVClass" URL="../OnShortcutMenuHandler/OnShortcutMenuHandler.lvclass"/>
+			<Item Name="OnValueChangeHandler.lvclass" Type="LVClass" URL="../OnValueChangeHandler/OnValueChangeHandler.lvclass"/>
+		</Item>
 		<Item Name="Control.lvclass" Type="LVClass" URL="../Control/Control.lvclass"/>
 		<Item Name="GUI Element.lvclass" Type="LVClass" URL="../GUI Element/GUI Element.lvclass"/>
 		<Item Name="Indicator.lvclass" Type="LVClass" URL="../Indicator/Indicator.lvclass"/>
+	</Item>
+	<Item Name="Data Types" Type="Folder">
+		<Item Name="Control Event.ctl" Type="VI" URL="../Control Event.ctl"/>
+		<Item Name="Event Registration.ctl" Type="VI" URL="../Event Registration.ctl"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
 		<Item Name="Controls" Type="Folder">
@@ -30,5 +39,6 @@
 		<Item Name="Lookup Group.vi" Type="VI" URL="../Lookup Group.vi"/>
 		<Item Name="Lookup Indicator Type.vi" Type="VI" URL="../Lookup Indicator Type.vi"/>
 	</Item>
+	<Item Name="Control Event Registrations.lvclass" Type="LVClass" URL="../Control Event Registrations/Control Event Registrations.lvclass"/>
 	<Item Name="PluginGUI.lvclass" Type="LVClass" URL="../PluginGUI/PluginGUI.lvclass"/>
 </Library>
