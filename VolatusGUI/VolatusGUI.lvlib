@@ -29,13 +29,6 @@
 		<Item Name="Event Registration.ctl" Type="VI" URL="../Event Registration.ctl"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
-		<Item Name="Controls" Type="Folder">
-			<Item Name="2WayValve.lvclass" Type="LVClass" URL="../2WayValve/2WayValve.lvclass"/>
-		</Item>
-		<Item Name="Indicators" Type="Folder">
-			<Item Name="DblNumericStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblNumericStatusIndicator.lvclass"/>
-			<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
-		</Item>
 		<Item Name="Lookup Group.vi" Type="VI" URL="../Lookup Group.vi"/>
 		<Item Name="Lookup Indicator Type.vi" Type="VI" URL="../Lookup Indicator Type.vi"/>
 	</Item>
