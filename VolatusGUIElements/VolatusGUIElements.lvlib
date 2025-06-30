@@ -5,10 +5,13 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Controls" Type="Folder">
-		<Item Name="2WayValve.lvclass" Type="LVClass" URL="../../VolatusGUI/2WayValve/2WayValve.lvclass"/>
+		<Item Name="Valves" Type="Folder">
+			<Item Name="2WayValveH.lvclass" Type="LVClass" URL="../2WayValveH/2WayValveH.lvclass"/>
+			<Item Name="2WayValveV.lvclass" Type="LVClass" URL="../2WayValveV/2WayValveV.lvclass"/>
+		</Item>
 	</Item>
 	<Item Name="Indicators" Type="Folder">
-		<Item Name="DblNumericStatusIndicator.lvclass" Type="LVClass" URL="../../VolatusGUI/DblNumericStatusIndicator/DblNumericStatusIndicator.lvclass"/>
-		<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../../VolatusGUI/NumericIndicator/NumericIndicator.lvclass"/>
+		<Item Name="DblNumericStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblNumericStatusIndicator.lvclass"/>
+		<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 	</Item>
 </Library>
