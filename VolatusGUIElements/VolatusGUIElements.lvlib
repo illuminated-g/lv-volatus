@@ -11,7 +11,7 @@
 		</Item>
 	</Item>
 	<Item Name="Indicators" Type="Folder">
-		<Item Name="DblNumericStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblNumericStatusIndicator.lvclass"/>
+		<Item Name="DblStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblStatusIndicator.lvclass"/>
 		<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 	</Item>
 </Library>
