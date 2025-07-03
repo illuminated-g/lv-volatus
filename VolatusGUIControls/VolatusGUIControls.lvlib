@@ -8,8 +8,13 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
-		<Item Name="2WayValveH.ctl" Type="VI" URL="../2WayValveH.ctl"/>
-		<Item Name="2WayValveV.ctl" Type="VI" URL="../2WayValveV.ctl"/>
+		<Item Name="Numeric" Type="Folder">
+			<Item Name="DblControl.ctl" Type="VI" URL="../DblControl.ctl"/>
+		</Item>
+		<Item Name="Valves" Type="Folder">
+			<Item Name="2WayValveH.ctl" Type="VI" URL="../2WayValveH.ctl"/>
+			<Item Name="2WayValveV.ctl" Type="VI" URL="../2WayValveV.ctl"/>
+		</Item>
 	</Item>
 	<Item Name="Indicators" Type="Folder">
 		<Item Name="Numeric" Type="Folder">

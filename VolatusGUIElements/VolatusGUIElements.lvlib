@@ -5,6 +5,9 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Controls" Type="Folder">
+		<Item Name="Numeric" Type="Folder">
+			<Item Name="DblPopupControl.lvclass" Type="LVClass" URL="../DblPopupControl/DblPopupControl.lvclass"/>
+		</Item>
 		<Item Name="Valves" Type="Folder">
 			<Item Name="2WayValveH.lvclass" Type="LVClass" URL="../2WayValveH/2WayValveH.lvclass"/>
 			<Item Name="2WayValveV.lvclass" Type="LVClass" URL="../2WayValveV/2WayValveV.lvclass"/>
