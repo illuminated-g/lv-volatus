@@ -5,7 +5,7 @@
     "Host":"git@github.com:illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"8335f18cf5f346204bb53b52241f4e4ed91bb208"
+    "Version":"441db4951bfe902ad1fc86c33ae20ebab1119b50"
   },
   "Dependencies":[
     {

@@ -13,11 +13,15 @@
 		<Item Name="DAQmxChannel.lvclass" Type="LVClass" URL="../DAQmxChannel/DAQmxChannel.lvclass"/>
 	</Item>
 	<Item Name="Channels" Type="Folder">
+		<Item Name="RTDChannel.lvclass" Type="LVClass" URL="../RTDChannel/RTDChannel.lvclass"/>
 		<Item Name="TCChannel.lvclass" Type="LVClass" URL="../DAQmxThermocoupleChannel/TCChannel.lvclass"/>
 		<Item Name="VoltageInChannel.lvclass" Type="LVClass" URL="../DAQmxVoltageChannel/VoltageInChannel.lvclass"/>
 		<Item Name="VoltageOutChannel.lvclass" Type="LVClass" URL="../VoltageOutChannel/VoltageOutChannel.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
+		<Item Name="RTD Excitation.ctl" Type="VI" URL="../RTD Excitation.ctl"/>
+		<Item Name="RTD Type.ctl" Type="VI" URL="../RTD Type.ctl"/>
+		<Item Name="RTD Wiring.ctl" Type="VI" URL="../RTD Wiring.ctl"/>
 		<Item Name="Sampling Config.ctl" Type="VI" URL="../Sampling Config.ctl"/>
 		<Item Name="TC Type.ctl" Type="VI" URL="../TC Type.ctl"/>
 		<Item Name="Temperature Units.ctl" Type="VI" URL="../Temperature Units.ctl"/>
