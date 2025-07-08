@@ -5,7 +5,8 @@
     "Host":"git@github.com:illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"441db4951bfe902ad1fc86c33ae20ebab1119b50"
+    "Version":"60965abb46bb66473af6993f83917ea99e2631b8",
+    "License":""
   },
   "Dependencies":[
     {
@@ -15,7 +16,8 @@
         "Host":"git@github.com:illuminated-g/lv-cdm.git",
         "Path":"",
         "Branch":"main",
-        "Version":"706fed6911435f3559a8732dc1ec7f37c828fd18"
+        "Version":"706fed6911435f3559a8732dc1ec7f37c828fd18",
+        "License":""
       },
       "Path":"..\\lv-cdm"
     },
@@ -26,7 +28,8 @@
         "Host":"git@github.com:illuminated-g/lv-http-server.git",
         "Path":"",
         "Branch":"main",
-        "Version":"94b46c2f51d940645e03d668708bd777fb82c6dd"
+        "Version":"94b46c2f51d940645e03d668708bd777fb82c6dd",
+        "License":""
       },
       "Path":"..\\lv-http-server"
     },
@@ -37,7 +40,8 @@
         "Host":"git@github.com:illuminated-g/lv-http-util.git",
         "Path":"",
         "Branch":"main",
-        "Version":"ee75373876fd159ac76f15aee5f629821ff9bb7d"
+        "Version":"ee75373876fd159ac76f15aee5f629821ff9bb7d",
+        "License":""
       },
       "Path":"..\\lv-http-util"
     },
@@ -48,7 +52,8 @@
         "Host":"git@github.com:illuminated-g/lv-promises.git",
         "Path":"",
         "Branch":"main",
-        "Version":"c5c3c03c030db07e8a550fdd0b8806ab727244da"
+        "Version":"c5c3c03c030db07e8a550fdd0b8806ab727244da",
+        "License":""
       },
       "Path":"..\\lv-promises"
     },
@@ -59,7 +64,8 @@
         "Host":"git@github.com:illuminated-g/lv-protoc.git",
         "Path":"",
         "Branch":"main",
-        "Version":"fca7465018893de352641c1d074f7996efcaa68b"
+        "Version":"fca7465018893de352641c1d074f7996efcaa68b",
+        "License":""
       },
       "Path":"..\\lv-protoc"
     },
@@ -70,7 +76,8 @@
         "Host":"git@github.com:illuminated-g/lv-stream.git",
         "Path":"",
         "Branch":"master",
-        "Version":"2eafa50d72d318a95603fb2430ccb3bc62f4cb3e"
+        "Version":"2eafa50d72d318a95603fb2430ccb3bc62f4cb3e",
+        "License":""
       },
       "Path":"..\\lv-stream"
     },
@@ -81,7 +88,8 @@
         "Host":"git@github.com:illuminated-g/lv-stream-tcp.git",
         "Path":"",
         "Branch":"master",
-        "Version":"fbbb5029cfda9858a5ce34851c2c1c1aa7e35e2a"
+        "Version":"fbbb5029cfda9858a5ce34851c2c1c1aa7e35e2a",
+        "License":""
       },
       "Path":"..\\lv-stream-tcp"
     },
@@ -92,7 +100,8 @@
         "Host":"git@github.com:illuminated-g/lv-stream-websocket.git",
         "Path":"",
         "Branch":"main",
-        "Version":"f475d749885eefc9e50821dfc92ade5612bae5be"
+        "Version":"f475d749885eefc9e50821dfc92ade5612bae5be",
+        "License":""
       },
       "Path":"..\\lv-stream-websocket"
     },
@@ -103,7 +112,8 @@
         "Host":"git@github.com:illuminated-g/lv-tree-tools.git",
         "Path":"",
         "Branch":"main",
-        "Version":"d6fa1f2fafe93b370312f1f5447b24da70fd7932"
+        "Version":"d6fa1f2fafe93b370312f1f5447b24da70fd7932",
+        "License":""
       },
       "Path":"..\\lv-tree-tools"
     },
@@ -114,7 +124,8 @@
         "Host":"git@github.com:illuminated-g/lv-vecto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"17035c84f6eaeeef01bebe9bf6ada993a990e359"
+        "Version":"3be22cb301e8bf254d949fd0501b1072b3f51116",
+        "License":""
       },
       "Path":"..\\lv-vecto"
     },
@@ -125,7 +136,8 @@
         "Host":"git@github.com:illuminated-g/lv-web-crypto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"2041e1864f16d4cfb88ca307a908817f5b0048b3"
+        "Version":"2041e1864f16d4cfb88ca307a908817f5b0048b3",
+        "License":""
       },
       "Path":"..\\lv-web-crypto"
     }
