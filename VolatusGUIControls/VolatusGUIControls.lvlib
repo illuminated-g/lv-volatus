@@ -8,6 +8,9 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
+		<Item Name="Button" Type="Folder">
+			<Item Name="ButtonControl.ctl" Type="VI" URL="../ButtonControl.ctl"/>
+		</Item>
 		<Item Name="Numeric" Type="Folder">
 			<Item Name="DblControl.ctl" Type="VI" URL="../DblControl.ctl"/>
 		</Item>

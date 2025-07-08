@@ -411,7 +411,6 @@
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="provcom_Utility_IsEmptyOrWhiteSpace.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_Utility_IsEmptyOrWhiteSpace.vi"/>
 			<Item Name="Type to Config.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Config-JSON/Type to Config.vim"/>
-			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../VolatusElements/DblNumericStatus.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
