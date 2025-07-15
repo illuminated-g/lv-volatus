@@ -13,6 +13,9 @@
 			<Item Name="Set Meta Type.vi" Type="VI" URL="../Set Meta Type.vi"/>
 			<Item Name="Set Overlay Type.vi" Type="VI" URL="../Set Overlay Type.vi"/>
 		</Item>
+		<Item Name="Scratch" Type="Folder">
+			<Item Name="Test Overlays.vi" Type="VI" URL="../Test Overlays.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Config Format.ctl" Type="VI" URL="../Config Format.ctl"/>

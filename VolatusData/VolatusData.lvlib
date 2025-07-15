@@ -10,20 +10,30 @@
 
 </Property>
 	<Item Name="Data Types" Type="Folder">
+		<Item Name="Logger Ready.ctl" Type="VI" URL="../Logger Ready.ctl"/>
+		<Item Name="Logger State.ctl" Type="VI" URL="../Logger State.ctl"/>
+		<Item Name="Logger Stopped.ctl" Type="VI" URL="../Logger Stopped.ctl"/>
+		<Item Name="Logging State.ctl" Type="VI" URL="../Logging State.ctl"/>
 		<Item Name="New Data.ctl" Type="VI" URL="../New Data.ctl"/>
+		<Item Name="Prepare Log.ctl" Type="VI" URL="../Prepare Log.ctl"/>
+		<Item Name="Register Logger.ctl" Type="VI" URL="../Register Logger.ctl"/>
+		<Item Name="Unregister Logger.ctl" Type="VI" URL="../Unregister Logger.ctl"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="DataProc Identity.lvclass" Type="LVClass" URL="../DataProc Identity/DataProc Identity.lvclass"/>
+		<Item Name="Log Manager Identity.lvclass" Type="LVClass" URL="../Log Manager Identity/Log Manager Identity.lvclass"/>
 		<Item Name="Logger Identity.lvclass" Type="LVClass" URL="../Logger Identity/Logger Identity.lvclass"/>
 		<Item Name="Redlines Identity.lvclass" Type="LVClass" URL="../Redlines Identity/Redlines Identity.lvclass"/>
 	</Item>
 	<Item Name="Messaging" Type="Folder">
-		<Item Name="Send New Data.vi" Type="VI" URL="../Send New Data.vi"/>
+		<Item Name="Send New Data (Array).vi" Type="VI" URL="../Send New Data (Array).vi"/>
+		<Item Name="Send New Data (Wfm).vi" Type="VI" URL="../Send New Data (Wfm).vi"/>
 	</Item>
 	<Item Name="Nested" Type="Folder">
 		<Item Name="Data Logger Module.lvclass" Type="LVClass" URL="../Data Logger Module/Data Logger Module.lvclass"/>
 		<Item Name="Redlines Module.lvclass" Type="LVClass" URL="../Redlines Module/Redlines Module.lvclass"/>
 	</Item>
 	<Item Name="Data Processor Module.lvclass" Type="LVClass" URL="../Data Processor Module/Data Processor Module.lvclass"/>
+	<Item Name="Log Manager Module.lvclass" Type="LVClass" URL="../Log Manager Module/Log Manager Module.lvclass"/>
 	<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
 </Library>

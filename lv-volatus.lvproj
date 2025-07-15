@@ -432,7 +432,7 @@
 				<Property Name="Bld_postActionVIID" Type="Ref">/My Computer/VolatusBuild.lvlib/PrePost Actions/Volatus Post-Build Action.vi</Property>
 				<Property Name="Bld_preActionVIID" Type="Ref">/My Computer/VolatusBuild.lvlib/PrePost Actions/Volatus Pre-Build Action.vi</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{1EE8B398-2758-4770-8AC8-ED4F8E8C0311}</Property>
-				<Property Name="Bld_version.build" Type="Int">7</Property>
+				<Property Name="Bld_version.build" Type="Int">8</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">demoapp.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/DemoApp/demoapp.exe</Property>
@@ -441,10 +441,10 @@
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
 				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/DemoApp/data</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{7481BD13-B23B-4EA8-BE03-9CB9E90AE4F0}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{9884A6E1-141A-4A2A-A8E0-3561E99C019C}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref"></Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VolatusScratch.lvlib/DAQmx Test.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
