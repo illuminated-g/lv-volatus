@@ -5,7 +5,7 @@
     "Host":"git@github.com:illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"60965abb46bb66473af6993f83917ea99e2631b8",
+    "Version":"6a31bcf78f0a469109303977b4a282aa4e70deec",
     "License":""
   },
   "Dependencies":[
@@ -124,7 +124,7 @@
         "Host":"git@github.com:illuminated-g/lv-vecto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"3be22cb301e8bf254d949fd0501b1072b3f51116",
+        "Version":"016122edffefa30ac1e3e4cac3a7e7105aee4c29",
         "License":""
       },
       "Path":"..\\lv-vecto"
