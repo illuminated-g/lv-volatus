@@ -35,6 +35,7 @@
 			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
 			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
+			<Item Name="VectoScratch.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/VectoScratch.lvlib"/>
 		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -410,6 +411,8 @@
 			<Item Name="provcom_StringGlobals.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_StringGlobals.vi"/>
 			<Item Name="provcom_Utility_IsEmptyOrWhiteSpace.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_Utility_IsEmptyOrWhiteSpace.vi"/>
 			<Item Name="Type to Config.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Config-JSON/Type to Config.vim"/>
+			<Item Name="RequestTwoDouble.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/proto/messages/RequestTwoDouble/RequestTwoDouble.lvlib"/>
+			<Item Name="ReplyOneDouble.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/proto/messages/ReplyOneDouble/ReplyOneDouble.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
