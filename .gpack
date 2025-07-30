@@ -5,7 +5,7 @@
     "Host":"git@github.com:illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"6a31bcf78f0a469109303977b4a282aa4e70deec",
+    "Version":"505b3cc65d9172937bee2339b8af5588078e92cd",
     "License":""
   },
   "Dependencies":[
@@ -16,7 +16,7 @@
         "Host":"git@github.com:illuminated-g/lv-cdm.git",
         "Path":"",
         "Branch":"main",
-        "Version":"706fed6911435f3559a8732dc1ec7f37c828fd18",
+        "Version":"261694bae7d3080bca4628bc389b1511c0004844",
         "License":""
       },
       "Path":"..\\lv-cdm"
@@ -28,7 +28,7 @@
         "Host":"git@github.com:illuminated-g/lv-http-server.git",
         "Path":"",
         "Branch":"main",
-        "Version":"94b46c2f51d940645e03d668708bd777fb82c6dd",
+        "Version":"e55f66124a8fa0099bdabc1097072bf68bbc4e1a",
         "License":""
       },
       "Path":"..\\lv-http-server"
