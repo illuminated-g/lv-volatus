@@ -55,6 +55,7 @@
 		<Item Name="VolatusGUIControls.lvlib" Type="Library" URL="../VolatusGUIControls/VolatusGUIControls.lvlib"/>
 		<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
+		<Item Name="VolatusSeq.lvlib" Type="Library" URL="../VolatusSeq/VolatusSeq.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
