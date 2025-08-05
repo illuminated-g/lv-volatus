@@ -5,14 +5,30 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Classes" Type="Folder">
+		<Item Name="Commands" Type="Folder"/>
 		<Item Name="Command.lvclass" Type="LVClass" URL="../Command/Command.lvclass"/>
 		<Item Name="Condition.lvclass" Type="LVClass" URL="../Condition/Condition.lvclass"/>
 		<Item Name="Sequence.lvclass" Type="LVClass" URL="../Sequence/Sequence.lvclass"/>
 		<Item Name="State.lvclass" Type="LVClass" URL="../State/State.lvclass"/>
 		<Item Name="Transition.lvclass" Type="LVClass" URL="../Transition/Transition.lvclass"/>
+		<Item Name="Variables.lvclass" Type="LVClass" URL="../Variables/Variables.lvclass"/>
+	</Item>
+	<Item Name="Data Types" Type="Folder">
+		<Item Name="Condition Operator.ctl" Type="VI" URL="../Condition Operator.ctl"/>
+		<Item Name="Condition Type.ctl" Type="VI" URL="../Condition Type.ctl"/>
+		<Item Name="Iteration Result.ctl" Type="VI" URL="../Iteration Result.ctl"/>
+		<Item Name="Sequence Mode.ctl" Type="VI" URL="../Sequence Mode.ctl"/>
+		<Item Name="Sequencer Action.ctl" Type="VI" URL="../Sequencer Action.ctl"/>
+		<Item Name="Timer.ctl" Type="VI" URL="../Timer.ctl"/>
+		<Item Name="Timing.ctl" Type="VI" URL="../Timing.ctl"/>
+		<Item Name="Value Source.ctl" Type="VI" URL="../Value Source.ctl"/>
 	</Item>
 	<Item Name="HTTP" Type="Folder">
 		<Item Name="SequencingHttpCtrlr.lvclass" Type="LVClass" URL="../SequencingHttpCtrlr/SequencingHttpCtrlr.lvclass"/>
+	</Item>
+	<Item Name="Modules" Type="Folder">
+		<Item Name="Sequence Submodule.lvclass" Type="LVClass" URL="../Sequence Submodule/Sequence Submodule.lvclass"/>
+		<Item Name="Status Submodule.lvclass" Type="LVClass" URL="../Status Submodule/Status Submodule.lvclass"/>
 	</Item>
 	<Item Name="Sequencing.lvclass" Type="LVClass" URL="../Sequencing/Sequencing.lvclass"/>
 </Library>
