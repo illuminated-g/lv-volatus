@@ -44,6 +44,7 @@
 	</Item>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="Lookups" Type="Folder">
+			<Item Name="Volatus Meta Value Lookup.vi" Type="VI" URL="../Volatus Meta Value Lookup.vi"/>
 			<Item Name="Volatus Type Lookup.vi" Type="VI" URL="../Volatus Type Lookup.vi"/>
 		</Item>
 		<Item Name="Config Format.vi" Type="VI" URL="../Config Format.vi"/>
