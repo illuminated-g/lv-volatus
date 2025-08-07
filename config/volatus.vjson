@@ -42,14 +42,14 @@
                     },
                     "Nodes": {
                         "Meta": {
-                            "VL_Type": "VL_Task_List"
+                            "VL_Type": "VL_Node_List"
                         },
                         "DemoNode": {
                             "Meta": {
                                 "VL_Type": "VL_Node",
                                 "VL_Node_Type": "VolatusDemo"
                             },
-                            "Node_ID": "1",
+                            "Node_ID": 1,
                             "DebugGUIs": false,
                             "Tasks": {
                                 "LoggingManager": {

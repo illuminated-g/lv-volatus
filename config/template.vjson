@@ -1,0 +1,306 @@
+{
+    "Volatus": {
+        "Meta": {
+            "VL_Config_Version": "0.0.0+1"
+        },
+        "$SystemName": {
+            "Meta": {
+                "VL_Type": "VL_System"
+            },
+            "Sensors": {
+                "Meta": {
+                    "VL_Type": "VL_Sensor_List"
+                },
+                "Value": [
+                    {
+                        "Model": "",
+                        "Serial": "",
+                        "Scale": {
+                            "Type": "Polynomial",
+                            "Coefficients": [0, 1]
+                        }
+                    }
+                ]
+            },
+            "Clusters": {
+                "$ClusterName": {
+                    "Meta": {
+                        "VL_Type": "VL_Cluster"
+                    },
+                    "Discovery": {
+                        "Address": "",
+                        "Port": 0
+                    },
+                    "Nodes": {
+                        "Meta": {
+                            "VL_Type": "VL_Node_List"
+                        },
+                        "$DAQNodeName": {
+                            "Meta": {
+                                "VL_Type": "VL_Node"
+                            },
+                            "Node_ID": 0,
+                            "DebugGUIs": false,
+                            "Events": {
+                                "LogFolder": "/c/logs"
+                            },
+                            "Network": {
+                                "Bind_Address": "0.0.0.0",
+                                "Announce_Interval": 5,
+                                "TCP": {
+                                    "Address": "localhost",
+                                    "Port": 12082,
+                                    "Server": true
+                                },
+                                "HTTP_Port": 13083
+                            },
+                            "Tasks": {
+                                "Logging": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "LogManager"
+                                    },
+                                    "Folder": "/c/logs"
+                                },
+                                "DAQ_AI_1kHz": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "DAQmxAI"
+                                    },
+                                    "DAQmx": {
+                                        "Rate": 1000,
+                                        "ChunkSize": 100
+                                    },
+                                    "DataProc": {
+
+                                    },
+                                    "1kHz_AI": {
+                                        "Meta": {
+                                            "VL_Type": "VL_Group",
+                                            "VL_Group_Type": "Double"
+                                        },
+                                        "Publish": {
+                                            "Address": "239.0.0.11",
+                                            "Port": 36987
+                                        },
+                                        "Channels": {
+                                            "$AI-00": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "Voltage_In",
+                                                "Terminal": "",
+                                                "Min": -10,
+                                                "Max": 10,
+                                                "Scale": {
+                                                    "Type": "Sensor",
+                                                    "Sensor": {
+                                                        "Model": "",
+                                                        "Serial": ""
+                                                    }
+                                                }
+                                            },
+                                            "$AI-01": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "TC",
+                                                "Temp_Units": "F",
+                                                "TC_Type": "K"
+                                            },
+                                            "$AI-02": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "RTD",
+                                                "RTD_Type": "",
+                                                "Temp_Units": "F",
+                                                "RTD_Wiring": "4-Wire",
+                                                "Ex_Source": "Internal",
+                                                "Ex_Value": 0,
+                                                "r0": 0
+                                            },
+                                            "$AI-03": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "IEPE",
+                                                "Terminal": "Differential",
+                                                "Min": -10,
+                                                "Max": 10,
+                                                "Ex_Source": "Internal",
+                                                "Ex_Value": 0,
+                                                "Sensitivity_Units": "mVolts/g",
+                                                "Sensitivity": 0
+                                            }
+                                        }
+                                    }
+                                },
+                                "DAQ_AO": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "DAQmxAO"
+                                    },
+                                    "DataProc": {
+
+                                    },
+                                    "AO_Group": {
+                                        "Meta": {
+                                            "VL_Type": "VL_Group",
+                                            "VL_Group_Type": "Double"
+                                        },
+                                        "Publish": {
+                                            "Address": "239.0.0.11",
+                                            "Port": 36987
+                                        },
+                                        "Channels": {
+                                            "$AO-00": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "Voltage_Out"
+                                            }
+                                        }
+                                    }
+                                },
+                                "DAQ_DI": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "DAQmxDI"
+                                    },
+                                    "DAQmx": {
+                                        "Rate": 100,
+                                        "ChunkSize": 10
+                                    },
+                                    "DataProc": {
+
+                                    },
+                                    "DI_Group": {
+                                        "Meta": {
+                                            "VL_Type": "VL_Group",
+                                            "VL_Group_Type": "Double"
+                                        },
+                                        "Publish": {
+                                            "Address": "239.0.0.11",
+                                            "Port": 36987
+                                        },
+                                        "Channels": {
+                                            "$DI-00": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "Digital_In"
+                                            },
+                                            "$DI-01": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "Digital_In",
+                                                "Scale": {
+                                                    "Type": "Invert Bool"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "DAQ_DO": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "DAQmxDO"
+                                    },
+                                    "DataProc": {
+
+                                    },
+                                    "DO_Group": {
+                                        "Meta": {
+                                            "VL_Type": "VL_Group",
+                                            "VL_Group_Type": "Double"
+                                        },
+                                        "Publish": {
+                                            "Address": "239.0.0.11",
+                                            "Port": 36987
+                                        },
+                                        "Channels": {
+                                            "$DO-00": {
+                                                "Meta": {
+                                                    "VL_Type": "VL_Channel"
+                                                },
+                                                "Resource": "",
+                                                "Type": "Digital_Out",
+                                                "Scale": {
+                                                    "Type": "Invert Bool"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "$GUINodeName": {
+                            "Meta": {
+                                "VL_Type": "VL_Node"
+                            },
+                            "Node_ID": 0,
+                            "DebugGUIs": false,
+                            "Events": {
+                                "LogFolder": "c:/logs"
+                            },
+                            "Network": {
+                                "Bind_Address": "0.0.0.0",
+                                "Announce_Interval": 5,
+                                "TCP": {
+                                    "Address": "",
+                                    "Port": 12082,
+                                    "Server": false
+                                },
+                                "HTTP_Port": 13083
+                            },
+                            "Tasks": {
+                                "PluginGUI": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "PluginGUI"
+                                    },
+                                    "GUI_Path": "",
+                                    "Autoshow": true,
+                                    "Refresh_Timeout_ms": 100
+                                },
+                                "GenericAI": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "GenericAI"
+                                    }
+                                },
+                                "GenericAO": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "GenericAO"
+                                    }
+                                },
+                                "GenericDI": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "GenericDI"
+                                    }
+                                },
+                                "GenericDO": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "GenericDO"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
