@@ -15,6 +15,7 @@
 	<Item Name="Channels" Type="Folder">
 		<Item Name="DigitalInChannel.lvclass" Type="LVClass" URL="../DigitalInChannel/DigitalInChannel.lvclass"/>
 		<Item Name="DigitalOutChannel.lvclass" Type="LVClass" URL="../DigitalOutChannel/DigitalOutChannel.lvclass"/>
+		<Item Name="IEPEChannel.lvclass" Type="LVClass" URL="../IEPEChannel/IEPEChannel.lvclass"/>
 		<Item Name="RTDChannel.lvclass" Type="LVClass" URL="../RTDChannel/RTDChannel.lvclass"/>
 		<Item Name="TCChannel.lvclass" Type="LVClass" URL="../DAQmxThermocoupleChannel/TCChannel.lvclass"/>
 		<Item Name="VoltageInChannel.lvclass" Type="LVClass" URL="../DAQmxVoltageChannel/VoltageInChannel.lvclass"/>
