@@ -5,12 +5,13 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Data Types" Type="Folder">
-		<Item Name="Latched Config.ctl" Type="VI" URL="../Latched Config.ctl"/>
 		<Item Name="Valve Action.ctl" Type="VI" URL="../Valve Action.ctl"/>
 	</Item>
 	<Item Name="Valves" Type="Folder">
 		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
+		<Item Name="PulsedValve.lvclass" Type="LVClass" URL="../PulsedValve/PulsedValve.lvclass"/>
+		<Item Name="SequencedValves.lvclass" Type="LVClass" URL="../SequencedValves/SequencedValves.lvclass"/>
 	</Item>
-	<Item Name="Valve.lvclass" Type="LVClass" URL="../Valve/Valve.lvclass"/>
+	<Item Name="ValveControl.lvclass" Type="LVClass" URL="../Valve/ValveControl.lvclass"/>
 	<Item Name="ValveControlModule.lvclass" Type="LVClass" URL="../ValveControlModule/ValveControlModule.lvclass"/>
 </Library>
