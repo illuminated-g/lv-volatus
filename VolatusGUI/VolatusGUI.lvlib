@@ -21,9 +21,7 @@
 			<Item Name="OnShortcutMenuHandler.lvclass" Type="LVClass" URL="../OnShortcutMenuHandler/OnShortcutMenuHandler.lvclass"/>
 			<Item Name="OnValueChangeHandler.lvclass" Type="LVClass" URL="../OnValueChangeHandler/OnValueChangeHandler.lvclass"/>
 		</Item>
-		<Item Name="Control.lvclass" Type="LVClass" URL="../Control/Control.lvclass"/>
 		<Item Name="GUI Element.lvclass" Type="LVClass" URL="../GUI Element/GUI Element.lvclass"/>
-		<Item Name="Indicator.lvclass" Type="LVClass" URL="../Indicator/Indicator.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Control Event.ctl" Type="VI" URL="../Control Event.ctl"/>
