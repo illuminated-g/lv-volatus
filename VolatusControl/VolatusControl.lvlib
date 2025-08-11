@@ -4,14 +4,14 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Controls" Type="Folder">
+		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
+		<Item Name="PulsedControl.lvclass" Type="LVClass" URL="../PulsedControl/PulsedControl.lvclass"/>
+		<Item Name="SeqDelayControl.lvclass" Type="LVClass" URL="../SeqDelayControl/SeqDelayControl.lvclass"/>
+	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Valve Action.ctl" Type="VI" URL="../Valve Action.ctl"/>
 	</Item>
-	<Item Name="Valves" Type="Folder">
-		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
-		<Item Name="PulsedValve.lvclass" Type="LVClass" URL="../PulsedValve/PulsedValve.lvclass"/>
-		<Item Name="SequencedValves.lvclass" Type="LVClass" URL="../SequencedValves/SequencedValves.lvclass"/>
-	</Item>
-	<Item Name="ValveControl.lvclass" Type="LVClass" URL="../Valve/ValveControl.lvclass"/>
-	<Item Name="ValveControlModule.lvclass" Type="LVClass" URL="../ValveControlModule/ValveControlModule.lvclass"/>
+	<Item Name="DigitalControl.lvclass" Type="LVClass" URL="../DigitalControl/DigitalControl.lvclass"/>
+	<Item Name="DigitalControlModule.lvclass" Type="LVClass" URL="../DigitalControlModule/DigitalControlModule.lvclass"/>
 </Library>

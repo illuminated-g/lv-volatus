@@ -25,6 +25,7 @@
 </Property>
 	<Item Name="Parent Libraries" Type="Parent Libraries">
 		<Item Name="VolatusGUI.lvlib:GUI Element.lvclass" Type="Parent" URL="../../../VolatusGUI/GUI Element/GUI Element.lvclass"/>
+		<Item Name="VolatusGUI.lvlib:OnMouseDown.lvclass" Type="Parent" URL="../../../VolatusGUI/OnMouseDown/OnMouseDown.lvclass"/>
 		<Item Name="VolatusGUI.lvlib:OnValueChangeHandler.lvclass" Type="Parent" URL="../../../VolatusGUI/OnValueChangeHandler/OnValueChangeHandler.lvclass"/>
 	</Item>
 	<Item Name="DigitalButtonControl.ctl" Type="Class Private Data" URL="DigitalButtonControl.ctl">
@@ -120,6 +121,15 @@
 	<Item Name="Public" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">1</Property>
 		<Item Name="Data Types" Type="Folder"/>
+		<Item Name="Handle Mouse Down.vi" Type="VI" URL="../Handle Mouse Down.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!+2!!!!'!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;J!=!!?!!!X'&amp;:P&lt;'&amp;U&gt;8.(65F&amp;&lt;'6N:7ZU=SZM&gt;GRJ9BR%;7&gt;J&gt;'&amp;M1H6U&gt;'^O1W^O&gt;(*P&lt;#ZM&gt;G.M98.T!"B%;7&gt;J&gt;'&amp;M1H6U&gt;'^O1W^O&gt;(*P&lt;#"P&gt;81!!!J!)164;'FG&gt;!!+1#%%1X2S&lt;!!!#%!B!U&amp;M&gt;!!)1#%$1WVE!!B!)1.0=(1!'E"1!!5!"A!(!!A!#1!+#&amp;"M982.&lt;W2T!!!Y1(!!(A!!)AV7&lt;WRB&gt;(6T,GRW&lt;'FC%F:P&lt;'&amp;U&gt;8."5%EO&lt;(:D&lt;'&amp;T=Q!!#F:P&lt;'&amp;U&gt;8."5%E!!"*!)1R%&lt;X6C&lt;'5A1WRJ9WM!!!Z!)1B.:7ZV)%NF?1!!%%"1!!)!$1!/"%VP:(-!!"2!=!!)!!!!"A!!"E.U&lt;&amp;*F:A!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!21!-!#EBP=GF[&lt;WZU97Q!!!^!!Q!)6G6S&gt;'FD97Q!!$-!]1!!!!!!!!!"&amp;%R75'^J&lt;H1T-F2Z='6%:79O9X2M!":!5!!#!")!%Q:$&lt;W^S:(-!!!V!"A!'1H6U&gt;'^O!!"91(!!(A!!.RB7&lt;WRB&gt;(6T2V6*27RF&lt;76O&gt;(-O&lt;(:M;7)=2'FH;82B&lt;%*V&gt;(2P&lt;E.P&lt;H2S&lt;WQO&lt;(:D&lt;'&amp;T=Q!82'FH;82B&lt;%*V&gt;(2P&lt;E.P&lt;H2S&lt;WQA;7Y!6!$Q!!Q!!Q!%!!1!"1!,!!Q!$Q!1!"%!&amp;!!6!"9#!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!%!!!!"!!!!!1!!!!%!!!!!A!!!!1!!!!%!!!!*!!!!!!!1!8!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">1090519178</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1082667520</Property>
+		</Item>
 		<Item Name="Handle Value Change.vi" Type="VI" URL="../Handle Value Change.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(4!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;J!=!!?!!!X'&amp;:P&lt;'&amp;U&gt;8.(65F&amp;&lt;'6N:7ZU=SZM&gt;GRJ9BR%;7&gt;J&gt;'&amp;M1H6U&gt;'^O1W^O&gt;(*P&lt;#ZM&gt;G.M98.T!"B%;7&gt;J&gt;'&amp;M1H6U&gt;'^O1W^O&gt;(*P&lt;#"P&gt;81!!$B!=!!?!!!C$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)36G^M982V=U&amp;133ZM&gt;G.M98.T!!!+6G^M982V=U&amp;131!!&amp;%"Q!!A!!!!'!!!'1X2M5G6G!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!R!5Q:/:8&gt;797Q!!!R!5Q:0&lt;'2797Q!!&amp;B!=!!?!!!X'&amp;:P&lt;'&amp;U&gt;8.(65F&amp;&lt;'6N:7ZU=SZM&gt;GRJ9BR%;7&gt;J&gt;'&amp;M1H6U&gt;'^O1W^O&gt;(*P&lt;#ZM&gt;G.M98.T!"&gt;%;7&gt;J&gt;'&amp;M1H6U&gt;'^O1W^O&gt;(*P&lt;#"J&lt;A"5!0!!$!!$!!1!"!!&amp;!!1!"A!%!!=!#!!*!!I!#Q-!!(A!!!U)!!!!!!!!!!!!!)E!!!!!!!!!%!!!!!!!!!!1!!!!#A!!!")!!!!1!!!!E!!!!!!"!!Q!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
