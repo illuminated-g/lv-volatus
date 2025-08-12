@@ -14,6 +14,9 @@
 		<Item Name="Numeric" Type="Folder">
 			<Item Name="DblControl.ctl" Type="VI" URL="../DblControl.ctl"/>
 		</Item>
+		<Item Name="Special" Type="Folder">
+			<Item Name="Logging Control.ctl" Type="VI" URL="../Logging Control.ctl"/>
+		</Item>
 		<Item Name="Valves" Type="Folder">
 			<Item Name="2WayValveH.ctl" Type="VI" URL="../2WayValveH.ctl"/>
 			<Item Name="2WayValveV.ctl" Type="VI" URL="../2WayValveV.ctl"/>
