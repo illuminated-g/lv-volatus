@@ -10,6 +10,7 @@
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
 	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
 	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
+	<Item Name="Test MinMax Decimation.vi" Type="VI" URL="../Test MinMax Decimation.vi"/>
 	<Item Name="TestGUI.vi" Type="VI" URL="../TestGUI.vi"/>
 	<Item Name="TestModule.lvclass" Type="LVClass" URL="../TestModule/TestModule.lvclass"/>
 	<Item Name="Toggle Main.vi" Type="VI" URL="../Toggle Main.vi"/>

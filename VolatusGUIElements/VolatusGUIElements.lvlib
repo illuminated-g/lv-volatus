@@ -23,10 +23,16 @@
 		</Item>
 	</Item>
 	<Item Name="Indicators" Type="Folder">
+		<Item Name="Plotting" Type="Folder">
+			<Item Name="LocalGraphBuffer.lvclass" Type="LVClass" URL="../LocalGraphBuffer/LocalGraphBuffer.lvclass"/>
+		</Item>
 		<Item Name="DblStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblStatusIndicator.lvclass"/>
 		<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
+		<Item Name="Plotting" Type="Folder">
+			<Item Name="MinMax Decimation.vi" Type="VI" URL="../MinMax Decimation.vi"/>
+		</Item>
 		<Item Name="Is Stale.vi" Type="VI" URL="../Is Stale.vi"/>
 		<Item Name="Parse Color.vi" Type="VI" URL="../DblNumericStatusIndicator/Parse Color.vi"/>
 	</Item>
