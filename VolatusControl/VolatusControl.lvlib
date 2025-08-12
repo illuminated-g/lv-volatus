@@ -6,6 +6,7 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Controls" Type="Folder">
 		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
+		<Item Name="PeriodicControl.lvclass" Type="LVClass" URL="../PeriodicControl/PeriodicControl.lvclass"/>
 		<Item Name="PulsedControl.lvclass" Type="LVClass" URL="../PulsedControl/PulsedControl.lvclass"/>
 		<Item Name="SeqDelayControl.lvclass" Type="LVClass" URL="../SeqDelayControl/SeqDelayControl.lvclass"/>
 	</Item>
