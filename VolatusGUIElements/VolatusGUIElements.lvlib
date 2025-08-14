@@ -36,4 +36,5 @@
 		<Item Name="Is Stale.vi" Type="VI" URL="../Is Stale.vi"/>
 		<Item Name="Parse Color.vi" Type="VI" URL="../DblNumericStatusIndicator/Parse Color.vi"/>
 	</Item>
+	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 </Library>
