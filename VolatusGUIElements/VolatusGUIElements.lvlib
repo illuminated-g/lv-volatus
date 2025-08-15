@@ -26,6 +26,7 @@
 		<Item Name="Plotting" Type="Folder">
 			<Item Name="LocalGraphBuffer.lvclass" Type="LVClass" URL="../LocalGraphBuffer/LocalGraphBuffer.lvclass"/>
 		</Item>
+		<Item Name="BooleanIndicator.lvclass" Type="LVClass" URL="../BooleanIndicator/BooleanIndicator.lvclass"/>
 		<Item Name="DblStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblStatusIndicator.lvclass"/>
 		<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 	</Item>
