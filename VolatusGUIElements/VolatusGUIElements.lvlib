@@ -13,6 +13,7 @@
 		</Item>
 		<Item Name="Numeric" Type="Folder">
 			<Item Name="DblPopupControl.lvclass" Type="LVClass" URL="../DblPopupControl/DblPopupControl.lvclass"/>
+			<Item Name="SliderControl.lvclass" Type="LVClass" URL="../DoubleControl/SliderControl.lvclass"/>
 		</Item>
 		<Item Name="Special" Type="Folder">
 			<Item Name="LoggingControl.lvclass" Type="LVClass" URL="../LoggingControl/LoggingControl.lvclass"/>

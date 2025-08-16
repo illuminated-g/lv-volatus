@@ -30,6 +30,7 @@
 		<Item Name="Send New Data (Array).vi" Type="VI" URL="../Send New Data (Array).vi"/>
 		<Item Name="Send New Data (Wfm).vi" Type="VI" URL="../Send New Data (Wfm).vi"/>
 	</Item>
+	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Data Logger Module.lvclass" Type="LVClass" URL="../Data Logger Module/Data Logger Module.lvclass"/>
 	<Item Name="Data Processor Module.lvclass" Type="LVClass" URL="../Data Processor Module/Data Processor Module.lvclass"/>
 	<Item Name="Log Manager Module.lvclass" Type="LVClass" URL="../Log Manager Module/Log Manager Module.lvclass"/>

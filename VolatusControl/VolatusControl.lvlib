@@ -8,6 +8,7 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
+		<Item Name="BangBangControl.lvclass" Type="LVClass" URL="../BangBangControl/BangBangControl.lvclass"/>
 		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
 		<Item Name="MultiControl.lvclass" Type="LVClass" URL="../MultiControl/MultiControl.lvclass"/>
 		<Item Name="PeriodicControl.lvclass" Type="LVClass" URL="../PeriodicControl/PeriodicControl.lvclass"/>
