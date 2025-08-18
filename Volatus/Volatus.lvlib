@@ -14,6 +14,7 @@
 		<Item Name="Simple QMH Template.vi" Type="VI" URL="../Simple QMH Template.vi"/>
 	</Item>
 	<Item Name="APIs" Type="Folder">
+		<Item Name="TimerAPI.lvclass" Type="LVClass" URL="../TimerAPI/TimerAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
 	<Item Name="Base" Type="Folder">
@@ -23,6 +24,7 @@
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
 		<Item Name="System Config Server.lvclass" Type="LVClass" URL="../System Config Server/System Config Server.lvclass"/>
+		<Item Name="Timing Module.lvclass" Type="LVClass" URL="../Timing Module/Timing Module.lvclass"/>
 		<Item Name="Vecto Message Bridge.lvclass" Type="LVClass" URL="../Vecto Message Bridge/Vecto Message Bridge.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
 		<Item Name="Volatus Core.lvclass" Type="LVClass" URL="../Volatus Core/Volatus Core.lvclass"/>
