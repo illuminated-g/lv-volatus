@@ -56,6 +56,7 @@
 	<Item Name="Path Utilities" Type="Folder">
 		<Item Name="App Path.vi" Type="VI" URL="../App Path.vi"/>
 		<Item Name="Normalize Path.vi" Type="VI" URL="../Normalize Path.vi"/>
+		<Item Name="Resolve Path.vi" Type="VI" URL="../Resolve Path.vi"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
