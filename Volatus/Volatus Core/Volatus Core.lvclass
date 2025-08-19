@@ -74,6 +74,15 @@
 				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 				<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
 			</Item>
+			<Item Name="Resolve Path.vi" Type="VI" URL="../Resolve Path.vi">
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"]!!!!"1!71$,`````$6*F=W^M&gt;G6E)&amp;"B&gt;'A!&amp;E!S`````QV4&gt;'&amp;S&gt;'FO:S"1982I!!Z!-P````]%5'&amp;U;!!!"!!!!$9!]!!(!!!!!1!#!!-!!Q!$!!-%!!"&lt;!!!*!!!!%!!!!"!!!!!!!!!!!!!!!!!!!!!!!!!!!!%!"!!!!!!</Property>
+				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+				<Property Name="NI.ClassItem.Flags" Type="Int">16908288</Property>
+				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+				<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+				<Property Name="NI.ClassItem.Priority" Type="Int">5</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">1342709760</Property>
+			</Item>
 		</Item>
 		<Item Name="Data Types" Type="Folder">
 			<Item Name="Config Type.ctl" Type="VI" URL="../Config Type.ctl">
