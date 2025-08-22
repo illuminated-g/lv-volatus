@@ -36,6 +36,10 @@
 	<Item Name="Error Utilities" Type="Folder">
 		<Item Name="Modify Error.vi" Type="VI" URL="../Modify Error.vi"/>
 	</Item>
+	<Item Name="HTTP" Type="Folder">
+		<Item Name="ConfigHTTPController.lvclass" Type="LVClass" URL="../ConfigHTTPController/ConfigHTTPController.lvclass"/>
+		<Item Name="HomeHTTPController.lvclass" Type="LVClass" URL="../HomeHTTPController/HomeHTTPController.lvclass"/>
+	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Event Reporter Identity.lvclass" Type="LVClass" URL="../Event Reporter Identity/Event Reporter Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
