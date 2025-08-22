@@ -2,13 +2,25 @@
   "Info":{
     "Name":"git:lv-volatus",
     "Type":"git",
-    "Host":"git@github.com:illuminated-g/lv-volatus.git",
+    "Host":"https://github.com/illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"1991f8f4b4bd57bd7ebd7f85d1fe3bd854913961",
+    "Version":"43b589749afe56f823f50d55923428b5a06b07a5",
     "License":""
   },
   "Dependencies":[
+    {
+      "Info":{
+        "Name":"git:lv-builder",
+        "Type":"git",
+        "Host":"git@github.com:illuminated-g/lv-builder.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"63d674ed5385e4034685d25e4dd9d0470f74be0a",
+        "License":""
+      },
+      "Path":"..\\lv-builder"
+    },
     {
       "Info":{
         "Name":"git:lv-cdm",
@@ -16,10 +28,22 @@
         "Host":"git@github.com:illuminated-g/lv-cdm.git",
         "Path":"",
         "Branch":"main",
-        "Version":"9137ff0bd410d6f19fa825622c8be87576c4b106",
+        "Version":"7cc076ec654b1efd896384f85a55816cbdb07979",
         "License":""
       },
       "Path":"..\\lv-cdm"
+    },
+    {
+      "Info":{
+        "Name":"git:lv-control",
+        "Type":"git",
+        "Host":"git@github.com:illuminated-g/lv-control.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"179f82832fc9510b3a5fcd022b0c0c8dd5c3f0db",
+        "License":""
+      },
+      "Path":"..\\lv-control"
     },
     {
       "Info":{
@@ -107,24 +131,12 @@
     },
     {
       "Info":{
-        "Name":"git:lv-tree-tools",
-        "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-tree-tools.git",
-        "Path":"",
-        "Branch":"main",
-        "Version":"d6fa1f2fafe93b370312f1f5447b24da70fd7932",
-        "License":""
-      },
-      "Path":"..\\lv-tree-tools"
-    },
-    {
-      "Info":{
         "Name":"git:lv-vecto",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-vecto.git",
+        "Host":"https://github.com/illuminated-g/lv-vecto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"016122edffefa30ac1e3e4cac3a7e7105aee4c29",
+        "Version":"a15f5e11300c557fa795eb0f32660e3554c3e450",
         "License":""
       },
       "Path":"..\\lv-vecto"
