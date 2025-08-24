@@ -26,6 +26,9 @@
 		<Item Name="Numeric" Type="Folder">
 			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../DblNumericStatus.ctl"/>
 		</Item>
+		<Item Name="Special" Type="Folder">
+			<Item Name="System Config Status.ctl" Type="VI" URL="../System Config Status.ctl"/>
+		</Item>
 	</Item>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="Graphics Folder.vi" Type="VI" URL="../Graphics Folder.vi"/>
