@@ -21,17 +21,22 @@
 		<Item Name="Module.lvclass" Type="LVClass" URL="../Module/Module.lvclass"/>
 	</Item>
 	<Item Name="Core" Type="Folder">
+		<Item Name="Nested" Type="Folder">
+			<Item Name="Config Alert Module.lvclass" Type="LVClass" URL="../Config Alert Module/Config Alert Module.lvclass"/>
+		</Item>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
-		<Item Name="System Config Server.lvclass" Type="LVClass" URL="../System Config Server/System Config Server.lvclass"/>
+		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
 		<Item Name="Timing Module.lvclass" Type="LVClass" URL="../Timing Module/Timing Module.lvclass"/>
 		<Item Name="Vecto Message Bridge.lvclass" Type="LVClass" URL="../Vecto Message Bridge/Vecto Message Bridge.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
 		<Item Name="Volatus Core.lvclass" Type="LVClass" URL="../Volatus Core/Volatus Core.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
+		<Item Name="Config Info.ctl" Type="VI" URL="../Config Info.ctl"/>
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
+		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 	</Item>
 	<Item Name="Error Utilities" Type="Folder">
 		<Item Name="Modify Error.vi" Type="VI" URL="../Modify Error.vi"/>
@@ -63,6 +68,7 @@
 		<Item Name="Resolve Path.vi" Type="VI" URL="../Resolve Path.vi"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
+		<Item Name="ConfigInfoValue.lvclass" Type="LVClass" URL="../ConfigInfoValue/ConfigInfoValue.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
 	</Item>
 </Library>
