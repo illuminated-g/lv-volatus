@@ -22,7 +22,7 @@
 	</Item>
 	<Item Name="Core" Type="Folder">
 		<Item Name="Nested" Type="Folder">
-			<Item Name="Config Alert Module.lvclass" Type="LVClass" URL="../Config Alert Module/Config Alert Module.lvclass"/>
+			<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../Config Alert Module/Config Monitor Module.lvclass"/>
 		</Item>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
@@ -46,9 +46,11 @@
 		<Item Name="HomeHTTPController.lvclass" Type="LVClass" URL="../HomeHTTPController/HomeHTTPController.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
+		<Item Name="Config Monitor Identity.lvclass" Type="LVClass" URL="../Config Monitor Identity/Config Monitor Identity.lvclass"/>
 		<Item Name="Event Reporter Identity.lvclass" Type="LVClass" URL="../Event Reporter Identity/Event Reporter Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
 		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>
+		<Item Name="System Config Identity.lvclass" Type="LVClass" URL="../System Config Identity/System Config Identity.lvclass"/>
 		<Item Name="Volatus Core Identity.lvclass" Type="LVClass" URL="../Volatus Core Identity/Volatus Core Identity.lvclass"/>
 	</Item>
 	<Item Name="Interfaces" Type="Folder">
@@ -69,6 +71,7 @@
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="ConfigInfoValue.lvclass" Type="LVClass" URL="../ConfigInfoValue/ConfigInfoValue.lvclass"/>
+		<Item Name="ConfigMonitorInfoValue.lvclass" Type="LVClass" URL="../ConfigMonitorInfoValue/ConfigMonitorInfoValue.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
 	</Item>
 </Library>
