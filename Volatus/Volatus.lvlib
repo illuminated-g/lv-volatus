@@ -36,6 +36,7 @@
 		<Item Name="Config Info.ctl" Type="VI" URL="../Config Info.ctl"/>
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
+		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 	</Item>
 	<Item Name="Error Utilities" Type="Folder">
@@ -64,8 +65,9 @@
 		</Item>
 		<Item Name="MessageQ.lvclass" Type="LVClass" URL="../MessageQ/MessageQ.lvclass"/>
 	</Item>
-	<Item Name="Path Utilities" Type="Folder">
+	<Item Name="Paths" Type="Folder">
 		<Item Name="App Path.vi" Type="VI" URL="../App Path.vi"/>
+		<Item Name="Default App INI.vi" Type="VI" URL="../Default App INI.vi"/>
 		<Item Name="Normalize Path.vi" Type="VI" URL="../Normalize Path.vi"/>
 		<Item Name="Resolve Path.vi" Type="VI" URL="../Resolve Path.vi"/>
 	</Item>
