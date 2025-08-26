@@ -102,7 +102,17 @@
 				<Property Name="NI.ClassItem.State" Type="Int">41943056</Property>
 			</Item>
 		</Item>
-		<Item Name="Meta" Type="Folder"/>
+		<Item Name="Meta" Type="Folder">
+			<Item Name="Read Meta Value.vi" Type="VI" URL="../Read Meta Value.vi">
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!';!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"2!-0````]+476U93"797RV:1!!6E"Q!"Y!!$)46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9BR7&lt;WRB&gt;(6T1W^O:GFH27RF&lt;76O&gt;#ZM&gt;G.M98.T!!!96G^M982V=U.P&lt;G:J:U6M:7VF&lt;H1A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!"*!-0````]*476U93"/97VF!&amp;2!=!!?!!!S%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)=6G^M982V=U.P&lt;G:J:U6M:7VF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!&amp;V:P&lt;'&amp;U&gt;8.$&lt;WZG;7&gt;&amp;&lt;'6N:7ZU)'FO!'%!]!!-!!-!"!!&amp;!!9!"!!%!!1!"!!(!!1!#!!*!Q!!?!!!$1A!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!"!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!I!!!!!</Property>
+				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+				<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+				<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+			</Item>
+		</Item>
 		<Item Name="Create (Element).vi" Type="VI" URL="../Create (Element).vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'O!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;:!=!!?!!!S%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)=6G^M982V=U.P&lt;G:J:U6M:7VF&lt;H1O&lt;(:D&lt;'&amp;T=Q!!'&amp;:P&lt;'&amp;U&gt;8.$&lt;WZG;7&gt;&amp;&lt;'6N:7ZU)'^V&gt;!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1![1(!!(A!!+2"$2%UN1W^O:GFH,GRW&lt;'FC&amp;E.P&lt;G:J:S"&amp;&lt;'6N:7ZU,GRW9WRB=X-!"U6M:7VF&lt;H1!6%"Q!"Y!!$)46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9BR7&lt;WRB&gt;(6T1W^O:GFH27RF&lt;76O&gt;#ZM&gt;G.M98.T!!!86G^M982V=U.P&lt;G:J:U6M:7VF&lt;H1A;7Y!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!(!!A#!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!%A!!!")!!!U!!!!-!!!!!!!!!!!!!!%!#1!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
