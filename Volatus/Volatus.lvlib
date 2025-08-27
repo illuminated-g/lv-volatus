@@ -36,6 +36,9 @@
 		<Item Name="Config Info.ctl" Type="VI" URL="../Config Info.ctl"/>
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
+		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
+		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
+		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
 		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 	</Item>

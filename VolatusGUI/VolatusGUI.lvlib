@@ -16,7 +16,6 @@
 	</Item>
 	<Item Name="Base" Type="Folder">
 		<Item Name="Events" Type="Folder">
-			<Item Name="OnClickHandler.lvclass" Type="LVClass" URL="../OnClickHandler/OnClickHandler.lvclass"/>
 			<Item Name="OnMouseDown.lvclass" Type="LVClass" URL="../OnMouseDown/OnMouseDown.lvclass"/>
 			<Item Name="OnShortcutMenuHandler.lvclass" Type="LVClass" URL="../OnShortcutMenuHandler/OnShortcutMenuHandler.lvclass"/>
 			<Item Name="OnValueChangeHandler.lvclass" Type="LVClass" URL="../OnValueChangeHandler/OnValueChangeHandler.lvclass"/>

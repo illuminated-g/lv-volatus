@@ -26,6 +26,7 @@
 		<Item Name="Model Serial.ctl" Type="VI" URL="../Model Serial.ctl"/>
 		<Item Name="Overlays.ctl" Type="VI" URL="../Overlays.ctl"/>
 		<Item Name="Scale Type.ctl" Type="VI" URL="../Scale Type.ctl"/>
+		<Item Name="Target Group.ctl" Type="VI" URL="../Target Group.ctl"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
 		<Item Name="Channel.lvclass" Type="LVClass" URL="../Channel/Channel.lvclass"/>
