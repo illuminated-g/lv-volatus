@@ -5,7 +5,7 @@
     "Host":"https://github.com/illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"849b83503169e5d6a9dd984b31a2df1c26caf1f5",
+    "Version":"db7d34b8b6a3ead0730944b0afc766a55a8176de",
     "License":""
   },
   "Dependencies":[
@@ -40,7 +40,7 @@
         "Host":"git@github.com:illuminated-g/lv-control.git",
         "Path":"",
         "Branch":"main",
-        "Version":"179f82832fc9510b3a5fcd022b0c0c8dd5c3f0db",
+        "Version":"291f3d7d72e85fa2c24727eaf4ecbc399b4dcced",
         "License":""
       },
       "Path":"..\\lv-control"
@@ -52,7 +52,7 @@
         "Host":"git@github.com:illuminated-g/lv-http-server.git",
         "Path":"",
         "Branch":"feature/serversentevents",
-        "Version":"0ca0edc976b8439acd180b4509b3dec89b82e6e2",
+        "Version":"a3dd5be52b985c5b6904ae750eb09cad4e3670fd",
         "License":""
       },
       "Path":"..\\lv-http-server"
