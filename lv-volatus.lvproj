@@ -49,7 +49,10 @@
 			</Item>
 		</Item>
 		<Item Name="_Build" Type="Folder">
-			<Item Name="Generic PC Build.vi" Type="VI" URL="../_build/Generic PC Build.vi"/>
+			<Item Name="Full PC Build.vi" Type="VI" URL="../_build/Full PC Build.vi"/>
+		</Item>
+		<Item Name="graphics" Type="Folder" URL="../VolatusGUIControls/graphics">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
@@ -670,12 +673,12 @@
 				<Item Name="NI_Message Digest API.lvlib" Type="Library" URL="/&lt;vilib&gt;/security/Message Digest/API/NI_Message Digest API.lvlib"/>
 				<Item Name="NI_SHA-3.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/security/Message Digest/SHA-3/NI_SHA-3.lvclass"/>
 				<Item Name="NI_Keccak.lvlib" Type="Library" URL="/&lt;vilib&gt;/security/Message Digest/Keccak/NI_Keccak.lvlib"/>
-				<Item Name="lib_NI_Advanced HTTP Client.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/Advanced HTTP Client/lib_NI_Advanced HTTP Client.lvlib"/>
-				<Item Name="lvwebclient_32.dll" Type="Document" URL="/&lt;vilib&gt;/NI/Advanced HTTP Client/lvwebclient_32.dll"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
+				<Item Name="lib_NI_Advanced HTTP Client.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/Advanced HTTP Client/lib_NI_Advanced HTTP Client.lvlib"/>
+				<Item Name="lvwebclient_32.dll" Type="Document" URL="/&lt;vilib&gt;/NI/Advanced HTTP Client/lvwebclient_32.dll"/>
 			</Item>
 			<Item Name="AB_UI_Change_Path_from_Label.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/AppBuilder/AB_UI_Change_Path_from_Label.vi"/>
 			<Item Name="CDK_GLOBAL_STRINGS.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_GLOBAL_STRINGS.vi"/>
@@ -884,7 +887,7 @@
 				<Property Name="TgtF_targetfileName" Type="Str">test.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Generic Volatus PC" Type="EXE">
+			<Item Name="Generic Volatus Full PC" Type="EXE">
 				<Property Name="App_copyErrors" Type="Bool">true</Property>
 				<Property Name="App_INI_aliasGUID" Type="Str">{4CC6C983-74C6-4188-B5B6-644252522E12}</Property>
 				<Property Name="App_INI_GUID" Type="Str">{5827CBD0-8D33-4603-A580-170018C8EC77}</Property>
@@ -892,51 +895,63 @@
 				<Property Name="App_serverType" Type="Int">0</Property>
 				<Property Name="App_winsec.description" Type="Str">http://www.NI.com</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{08E8D3DC-2A37-4F54-B637-BA34209C0687}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">Generic Volatus PC</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Generic Volatus Full PC</Property>
 				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus PC</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{53E88FC8-62FE-49BC-B0E8-31027488BA4F}</Property>
-				<Property Name="Bld_version.build" Type="Int">2</Property>
+				<Property Name="Bld_version.build" Type="Int">7</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
-				<Property Name="Bld_version.minor" Type="Int">1</Property>
-				<Property Name="Destination[0].destName" Type="Str">volatus.exe</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus PC/volatus.exe</Property>
+				<Property Name="Bld_version.minor" Type="Int">2</Property>
+				<Property Name="Bld_version.patch" Type="Int">4</Property>
+				<Property Name="Destination[0].destName" Type="Str">volatus-full.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/volatus-full.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus PC/data</Property>
-				<Property Name="DestinationCount" Type="Int">2</Property>
-				<Property Name="Source[0].itemID" Type="Str">{84072A98-2223-4A36-B9B6-84596A90EC84}</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/data</Property>
+				<Property Name="Destination[2].destName" Type="Str">graphics</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/graphics</Property>
+				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{D0EE9007-9A3C-4326-80A0-22DC1A1BF7A7}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Generic PC App.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
-				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="Source[2].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/graphics</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_companyName" Type="Str">IlluminatedG</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">Generic Volatus PC</Property>
-				<Property Name="TgtF_internalName" Type="Str">Generic Volatus PC</Property>
+				<Property Name="TgtF_fastFileFormat" Type="Bool">true</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Generic Volatus Full PC</Property>
+				<Property Name="TgtF_internalName" Type="Str">Volatus</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2025 IlluminatedG</Property>
-				<Property Name="TgtF_productName" Type="Str">Generic Volatus PC</Property>
+				<Property Name="TgtF_productName" Type="Str">Volatus</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{11ECEA23-BACC-4337-9C40-5CDAAD7AF22B}</Property>
-				<Property Name="TgtF_targetfileName" Type="Str">volatus.exe</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">volatus-full.exe</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Generic Volatus Pkg" Type="{E661DAE2-7517-431F-AC41-30807A3BDA38}">
+			<Item Name="Generic Volatus Full PC Pkg" Type="{E661DAE2-7517-431F-AC41-30807A3BDA38}">
 				<Property Name="NIPKG_addToFeed" Type="Bool">false</Property>
 				<Property Name="NIPKG_allDependenciesToFeed" Type="Bool">false</Property>
 				<Property Name="NIPKG_allDependenciesToSystemLink" Type="Bool">false</Property>
 				<Property Name="NIPKG_certificates" Type="Bool">false</Property>
 				<Property Name="NIPKG_createInstaller" Type="Bool">false</Property>
-				<Property Name="NIPKG_feedLocation" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Pkg/Feed</Property>
+				<Property Name="NIPKG_feedLocation" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC Pkg/Feed</Property>
 				<Property Name="NIPKG_feedLocation.Type" Type="Str">relativeToCommon</Property>
 				<Property Name="NIPKG_installerArtifacts" Type="Str"></Property>
 				<Property Name="NIPKG_installerBuiltBefore" Type="Bool">false</Property>
-				<Property Name="NIPKG_installerDestination" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Pkg/Package Installer</Property>
+				<Property Name="NIPKG_installerDestination" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC Pkg/Package Installer</Property>
 				<Property Name="NIPKG_installerDestination.Type" Type="Str">relativeToCommon</Property>
 				<Property Name="NIPKG_lastBuiltPackage" Type="Str">lv-volatus-generic_1.1.0-2_windows_all.nipkg</Property>
 				<Property Name="NIPKG_license" Type="Ref"></Property>
@@ -948,7 +963,7 @@
 				<Property Name="PKG_autoIncrementBuild" Type="Bool">false</Property>
 				<Property Name="PKG_autoSelectDeps" Type="Bool">true</Property>
 				<Property Name="PKG_buildNumber" Type="Int">2</Property>
-				<Property Name="PKG_buildSpecName" Type="Str">Generic Volatus Pkg</Property>
+				<Property Name="PKG_buildSpecName" Type="Str">Generic Volatus Full PC Pkg</Property>
 				<Property Name="PKG_dependencies.Count" Type="Int">2</Property>
 				<Property Name="PKG_dependencies[0].Enhanced" Type="Bool">false</Property>
 				<Property Name="PKG_dependencies[0].MaxVersion" Type="Str"></Property>
@@ -985,7 +1000,7 @@
 				<Property Name="PKG_homepage" Type="Str"></Property>
 				<Property Name="PKG_hostname" Type="Str"></Property>
 				<Property Name="PKG_maintainer" Type="Str">Derrick Bommarito &lt;&gt;</Property>
-				<Property Name="PKG_output" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Pkg/Package</Property>
+				<Property Name="PKG_output" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC Pkg/Package</Property>
 				<Property Name="PKG_output.Type" Type="Str">relativeToCommon</Property>
 				<Property Name="PKG_packageName" Type="Str">lv-volatus-generic</Property>
 				<Property Name="PKG_publishToSystemLink" Type="Bool">false</Property>
@@ -996,11 +1011,11 @@
 				<Property Name="PKG_shortcuts[0].Path" Type="Path">lv-volatus</Property>
 				<Property Name="PKG_shortcuts[0].Target.Child" Type="Str">{11ECEA23-BACC-4337-9C40-5CDAAD7AF22B}</Property>
 				<Property Name="PKG_shortcuts[0].Target.Destination" Type="Str">{99E085CF-78B9-4D6A-99E9-EBE10AB466B5}</Property>
-				<Property Name="PKG_shortcuts[0].Target.Source" Type="Ref">/My Computer/Build Specifications/Generic Volatus PC</Property>
+				<Property Name="PKG_shortcuts[0].Target.Source" Type="Ref">/My Computer/Build Specifications/Generic Volatus Full PC</Property>
 				<Property Name="PKG_shortcuts[0].Type" Type="Str">NIPKG</Property>
 				<Property Name="PKG_sources.Count" Type="Int">1</Property>
 				<Property Name="PKG_sources[0].Destination" Type="Str">{99E085CF-78B9-4D6A-99E9-EBE10AB466B5}</Property>
-				<Property Name="PKG_sources[0].ID" Type="Ref">/My Computer/Build Specifications/Generic Volatus PC</Property>
+				<Property Name="PKG_sources[0].ID" Type="Ref">/My Computer/Build Specifications/Generic Volatus Full PC</Property>
 				<Property Name="PKG_sources[0].Type" Type="Str">EXE Build</Property>
 				<Property Name="PKG_synopsis" Type="Str">lv-volatus-general</Property>
 				<Property Name="PKG_version" Type="Str">1.1.0</Property>
