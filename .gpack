@@ -5,7 +5,7 @@
     "Host":"https://github.com/illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/module",
-    "Version":"43b589749afe56f823f50d55923428b5a06b07a5",
+    "Version":"849b83503169e5d6a9dd984b31a2df1c26caf1f5",
     "License":""
   },
   "Dependencies":[
@@ -16,7 +16,7 @@
         "Host":"git@github.com:illuminated-g/lv-builder.git",
         "Path":"",
         "Branch":"main",
-        "Version":"63d674ed5385e4034685d25e4dd9d0470f74be0a",
+        "Version":"3fab66f41c0692c7ef5df0e1ea117eadad56473f",
         "License":""
       },
       "Path":"..\\lv-builder"
@@ -28,7 +28,7 @@
         "Host":"git@github.com:illuminated-g/lv-cdm.git",
         "Path":"",
         "Branch":"main",
-        "Version":"7cc076ec654b1efd896384f85a55816cbdb07979",
+        "Version":"c319d0a1169bae85b2f53b44edebd40f74f1d234",
         "License":""
       },
       "Path":"..\\lv-cdm"
@@ -136,7 +136,7 @@
         "Host":"https://github.com/illuminated-g/lv-vecto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"a15f5e11300c557fa795eb0f32660e3554c3e450",
+        "Version":"cd9fd31116944569460dfe9b6e11a3e1a8a3eecf",
         "License":""
       },
       "Path":"..\\lv-vecto"
