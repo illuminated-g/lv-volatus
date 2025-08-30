@@ -1,7 +1,7 @@
 {
     "Volatus": {
         "Meta": {
-            "VL_Config_Version": "0.0.0+1"
+            "VL_Config_Version": "0.1.0+1"
         },
         "TestSystem": {
             "Meta": {
