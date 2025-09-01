@@ -57,7 +57,7 @@
                         "DaqTest": {
                             "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 3,
-                            "DebugGUIs": false,
+                            "DebugGUIs": true,
                             "Events": {"LogFolder": "c:/logs"},
                             "Config": {},
                             "Network": {
