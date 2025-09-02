@@ -12,6 +12,8 @@ cfgPath = Cfg.normalizePath('c:/dev/lv20ce/relink/lv-volatus/VolatusScratch/daqt
 #   with telemetry and commands
 vCfg: VolatusConfig = ConfigLoader.load(cfgPath)
 
+print('Config hash: ' + vCfg.hash)
+
 # create the telemetry object which handles subscriptions and reading group data
 #   from the network
 tlm = Telemetry()

@@ -3,6 +3,7 @@ from enum import Enum
 import json
 import queue
 import os
+import hashlib
 
 class VL_Type(Enum):
     UNKNOWN = 0
@@ -455,11 +456,12 @@ class ChannelLookup(GroupLookup):
         return self._channel
 
 class VolatusConfig:
-    def __init__(self, version: VolatusVersion = None, system: SystemConfig = None):
-        self._version = version
-        self._system = system
-        self._groups: dict[str, TaskLookup] = dict()
-        self._channels: dict[str, GroupLookup] = dict()
+    def __init__(self, version: VolatusVersion = None, hash: str = None, system: SystemConfig = None):
+        self.version = version
+        self.hash = hash
+        self.system = system
+        self.groups: dict[str, TaskLookup] = dict()
+        self.channels: dict[str, GroupLookup] = dict()
 
         self.refreshLookups()
 
@@ -484,30 +486,24 @@ class VolatusConfig:
             self._addGroupDicts(group)
 
     def _addGroupDicts(self, group: GroupConfig):
-        self._groups[group.name()] = TaskLookup(group.taskName(), group.nodeName(), group.clusterName())
+        self.groups[group.name()] = TaskLookup(group.taskName(), group.nodeName(), group.clusterName())
         channels = group.channels()
         for channel in channels.values():
-            self._channels[channel.name()] = GroupLookup(group.name(), group.taskName(), group.nodeName(), group.clusterName())
-
-    def version(self) -> VolatusVersion | None:
-        return self._version
-    
-    def system(self) -> SystemConfig | None:
-        return self._system
+            self.channels[channel.name()] = GroupLookup(group.name(), group.taskName(), group.nodeName(), group.clusterName())
     
     def refreshLookups(self):
-        self._groups = dict()
-        self._channels = dict()
+        self.groups = dict()
+        self.channels = dict()
 
-        if self._system:
-            self._addSystemDicts(self._system)
+        if self.system:
+            self._addSystemDicts(self.system)
     
     def lookupCluster(self, cl: ClusterLookup) -> ClusterConfig | None:
         return self.lookupClusterByName(cl.cluster())
     
     def lookupClusterByName(self, clusterName: str) -> ClusterConfig | None:
-        if self._system:
-            return self._system.lookupClusterByName(clusterName)
+        if self.system:
+            return self.system.lookupClusterByName(clusterName)
         
         return None
     
@@ -519,8 +515,8 @@ class VolatusConfig:
             cluster = self.lookupClusterByName(clusterName)
             if cluster:
                 return cluster.lookupNodeByName(nodeName)
-        elif self._system:
-            clusters = self._system.clusters()
+        elif self.system:
+            clusters = self.system.clusters()
             for clusterName, cluster in clusters.items():
                 node = cluster.lookupNodeByName(nodeName)
                 if node:
@@ -546,7 +542,7 @@ class VolatusConfig:
         return None
     
     def lookupGroupByName(self, groupName: str) -> GroupConfig | None:
-        tl = self._groups.get(groupName)
+        tl = self.groups.get(groupName)
         if tl:
             task = self.lookupTask(tl)
             if task:
@@ -562,7 +558,7 @@ class VolatusConfig:
         return None
     
     def lookupChannelByName(self, channelName: str) -> ChannelConfig | None:
-        gl = self._channels.get(channelName)
+        gl = self.channels.get(channelName)
         if gl:
             group = self.lookupGroup(gl)
             if group:
@@ -639,6 +635,12 @@ class Cfg:
 
 class ConfigLoader:
     def load(path: Path) -> VolatusConfig:
+        hash = ''
+
+        #hash needs to be calculated with binary mode
+        with open(path, 'rb') as file:
+            hash = hashlib.file_digest(file, 'sha256').hexdigest()
+
         with open(path, 'r', encoding='utf-8') as file:
             cfg = json.load(file)
             version = VolatusVersion.fromString(cfg['Volatus']['Meta']['VL_Config_Version'])
@@ -648,7 +650,7 @@ class ConfigLoader:
             systemName, sysObj = next(iter(children.items()))
 
             system = SystemConfig(systemName)
-            vCfg = VolatusConfig(version, system)
+            vCfg = VolatusConfig(version, hash, system)
 
             ConfigLoader.loadSystem(system, sysObj)
 
