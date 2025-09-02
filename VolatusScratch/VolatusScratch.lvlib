@@ -4,6 +4,9 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="configs" Type="Folder">
+		<Item Name="daqtest.vjson" Type="Document" URL="../daqtest.vjson"/>
+	</Item>
 	<Item Name="DAQmx Test.vi" Type="VI" URL="../DAQmx Test.vi"/>
 	<Item Name="Demo2.vi" Type="VI" URL="../Demo2.vi"/>
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
