@@ -14,6 +14,7 @@
 		<Item Name="Simple QMH Template.vi" Type="VI" URL="../Simple QMH Template.vi"/>
 	</Item>
 	<Item Name="APIs" Type="Folder">
+		<Item Name="System Config Status API.lvclass" Type="LVClass" URL="../System Config Status API/System Config Status API.lvclass"/>
 		<Item Name="TimerAPI.lvclass" Type="LVClass" URL="../TimerAPI/TimerAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
