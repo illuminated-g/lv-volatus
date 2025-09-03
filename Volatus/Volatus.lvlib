@@ -48,6 +48,7 @@
 	</Item>
 	<Item Name="HTTP" Type="Folder">
 		<Item Name="ConfigHTTPController.lvclass" Type="LVClass" URL="../ConfigHTTPController/ConfigHTTPController.lvclass"/>
+		<Item Name="DebugHTTPController.lvclass" Type="LVClass" URL="../DebugHTTPController/DebugHTTPController.lvclass"/>
 		<Item Name="HomeHTTPController.lvclass" Type="LVClass" URL="../HomeHTTPController/HomeHTTPController.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
@@ -79,5 +80,6 @@
 		<Item Name="ConfigInfoValue.lvclass" Type="LVClass" URL="../ConfigInfoValue/ConfigInfoValue.lvclass"/>
 		<Item Name="ConfigMonitorInfoValue.lvclass" Type="LVClass" URL="../ConfigMonitorInfoValue/ConfigMonitorInfoValue.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
+		<Item Name="PathValue.lvclass" Type="LVClass" URL="../PathValue/PathValue.lvclass"/>
 	</Item>
 </Library>
