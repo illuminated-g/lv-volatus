@@ -15,6 +15,8 @@ class MulticastReader(socket.socket):
         self.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.bind((self._bind, self._port))
 
+        self.settimeout(1)
+
     def join(self):
         self.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, self._joinReq)
     

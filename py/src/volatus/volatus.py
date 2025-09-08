@@ -65,12 +65,12 @@ class Volatus:
         self._seq += 1
         return seq
 
-    def shutdown(self) -> bool:
-        if self.telemetry:
-            self.telemetry.shutdown()
-
+    def shutdown(self):
         if self.tcp:
             self.tcp.shutdown()
+
+        if self.telemetry:
+            self.telemetry.shutdown()
 
     def sendDigitalCommand(self, chanName: str, value: bool):
         cmd = CmdDigital()

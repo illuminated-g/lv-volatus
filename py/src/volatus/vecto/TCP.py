@@ -144,23 +144,26 @@ class TCPMessaging:
 
             if state == ClientState.CONNECTING:
                 #make an attempt at connecting to the server
-                self.socket.connect((self.address, self.port))
+                try:
+                    self.socket.connect((self.address, self.port))
 
-                # connection handshake, client starts by sending ClientHello
-                self.__sendSized(helloPayload)
+                    # connection handshake, client starts by sending ClientHello
+                    self.__sendSized(helloPayload)
 
-                # server responds with ServerHello
-                serverPayload = self.__recvSized()
-                if serverPayload:
-                    serverHello = TcpServerHello()
-                    serverHello.ParseFromString(serverPayload)
-                    if serverHello.status == ConnectStatus.STATUS_SUCCESS:
-                        state = ClientState.CONNECTED
-                        self.state = str(state)
-                    else:
-                        raise RuntimeError(
-                            f'Connection error {serverHello.status} from server, aborting.'
-                        )
+                    # server responds with ServerHello
+                    serverPayload = self.__recvSized()
+                    if serverPayload:
+                        serverHello = TcpServerHello()
+                        serverHello.ParseFromString(serverPayload)
+                        if serverHello.status == ConnectStatus.STATUS_SUCCESS:
+                            state = ClientState.CONNECTED
+                            self.state = str(state)
+                        else:
+                            raise RuntimeError(
+                                f'Connection error {serverHello.status} from server, aborting.'
+                            )
+                except:
+                    pass
 
             if state == ClientState.CONNECTED:
                 #check for messages to send

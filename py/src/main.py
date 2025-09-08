@@ -17,13 +17,13 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
     # get a single channel to read live values from
     ch0 = gAI.chanByName('Alpha')
 
+    # turn digital output on
     v.sendDigitalCommand('Heater_En', True)
 
     # loop ~10Hz displaying current value for the channel
-    for i in range(10):
+    for i in range(20):
         print(ch0.value)
         time.sleep(0.1)
 
-    time.sleep(1)
-
+    # turn digital output back off
     v.sendDigitalCommand('Heater_En', False)

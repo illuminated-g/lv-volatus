@@ -119,7 +119,7 @@ class Subscriber:
 
     def close(self):
         self._actions.put(SubActionClose())
-        self._thread.join()
+        #self._thread.join()
 
     def _readLoop(self):
         self._reader.join()
@@ -141,26 +141,30 @@ class Subscriber:
                         continue
 
             # read payload
-            udpPayload = self._reader.readUdpPayload()
-            if not udpPayload:
-                # disconnected, try rejoining multicast
-                self._reader.leave()
-                self._reader.join()
-                continue
+            try:
+                udpPayload = self._reader.readUdpPayload()
+                if not udpPayload:
+                    # disconnected, try rejoining multicast
+                    self._reader.leave()
+                    self._reader.join()
+                    continue
 
-            match udpPayload.type:
-                case 'v:GroupData':
-                    # numeric data
-                    groupData.ParseFromString(udpPayload.payload)
-                    group = self._groups.get(groupData.group_name)
-                    if group:
-                        group.updateValues(groupData.scaled_data, groupData.data_timestamp)
+                match udpPayload.type:
+                    case 'v:GroupData':
+                        # numeric data
+                        groupData.ParseFromString(udpPayload.payload)
+                        group = self._groups.get(groupData.group_name)
+                        if group:
+                            group.updateValues(groupData.scaled_data, groupData.data_timestamp)
 
-                case 'v:StringData':
-                    stringData.ParseFromString(udpPayload.payload)
-                    group = self._groups.get(stringData.group_name)
-                    if group:
-                        group.updateValues(stringData.scaled_data, stringData.data_timestamp)
+                    case 'v:StringData':
+                        stringData.ParseFromString(udpPayload.payload)
+                        group = self._groups.get(stringData.group_name)
+                        if group:
+                            group.updateValues(stringData.scaled_data, stringData.data_timestamp)
+
+            except TimeoutError:
+                pass
 
         self._reader.close()
 
