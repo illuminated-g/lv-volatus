@@ -83,13 +83,21 @@ class Volatus:
 
         self.tcp.sendMsg(targetName, 'cmd_digital', cmd.SerializeToString(), self.__nextSeq(), taskName)
 
-    def createDigitalMultipleCommand(self, values: tuple[str, bool]) -> bytes:
+    def sendDigitalMultipleCommand(self, values: tuple[str, bool]) -> bytes:
         pass
 
-    def createAnalogCommand(self, chanName: str, value: float) -> bytes:
-        pass
+    def sendAnalogCommand(self, chanName: str, value: float) -> bytes:
+        cmd = CmdAnalog()
+        cmd.channel = chanName
+        cmd.value = value
 
-    def createAnalogMultipleCommand(self, values: tuple[str, float]) -> bytes:
+        chan = self.config.lookupChannelByName(chanName)
+        targetName = chan.nodeName
+        taskName = chan.taskName
+
+        self.tcp.sendMsg(targetName, 'cmd_analog', cmd.SerializeToString(), self.__nextSeq(), taskName)
+
+    def sendAnalogMultipleCommand(self, values: tuple[str, float]) -> bytes:
         pass
 
 
