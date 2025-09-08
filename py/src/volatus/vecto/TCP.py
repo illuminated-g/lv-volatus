@@ -82,8 +82,14 @@ class TCPMessaging:
     def shutdown(self):
         self._actionQ.put(TCPAction.SHUTDOWN)
 
-    def sendMsg(self, target: str, type: str, payload: bytes, sequence: int, task: str = ''):
-        targetId = self.vCfg.lookupNodeByName(target).id
+    def sendMsg(self, target: str | int, msgType: str, payload: bytes, sequence: int, task: str = ''):
+        targetId: int
+        if type(target) == int:
+            targetId = target
+        elif type(target) == str:
+            targetId = self.vCfg.lookupNodeByName(target).id
+        else:
+            raise ValueError('Target must be target name string or target ID int.')
 
         if targetId:
             #timestamp (0) is set when actually sent
@@ -91,7 +97,7 @@ class TCPMessaging:
             toSend.target_node = targetId
             toSend.source_id = self.id
             toSend.sequence = sequence
-            toSend.type = type
+            toSend.type = msgType
             toSend.task_id = task
             toSend.payload = payload
             self._sendQueue.put(toSend)

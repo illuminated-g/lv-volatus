@@ -19,7 +19,8 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
 
     # turn digital output on, for scaled values (such as inverted NO valves) this will be before scaling
     # typically meaning valves are always True = Open, False = Closed
-    v.sendDigitalCommand('Heater_En', True)
+    # the create___Command methods return a VCommand object with a send() that can be called right away or sent later
+    v.createDigitalCommand('Heater_En', True).send()
 
     # loop ~10Hz displaying current value for the channel
     for i in range(20):
@@ -27,4 +28,7 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
         time.sleep(0.1)
 
     # turn digital output back off
-    v.sendDigitalCommand('Heater_En', False)
+    v.createDigitalCommand('Heater_En', False).send()
+
+    #need to sleep a bit to give last command time to send before the with block tears down the TCP connection
+    time.sleep(0.1)
