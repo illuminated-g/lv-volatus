@@ -83,8 +83,26 @@ class Volatus:
 
         self.tcp.sendMsg(targetName, 'cmd_digital', cmd.SerializeToString(), self.__nextSeq(), taskName)
 
-    def sendDigitalMultipleCommand(self, values: tuple[str, bool]) -> bytes:
-        pass
+    def sendDigitalMultipleCommand(self, values: list[tuple[str, bool]]) -> bytes:
+        cmd = CmdDigitalMultiple()
+
+        targetName: str = None
+        taskName: str = None
+
+        for chanName, value in values:
+            val = cmd.values.add()
+            val.channel = chanName
+            val.value = value
+            
+            chan = self.config.lookupChannelByName(chanName)
+            if not targetName:
+                targetName = chan.nodeName
+                taskName = chan.taskName
+            else:
+                if targetName != chan.nodeName or taskName != chan.taskName:
+                    raise ValueError('Multiple command can only include channels from a single node/task.')
+        
+        self.tcp.sendMsg(targetName, 'cmd_analog_multiple', cmd.SerializeToString(), self.__nextSeq(), taskName)
 
     def sendAnalogCommand(self, chanName: str, value: float) -> bytes:
         cmd = CmdAnalog()
@@ -97,8 +115,26 @@ class Volatus:
 
         self.tcp.sendMsg(targetName, 'cmd_analog', cmd.SerializeToString(), self.__nextSeq(), taskName)
 
-    def sendAnalogMultipleCommand(self, values: tuple[str, float]) -> bytes:
-        pass
+    def sendAnalogMultipleCommand(self, values: list[tuple[str, float]]) -> bytes:
+        cmd = CmdAnalogMultiple()
+
+        targetName: str = None
+        taskName: str = None
+
+        for chanName, value in values:
+            val = cmd.values.add()
+            val.channel = chanName
+            val.value = value
+            
+            chan = self.config.lookupChannelByName(chanName)
+            if not targetName:
+                targetName = chan.nodeName
+                taskName = chan.taskName
+            else:
+                if targetName != chan.nodeName or taskName != chan.taskName:
+                    raise ValueError('Multiple command can only include channels from a single node/task.')
+        
+        self.tcp.sendMsg(targetName, 'cmd_analog_multiple', cmd.SerializeToString(), self.__nextSeq(), taskName)
 
 
     def subscribe(self, groupName: str) -> ChannelGroup :
