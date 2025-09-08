@@ -17,7 +17,8 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
     # get a single channel to read live values from
     ch0 = gAI.chanByName('Alpha')
 
-    # turn digital output on
+    # turn digital output on, for scaled values (such as inverted NO valves) this will be before scaling
+    # typically meaning valves are always True = Open, False = Closed
     v.sendDigitalCommand('Heater_En', True)
 
     # loop ~10Hz displaying current value for the channel
