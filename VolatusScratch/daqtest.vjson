@@ -56,7 +56,7 @@
                         "Meta": {"VL_Type": "VL_Node_List"},
                         "DaqTest": {
                             "Meta": {"VL_Type": "VL_Node"},
-                            "Node_ID": 3,
+                            "Node_ID": 1,
                             "DebugGUIs": true,
                             "Events": {"LogFolder": "c:/logs"},
                             "Config": {},
@@ -97,12 +97,12 @@
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
-                                            "Alpha": {"Resource": "cDAQ1Mod5/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Beta": {"Resource": "cDAQ1Mod5/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Gamma": {"Resource": "cDAQ1Mod5/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Delta": {"Resource": "cDAQ1Mod5/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Wheeee": {"Resource": "cDAQ1Mod6/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "bxchb": {"Resource": "cDAQ1Mod6/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Alpha":    {"Resource": "cDAQ1Mod5/ai0", "Unit": "psia", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Beta":     {"Resource": "cDAQ1Mod5/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Gamma":    {"Resource": "cDAQ1Mod5/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Delta":    {"Resource": "cDAQ1Mod5/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Wheeee":   {"Resource": "cDAQ1Mod6/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "bxchb":    {"Resource": "cDAQ1Mod6/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
                                             "TestAI06": {"Resource": "cDAQ1Mod6/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
                                             "TestAI07": {"Resource": "cDAQ1Mod6/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
                                             "TestAI08": {"Resource": "cDAQ1Mod7/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
@@ -303,6 +303,21 @@
                                     "Refresh_Timeout_ms": 100,
                                     "Shutdown_On_Close": true
                                 }
+                            }
+                        },
+                        "PyScript": {
+                            "Meta": {"VL_Type": "VL_Node"},
+                            "Node_ID": 3,
+                            "Network": {
+                                "Bind_Address": "0.0.0.0",
+                                "TCP": {
+                                    "Address": "localhost",
+                                    "Port": 12082,
+                                    "Server": false
+                                }
+                            },
+                            "Events": {
+                                "LogFolder": "c:/logs"
                             }
                         }
                     }

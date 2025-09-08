@@ -44,284 +44,162 @@ class VL_Meta(Enum):
 
 class EndpointConfig:
     def __init__(self, address: str, port: int):
-        self._address: str = address
-        self._port: int = port
+        self.address: str = address
+        self.port: int = port
 
     def __str__(self) -> str:
-        return f'{self._address}:{self._port}'
-    
-    def address(self) -> str:
-        return self._address
-    
-    def port(self) -> int:
-        return self._port
+        return f'{self.address}:{self.port}'
     
     def tuple(self) -> tuple[str, int]:
-        return (self._address, self._port)
+        return (self.address, self.port)
 
 class ChannelConfig:
     def __init__(self, name: str, groupName: str, taskName: str, nodeName: str, clusterName: str,
                  defaultValue: str | float = None, resource: str = ''):
-        self._name = name
-        self._default = defaultValue
-        self._resource = resource
-        self._group = groupName
-        self._task = taskName
-        self._node = nodeName
-        self._cluster = clusterName
-
-    def name(self) -> str:
-        return self._name
-    
-    def defaultValue(self):
-        return self._default
-    
-    def resource(self) -> str:
-        return self._resource
-    
-    def groupName(self) -> str:
-        return self._group
-    
-    def setGroupName(self, groupName: str):
-        self._group = groupName
-    
-    def taskName(self) -> str:
-        return self._task
-    
-    def setTaskName(self, taskName: str):
-        self._task = taskName
-    
-    def nodeName(self) -> str:
-        return self._node
-    
-    def setNodeName(self, nodeName: str):
-        self._node = nodeName
+        self.name = name
+        self.defaultValue = defaultValue
+        self.resource = resource
+        self.groupName = groupName
+        self.taskName = taskName
+        self.nodeName = nodeName
+        self._clusterName = clusterName
     
     def clusterName(self) -> str:
-        return self._cluster
+        return self._clusterName
     
     def setClusterName(self, clusterName: str):
-        self._cluster = clusterName
+        self._clusterName = clusterName
 
 class GroupConfig:
     def __init__(self, name: str, taskName: str, nodeName: str, clusterName: str,
                  channels: list[ChannelConfig] = [], publishConfig: EndpointConfig = None):
-        self._name = name
+        self.name = name
         self.publishConfig = publishConfig
-        self._channels: dict[str, ChannelConfig] = dict()
-        self._task = taskName
-        self._node = nodeName
-        self._cluster = clusterName
+        self.channels: dict[str, ChannelConfig] = dict()
+        self.taskName = taskName
+        self.nodeName = nodeName
+        self.clusterName = clusterName
 
         for channel in channels:
-            self._channels[channel.name()] = channel
+            self.channels[channel.name] = channel
     
     def isPublished(self) -> bool:
         return self.publishConfig is not None
     
-    def name(self) -> str:
-        return self._name
-    
-    def taskName(self) -> str:
-        return self._task
-    
-    def setTaskName(self, taskName: str):
-        self._task = taskName
-    
-    def nodeName(self) -> str:
-        return self._node
-    
-    def setNodeName(self, nodeName: str):
-        self._node = nodeName
-    
-    def clusterName(self) -> str:
-        return self._cluster
+    def addChannel(self, channel: ChannelConfig):
+        self.channels[channel.name] = channel
     
     def setClusterName(self, clusterName: str):
-        self._cluster = clusterName
-    
-    def channels(self) -> dict[str, ChannelConfig]:
-        return self._channels
-    
-    def addChannel(self, channel: ChannelConfig):
-        self._channels[channel.name()] = channel
+        self.clusterName = clusterName
+        for channel in self.channels.values():
+            channel.setClusterName(clusterName)
     
     def lookupChannelByName(self, channelName: str) -> ChannelConfig:
-        return self._channels.get(channelName)
+        return self.channels.get(channelName)
 
 class TaskConfig:
     def __init__(self, name: str, type: str, nodeName: str, clusterName: str,
                  groups: list[GroupConfig] = []):
-        self._name = name
-        self._type = type
-        self._groups: dict[str, GroupConfig] = dict()
-        self._node = nodeName
-        self._cluster = clusterName
+        self.name = name
+        self.type = type
+        self.groups: dict[str, GroupConfig] = dict()
+        self.nodeName = nodeName
+        self.clusterName = clusterName
 
         for group in groups:
-            self._groups[group.name()] = group
-
-    def groups(self) -> dict[str, GroupConfig]:
-        return self._groups
-
-    def addGroup(self, group: GroupConfig):
-        self._groups[group.name()] = group
-    
-    def lookupGroupByName(self, groupName: str) -> GroupConfig | None:
-        return self._groups.get(groupName)
-    
-    def type(self) -> str:
-        return self._type
-    
-    def name(self) -> str:
-        return self._name
-    
-    def nodeName(self) -> str:
-        return self._node
-    
-    def setNodeName(self, nodeName: str):
-        self._node = nodeName
-    
-    def clusterName(self) -> str:
-        return self._cluster
+            self.groups[group.name] = group
     
     def setClusterName(self, clusterName: str):
-        self._cluster = clusterName
+        self.clusterName = clusterName
+        for group in self.groups.values():
+            group.setClusterName(clusterName)
+
+    def addGroup(self, group: GroupConfig):
+        self.groups[group.name] = group
+    
+    def lookupGroupByName(self, groupName: str) -> GroupConfig | None:
+        return self.groups.get(groupName)
 
 class TCPConfig:
     def __init__(self, address: str, port: int, server: bool):
-        self._address = address
-        self._port = port
-        self._server = server
-
-    def address(self) -> str:
-        return self._address
-    
-    def port(self) -> int:
-        return self._port
-    
-    def isServer(self) -> bool:
-        return self._server
+        self.address = address
+        self.port = port
+        self.server = server
 
 class NodeNetworkConfig:
     def __init__(self, tcpConfig: TCPConfig, httpPort: int = None, announceInterval: int = None):
-        self._tcp = tcpConfig
-        self._httpPort = httpPort
-        self._announceInterval = announceInterval
-    
-    def tcp(self) -> TCPConfig | None:
-        return self._tcp
-    
-    def httpPort(self) -> int | None:
-        return self._httpPort
-    
-    def announceInterval(self) -> int | None:
-        return self._announceInterval
+        self.tcp = tcpConfig
+        self.httpPort = httpPort
+        self.announceInterval = announceInterval
         
 class NodeConfig:
     def __init__(self, name: str, id: int, clusterName: str,
                  eventLogFolder: Path = None, network: NodeNetworkConfig = None,
                  targetGroups: list[str] = [], tasks: list[TaskConfig] = []):
-        self._name = name
-        self._id = id
-        self._logFolder = eventLogFolder
-        self._network = network
-        self._targetGroups = targetGroups
-        self._tasks: dict[str, TaskConfig] = dict()
-        self._cluster = clusterName
+        self.name = name
+        self.id = id
+        self.logFolder = eventLogFolder
+        self.network = network
+        self.targetGroups = targetGroups
+        self.tasks: dict[str, TaskConfig] = dict()
+        self.clusterName = clusterName
 
         for task in tasks:
-            self._tasks[task.name()] = task
-
-    def name(self) -> str:
-        return self._name
-    
-    def id(self) -> int:
-        return self._id
-    
-    def eventLogFolder(self) -> Path | None:
-        return self._logFolder
-    
-    def networkConfig(self) -> NodeNetworkConfig | None:
-        return self._network
+            self.tasks[task.name] = task
     
     def tcpConfig(self) -> TCPConfig | None:
-        if self._network:
-            return self._network.tcp()
+        if self.network:
+            return self.network.tcp()
         
         return None
     
-    def targetGroups(self) -> list[str]:
-        return self._targetGroups
-    
-    def tasks(self) -> dict[str, TaskConfig]:
-        return self._tasks
-    
     def addTask(self, task: TaskConfig):
-        self._tasks[task.name()] = task
-    
-    def clusterName(self) -> str:
-        return self._cluster
+        self.tasks[task.name] = task
     
     def setClusterName(self, clusterName: str):
-        self._cluster = clusterName
-        for task in self._tasks:
-            task.setClusterName(clusterName)
+        self.clusterName = clusterName
+        for taskObj in self.tasks.values():
+            taskObj.setClusterName(clusterName)
     
     def lookupTaskByName(self, taskName: str) -> TaskConfig | None:
-        return self._tasks.get(taskName)
+        return self.tasks.get(taskName)
 
 class ClusterConfig:
     def __init__(self, name: str, discoveryEndpoint: EndpointConfig = None, targetGroups: dict[str, int] = None, nodes: list[NodeConfig] = None):
-        self._name = name
-        self._discovery = discoveryEndpoint
-        self._targetGroups = targetGroups
-        self._nodes: dict[str, NodeConfig] = dict()
+        self.name = name
+        self.discovery = discoveryEndpoint
+        self.targetGroups = targetGroups
+        self.nodes: dict[str, NodeConfig] = dict()
 
         if nodes:
             for node in nodes:
-                self._nodes[node.name()] = node
-    
-    def name(self) -> str:
-        return self._name
-    
-    def discoveryEndpoint(self) -> EndpointConfig | None:
-        return self._discovery
+                self.nodes[node.name] = node
     
     def lookupTargetGroupId(self, targetName: str) -> int | None:
-        if self._targetGroups:
-            return self._targetGroups.get(targetName)
+        if self.targetGroups:
+            return self.targetGroups.get(targetName)
         
         return None
     
-    def nodes(self) -> dict[str, NodeConfig]:
-        return self._nodes
-    
     def lookupNodeByName(self, nodeName: str) -> NodeConfig | None:
-        return self._nodes.get(nodeName)
+        return self.nodes.get(nodeName)
     
     def addNode(self, node: NodeConfig):
-        self._nodes[node.name()] = node
+        self.nodes[node.name] = node
 
 class SystemConfig:
     def __init__(self, name: str, clusters: list[ClusterConfig] = []):
-        self._name = name
-        self._clusters: dict[str, ClusterConfig] = dict()
+        self.name = name
+        self.clusters: dict[str, ClusterConfig] = dict()
 
         for cluster in clusters:
-            self._clusters[cluster.name()] = cluster
-    
-    def name(self) -> str:
-        return self._name
-    
-    def clusters(self) -> dict[str, ClusterConfig]:
-        return self._clusters
+            self.clusters[cluster.name] = cluster
     
     def lookupClusterByName(self, clusterName: str) -> ClusterConfig | None:
-        return self._clusters.get(clusterName)
+        return self.clusters.get(clusterName)
     
     def addCluster(self, cluster: ClusterConfig):
-        self._clusters[cluster.name()] = cluster
+        self.clusters[cluster.name] = cluster
 
 class VersionBump(Enum):
     NONE = 0
@@ -331,19 +209,19 @@ class VersionBump(Enum):
 
 class VolatusVersion:
     def __init__(self, major: int, minor: int, fix: int, build: int = 0, prerelease: str = ''):
-        self._major = major
-        self._minor = minor
-        self._fix = fix
-        self._build = build
-        self._prerelease = prerelease
+        self.major = major
+        self.minor = minor
+        self.fix = fix
+        self.build = build
+        self.prerelease = prerelease
 
     def __str__(self) -> str:
-        ver = f'{self._major}.{self._minor}.{self._fix}'
-        if self._prerelease:
-            ver += f'-{self._prerelease}'
+        ver = f'{self.major}.{self.minor}.{self.fix}'
+        if self.prerelease:
+            ver += f'-{self.prerelease}'
 
-        if self._build > 0:
-            ver += f'+{self._build}'
+        if self.build > 0:
+            ver += f'+{self.build}'
 
         return ver
     
@@ -369,91 +247,61 @@ class VolatusVersion:
     def bump(self, bumpType: VersionBump):
         match bumpType:
             case VersionBump.NONE:
-                if self._build:
-                    self._build += 1
+                if self.build:
+                    self.build += 1
                 else:
-                    self._build = 1
+                    self.build = 1
 
             case VersionBump.FIX:
-                self._fix += 1
+                self.fix += 1
 
-                if self._build:
-                    self._build += 1
+                if self.build:
+                    self.build += 1
                 else:
-                    self._build = 1
+                    self.build = 1
 
             case VersionBump.MINOR:
-                self._minor += 1
-                self._fix = 0
+                self.minor += 1
+                self.fix = 0
 
-                if self._build:
-                    self._build += 1
+                if self.build:
+                    self.build += 1
                 else:
-                    self._build = 1
+                    self.build = 1
                 
             case VersionBump.MAJOR:
-                self._major += 1
-                self._minor = 0
-                self._fix = 0
+                self.major += 1
+                self.minor = 0
+                self.fix = 0
                 
-                if self._build:
-                    self._build += 1
+                if self.build:
+                    self.build += 1
                 else:
-                    self._build = 1
-
-    def major(self) -> int:
-        return self._major
-    
-    def minor(self) -> int:
-        return self._minor
-    
-    def fix(self) -> int:
-        return self._fix
-    
-    def build(self) -> int:
-        return self._build
-    
-    def prerelease(self) -> str:
-        return self._prerelease
+                    self.build = 1
 
 class ClusterLookup:
     def __init__(self, clusterName: str):
-        self._cluster = clusterName
-
-    def cluster(self) -> str:
-        return self._cluster
+        self.clusterName = clusterName
 
 class NodeLookup(ClusterLookup):
     def __init__(self, nodeName: str, clusterName: str):
-        self._node = nodeName
+        self.nodeName = nodeName
         super(NodeLookup, self).__init__(clusterName)
-
-    def node(self) -> str:
-        return self._node
     
 class TaskLookup(NodeLookup):
     def __init__(self, taskName: str, nodeName: str, clusterName: str):
-        self._task = taskName
+        self.taskName = taskName
         super(TaskLookup, self).__init__(nodeName, clusterName)
-
-    def task(self) -> str | None:
-        return self._task
     
 class GroupLookup(TaskLookup):
     def __init__(self, groupName: str, taskName: str, nodeName: str, clusterName: str):
-        self._group = groupName
+        self.groupName = groupName
         super(GroupLookup, self).__init__(taskName, nodeName, clusterName)
-    
-    def group(self) -> str:
-        return self._group
 
 class ChannelLookup(GroupLookup):
     def __init__(self, channelName: str, groupName: str, taskName: str, nodeName: str, clusterName: str):
-        self._channel = channelName
+        self.channelName = channelName
         super(ChannelLookup, self).__init__(groupName, taskName, nodeName, clusterName)
-
-    def channel(self) -> str:
-        return self._channel
 
 class VolatusConfig:
     def __init__(self, version: VolatusVersion = None, hash: str = None, system: SystemConfig = None):
@@ -466,30 +314,26 @@ class VolatusConfig:
         self.refreshLookups()
 
     def _addSystemDicts(self, system: SystemConfig):
-        clusters = system.clusters()
-        for cluster in clusters.values():
+        for cluster in system.clusters.values():
             self._addClusterDicts(cluster)
 
     def _addClusterDicts(self, cluster: ClusterConfig):
-        nodes = cluster.nodes()
-        for node in nodes.values():
+        for node in cluster.nodes.values():
             self._addNodeDicts(node)
 
     def _addNodeDicts(self, node: NodeConfig):
-        tasks = node.tasks()
-        for task in tasks.values():
+        for task in node.tasks.values():
             self._addTaskDicts(task)
 
     def _addTaskDicts(self, task: TaskConfig):
-        groups = task.groups()
-        for group in groups.values():
+        for group in task.groups.values():
             self._addGroupDicts(group)
 
     def _addGroupDicts(self, group: GroupConfig):
-        self.groups[group.name()] = TaskLookup(group.taskName(), group.nodeName(), group.clusterName())
-        channels = group.channels()
+        self.groups[group.name] = TaskLookup(group.taskName, group.nodeName, group.clusterName)
+        channels = group.channels
         for channel in channels.values():
-            self.channels[channel.name()] = GroupLookup(group.name(), group.taskName(), group.nodeName(), group.clusterName())
+            self.channels[channel.name] = GroupLookup(group.name, group.taskName, group.nodeName, group.clusterName)
     
     def refreshLookups(self):
         self.groups = dict()
@@ -499,7 +343,7 @@ class VolatusConfig:
             self._addSystemDicts(self.system)
     
     def lookupCluster(self, cl: ClusterLookup) -> ClusterConfig | None:
-        return self.lookupClusterByName(cl.cluster())
+        return self.lookupClusterByName(cl.clusterName)
     
     def lookupClusterByName(self, clusterName: str) -> ClusterConfig | None:
         if self.system:
@@ -508,7 +352,7 @@ class VolatusConfig:
         return None
     
     def lookupNode(self, nl: NodeLookup) -> NodeConfig | None:
-        return self.lookupNodeByName(nl.node(), nl.cluster())
+        return self.lookupNodeByName(nl.nodeName, nl.clusterName)
     
     def lookupNodeByName(self, nodeName: str, clusterName: str = None) -> NodeConfig | None:
         if clusterName:
@@ -516,7 +360,7 @@ class VolatusConfig:
             if cluster:
                 return cluster.lookupNodeByName(nodeName)
         elif self.system:
-            clusters = self.system.clusters()
+            clusters = self.system.clusters
             for clusterName, cluster in clusters.items():
                 node = cluster.lookupNodeByName(nodeName)
                 if node:
@@ -525,7 +369,7 @@ class VolatusConfig:
         return None
     
     def lookupTask(self, tl: TaskLookup) -> TaskConfig | None:
-        return self.lookupTaskByName(tl.task(), tl.node(), tl.cluster())
+        return self.lookupTaskByName(tl.taskName, tl.nodeName, tl.clusterName)
 
     def lookupTaskByName(self, taskName: str, nodeName: str, clusterName: str = None) -> TaskConfig | None:
         node = self.lookupNodeByName(nodeName, clusterName)
@@ -537,7 +381,7 @@ class VolatusConfig:
     def lookupGroup(self, gl: GroupLookup) -> GroupConfig | None:
         task = self.lookupTask(gl)
         if task:
-            return task.lookupGroupByName(gl.group())
+            return task.lookupGroupByName(gl.groupName)
         
         return None
     
@@ -553,7 +397,7 @@ class VolatusConfig:
     def lookupChannel(self, cl: ChannelLookup) -> ChannelConfig | None:
         group = self.lookupGroup(cl)
         if group:
-            return group.lookupChannelByName(cl.channel())
+            return group.lookupChannelByName(cl.channelName)
         
         return None
     
@@ -579,11 +423,11 @@ class Cfg:
         
         return path
 
-    def childrenOf(obj: dict) -> dict:
+    def childrenOf(obj: dict) -> dict[str, dict]:
         return {k: v for k, v in obj.items() if k != 'Meta'}
     
     def readMetaValue(obj: dict, name: str) -> str | None:
-        meta = obj.get('Meta')
+        meta: dict = obj.get('Meta')
         if meta:
             return meta.get(name)
         
@@ -596,7 +440,7 @@ class Cfg:
             obj['Meta'][name] = value
     
     def vlReadMeta(obj: dict, meta: VL_Meta) -> str | None:
-        m = obj.get('Meta')
+        m: dict = obj.get('Meta')
         if m:
             return m.get(str(meta))
         
@@ -611,7 +455,7 @@ class Cfg:
     def vlTypeOf(obj: dict) -> VL_Type | None:
         return VL_Type.fromStr(Cfg.vlReadMeta(obj, VL_Meta.VL_Type))            
     
-    def vlFindType(obj: dict, type: VL_Type, recursePastMatch: bool = True) -> dict:
+    def vlFindType(obj: dict, type: VL_Type, recursePastMatch: bool = True) -> dict[str, dict]:
         matches = dict()
 
         q: queue.Queue[tuple[str, dict]] = queue.Queue()
@@ -668,18 +512,18 @@ class ConfigLoader:
         if pubObj:
             pubCfg = EndpointConfig(pubObj['Address'], pubObj['Port'])
 
-        group = GroupConfig(groupName, task.name(), task.nodeName(),
-                            task.clusterName(), publishConfig= pubCfg)
+        group = GroupConfig(groupName, task.name, task.nodeName,
+                            task.clusterName, publishConfig= pubCfg)
         task.addGroup(group)
         
-        chansObj = Cfg.vlFindType(groupObj, VL_Type.VL_Channel)
+        chansObj: dict[str, dict] = Cfg.vlFindType(groupObj, VL_Type.VL_Channel)
         for channelName, chanObj in chansObj.items():
             resource = chanObj.get('Resource')
             if not resource:
                 resource = ''
 
-            channel = ChannelConfig(channelName, groupName, task.name(),
-                                    task.nodeName(), task.clusterName(),
+            channel = ChannelConfig(channelName, groupName, task.name,
+                                    task.nodeName, task.clusterName,
                                     chanObj.get('Value'),  resource)
             
             group.addChannel(channel)
@@ -687,20 +531,20 @@ class ConfigLoader:
     def loadTask(node: NodeConfig, taskName: str, taskObj: dict):
         taskType = Cfg.vlReadMeta(taskObj, VL_Meta.VL_Task_Type)
 
-        task = TaskConfig(taskName, taskType, node.name(), node.clusterName())
+        task = TaskConfig(taskName, taskType, node.name, node.clusterName)
         node.addTask(task)
 
-        groups = Cfg.vlFindType(taskObj, VL_Type.VL_Group, False)
+        groups: dict[str, dict] = Cfg.vlFindType(taskObj, VL_Type.VL_Group, False)
         for groupName, groupObj in groups.items():
             ConfigLoader.loadGroup(task, groupName, groupObj)
     
     def loadNode(cluster: ClusterConfig, nodeName: str, nodeObj: dict):
         nodeId = nodeObj['Node_ID']
-        debug = nodeObj['DebugGUIs']
+        #debug = nodeObj['DebugGUIs']
         logFolder = Cfg.normalizePath(nodeObj['Events']['LogFolder'])
         
         netCfg: NodeNetworkConfig = None
-        net = nodeObj.get('Network')
+        net: dict = nodeObj.get('Network')
         if net:
             tcpCfg: TCPConfig = None
             tcp = net.get('TCP')
@@ -718,12 +562,12 @@ class ConfigLoader:
             for group in groups:
                 targetGroups.append(group)
         
-        node = NodeConfig(nodeName, nodeId, cluster.name(), logFolder, netCfg, targetGroups)
+        node = NodeConfig(nodeName, nodeId, cluster.name, logFolder, netCfg, targetGroups)
         cluster.addNode(node)
 
         tasksObj = nodeObj.get('Tasks')
         if tasksObj:
-            tasks = Cfg.childrenOf(tasksObj)
+            tasks: dict[str, dict] = Cfg.childrenOf(tasksObj)
             for taskName, taskObj in tasks.items():
                 ConfigLoader.loadTask(node, taskName, taskObj)
         
@@ -740,7 +584,7 @@ class ConfigLoader:
         system.addCluster(cluster)
 
         nodesObj = clusterObj.get('Nodes')
-        nodes = Cfg.childrenOf(nodesObj)
+        nodes: dict[str, dict] = Cfg.childrenOf(nodesObj)
         for nodeName, nodeObj in nodes.items():
             ConfigLoader.loadNode(cluster, nodeName, nodeObj)
 

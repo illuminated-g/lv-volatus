@@ -10,8 +10,8 @@ from .vecto.proto import group_data_pb2, string_data_pb2
 
 class ChannelValue:
     def __init__(self, chanCfg: ChannelConfig):
-        self.name = chanCfg.name()
-        self.value = chanCfg.defaultValue()
+        self.name = chanCfg.name
+        self.value = chanCfg.defaultValue
         self.time_ns = 0
     
     def update(self, value, timestamp: int):
@@ -23,9 +23,9 @@ class ChannelValue:
     
 class ChannelGroup:
     def __init__(self, groupCfg: GroupConfig):
-        self.channel: dict[ChannelValue] = dict()
+        self._channel: dict[str, ChannelValue] = dict()
         self.config = groupCfg
-        self.name = groupCfg.name()
+        self.name = groupCfg.name
         self.time_ns = 0
         
         self._chanIndex: dict[str, int] = dict()
@@ -33,17 +33,20 @@ class ChannelGroup:
         self._valLock = threading.Lock()
         self._count = 0
 
-        channels = groupCfg.channels()
+        channels = groupCfg.channels
 
         i:int = 0
         for chanCfg in channels.values():
             chan = ChannelValue(chanCfg)
             self._channels.append(chan)
-            self.channel[chan.name] = chan
-            self._chanIndex[chanCfg.name()] = i
+            self._channel[chan.name] = chan
+            self._chanIndex[chanCfg.name] = i
             i += 1
 
         self._count = i
+
+    def chanByName(self, chanName: str) -> ChannelValue | None:
+        return self._channel.get(chanName)
 
     def chanIndex(self, chanName: str) -> int | None:
         return self._chanIndex.get(chanName)
@@ -102,7 +105,7 @@ class Subscriber:
         self._actions: queue.Queue[SubAction] = queue.Queue()
         self._thread: threading.Thread = threading.Thread(target= self._readLoop)
 
-        self._reader = MulticastReader(endpt.address(), endpt.port())
+        self._reader = MulticastReader(endpt.address, endpt.port)
 
         self._groups: dict[str, ChannelGroup] = dict()
 
@@ -110,7 +113,7 @@ class Subscriber:
 
     def addGroup(self, group: ChannelGroup):
         if group.config.publishConfig != self._endpoint:
-            raise ValueError(f'Group {group.name()} does not match subscriber endpoint of {str(self._endpoint)}')
+            raise ValueError(f'Group {group.name} does not match subscriber endpoint of {str(self._endpoint)}')
         
         self._actions.put(SubActionAddGroup(group))
 
@@ -174,7 +177,7 @@ class Telemetry:
     
     def subscribeToGroupCfg(self, groupCfg: GroupConfig) -> ChannelGroup:
         # check to see if group already exists
-        group = self._groups.get(groupCfg.name())
+        group = self._groups.get(groupCfg.name)
         if group:
             return group
         

@@ -1,37 +1,59 @@
 from pathlib import Path
 
-from telemetry import Subscriber
-from .config import VolatusConfig
+from .telemetry import *
+from .config import *
 
 class Volatus:
     def __init__(self, configPath: Path, systemName: str, clusterName: str, nodeName: str):
-        self._system = systemName
-        self._cluster = clusterName
-        self._node = nodeName
-        self._config = VolatusConfig()
+        self.systemName = systemName
+        self.clusterName = clusterName
+        self.nodeName = nodeName
+        self.config: VolatusConfig = ConfigLoader.load(configPath)
+        self.cluster: ClusterConfig
+        self.node: NodeConfig
+        self.telemetry: Telemetry
 
-        self.__loadConfig(configPath)
+        cfgSystemName = self.config.system.name
 
-    def __loadConfig(self, path: Path):
-        self._config.load(path)
+        if systemName != cfgSystemName:
+            raise ValueError(
+                f'Created config object for "{systemName}" system but config loaded is for "{cfgSystemName}".')
+
+
+        self.cluster = self.config.lookupClusterByName(clusterName)
+        if self.cluster:
+            self.node = self.cluster.lookupNodeByName(nodeName)
+
+        if not self.node:
+            raise ValueError(
+                f'Unable to find node "{nodeName}" in cluster "{clusterName}".')
+
+        self.__initFromConfig()
 
     def __createTelemetry(self):
-        pass
+        self.telemetry = Telemetry()
 
     def __startTCP(self):
         pass
 
-    def config(self) -> VolatusConfig:
-        return self._config
+    def __initFromConfig(self):
+        node = self.node
+        cluster = self.cluster
+
+        if node.network.tcp:
+            self.__startTCP()
+        
+        self.__createTelemetry()
 
     def connect(self) -> bool:
         pass
 
     def close(self) -> bool:
-        pass
+        self.telemetry.close()
 
-    def subscribe(self, groupName: str) -> Subscriber :
-        pass
+    def subscribe(self, groupName: str) -> ChannelGroup :
+        groupCfg = self.config.lookupGroupByName(groupName)
+        return self.telemetry.subscribeToGroupCfg(groupCfg)
 
     def unsubscribe(self, groupName: str) -> bool:
         pass

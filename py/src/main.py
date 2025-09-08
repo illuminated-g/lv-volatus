@@ -1,5 +1,4 @@
-from volatus.telemetry import *
-from volatus.config import *
+from volatus.volatus import *
 
 import time
 
@@ -7,27 +6,20 @@ import time
 # this is the same format used for paths in vjson files.
 cfgPath = Cfg.normalizePath('c:/dev/lv20ce/relink/lv-volatus/VolatusScratch/daqtest.vjson')
 
-# load the configuration object from disk
-# the volatus config class provides convenient lookup methods used for interacting
-#   with telemetry and commands
-vCfg: VolatusConfig = ConfigLoader.load(cfgPath)
+# create the top level Volatus object. The Volatus class handles config loading
+# and initializing the components as configured.
+v = Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript')
 
-print('Config hash: ' + vCfg.hash)
+# subscribe to a known group we're interested in reading published data from
+gAI = v.subscribe('TestAI')
 
-# create the telemetry object which handles subscriptions and reading group data
-#   from the network
-tlm = Telemetry()
+# get a single channel to read live values from
+ch0 = gAI.chanByName('Alpha')
 
-# get a known group config that we are interested in subscribing for data from
-aiGroup = tlm.subscribeToGroupCfg(vCfg.lookupGroupByName('TestAI'))
-
-# lookup a value we want to get current value from
-chAlpha = aiGroup.channel['Alpha']
-
-# display channel value roughly ten times a second
-for i in range(100):
-    print(chAlpha.value)
+# loop ~10Hz displaying current value for the channel
+for i in range(20):
+    print(ch0.value)
     time.sleep(0.1)
 
-# shutdown the telemetry handling
-tlm.close()
+# when done with volatus, make sure connections are closed, threads are cleaned up, and resources are released
+v.close()
