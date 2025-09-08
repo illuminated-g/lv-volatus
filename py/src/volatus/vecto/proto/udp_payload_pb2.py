@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11udp_payload.proto\"c\n\nUdpPayload\x12\x11\n\tsource_id\x18\x03 \x01(\x07\x12\x10\n\x08sequence\x18\x04 \x01(\x07\x12\x11\n\ttimestamp\x18\x05 \x01(\x06\x12\x0c\n\x04type\x18\x06 \x01(\t\x12\x0f\n\x07payload\x18\n \x01(\x0c\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11udp_payload.proto\"c\n\nUdpPayload\x12\x11\n\tsource_id\x18\x03 \x01(\x07\x12\x10\n\x08sequence\x18\x04 \x01(\x07\x12\x11\n\ttimestamp\x18\x05 \x01(\x10\x12\x0c\n\x04type\x18\x06 \x01(\t\x12\x0f\n\x07payload\x18\n \x01(\x0c\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)

@@ -200,7 +200,7 @@ class Telemetry:
         
         return group
     
-    def close(self):
+    def shutdown(self):
         with self._subLock:
             for sub in self._subscribers.values():
                 sub.close()

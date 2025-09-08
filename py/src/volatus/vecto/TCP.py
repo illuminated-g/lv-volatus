@@ -9,6 +9,7 @@ from ..config import *
 
 from .proto.tcp_payload_pb2 import *
 from .proto.tcp_client_hello_pb2 import *
+from .proto.tcp_server_hello_pb2 import *
 
 thread_local = threading.local()
 
@@ -48,7 +49,7 @@ class ClientInfo:
     def __init__(self, address: tuple[str, int]):
         self.address = address
 
-class TCPMessaging(socket.socket):
+class TCPMessaging:
     def __init__(self, address: str, port: int, server: bool, vCfg: VolatusConfig, nodeCfg: NodeConfig):
         self.address = address
         self.port = port
@@ -56,38 +57,52 @@ class TCPMessaging(socket.socket):
         self.state: str = 'UNKNOWN'
         self.vCfg = vCfg
         self.nodeCfg = nodeCfg
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         self.id = nodeCfg.id
 
         self._actionQ: queue.Queue[TCPAction] = queue.Queue()
         self._sendQueue: queue.Queue[TcpPayload] = queue.Queue()
 
-        super(TCPMessaging, self).__init__(socket.AF_INET, socket.SOCK_STREAM)
+        self.socket.settimeout(5)
 
-        self.settimeout(5)
-
-        if self._server:
+        if self.server:
             raise ValueError('Server mode is not implemented in Python yet.')
         else:
             self._thread = threading.Thread(target= self._clientLoop)
 
         self._thread.start()
+    
+    def open(self):
+        self._actionQ.put(TCPAction.OPEN)
+
+    def close(self):
+        self._actionQ.put(TCPAction.CLOSE)
+    
+    def shutdown(self):
+        self._actionQ.put(TCPAction.SHUTDOWN)
 
     def sendMsg(self, target: str, type: str, payload: bytes, sequence: int, task: str = ''):
         targetId = self.vCfg.lookupNodeByName(target).id
 
         if targetId:
             #timestamp (0) is set when actually sent
-            toSend = TcpPayload(targetId, self.id, sequence, 0, type, task, payload)
+            toSend = TcpPayload()
+            toSend.target_node = targetId
+            toSend.source_id = self.id
+            toSend.sequence = sequence
+            toSend.type = type
+            toSend.task_id = task
+            toSend.payload = payload
             self._sendQueue.put(toSend)
 
     def _clientLoop(self):
         clientHello = TcpClientHello()
-        clientHello.system = self.vCfg.system
-        clientHello.cluster = self.nodeCfg.clusterName
         clientHello.node_id = self.nodeCfg.id
+        clientHello.system = self.vCfg.system.name
+        clientHello.cluster = self.nodeCfg.clusterName
         clientHello.node_name = self.nodeCfg.name
-        clientHello.config_version = str(self.vCfg.version())
+        clientHello.config_version = str(self.vCfg.version)
         helloPayload = clientHello.SerializeToString()
 
         tcpPayload = TcpPayload()
@@ -118,7 +133,7 @@ class TCPMessaging(socket.socket):
 
                     case TCPAction.SHUTDOWN:
                         shutdown = True
-                        if state != ClientState.IDLE:
+                        if state == ClientState.CONNECTED:
                             state = ClientState.CLOSING
                             self.state = str(state)
 
@@ -129,12 +144,23 @@ class TCPMessaging(socket.socket):
 
             if state == ClientState.CONNECTING:
                 #make an attempt at connecting to the server
-                try:
-                    self.connect(self.address)
-                    state = ClientState.CONNECTED
-                    self.state = str(state)
-                except:
-                    pass
+                self.socket.connect((self.address, self.port))
+
+                # connection handshake, client starts by sending ClientHello
+                self.__sendSized(helloPayload)
+
+                # server responds with ServerHello
+                serverPayload = self.__recvSized()
+                if serverPayload:
+                    serverHello = TcpServerHello()
+                    serverHello.ParseFromString(serverPayload)
+                    if serverHello.status == ConnectStatus.STATUS_SUCCESS:
+                        state = ClientState.CONNECTED
+                        self.state = str(state)
+                    else:
+                        raise RuntimeError(
+                            f'Connection error {serverHello.status} from server, aborting.'
+                        )
 
             if state == ClientState.CONNECTED:
                 #check for messages to send
@@ -143,32 +169,26 @@ class TCPMessaging(socket.socket):
                     payload.timestamp = time.time_ns()
 
                     try:
-                        self.sendall(payload.SerializeToString())
+                        self.__sendSized(payload.SerializeToString())
                     except:
                         state = ClientState.CLOSING
                         self.state = str(state)
                         continue
 
                 #check for incoming messages
-                while True:
-                    sizeBytes = self.recv(4)
-                    if sizeBytes == 0:
-                        state = ClientState.CLOSING
-                        self.state = str(state)
-                        break
-                    else:
-                        size = int.from_bytes(sizeBytes, 'little')
-                        recvBytes = self.recv(size)
-                        if len(recvBytes) < size:
-                            state = ClientState.CLOSING
-                            self.state = str(state)
-                        
-                        tcpPayload.ParseFromString(recvBytes)
-                        #TODO handle receiving messages
+                # while True:
+                #     recvBytes = self.__recvSized()
+                #     if recvBytes:
+                #         tcpPayload.ParseFromString(recvBytes)
+                #         #TODO handle receiving messages
+                #     else:
+                #         state = ClientState.CLOSING
+                #         self.state = str(state)
+                #         break
 
             if state == ClientState.CLOSING:
-                self.shutdown()
-                self.close()
+                self.socket.shutdown(socket.SHUT_RDWR)
+                self.socket.close()
 
                 if open and not shutdown:
                     #error during send, try to reconnect
@@ -177,6 +197,24 @@ class TCPMessaging(socket.socket):
                 elif shutdown:
                     state = ClientState.SHUTDOWN
                     self.state = str(state)
+
+    def __sendSized(self, payload: bytes):
+        l = len(payload)
+        lb = l.to_bytes(4, 'little')
+        buf = lb + payload
+        self.socket.sendall(buf)
+
+    def __recvSized(self) -> bytes:
+        sizeBytes = self.socket.recv(4)
+        if len(sizeBytes) == 0:
+            return bytes()
+        else:
+            size = int.from_bytes(sizeBytes, 'little')
+            recvBytes = self.socket.recv(size)
+            if len(recvBytes) < size:
+                return bytes()
+            
+            return recvBytes
 
     def _serverClientLoop(self):
         pass

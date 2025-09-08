@@ -2,6 +2,9 @@ from pathlib import Path
 
 from .telemetry import *
 from .config import *
+from .vecto.TCP import *
+from .proto.cmd_digital_pb2 import *
+from .proto.cmd_analog_pb2 import *
 
 class Volatus:
     def __init__(self, configPath: Path, systemName: str, clusterName: str, nodeName: str):
@@ -12,6 +15,9 @@ class Volatus:
         self.cluster: ClusterConfig
         self.node: NodeConfig
         self.telemetry: Telemetry
+        self.tcp: TCPMessaging
+
+        self._seq = 0
 
         cfgSystemName = self.config.system.name
 
@@ -34,7 +40,10 @@ class Volatus:
         self.telemetry = Telemetry()
 
     def __startTCP(self):
-        pass
+        tcpCfg = self.node.network.tcp
+
+        self.tcp = TCPMessaging(tcpCfg.address, tcpCfg.port, tcpCfg.server, self.config, self.node)
+        self.tcp.open()
 
     def __initFromConfig(self):
         node = self.node
@@ -51,11 +60,38 @@ class Volatus:
     def __exit__(self, type, value, traceback):
         self.shutdown()
 
-    def connect(self) -> bool:
-        pass
+    def __nextSeq(self) -> int:
+        seq = self._seq
+        self._seq += 1
+        return seq
 
     def shutdown(self) -> bool:
-        self.telemetry.close()
+        if self.telemetry:
+            self.telemetry.shutdown()
+
+        if self.tcp:
+            self.tcp.shutdown()
+
+    def sendDigitalCommand(self, chanName: str, value: bool):
+        cmd = CmdDigital()
+        cmd.channel = chanName
+        cmd.value = value
+
+        chan = self.config.lookupChannelByName(chanName)
+        targetName = chan.nodeName
+        taskName = chan.taskName
+
+        self.tcp.sendMsg(targetName, 'cmd_digital', cmd.SerializeToString(), self.__nextSeq(), taskName)
+
+    def createDigitalMultipleCommand(self, values: tuple[str, bool]) -> bytes:
+        pass
+
+    def createAnalogCommand(self, chanName: str, value: float) -> bytes:
+        pass
+
+    def createAnalogMultipleCommand(self, values: tuple[str, float]) -> bytes:
+        pass
+
 
     def subscribe(self, groupName: str) -> ChannelGroup :
         if self.telemetry:
