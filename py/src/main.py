@@ -7,19 +7,17 @@ import time
 cfgPath = Cfg.normalizePath('c:/dev/lv20ce/relink/lv-volatus/VolatusScratch/daqtest.vjson')
 
 # create the top level Volatus object. The Volatus class handles config loading
-# and initializing the components as configured.
-v = Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript')
+# and initializing the components as configured. With the Context Manager support
+# the initialized volatus object is automatically shutdown at the end of the with block.
+with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
 
-# subscribe to a known group we're interested in reading published data from
-gAI = v.subscribe('TestAI')
+    # subscribe to a known group we're interested in reading published data from
+    gAI = v.subscribe('TestAI')
 
-# get a single channel to read live values from
-ch0 = gAI.chanByName('Alpha')
+    # get a single channel to read live values from
+    ch0 = gAI.chanByName('Alpha')
 
-# loop ~10Hz displaying current value for the channel
-for i in range(20):
-    print(ch0.value)
-    time.sleep(0.1)
-
-# when done with volatus, make sure connections are closed, threads are cleaned up, and resources are released
-v.close()
+    # loop ~10Hz displaying current value for the channel
+    for i in range(20):
+        print(ch0.value)
+        time.sleep(0.1)

@@ -45,15 +45,24 @@ class Volatus:
         
         self.__createTelemetry()
 
+    def __enter__(self):
+        return self
+    
+    def __exit__(self, type, value, traceback):
+        self.shutdown()
+
     def connect(self) -> bool:
         pass
 
-    def close(self) -> bool:
+    def shutdown(self) -> bool:
         self.telemetry.close()
 
     def subscribe(self, groupName: str) -> ChannelGroup :
-        groupCfg = self.config.lookupGroupByName(groupName)
-        return self.telemetry.subscribeToGroupCfg(groupCfg)
+        if self.telemetry:
+            groupCfg = self.config.lookupGroupByName(groupName)
+            return self.telemetry.subscribeToGroupCfg(groupCfg)
+
+        raise RuntimeError('Volatus is not configured for networking and the telemetry component is not available.')
 
     def unsubscribe(self, groupName: str) -> bool:
         pass
