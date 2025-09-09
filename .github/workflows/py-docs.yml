@@ -24,10 +24,12 @@ jobs:
       - name: Install dependencies
         working-directory: ./py
         run: uv sync --locked --all-extras --dev
+      - name: Activate venv
+        working-directory: ./py
+        run: .venv/Scripts/activate
       - name: Sphinx build
-        uses: ammaraskar/sphinx-action@master
-        with:
-            docs-folder: "py/doc/source"
+        working-directory: ./py/doc
+        run: make html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
