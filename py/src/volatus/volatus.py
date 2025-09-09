@@ -1,12 +1,16 @@
+"""The core module containing the Volatus class to be used for handling configs and system interactions."""
+
 from pathlib import Path
-
 from collections.abc import Callable
+from datetime import datetime
 
-from .telemetry import *
-from .config import *
-from .vecto.TCP import *
-from .proto.cmd_digital_pb2 import *
-from .proto.cmd_analog_pb2 import *
+from volatus.telemetry import Telemetry, ChannelGroup
+from volatus.config import VolatusConfig, NodeConfig, ConfigLoader, ClusterConfig
+from volatus.vecto.TCP import TCPMessaging
+from volatus.proto.cmd_digital_pb2 import CmdDigital, CmdDigitalMultiple
+from volatus.proto.cmd_analog_pb2 import CmdAnalog, CmdAnalogMultiple
+from volatus.proto.start_log_pb2 import StartLog
+from volatus.proto.stop_log_pb2 import StopLog
 
 class VCommand:
     """Constructed command that is ready to be sent to a Volatus system.
@@ -45,6 +49,34 @@ class VCommand:
         """
         self._sendFunc(self._targetName, self._type, self._payload, self._seqFunc(), self._taskName)
 
+class StartLogCommand(VCommand):
+    """A prepared command to start logging across a set of target nodes that can be sent with send()
+    """
+    
+    def __init__(self,
+                 targetName: str,
+                 testName: str,
+                 seqFunc: Callable[[], int],
+                 sendFunc: Callable[[str, str, bytes, int, str], None],
+                 startedBy: str,
+                 timestamp: str = ''):
+        self._seqFunc = seqFunc
+        self._sendFunc = sendFunc
+        self._targetName = targetName
+        self._timestamp = timestamp
+
+        self._cmd = StartLog()
+        self._cmd.series = testName
+        self._cmd.started_by = startedBy
+
+    def send(self):
+        if not self._timestamp:
+            self._timestamp = datetime.now().strftime('%Y%m%dT%H%M%S')
+
+        self._cmd.timestamp = self._timestamp
+
+        self._sendFunc(self._targetName, 'start_log', self._cmd.SerializeToString(), self._seqFunc(), '')
+
 class Volatus:
     """The main API class for interacting with Volatus configs and systems.
     """
@@ -65,14 +97,23 @@ class Volatus:
         :raises ValueError: The specified systemName was not found in the configuration.
         :raises ValueError: The specified clusterName or nodeName was not found in the configuration.
         """
-        self.systemName = systemName
-        self.clusterName = clusterName
-        self.nodeName = nodeName
+
+        self.systemName: str = systemName
+        """The name of the system in the configuration to validate the correct system is being referenced."""
+
+        self.clusterName: str = clusterName
+        """The name of the cluster this app belongs to in the configuration."""
+
+        self.nodeName: str = nodeName
+        """The name of the node (application) to use from the configuration."""
+
         self.config: VolatusConfig = ConfigLoader.load(configPath)
-        self.cluster: ClusterConfig
-        self.node: NodeConfig
-        self.telemetry: Telemetry
-        self.tcp: TCPMessaging
+        """The configuration from the configPath argument."""
+
+        self._cluster: ClusterConfig
+        self._node: NodeConfig
+        self._telemetry: Telemetry
+        self._tcp: TCPMessaging
 
         self._seq = 0
 
@@ -83,28 +124,28 @@ class Volatus:
                 f'Created config object for "{systemName}" system but config loaded is for "{cfgSystemName}".')
 
 
-        self.cluster = self.config.lookupClusterByName(clusterName)
-        if self.cluster:
-            self.node = self.cluster.lookupNodeByName(nodeName)
+        self._cluster = self.config.lookupClusterByName(clusterName)
+        if self._cluster:
+            self._node = self._cluster.lookupNodeByName(nodeName)
 
-        if not self.node:
+        if not self._node:
             raise ValueError(
                 f'Unable to find node "{nodeName}" in cluster "{clusterName}".')
 
         self.__initFromConfig()
 
     def __createTelemetry(self):
-        self.telemetry = Telemetry()
+        self._telemetry = Telemetry()
 
     def __startTCP(self):
-        tcpCfg = self.node.network.tcp
+        tcpCfg = self._node.network.tcp
 
-        self.tcp = TCPMessaging(tcpCfg.address, tcpCfg.port, tcpCfg.server, self.config, self.node)
-        self.tcp.open()
+        self._tcp = TCPMessaging(tcpCfg.address, tcpCfg.port, tcpCfg.server, self.config, self._node)
+        self._tcp.open()
 
     def __initFromConfig(self):
-        node = self.node
-        cluster = self.cluster
+        node = self._node
+        cluster = self._cluster
 
         if node.network.tcp:
             self.__startTCP()
@@ -125,11 +166,11 @@ class Volatus:
     def shutdown(self):
         """Stops all communication threads managed by the Volatus framework to prepare for reloading configuration or stopping the Python app.
         """
-        if self.tcp:
-            self.tcp.shutdown()
+        if self._tcp:
+            self._tcp.shutdown()
 
-        if self.telemetry:
-            self.telemetry.shutdown()
+        if self._telemetry:
+            self._telemetry.shutdown()
 
     def lookupTargetId(self, targetName: str) -> int | None:
         """Looks up the numeric ID used to route a message to the desired node(s).
@@ -137,12 +178,12 @@ class Volatus:
         Also useful for verifying if a target name is valid; unknown target names return None as the value.
         """
         #check if target is a node
-        node = self.cluster.lookupNodeByName(targetName)
+        node = self._cluster.lookupNodeByName(targetName)
         if node:
             return node.id
         
         #check if target is a targetGroup
-        targetGroup = self.cluster.lookupTargetGroupId(targetName)
+        targetGroup = self._cluster.lookupTargetGroupId(targetName)
         return targetGroup
     
     def createDigitalCommand(self, chanName: str, value: bool) -> VCommand:
@@ -169,7 +210,7 @@ class Volatus:
         targetName = chan.nodeName
         taskName = chan.taskName
 
-        return VCommand(targetName, 'cmd_digital', cmd.SerializeToString(), self.__nextSeq, self.tcp.sendMsg, taskName)
+        return VCommand(targetName, 'cmd_digital', cmd.SerializeToString(), self.__nextSeq, self._tcp.sendMsg, taskName)
     
     def createAnalogCommand(self, chanName: str, value: float) -> VCommand:
         """Prepares an analog/numeric command to send to a Volatus system.
@@ -195,7 +236,7 @@ class Volatus:
         targetName = chan.nodeName
         taskName = chan.taskName
 
-        return VCommand(targetName, 'cmd_analog', cmd.SerializeToString(), self.__nextSeq, self.tcp.sendMsg, taskName)
+        return VCommand(targetName, 'cmd_analog', cmd.SerializeToString(), self.__nextSeq, self._tcp.sendMsg, taskName)
 
     def createDigitalMultipleCommand(self, values: list[tuple[str, bool]]) -> VCommand:
         """Creates a command that can update multiple digital values simultaneously.
@@ -230,7 +271,7 @@ class Volatus:
                 if targetName != chan.nodeName or taskName != chan.taskName:
                     raise ValueError('Multiple command can only include channels from a single node/task.')
         
-        return VCommand(targetName, 'cmd_digital_multiple', cmd.SerializeToString(), self.__nextSeq(), self.tcp.sendMsg, taskName)
+        return VCommand(targetName, 'cmd_digital_multiple', cmd.SerializeToString(), self.__nextSeq(), self._tcp.sendMsg, taskName)
 
     def createAnalogMultipleCommand(self, values: list[tuple[str, float]]) -> VCommand:
         """Prepares a command that can update multiple numeric values simultaneously
@@ -265,8 +306,38 @@ class Volatus:
                 if targetName != chan.nodeName or taskName != chan.taskName:
                     raise ValueError('Multiple command can only include channels from a single node/task.')
         
-        return VCommand(targetName, 'cmd_analog_multiple', cmd.SerializeToString(), self.__nextSeq(), self.tcp.sendMsg, taskName)
+        return VCommand(targetName, 'cmd_analog_multiple', cmd.SerializeToString(), self.__nextSeq(), self._tcp.sendMsg, taskName)
+    
+    def createStartLogCommand(self, targetName: str, testName: str, startedBy: str, timestamp: str = '') -> VCommand:
+        """Prepare a Start Log command to send to a Volatus system.
 
+        :param targetName: Either the node or targetGroup to send the log command to.
+        :type targetName: str
+        :param testName: The primary name used for the log.
+        :type testName: str
+        :param startedBy: The user or source of the start log command.
+        :type startedBy: str
+        :param timestamp: The string representation of the time of the start log command, should be in basic ISO-8601
+            format with second precision, when defaulted to '' it generates a timestamp string when the command is sent.
+        :type timestamp: str, optional
+        :return: The prepared command ready to be sent with send()
+        :rtype: VCommand
+        """
+        cmd = StartLogCommand(
+            targetName,
+            testName,
+            self.__nextSeq,
+            self._tcp.sendMsg,
+            startedBy,
+            timestamp
+        )
+
+        return cmd
+    
+    def createStopLogCommand(self, targetName: str, reason: str) -> VCommand:
+        cmd = StopLog()
+        cmd.reason = reason
+        return VCommand(targetName, 'stop_log', cmd.SerializeToString(), self.__nextSeq, self._tcp.sendMsg)
 
     def subscribe(self, groupName: str) -> ChannelGroup:
         """Subscribes to the telemetry data from the specified group.
@@ -281,13 +352,13 @@ class Volatus:
         :return: The group that has been subscribed to.
         :rtype: ChannelGroup
         """
-        if self.telemetry:
+        if self._telemetry:
             groupCfg = self.config.lookupGroupByName(groupName)
 
             if not groupCfg:
                 raise ValueError(f'Unknown group name "{groupName}".')
             
-            return self.telemetry.subscribeToGroupCfg(groupCfg)
+            return self._telemetry.subscribeToGroupCfg(groupCfg)
 
         raise RuntimeError('Volatus is not configured for networking and the telemetry component is not available.')
 

@@ -5,11 +5,15 @@ import threading
 import queue
 from enum import Enum
 
-from ..config import *
+from ..config import VolatusConfig, NodeConfig
 
 from .proto.tcp_payload_pb2 import *
 from .proto.tcp_client_hello_pb2 import *
 from .proto.tcp_server_hello_pb2 import *
+
+__all__ = [
+    'TCPMessaging'
+]
 
 thread_local = threading.local()
 

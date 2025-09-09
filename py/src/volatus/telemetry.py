@@ -8,6 +8,12 @@ from .config import *
 from .vecto.UDP import *
 from .vecto.proto import group_data_pb2, string_data_pb2
 
+__all__ = [
+    'Telemetry',
+    'ChannelGroup',
+    'ChannelValue'
+]
+
 class ChannelValue:
     def __init__(self, chanCfg: ChannelConfig):
         self.name = chanCfg.name

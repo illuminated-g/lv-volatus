@@ -6,12 +6,10 @@
 Volatus documentation
 =====================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+Python library for interacting with Volatus software systems.
 
+.. autosummary::
+   :toctree: _autosummary
+   :recursive:
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
+   volatus
