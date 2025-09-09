@@ -17,12 +17,14 @@ jobs:
         uses: astral-sh/setup-uv@v6
         with:
           working-directory: py
+      - name: Check Python version
+        run: python --version
+      - name: Check uv version
+        run: uv --version
       - name: Install dependencies
-        run: |
-          run: uv sync --locked --all-extras --dev
+        run: uv sync --locked --all-extras --dev
       - name: Sphinx build
-        run: |
-          sphinx-build py/doc/source _py_docs_build
+        run: sphinx-build py/doc/source _py_docs_build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
