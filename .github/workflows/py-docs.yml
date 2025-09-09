@@ -22,9 +22,11 @@ jobs:
       - name: Check uv version
         run: uv --version
       - name: Install dependencies
+        working-directory: ./py
         run: uv sync --locked --all-extras --dev
       - name: Sphinx build
-        run: sphinx-build py/doc/source _py_docs_build
+        working-directory: ./py
+        run: sphinx-build doc/source _py_docs_build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
