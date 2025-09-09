@@ -25,13 +25,13 @@ jobs:
         working-directory: ./py
         run: uv sync --locked --all-extras --dev
       - name: Sphinx build
-        working-directory: ./py
-        run: sphinx-build doc/source _py_docs_build
+        working-directory: ./py/doc
+        run: make
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _py_docs_build
+          publish_dir: py/doc/build/html
           force_orphan: true
