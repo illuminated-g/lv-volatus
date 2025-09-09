@@ -25,8 +25,9 @@ jobs:
         working-directory: ./py
         run: uv sync --locked --all-extras --dev
       - name: Sphinx build
-        working-directory: ./py/doc
-        run: make
+        uses: ammaraskar/sphinx-action@master
+        with:
+            docs-folder: "py/doc/"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
