@@ -11,9 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme myst_parser
+          run: uv sync --locked --all-extras --dev
       - name: Sphinx build
         run: |
           sphinx-build py/doc/source _py_docs_build
