@@ -12,6 +12,7 @@
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
 	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
+	<Item Name="StandaloneServer.lvlib" Type="Library" URL="../StandaloneServer/StandaloneServer.lvlib"/>
 	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
 	<Item Name="Test MinMax Decimation.vi" Type="VI" URL="../Test MinMax Decimation.vi"/>
 	<Item Name="TestGUI.vi" Type="VI" URL="../TestGUI.vi"/>
