@@ -448,6 +448,15 @@
 			</Item>
 		</Item>
 		<Item Name="Messaging" Type="Folder">
+			<Item Name="Delayed Send to Self.vi" Type="VI" URL="../Delayed Send to Self.vi">
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;T!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!?$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)/47^E&gt;7RF,GRW9WRB=X-!!!J.&lt;W2V&lt;'5A&lt;X6U!!!01!-!#%2F&lt;'&amp;Z)'VT!!!71#%23'FH;#"1=GFP=GFU?3!I2CE!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!+1&amp;-%2'&amp;U91!!&amp;%!Q`````QJ.:8.T97&gt;F)%F%!!!S1(!!(A!!(AV7&lt;WRB&gt;(6T,GRW&lt;'FC$EVP:(6M:3ZM&gt;G.M98.T!!!*47^E&gt;7RF)'FO!'%!]!!-!!-!"!!%!!5!"!!%!!9!"Q!)!!E!#A!,!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!%!!!!!A!!!!+!!!!#A!!!B!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!Q!!!!!</Property>
+				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+				<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
+				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+				<Property Name="NI.ClassItem.MethodScope" Type="UInt">3</Property>
+				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">268967952</Property>
+			</Item>
 			<Item Name="Register for Remote Messages.vi" Type="VI" URL="../Register for Remote Messages.vi">
 				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!($!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$2!=!!?!!!?$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)/47^E&gt;7RF,GRW9WRB=X-!!!J.&lt;W2V&lt;'5A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!":!-0````]-476T=W&amp;H:3"5?8"F!!!51$$`````#EVF=X.B:W5A351!!&amp;-!]1!!!!!!!!!#$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)9476T=W&amp;H:3"3:7&gt;J=X2S982J&lt;WYO9X2M!#2!5!!#!!=!#"2.:8.T97&gt;F)&amp;*F:WFT&gt;(*B&gt;'FP&lt;A!!&amp;E"!!!(`````!!E)476T=W&amp;H:8-!!$*!=!!?!!!?$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)/47^E&gt;7RF,GRW9WRB=X-!!!F.&lt;W2V&lt;'5A;7Y!91$Q!!Q!!Q!%!!1!"1!%!!1!"!!%!!9!"!!+!!M$!!"Y!!!.#!!!!!!!!!!!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!#%!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$!!!!!!</Property>
 				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>

@@ -362,5 +362,10 @@ class Volatus:
 
         raise RuntimeError('Volatus is not configured for networking and the telemetry component is not available.')
 
-    def unsubscribe(self, group: ChannelGroup) -> bool:
+    def unsubscribe(self, group: ChannelGroup):
+        """Not implemented yet.
+
+        :param group: The group that was subscribed to.
+        :type group: ChannelGroup
+        """
         pass

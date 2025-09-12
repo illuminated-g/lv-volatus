@@ -26,6 +26,7 @@
 			<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../Config Alert Module/Config Monitor Module.lvclass"/>
 		</Item>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
+		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
 		<Item Name="Timing Module.lvclass" Type="LVClass" URL="../Timing Module/Timing Module.lvclass"/>
@@ -37,6 +38,7 @@
 		<Item Name="Config Info.ctl" Type="VI" URL="../Config Info.ctl"/>
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
+		<Item Name="Hardware Type.ctl" Type="VI" URL="../Hardware Type.ctl"/>
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
 		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
@@ -49,11 +51,13 @@
 	<Item Name="HTTP" Type="Folder">
 		<Item Name="ConfigHTTPController.lvclass" Type="LVClass" URL="../ConfigHTTPController/ConfigHTTPController.lvclass"/>
 		<Item Name="DebugHTTPController.lvclass" Type="LVClass" URL="../DebugHTTPController/DebugHTTPController.lvclass"/>
+		<Item Name="HardwareHTTPController.lvclass" Type="LVClass" URL="../HardwareHTTPController/HardwareHTTPController.lvclass"/>
 		<Item Name="HomeHTTPController.lvclass" Type="LVClass" URL="../HomeHTTPController/HomeHTTPController.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Config Monitor Identity.lvclass" Type="LVClass" URL="../Config Monitor Identity/Config Monitor Identity.lvclass"/>
 		<Item Name="Event Reporter Identity.lvclass" Type="LVClass" URL="../Event Reporter Identity/Event Reporter Identity.lvclass"/>
+		<Item Name="Hardware Info Identity.lvclass" Type="LVClass" URL="../Hardware Info Identity/Hardware Info Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
 		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>
 		<Item Name="System Config Identity.lvclass" Type="LVClass" URL="../System Config Identity/System Config Identity.lvclass"/>
