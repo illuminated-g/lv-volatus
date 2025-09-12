@@ -85,5 +85,6 @@
 		<Item Name="ConfigMonitorInfoValue.lvclass" Type="LVClass" URL="../ConfigMonitorInfoValue/ConfigMonitorInfoValue.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
 		<Item Name="PathValue.lvclass" Type="LVClass" URL="../PathValue/PathValue.lvclass"/>
+		<Item Name="StringValue.lvclass" Type="LVClass" URL="../StringValue/StringValue.lvclass"/>
 	</Item>
 </Library>
