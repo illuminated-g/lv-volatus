@@ -1,0 +1,33 @@
+[project]
+name = "ig-volatus"
+version = "0.2.0"
+description = "Python package for interacting with Volatus framework applications"
+authors = [{ name = "Derrick Bommarito", email = "derrick.a.bommarito@gmail.com" }]
+requires-python = ">=3.13"
+readme = "readme.md"
+license = { text = "MIT" }
+dependencies = [
+    "protobuf (>=6.32.0,<7.0.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "sockets (>=1.0.0,<2.0.0)",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/volatus"]
+
+[tool.hatch.build.targets.wheel]
+include = ["src/volatus"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/volatus" = "volatus"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "python-docs-theme>=2025.9.1",
+    "sphinx>=8.2.3",
+    "sphinx-autoapi>=3.6.0",
+]

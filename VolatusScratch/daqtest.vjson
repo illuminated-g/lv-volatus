@@ -1,0 +1,328 @@
+{
+    "Volatus": {
+        "Meta": {
+            "VL_Config_Version": "0.1.0+1"
+        },
+        "TestSystem": {
+            "Meta": {
+                "VL_Type": "VL_System"
+            },
+            "Sensors": {
+                "Meta": {
+                    "VL_Overlay_Type": "Sensors",
+                    "VL_Type": "VL_Sensor_List"
+                },
+                "Value": [
+                    {
+                        "Meta": {
+                            "VL_Type": "VL_Sensor"
+                        },
+                        "Model": "GP50",
+                        "Serial": "123456",
+                        "Scale": {
+                            "Meta": {
+                                "VL_Type": "VL_Scale"
+                            },
+                            "Type": "Polynomial",
+                            "Coefficients": [0.01, 0.9967]
+                        }
+                    },
+                    {
+                        "Meta": {
+                            "VL_Type": "VL_Sensor"
+                        },
+                        "Model": "GP50",
+                        "Serial": "234567",
+                        "Scale": {
+                            "Meta": {
+                                "VL_Type": "VL_Scale"
+                            },
+                            "Type": "Polynomial",
+                            "Coefficients": [-0.002, 1.00027]
+                        }
+                    }
+                ]
+            },
+            "Clusters": {
+                "TestCluster": {
+                    "Meta": {"VL_Type": "VL_Cluster"},
+                    "Discovery": {"Address": "239.0.0.10", "Port": 36987},
+                    "Groups": {
+                        "Events": 5,
+                        "Config": 6,
+                        "Logging": 7
+                    },
+                    "Nodes": {
+                        "Meta": {"VL_Type": "VL_Node_List"},
+                        "DaqTest": {
+                            "Meta": {"VL_Type": "VL_Node"},
+                            "Node_ID": 1,
+                            "DebugGUIs": true,
+                            "Events": {"LogFolder": "c:/logs"},
+                            "Config": {},
+                            "Network": {
+                                "Bind_Address": "0.0.0.0",
+                                "Announce_Interval": 5,
+                                "TCP": {"Address": "localhost", "Port": 12082, "Server": true},
+                                "HTTP_Port": 13083
+                            },
+                            "Groups": ["Config", "Logging"],
+                            "Tasks": {
+                                "0-Logging": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "LogManager"},
+                                    "Folder": "c:/logs",
+                                    "Logging_Status": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "String"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": "36987"},
+                                        "Logging_State_Num":    {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"}},
+                                        "Logging_Num_Loggers":  {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers"}},
+                                        "Logging_Num_Idle":     {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"}},
+                                        "Logging_Num_Prep":     {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Prep"}},
+                                        "Logging_Num_Ready":    {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Ready"}},
+                                        "Logging_Num_Active":   {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Active"}},
+                                        "Logging_Num_Stopping": {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"}},
+                                        "Logging_All_Active":   {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"}},
+                                        "Logging_State":        {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State"}},
+                                        "Logging_Series":       {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Series"}},
+                                        "Logging_Timestamp":    {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Timestamp"}}
+                                    }
+                                },
+                                "1-TestAI": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
+                                    "Sampling": {"Rate": 50000, "ChunkSize": 500},
+                                    "DataProc": {
+                                        "Publish_Period_ms": 100
+                                    },
+                                    "TestAI": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Channels": {
+                                            "Alpha":    {"Resource": "cDAQ1Mod5/ai0", "Unit": "psia", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Beta":     {"Resource": "cDAQ1Mod5/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Gamma":    {"Resource": "cDAQ1Mod5/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Delta":    {"Resource": "cDAQ1Mod5/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Wheeee":   {"Resource": "cDAQ1Mod6/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "bxchb":    {"Resource": "cDAQ1Mod6/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI06": {"Resource": "cDAQ1Mod6/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI07": {"Resource": "cDAQ1Mod6/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI08": {"Resource": "cDAQ1Mod7/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI09": {"Resource": "cDAQ1Mod7/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI10": {"Resource": "cDAQ1Mod7/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI11": {"Resource": "cDAQ1Mod7/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI12": {"Resource": "cDAQ1Mod8/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI13": {"Resource": "cDAQ1Mod8/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI14": {"Resource": "cDAQ1Mod8/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TestAI15": {"Resource": "cDAQ1Mod8/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}}
+                                        }
+                                    }
+                                },
+                                "1-TestAO": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAO"},
+                                    "DataProc": {
+                                        "Publish_Period_ms": 100
+                                    },
+                                    "AO_Group": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Channels": {
+                                            "Heat_PV1": {"Resource": "cDAQ1Mod4/ao0", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Heat_PV2": {"Resource": "cDAQ1Mod4/ao1", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Heat_PV3": {"Resource": "cDAQ1Mod4/ao2", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Heat_PV4": {"Resource": "cDAQ1Mod4/ao3", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "BB_PV1":   {"Resource": "cDAQ1Mod2/ao0", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "BB_PV2":   {"Resource": "cDAQ1Mod2/ao1", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "BB_PV3":   {"Resource": "cDAQ1Mod2/ao2", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}}
+                                        }
+                                    }
+                                },
+                                "1-TestDO": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDO"},
+                                    "DataProc": {
+                                        "Publish_Period_ms": 100
+                                    },
+                                    "TestDO": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Channels": {
+                                            "Latch1En":  {"Resource": "cDAQ1Mod1/port0/line0", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Latch1Dir": {"Resource": "cDAQ1Mod1/port0/line1", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Pulse1":    {"Resource": "cDAQ1Mod1/port0/line2", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Pulse2":    {"Resource": "cDAQ1Mod1/port0/line3", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Heater_En": {"Resource": "cDAQ1Mod1/port0/line4", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
+                                        }
+                                    }
+                                },
+                                "2-DigitalControl": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
+                                    "DataProc": {
+                                        "Publish_Period_ms": 100
+                                    },
+                                    "Period_ms": 5,
+                                    "ControlGroup": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Status": {
+                                            "DC_LastDt":   {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"}},
+                                            "DC_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
+                                        },
+                                        "Controls": {
+                                            "Latch1Control": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Latched",
+                                                "En_Channel": "Latch1En",
+                                                "Dir_Channel": "Latch1Dir",
+                                                "Latch1_Settle_s":    {"Value": 0.005, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Settle_s"}},
+                                                "Latch1_Actuation_s": {"Value": 0.2,   "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Actuation_s"}}
+                                            },
+                                            "Pulse1Control": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Pulsed",
+                                                "Channel": "Pulse1",
+                                                "Pulse1_Duration_s": {"Value": 0.1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Duration_s"}}
+                                            },
+                                            "Pulse2Control": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Pulsed",
+                                                "Channel": "Pulse2",
+                                                "Pulse2_Duration_s": {"Value": 0.1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Duration_s"}}
+                                            },
+                                            "Seq1Control": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "SeqDelay",
+                                                "Control_A": "Pulse1Control",
+                                                "Control_B": "Pulse2Control",
+                                                "Seq1_Delay_s": {"Value": 0.135, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Delay_s"}}
+                                            },
+                                            "Periodic1Control": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Periodic",
+                                                "Channel": "Pulse1Control",
+                                                "Periodic1_Period_s": {"Value": 1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Period_s"}}
+                                            },
+                                            "PeriodicSeqControl": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Periodic",
+                                                "Channel": "Seq1Control",
+                                                "PeriodicSeq_Period_s": {"Value": 1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Period_s"}}
+                                            },
+                                            "Multi_1": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Multi",
+                                                "Value": 0,
+                                                "Channels": ["Pulse1Control", "Pulse2Control"]
+                                            },
+                                            "BangBang_1": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "BangBang",
+                                                "Value": 0,
+                                                "Output": "BB_Multi",
+                                                "Process_Value": ["BB_PV1", "BB_PV2", "BB_PV3"],
+                                                "PV_Calc": "Median",
+                                                "Invert": false,
+                                                "Normal_Output": false,
+                                                "BangBang_1_Upper_Limit": {"Value": 4, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Upper_Limit"}},
+                                                "BangBang_1_Lower_Limit": {"Value": 2, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Lower_Limit"}}
+                                            },
+                                            "BB_Multi": {"Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Multi",
+                                                "Value": 0,
+                                                "Channels": ["Pulse1", "Pulse2"]
+                                            }
+                                        }
+                                    }
+                                },
+                                "2-HeaterControl": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
+                                    "DataProc": {},
+                                    "Period_ms": 100,
+                                    "HeaterGroup": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Status": {
+                                            "Heater_LastDt":   {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"}},
+                                            "Heater_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
+                                        },
+                                        "Controls": {
+                                            "Heater_1": {
+                                                "Meta": {"VL_Type": "VL_Channel"},
+                                                "Value": 0,
+                                                "Type": "TimedPWM",
+                                                "Output": "Heater_En",
+                                                "Process_Value": ["Heat_PV1", "Heat_PV2", "Heat_PV3", "Heat_PV4"],
+                                                "PV_Calc": "Average",
+                                                "Heater_1_Setpoint":   {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Setpoint"}},
+                                                "Heater_1_P_Band":     {"Value": 5,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "P_Band"}},
+                                                "Heater_1_I_Gain":     {"Value": 0.001, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "I_Gain"}},
+                                                "Heater_1_D_Gain":     {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "D_Gain"}},
+                                                "Heater_1_F_Gain":     {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "F_Gain"}},
+                                                "Heater_1_Cycle_s":    {"Value": 5,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Cycle_s"}},
+                                                "Heater_1_Min_s":      {"Value": 0.2,   "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Min_s"}},
+                                                "Heater_1_Out":        {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Out"}}
+                                            }
+                                        }
+                                    }
+                                },
+                                "GuiAI": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"},
+                                    "Shutdown_On_Close": true
+                                },
+                                "GuiAO": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"},
+                                    "Shutdown_On_Close": true
+                                },
+                                "GuiDO": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"},
+                                    "Shutdown_On_Close": true
+                                }
+                            }
+                        },
+                        "ValveGUI": {
+                            "Meta": {
+                                "VL_Type": "VL_Node"
+                            },
+                            "Node_ID": 2,
+                            "DebugGUIs": true,
+                            "Config": {
+                                "Monitor": true,
+                                "Autoshow": false
+                            },
+                            "Events": {
+                                "LogFolder": "c:/logs"
+                            },
+                            "Network": {
+                                "Bind_Address": "0.0.0.0",
+                                "Announce_Interval": 5,
+                                "TCP": {
+                                    "Address": "localhost",
+                                    "Port": 12082,
+                                    "Server": false
+                                },
+                                "Foo": "Bar"
+                            },
+                            "Groups": ["Config", "Events"],
+                            "Tasks": {
+                                "ValveGUI1": {
+                                    "Meta": {
+                                        "VL_Type": "VL_Task",
+                                        "VL_Task_Type": "PluginGUI"
+                                    },
+                                    "GUI_Path": "C:/dev/lv20CE/relink/lv-volatus/VolatusScratch/ValveGUI.vi",
+                                    "Autoshow": true,
+                                    "Refresh_Timeout_ms": 100,
+                                    "Shutdown_On_Close": true
+                                }
+                            }
+                        },
+                        "PyScript": {
+                            "Meta": {"VL_Type": "VL_Node"},
+                            "Node_ID": 3,
+                            "Network": {
+                                "Bind_Address": "0.0.0.0",
+                                "TCP": {
+                                    "Address": "localhost",
+                                    "Port": 12082,
+                                    "Server": false
+                                }
+                            },
+                            "Events": {
+                                "LogFolder": "c:/logs"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
