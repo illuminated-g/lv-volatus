@@ -1,4 +1,6 @@
-from volatus.volatus import *
+from volatus.config import Cfg
+from volatus.volatus import Volatus
+from volatus.telemetry import ChannelGroup, ChannelValue
 
 import time
 
@@ -11,11 +13,19 @@ cfgPath = Cfg.normalizePath('c:/dev/lv20ce/relink/lv-volatus/VolatusScratch/daqt
 # the initialized volatus object is automatically shutdown at the end of the with block.
 with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
 
+    gAI: ChannelGroup
+    hasData: bool
+
     # subscribe to a known group we're interested in reading published data from
-    gAI = v.subscribe('TestAI')
+    gAI, hasData = v.subscribe('TestAI', 2)
+
+    if hasData:
+        print("Data valid within timeout.")
+    else:
+        print("No data received yet.")
 
     # get a single channel to read live values from
-    ch0 = gAI.chanByName('Alpha')
+    ch0: ChannelValue = gAI.chanByName('Alpha')
 
     # turn digital output on, for scaled values (such as inverted NO valves) this will be before scaling
     # typically meaning valves are always True = Open, False = Closed

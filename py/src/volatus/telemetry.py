@@ -185,7 +185,17 @@ class Telemetry:
     def createPublishGroupCfg(self, groupCfg: GroupConfig) -> ChannelGroup:
         pass
     
-    def subscribeToGroupCfg(self, groupCfg: GroupConfig) -> ChannelGroup:
+    def subscribeToGroupCfg(self, groupCfg: GroupConfig, timeout_s: float = None) -> tuple[ChannelGroup, bool]:
+        """_summary_
+
+        :param groupCfg: The configuration of the group to subscribe to. Must include publish configuration.
+        :type groupCfg: GroupConfig
+        :param timeout_s: Wait up to this amount of time for data to arrive after subscribibg, defaults to None
+        :type timeout_s: int, optional
+        :raises ValueError: The group config does not have a publish configuration.
+        :return: The group that was subscribed to and true if data has been received before the timeout.
+        :rtype: tuple[ChannelGroup, bool]
+        """
         # check to see if group already exists
         group = self._groups.get(groupCfg.name)
         if group:
@@ -207,8 +217,22 @@ class Telemetry:
                 sub = Subscriber(endpt)
                 self._subscribers[endpt] = sub
                 sub.addGroup(group)
+
+        hasData = False
+
+        if timeout_s is not None:
+            start = time.time()
+
+            #get first channel to check for data
+            chan = group.chanByIndex(0)
+
+            while time.time() - start < timeout_s and chan.time_ns == 0:
+                #data subcriptions run in a separate thread so we can just block sleep to wait
+                time.sleep(0.01)
+
+            hasData = chan.time_ns > 0
         
-        return group
+        return (group, hasData)
     
     def shutdown(self):
         with self._subLock:

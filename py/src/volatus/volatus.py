@@ -339,7 +339,7 @@ class Volatus:
         cmd.reason = reason
         return VCommand(targetName, 'stop_log', cmd.SerializeToString(), self.__nextSeq, self._tcp.sendMsg)
 
-    def subscribe(self, groupName: str) -> ChannelGroup:
+    def subscribe(self, groupName: str, timeout_s: float = None) -> tuple[ChannelGroup, bool]:
         """Subscribes to the telemetry data from the specified group.
 
         Groups are named collections of channels that are published together. Once subscribed, the channels within the group
@@ -347,18 +347,22 @@ class Volatus:
 
         :param groupName: The name of the group to subscribe to.
         :type groupName: str
+        :param timeout_s: How much time to wait for data to arrive after subscribing, defaults to None
+        :type timeout_s: float
         :raises ValueError: The specified group name was not found in the system configuration.
         :raises RuntimeError: The configuration for the node this Python app is running as was not configured for networking.
         :return: The group that has been subscribed to.
-        :rtype: ChannelGroup
+        :rtype: tuple[ChannelGroup, bool]
         """
+
+        
         if self._telemetry:
             groupCfg = self.config.lookupGroupByName(groupName)
 
             if not groupCfg:
                 raise ValueError(f'Unknown group name "{groupName}".')
             
-            return self._telemetry.subscribeToGroupCfg(groupCfg)
+            return self._telemetry.subscribeToGroupCfg(groupCfg, timeout_s)
 
         raise RuntimeError('Volatus is not configured for networking and the telemetry component is not available.')
 
