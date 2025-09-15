@@ -13,6 +13,7 @@
 		<Item Name="DAQmxChannel.lvclass" Type="LVClass" URL="../DAQmxChannel/DAQmxChannel.lvclass"/>
 	</Item>
 	<Item Name="Channels" Type="Folder">
+		<Item Name="BridgeChannel.lvclass" Type="LVClass" URL="../BridgeChannel/BridgeChannel.lvclass"/>
 		<Item Name="CurrentOutChannel.lvclass" Type="LVClass" URL="../CurrentOutChannel/CurrentOutChannel.lvclass"/>
 		<Item Name="DigitalInChannel.lvclass" Type="LVClass" URL="../DigitalInChannel/DigitalInChannel.lvclass"/>
 		<Item Name="DigitalOutChannel.lvclass" Type="LVClass" URL="../DigitalOutChannel/DigitalOutChannel.lvclass"/>
