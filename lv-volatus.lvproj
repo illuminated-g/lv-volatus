@@ -51,9 +51,7 @@
 		<Item Name="_Build" Type="Folder">
 			<Item Name="Full PC Build.vi" Type="VI" URL="../_build/Full PC Build.vi"/>
 		</Item>
-		<Item Name="graphics" Type="Folder" URL="../VolatusGUIControls/graphics">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
+		<Item Name="graphics" Type="Folder"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
@@ -61,8 +59,7 @@
 		<Item Name="VolatusData.lvlib" Type="Library" URL="../VolatusData/VolatusData.lvlib"/>
 		<Item Name="VolatusDAQConfig.lvlib" Type="Library" URL="../VolatusDAQConfig/VolatusDAQConfig.lvlib"/>
 		<Item Name="VolatusGUI.lvlib" Type="Library" URL="../VolatusGUI/VolatusGUI.lvlib"/>
-		<Item Name="VolatusGUIControls.lvlib" Type="Library" URL="../VolatusGUIControls/VolatusGUIControls.lvlib"/>
-		<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
+		<Item Name="VolatusGUIControls.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIControls/VolatusGUIControls.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
 		<Item Name="VolatusSeq.lvlib" Type="Library" URL="../VolatusSeq/VolatusSeq.lvlib"/>
 		<Item Name="VolatusDAQGenericGUI.lvlib" Type="Library" URL="../VolatusDAQGenericGUI/VolatusDAQGenericGUI.lvlib"/>
@@ -800,6 +797,10 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
+			<Item Name="Graphics Folder.vi" Type="VI" URL="../VolatusGUIControls/Graphics Folder.vi"/>
+			<Item Name="2WayValveH.ctl" Type="VI" URL="../VolatusGUIControls/2WayValveH.ctl"/>
+			<Item Name="2WayValveV.ctl" Type="VI" URL="../VolatusGUIControls/2WayValveV.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
