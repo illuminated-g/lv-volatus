@@ -101,6 +101,7 @@ name = "ig-volatus"
 version = "0.3.0"
 source = { editable = "." }
 dependencies = [
+    { name = "netifaces" },
     { name = "protobuf" },
     { name = "requests" },
     { name = "sockets" },
@@ -115,6 +116,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "netifaces", specifier = ">=0.11.0" },
     { name = "protobuf", specifier = ">=6.32.0,<7.0.0" },
     { name = "requests", specifier = ">=2.32.5,<3.0.0" },
     { name = "sockets", specifier = ">=1.0.0,<2.0.0" },
@@ -175,6 +177,12 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/82/78/fedb03c7d5380df2427038ec8d973587e90561b2d90cd472ce9254cf348b/MarkupSafe-3.0.2-cp313-cp313t-win32.whl", hash = "sha256:ba8062ed2cf21c07a9e295d5b8a2a5ce678b913b45fdf68c32d95d6c1291e0b6", size = 15208, upload-time = "2024-10-18T15:21:41.814Z" },
     { url = "https://files.pythonhosted.org/packages/4f/65/6079a46068dfceaeabb5dcad6d674f5f5c61a6fa5673746f42a9f4c233b3/MarkupSafe-3.0.2-cp313-cp313t-win_amd64.whl", hash = "sha256:e444a31f8db13eb18ada366ab3cf45fd4b31e4db1236a4448f68778c1d1a5a2f", size = 15739, upload-time = "2024-10-18T15:21:42.784Z" },
 ]
+
+[[package]]
+name = "netifaces"
+version = "0.11.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a6/91/86a6eac449ddfae239e93ffc1918cf33fd9bab35c04d1e963b311e347a73/netifaces-0.11.0.tar.gz", hash = "sha256:043a79146eb2907edf439899f262b3dfe41717d34124298ed281139a8b93ca32", size = 30106, upload-time = "2021-05-31T08:33:02.506Z" }
 
 [[package]]
 name = "packaging"

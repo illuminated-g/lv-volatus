@@ -26,6 +26,7 @@
 	<Item Name="Indicators" Type="Folder">
 		<Item Name="Plotting" Type="Folder">
 			<Item Name="LocalGraphBuffer.lvclass" Type="LVClass" URL="../LocalGraphBuffer/LocalGraphBuffer.lvclass"/>
+			<Item Name="SimpleChart.lvclass" Type="LVClass" URL="../SimpleChart/SimpleChart.lvclass"/>
 		</Item>
 		<Item Name="Special" Type="Folder">
 			<Item Name="SystemConfigStatusIndicator.lvclass" Type="LVClass" URL="../SystemConfigStatusIndicator/SystemConfigStatusIndicator.lvclass"/>

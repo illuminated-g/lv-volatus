@@ -1,11 +1,10 @@
 import time
 import threading
 import queue
-import socket
-import struct
+from enum import Enum
 
-from .config import *
-from .vecto.UDP import *
+from .config import Cfg, GroupConfig, ChannelConfig, EndpointConfig
+from .vecto.UDP import MulticastReader, MulticastWriter
 from .vecto.proto import group_data_pb2, string_data_pb2
 
 __all__ = [

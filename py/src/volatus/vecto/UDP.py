@@ -3,6 +3,7 @@ import struct
 import time
 
 from .proto.udp_payload_pb2 import *
+from .util import resolveAddress
 
 __all__ = [
     'MulticastReader',
@@ -13,7 +14,7 @@ class MulticastReader(socket.socket):
     def __init__(self, multicastAddress: str, multicastPort: int, bindAddress: str = ''):
         self._address= multicastAddress
         self._port = multicastPort
-        self._bind = bindAddress
+        self._bind = resolveAddress(bindAddress)
         self._joinReq = struct.pack("4sl", socket.inet_aton(self._address), socket.INADDR_ANY)
 
         super(MulticastReader, self).__init__(socket.AF_INET, socket.SOCK_DGRAM)
@@ -46,7 +47,7 @@ class MulticastWriter(socket.socket):
     def __init__(self, multicastAddress: str, multicastPort: int, source_id: int, bindAddress: str = ''):
         self._address= multicastAddress
         self._port = multicastPort
-        self._bind = bindAddress
+        self._bind = resolveAddress(bindAddress)
         self._joinReq = struct.pack("4sl", socket.inet_aton(self._address), socket.INADDR_ANY)
         self._msg = UdpPayload()
         self._msg.source_id = source_id
