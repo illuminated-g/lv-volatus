@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+enum EventLevel {
+    EVENTLEVEL_UNKNOWN = 0;
+    EVENTLEVEL_DEBUG = 1;
+    EVENTLEVEL_INFO = 2;
+    EVENTLEVEL_WARNING = 3;
+    EVENTLEVEL_ERROR = 4;
+}
+
+message Error {
+    bool status = 1;
+    int32 code = 2;
+    string source = 3;
+}
+
+message Event {
+    int64 timestamp = 1;
+    EventLevel level = 2;
+    string context = 3;
+    string message = 4;
+    Error error = 5;
+}
+
+message Events {
+    repeated Event events = 1;
+}

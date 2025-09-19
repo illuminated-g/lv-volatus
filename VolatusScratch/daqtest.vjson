@@ -58,7 +58,10 @@
                             "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 1,
                             "DebugGUIs": true,
-                            "Events": {"LogFolder": "c:/logs"},
+                            "Events": {
+                                "LogFolder": "c:/logs",
+                                "Can_Close": true
+                            },
                             "Config": {},
                             "Network": {
                                 "Bind_Address": "0.0.0.0",

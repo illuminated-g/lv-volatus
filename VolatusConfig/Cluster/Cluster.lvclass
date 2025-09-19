@@ -137,7 +137,16 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
 		</Item>
-		<Item Name="Lookup Node.vi" Type="VI" URL="../Lookup Node.vi">
+		<Item Name="Lookup Node (ID).vi" Type="VI" URL="../Lookup Node (ID).vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;^!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$*!=!!?!!!C%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)-4G^E:3ZM&gt;G.M98.T!!!%4G^E:1!!/E"Q!"Y!!#546G^M982V=U.P&lt;G:J:SZM&gt;GRJ9A^$&lt;(6T&gt;'6S,GRW9WRB=X-!#U.M&gt;8.U:8)A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$5!(!!&gt;/&lt;W2F)%F%!$J!=!!?!!!F%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)01WRV=X2F=CZM&gt;G.M98.T!!J$&lt;(6T&gt;'6S)'FO!!"B!0!!$!!$!!1!"1!'!!1!"!!%!!1!"Q!%!!A!#1-!!(A!!!U)!!!!!!!!#1!!!!U,!!!!!!!!!!!!!!!!!!!!!!!!#A!!!!!!!!!1!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!+!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+		</Item>
+		<Item Name="Lookup Node (Name).vi" Type="VI" URL="../Lookup Node (Name).vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'#!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$*!=!!?!!!C%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)-4G^E:3ZM&gt;G.M98.T!!!%4G^E:1!!/E"Q!"Y!!#546G^M982V=U.P&lt;G:J:SZM&gt;GRJ9A^$&lt;(6T&gt;'6S,GRW9WRB=X-!#U.M&gt;8.U:8)A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%E!Q`````QF/&lt;W2F)%ZB&lt;75!/E"Q!"Y!!#546G^M982V=U.P&lt;G:J:SZM&gt;GRJ9A^$&lt;(6T&gt;'6S,GRW9WRB=X-!#E.M&gt;8.U:8)A;7Y!!'%!]!!-!!-!"!!&amp;!!9!"!!%!!1!"!!(!!1!#!!*!Q!!?!!!$1A!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!"!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!I!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
