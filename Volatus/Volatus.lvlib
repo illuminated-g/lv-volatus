@@ -39,6 +39,7 @@
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
 		<Item Name="Hardware Type.ctl" Type="VI" URL="../Hardware Type.ctl"/>
+		<Item Name="Message Forward (ID).ctl" Type="VI" URL="../Message Forward (ID).ctl"/>
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
 		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
