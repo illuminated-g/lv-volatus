@@ -1,0 +1,6 @@
+volatus.vecto.proto.udp\_payload\_pb2
+=====================================
+
+.. automodule:: volatus.vecto.proto.udp_payload_pb2
+
+   

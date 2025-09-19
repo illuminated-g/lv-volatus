@@ -1,0 +1,19 @@
+volatus.discovery
+=================
+
+.. py:module:: volatus.discovery
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   volatus.discovery.DiscoveryService
+
+
+Module Contents
+---------------
+
+.. py:class:: DiscoveryService(vCfg: volatus.config.VolatusConfig, nodeCfg: volatus.config.NodeConfig)
+
