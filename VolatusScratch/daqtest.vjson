@@ -296,6 +296,9 @@
                             },
                             "Groups": ["Config", "Events"],
                             "Tasks": {
+                                "GUI_Manager": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}
+                                },
                                 "ValveGUI1": {
                                     "Meta": {
                                         "VL_Type": "VL_Task",
