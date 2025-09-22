@@ -20,7 +20,7 @@
 	<Item Name="Toggle Main.vi" Type="VI" URL="../Toggle Main.vi"/>
 	<Item Name="ToggleTestModule.lvclass" Type="LVClass" URL="../ToggleTestModule/ToggleTestModule.lvclass"/>
 	<Item Name="ValveGUI Main.vi" Type="VI" URL="../ValveGUI Main.vi"/>
-	<Item Name="ValveGUI.vi" Type="VI" URL="../ValveGUI.vi"/>
+	<Item Name="ValveGUI.vi" Type="VI" URL="../gui/ValveGUI.vi"/>
 	<Item Name="ValveSim Main.vi" Type="VI" URL="../ValveSim Main.vi"/>
 	<Item Name="ValveSimModule.lvclass" Type="LVClass" URL="../ValveSimModule/ValveSimModule.lvclass"/>
 </Library>

@@ -301,17 +301,8 @@
                             "Groups": ["Config", "Events"],
                             "Tasks": {
                                 "GUI_Manager": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}
-                                },
-                                "ValveGUI1": {
-                                    "Meta": {
-                                        "VL_Type": "VL_Task",
-                                        "VL_Task_Type": "PluginGUI"
-                                    },
-                                    "GUI_Path": "C:/dev/lv20CE/relink/lv-volatus/VolatusScratch/ValveGUI.vi",
-                                    "Autoshow": true,
-                                    "Refresh_Timeout_ms": 100,
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
+                                    "Plugins": "gui"
                                 }
                             }
                         },
