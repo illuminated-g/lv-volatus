@@ -91,7 +91,10 @@ class TCPMessaging:
         if type(target) == int:
             targetId = target
         elif type(target) == str:
-            targetId = self.vCfg.lookupNodeByName(target).id
+            cluster = self.vCfg.lookupClusterByName(self.nodeCfg.clusterName)
+            targetId = cluster.lookupTargetGroupId(target)
+            if not targetId:
+                targetId = self.vCfg.lookupNodeByName(target).id
         else:
             raise ValueError('Target must be target name string or target ID int.')
 

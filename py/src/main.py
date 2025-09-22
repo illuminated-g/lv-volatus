@@ -1,5 +1,5 @@
 from volatus.config import Cfg
-from volatus.volatus import Volatus
+from volatus.volatus import Volatus, EventLevel
 from volatus.telemetry import ChannelGroup, ChannelValue
 
 import time
@@ -27,6 +27,8 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
     # get a single channel to read live values from
     ch0: ChannelValue = gAI.chanByName('Alpha')
 
+    v.reportEvent('Events', EventLevel.EVENTLEVEL_INFO, 'Test Python', 'Starting sequencing')
+
     # turn digital output on, for scaled values (such as inverted NO valves) this will be before scaling
     # typically meaning valves are always True = Open, False = Closed
     # the create___Command methods return a VCommand object with a send() that can be called right away or sent later
@@ -39,6 +41,8 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
 
     # turn digital output back off
     v.createDigitalCommand('Heater_En', False).send()
+
+    v.reportEvent('Events', EventLevel.EVENTLEVEL_INFO, 'Test Python', 'Sequence complete')
 
     #need to sleep a bit to give last command time to send before the with block tears down the TCP connection
     time.sleep(0.1)

@@ -11,6 +11,7 @@ from volatus.proto.cmd_digital_pb2 import CmdDigital, CmdDigitalMultiple
 from volatus.proto.cmd_analog_pb2 import CmdAnalog, CmdAnalogMultiple
 from volatus.proto.start_log_pb2 import StartLog
 from volatus.proto.stop_log_pb2 import StopLog
+from volatus.proto.event_pb2 import EventLevel, Event, Events
 
 class VCommand:
     """Constructed command that is ready to be sent to a Volatus system.
@@ -375,3 +376,56 @@ class Volatus:
         :type group: ChannelGroup
         """
         pass
+
+    def createReportEventMsg(self, targetName: str, level: EventLevel,
+                             context: str, message: str = '') -> VCommand:
+        event = Event()
+        event.context = context
+        event.message = message
+        event.level = level
+
+        msg = Events()
+        msg.events.append(event)
+
+        return VCommand(targetName, 'v:Events', msg.SerializeToString(), self.__nextSeq, self._tcp.sendMsg)
+    
+    def createReportErrorMsg(self, targetName: str, errCode: int, errMsg: str,
+                             context: str, message: str = '') -> VCommand:
+        event = Event()
+        event.context = context
+        event.message = message
+        event.level = EventLevel.EVENTLEVEL_ERROR
+        event.error.code = errCode
+        event.error.status = True
+        event.error.source = errMsg
+
+        msg = Events()
+        msg.events.append(event)
+
+        return VCommand(targetName, 'v:Events', msg.SerializeToString(), self.__nextSeq, self._tcp.sendMsg)
+
+
+    def reportEvent(self, targetName: str, level: EventLevel, context: str, message: str = ''):
+        event = Event()
+        event.context = context
+        event.message = message
+        event.level = level
+
+        msg = Events()
+        msg.events.append(event)
+
+        self._tcp.sendMsg(targetName, 'v:Events', msg.SerializeToString(), self.__nextSeq())
+
+    def reportError(self, targetName: str, errCode: int, errMsg: str, context: str, message: str = ''):
+        event = Event()
+        event.context = context
+        event.message = message
+        event.level = EventLevel.EVENTLEVEL_ERROR
+        event.error.code = errCode
+        event.error.status = True
+        event.error.source = errMsg
+
+        msg = Events()
+        msg.events.append(event)
+
+        self._tcp.sendMsg(targetName, 'v:Events', msg.SerializeToString(), self.__nextSeq())
