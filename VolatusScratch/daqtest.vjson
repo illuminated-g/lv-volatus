@@ -279,7 +279,7 @@
                                 "VL_Type": "VL_Node"
                             },
                             "Node_ID": 2,
-                            "DebugGUIs": true,
+                            "DebugGUIs": false,
                             "Config": {
                                 "Monitor": true,
                                 "Autoshow": false

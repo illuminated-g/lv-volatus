@@ -38,6 +38,7 @@
 		<Item Name="Config Info.ctl" Type="VI" URL="../Config Info.ctl"/>
 		<Item Name="Event Level.ctl" Type="VI" URL="../Event Level.ctl"/>
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
+		<Item Name="Events Summary.ctl" Type="VI" URL="../Events Summary.ctl"/>
 		<Item Name="Hardware Type.ctl" Type="VI" URL="../Hardware Type.ctl"/>
 		<Item Name="Message Forward (ID).ctl" Type="VI" URL="../Message Forward (ID).ctl"/>
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
@@ -84,6 +85,7 @@
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="ConfigInfoValue.lvclass" Type="LVClass" URL="../ConfigInfoValue/ConfigInfoValue.lvclass"/>
 		<Item Name="ConfigMonitorInfoValue.lvclass" Type="LVClass" URL="../ConfigMonitorInfoValue/ConfigMonitorInfoValue.lvclass"/>
+		<Item Name="Events Summary Value.lvclass" Type="LVClass" URL="../Events Summary Value/Events Summary Value.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
 		<Item Name="PathValue.lvclass" Type="LVClass" URL="../PathValue/PathValue.lvclass"/>
 		<Item Name="StringValue.lvclass" Type="LVClass" URL="../StringValue/StringValue.lvclass"/>
