@@ -362,6 +362,8 @@ class Volatus:
             if not groupCfg:
                 raise ValueError(f'Unknown group name "{groupName}".')
             
+            bindAddress = self._node.network.bindAddress
+            
             return self._telemetry.subscribeToGroupCfg(groupCfg, timeout_s)
 
         raise RuntimeError('Volatus is not configured for networking and the telemetry component is not available.')

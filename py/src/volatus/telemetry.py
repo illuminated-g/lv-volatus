@@ -105,12 +105,12 @@ class SubActionClose(SubAction):
         super(SubActionClose, self).__init__(SubActionType.CLOSE)            
 
 class Subscriber:
-    def __init__(self, endpt: EndpointConfig):
+    def __init__(self, endpt: EndpointConfig, bindAddress: str = '0.0.0.0'):
         self._endpoint = endpt
         self._actions: queue.Queue[SubAction] = queue.Queue()
         self._thread: threading.Thread = threading.Thread(target= self._readLoop)
 
-        self._reader = MulticastReader(endpt.address, endpt.port)
+        self._reader = MulticastReader(endpt.address, endpt.port, bindAddress)
 
         self._groups: dict[str, ChannelGroup] = dict()
 
@@ -184,7 +184,9 @@ class Telemetry:
     def createPublishGroupCfg(self, groupCfg: GroupConfig) -> ChannelGroup:
         pass
     
-    def subscribeToGroupCfg(self, groupCfg: GroupConfig, timeout_s: float = None) -> tuple[ChannelGroup, bool]:
+    def subscribeToGroupCfg(self, groupCfg: GroupConfig,
+                            timeout_s: float = None,
+                            bindAddress: str = '0.0.0.0') -> tuple[ChannelGroup, bool]:
         """_summary_
 
         :param groupCfg: The configuration of the group to subscribe to. Must include publish configuration.
@@ -213,7 +215,7 @@ class Telemetry:
                 sub = self._subscribers[endpt]
                 sub.addGroup(group)
             else:    
-                sub = Subscriber(endpt)
+                sub = Subscriber(endpt, bindAddress)
                 self._subscribers[endpt] = sub
                 sub.addGroup(group)
 

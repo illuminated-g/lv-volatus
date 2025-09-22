@@ -127,10 +127,12 @@ class TCPConfig:
         self.server = server
 
 class NodeNetworkConfig:
-    def __init__(self, tcpConfig: TCPConfig, httpPort: int = None, announceInterval: int = None):
+    def __init__(self, tcpConfig: TCPConfig, httpPort: int = None,
+                 announceInterval: int = None, bindAddress: str = '0.0.0.0'):
         self.tcp = tcpConfig
         self.httpPort = httpPort
         self.announceInterval = announceInterval
+        self.bindAddress = bindAddress
         
 class NodeConfig:
     def __init__(self, name: str, id: int, clusterName: str,
@@ -553,8 +555,12 @@ class ConfigLoader:
 
             httpPort = net.get('HTTP_Port')
             announceInterval = net.get('Announce_Interval')
+            bindAddress = net.get('Bind_Address')
+
+            if not bindAddress:
+                bindAddress = '0.0.0.0'
             
-            netCfg = NodeNetworkConfig(tcpCfg, httpPort, announceInterval)
+            netCfg = NodeNetworkConfig(tcpCfg, httpPort, announceInterval, bindAddress)
 
         targetGroups = []
         groups = nodeObj.get('Groups')
