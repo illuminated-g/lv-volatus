@@ -22,9 +22,7 @@
 		<Item Name="Module.lvclass" Type="LVClass" URL="../Module/Module.lvclass"/>
 	</Item>
 	<Item Name="Core" Type="Folder">
-		<Item Name="Nested" Type="Folder">
-			<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../Config Alert Module/Config Monitor Module.lvclass"/>
-		</Item>
+		<Item Name="Nested" Type="Folder"/>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
@@ -45,6 +43,7 @@
 		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
 		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
+		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 	</Item>
 	<Item Name="Error Utilities" Type="Folder">

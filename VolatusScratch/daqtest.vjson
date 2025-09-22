@@ -280,10 +280,7 @@
                             },
                             "Node_ID": 2,
                             "DebugGUIs": false,
-                            "Config": {
-                                "Monitor": true,
-                                "Autoshow": false
-                            },
+                            "Config": {},
                             "Events": {
                                 "LogFolder": "c:/logs",
                                 "Can_Close": true
@@ -303,6 +300,10 @@
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
                                     "Plugins": "gui"
+                                },
+                                "Config_Monitor": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "ConfigMonitor"},
+                                    "Autoshow": false
                                 }
                             }
                         },

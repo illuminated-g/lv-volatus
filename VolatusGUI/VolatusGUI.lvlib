@@ -42,6 +42,7 @@
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="GUIStateValue.lvclass" Type="LVClass" URL="../GUIStateValue/GUIStateValue.lvclass"/>
 	</Item>
+	<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../../Volatus/Config Alert Module/Config Monitor Module.lvclass"/>
 	<Item Name="Control Event Registrations.lvclass" Type="LVClass" URL="../Control Event Registrations/Control Event Registrations.lvclass"/>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="GUI Helper.lvclass" Type="LVClass" URL="../GUI Helper/GUI Helper.lvclass"/>
