@@ -44,6 +44,7 @@
 	</Item>
 	<Item Name="Control Event Registrations.lvclass" Type="LVClass" URL="../Control Event Registrations/Control Event Registrations.lvclass"/>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
+	<Item Name="GUI Helper.lvclass" Type="LVClass" URL="../GUI Helper/GUI Helper.lvclass"/>
 	<Item Name="GUI Manager Module.lvclass" Type="LVClass" URL="../GUI Manager Module/GUI Manager Module.lvclass"/>
 	<Item Name="PluginGUI.lvclass" Type="LVClass" URL="../PluginGUI/PluginGUI.lvclass"/>
 </Library>
