@@ -24,6 +24,14 @@
 		</Item>
 	</Item>
 	<Item Name="Indicators" Type="Folder">
+		<Item Name="Boolean" Type="Folder">
+			<Item Name="BooleanIndicator.lvclass" Type="LVClass" URL="../BooleanIndicator/BooleanIndicator.lvclass"/>
+			<Item Name="NumericRangeBooleanIndicator.lvclass" Type="LVClass" URL="../NumericRangeBooleanIndicator/NumericRangeBooleanIndicator.lvclass"/>
+		</Item>
+		<Item Name="Numeric" Type="Folder">
+			<Item Name="DblStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblStatusIndicator.lvclass"/>
+			<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
+		</Item>
 		<Item Name="Plotting" Type="Folder">
 			<Item Name="LocalGraphBuffer.lvclass" Type="LVClass" URL="../LocalGraphBuffer/LocalGraphBuffer.lvclass"/>
 			<Item Name="SimpleChart.lvclass" Type="LVClass" URL="../SimpleChart/SimpleChart.lvclass"/>
@@ -31,9 +39,6 @@
 		<Item Name="Special" Type="Folder">
 			<Item Name="SystemConfigStatusIndicator.lvclass" Type="LVClass" URL="../SystemConfigStatusIndicator/SystemConfigStatusIndicator.lvclass"/>
 		</Item>
-		<Item Name="BooleanIndicator.lvclass" Type="LVClass" URL="../BooleanIndicator/BooleanIndicator.lvclass"/>
-		<Item Name="DblStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblStatusIndicator.lvclass"/>
-		<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 	</Item>
 	<Item Name="Support" Type="Folder">
 		<Item Name="Plotting" Type="Folder">
