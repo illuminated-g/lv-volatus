@@ -1,6 +1,6 @@
 [project]
 name = "ig-volatus"
-version = "0.4.2"
+version = "0.5.0"
 description = "Python package for interacting with Volatus framework applications"
 authors = [{ name = "Derrick Bommarito", email = "derrick.a.bommarito@gmail.com" }]
 requires-python = ">=3.13"

@@ -304,6 +304,9 @@
                                 "Config_Monitor": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "ConfigMonitor"},
                                     "Autoshow": false
+                                },
+                                "EventViewer": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 }
                             }
                         },
