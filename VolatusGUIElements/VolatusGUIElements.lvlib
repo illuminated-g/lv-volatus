@@ -30,6 +30,7 @@
 		</Item>
 		<Item Name="Numeric" Type="Folder">
 			<Item Name="DblStatusIndicator.lvclass" Type="LVClass" URL="../DblNumericStatusIndicator/DblStatusIndicator.lvclass"/>
+			<Item Name="GaugeIndicator.lvclass" Type="LVClass" URL="../GaugeIndicator/GaugeIndicator.lvclass"/>
 			<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 		</Item>
 		<Item Name="Plotting" Type="Folder">
