@@ -315,11 +315,13 @@
                             "Node_ID": 3,
                             "Network": {
                                 "Bind_Address": "0.0.0.0",
+                                "Announce_Interval": 5,
                                 "TCP": {
                                     "Address": "localhost",
                                     "Port": 12082,
                                     "Server": false
-                                }
+                                },
+                                "HTTP_Port": 14080
                             },
                             "Events": {
                                 "LogFolder": "c:/logs"

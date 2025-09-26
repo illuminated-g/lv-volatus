@@ -4,6 +4,7 @@ from pathlib import Path
 from collections.abc import Callable
 from datetime import datetime
 
+from volatus.discovery import DiscoveryService
 from volatus.telemetry import Telemetry, ChannelGroup
 from volatus.config import VolatusConfig, NodeConfig, ConfigLoader, ClusterConfig
 from volatus.vecto.TCP import TCPMessaging
@@ -144,9 +145,15 @@ class Volatus:
         self._tcp = TCPMessaging(tcpCfg.address, tcpCfg.port, tcpCfg.server, self.config, self._node)
         self._tcp.open()
 
+    def __startDiscovery(self):
+        self._discovery = DiscoveryService(self.config, self._node)
+
     def __initFromConfig(self):
         node = self._node
         cluster = self._cluster
+
+        if cluster.discovery and node.network.announceInterval:
+            self.__startDiscovery()
 
         if node.network.tcp:
             self.__startTCP()
@@ -167,10 +174,13 @@ class Volatus:
     def shutdown(self):
         """Stops all communication threads managed by the Volatus framework to prepare for reloading configuration or stopping the Python app.
         """
-        if self._tcp:
+        if hasattr(self, '_discovery'):
+            self._discovery.shutdown()
+
+        if hasattr(self, '_tcp'):
             self._tcp.shutdown()
 
-        if self._telemetry:
+        if hasattr(self, '_telemetry'):
             self._telemetry.shutdown()
 
     def lookupTargetId(self, targetName: str) -> int | None:

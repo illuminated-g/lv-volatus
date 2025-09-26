@@ -35,7 +35,8 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
     v.createDigitalCommand('Heater_En', True).send()
 
     # loop ~10Hz displaying current value for the channel
-    for i in range(20):
+    # run long enough to get some discovery packets out
+    for i in range(100):
         print(ch0.value)
         time.sleep(0.1)
 
