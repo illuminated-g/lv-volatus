@@ -199,33 +199,32 @@ class Telemetry:
         """
         # check to see if group already exists
         group = self._groups.get(groupCfg.name)
-        if group:
-            return group
-        
-        endpt = groupCfg.publishConfig
+        if not group:
+            endpt = groupCfg.publishConfig
 
-        group = ChannelGroup(groupCfg)
-        self._groups[group.name] = group
+            group = ChannelGroup(groupCfg)
+            self._groups[group.name] = group
 
-        if not endpt:
-            raise ValueError(f'Group {groupCfg.name()} does not have a publish config and cannot be subscribed to.')
-        
-        with self._subLock:
-            if endpt in self._subscribers:
-                sub = self._subscribers[endpt]
-                sub.addGroup(group)
-            else:    
-                sub = Subscriber(endpt, bindAddress)
-                self._subscribers[endpt] = sub
-                sub.addGroup(group)
+            if not endpt:
+                raise ValueError(f'Group {groupCfg.name()} does not have a publish config and cannot be subscribed to.')
+            
+            with self._subLock:
+                if endpt in self._subscribers:
+                    sub = self._subscribers[endpt]
+                    sub.addGroup(group)
+                else:    
+                    sub = Subscriber(endpt, bindAddress)
+                    self._subscribers[endpt] = sub
+                    sub.addGroup(group)
 
-        hasData = False
 
-        if timeout_s is not None:
+
+        #get first channel to check for data
+        chan = group.chanByIndex(0)
+        hasData = chan.time_ns > 0
+
+        if timeout_s is not None and not hasData:
             start = time.time()
-
-            #get first channel to check for data
-            chan = group.chanByIndex(0)
 
             while time.time() - start < timeout_s and chan.time_ns == 0:
                 #data subcriptions run in a separate thread so we can just block sleep to wait
