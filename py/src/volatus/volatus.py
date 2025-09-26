@@ -4,6 +4,12 @@ from pathlib import Path
 from collections.abc import Callable
 from datetime import datetime
 
+from fastapi import FastAPI, APIRouter
+import uvicorn
+import threading
+import os
+import signal
+
 from volatus.discovery import DiscoveryService
 from volatus.telemetry import Telemetry, ChannelGroup
 from volatus.config import VolatusConfig, NodeConfig, ConfigLoader, ClusterConfig
@@ -148,12 +154,38 @@ class Volatus:
     def __startDiscovery(self):
         self._discovery = DiscoveryService(self.config, self._node)
 
+    def _httpServer(self):
+        uvicorn.run(self._http, host='0.0.0.0', port= self._node.network.httpPort)
+
+    def _httpConfigInfo(self):
+        return {
+            'System': self.config.system.name,
+            'Cluster': self._node.clusterName,
+            'Node': self._node.name,
+            'Path': '',
+            'Version': str(self.config.version),
+            'Hash': self.config.hash.upper()
+        }
+
+    def __startHTTP(self):
+        self._httpThread = threading.Thread(target= self._httpServer)
+
+        self._http = FastAPI()
+
+        self._http.add_api_route('/config/info', self._httpConfigInfo, methods=["GET"])
+
+
+        self._httpThread.start()
+
     def __initFromConfig(self):
         node = self._node
         cluster = self._cluster
 
         if cluster.discovery and node.network.announceInterval:
             self.__startDiscovery()
+
+        if node.network.httpPort:
+            self.__startHTTP()
 
         if node.network.tcp:
             self.__startTCP()
@@ -182,6 +214,9 @@ class Volatus:
 
         if hasattr(self, '_telemetry'):
             self._telemetry.shutdown()
+
+        if hasattr(self, '_http'):
+            os.kill(os.getpid(), signal.SIGTERM)
 
     def lookupTargetId(self, targetName: str) -> int | None:
         """Looks up the numeric ID used to route a message to the desired node(s).
