@@ -54,10 +54,15 @@ class DiscoveryService:
         interval = self._nodeCfg.network.announceInterval
         lastAnnounce = 0
 
+        bindAddress = util.resolveAddress(self._nodeCfg.network.bindAddress)
+
+        if bindAddress == '0.0.0.0':
+            bindAddress = util.localIPs()[0]
+
         discovery = discovery_pb2.Discovery()
         discovery.node_id = self._nodeCfg.id
         discovery.name = self._nodeCfg.name
-        discovery.ip = int(ipaddress.ip_address(util.resolveAddress(self._nodeCfg.network.bindAddress)))
+        discovery.ip = int(ipaddress.ip_address(bindAddress))
         discovery.system = self._vCfg.system.name
         discovery.cluster = self._nodeCfg.clusterName
         discovery.cfg_version = str(self._vCfg.version)

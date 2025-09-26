@@ -36,7 +36,7 @@ with Volatus(cfgPath, 'TestSystem', 'TestCluster', 'PyScript') as v:
 
     # loop ~10Hz displaying current value for the channel
     # run long enough to get some discovery packets out
-    for i in range(100):
+    for i in range(200):
         print(ch0.value)
         time.sleep(0.1)
 
