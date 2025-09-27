@@ -1,0 +1,58 @@
+volatus.vecto.TCP
+=================
+
+.. py:module:: volatus.vecto.TCP
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   volatus.vecto.TCP.TCPMessaging
+
+
+Module Contents
+---------------
+
+.. py:class:: TCPMessaging(address: str, port: int, server: bool, vCfg: volatus.config.VolatusConfig, nodeCfg: volatus.config.NodeConfig)
+
+   .. py:attribute:: address
+
+
+   .. py:attribute:: port
+
+
+   .. py:attribute:: server
+
+
+   .. py:attribute:: state
+      :type:  str
+      :value: 'UNKNOWN'
+
+
+
+   .. py:attribute:: vCfg
+
+
+   .. py:attribute:: nodeCfg
+
+
+   .. py:attribute:: socket
+
+
+   .. py:attribute:: id
+
+
+   .. py:method:: open()
+
+
+   .. py:method:: close()
+
+
+   .. py:method:: shutdown()
+
+
+   .. py:method:: sendMsg(target: str | int, msgType: str, payload: bytes, sequence: int, task: str = '')
+
+

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>volatus.telemetry &#8212; Volatus  documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pydoctheme.css?v=5ff89526" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="volatus.vecto" href="../vecto/index.html" />
+    <link rel="prev" title="volatus.proto.sync_ticks_pb2" href="../proto/sync_ticks_pb2/index.html" /><link rel="stylesheet" href="../../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../../_static/py.svg">
+            <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../../_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../../search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.telemetry</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue"><code class="docutils literal notranslate"><span class="pre">ChannelValue</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.name"><code class="docutils literal notranslate"><span class="pre">ChannelValue.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.value"><code class="docutils literal notranslate"><span class="pre">ChannelValue.value</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.time_ns"><code class="docutils literal notranslate"><span class="pre">ChannelValue.time_ns</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.update"><code class="docutils literal notranslate"><span class="pre">ChannelValue.update()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup"><code class="docutils literal notranslate"><span class="pre">ChannelGroup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.config"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.config</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.name"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.time_ns"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.time_ns</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.chanByName"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.chanByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.chanIndex"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.chanIndex()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.chanByIndex"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.chanByIndex()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.valueByIndex"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.valueByIndex()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.updateValues"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.updateValues()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.allValues"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.allValues()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry"><code class="docutils literal notranslate"><span class="pre">Telemetry</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry.createPublishGroupCfg"><code class="docutils literal notranslate"><span class="pre">Telemetry.createPublishGroupCfg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry.subscribeToGroupCfg"><code class="docutils literal notranslate"><span class="pre">Telemetry.subscribeToGroupCfg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry.shutdown"><code class="docutils literal notranslate"><span class="pre">Telemetry.shutdown()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../proto/sync_ticks_pb2/index.html"
+                          title="previous chapter">volatus.proto.sync_ticks_pb2</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../vecto/index.html"
+                          title="next chapter">volatus.vecto</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/volatus/telemetry/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../vecto/index.html" title="volatus.vecto"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../proto/sync_ticks_pb2/index.html" title="volatus.proto.sync_ticks_pb2"
+             accesskey="P">previous</a> |</li>
+          <li><img src="../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">volatus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.telemetry</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-volatus.telemetry">
+<span id="volatus-telemetry"></span><h1>volatus.telemetry<a class="headerlink" href="#module-volatus.telemetry" title="Link to this heading">¶</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.telemetry.ChannelValue" title="volatus.telemetry.ChannelValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelValue</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelGroup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.telemetry.Telemetry" title="volatus.telemetry.Telemetry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Telemetry</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelValue">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.telemetry.</span></span><span class="sig-name descname"><span class="pre">ChannelValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanCfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../config/index.html#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">volatus.config.ChannelConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.telemetry.ChannelValue" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelValue.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.telemetry.ChannelValue.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelValue.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#volatus.telemetry.ChannelValue.value" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelValue.time_ns">
+<span class="sig-name descname"><span class="pre">time_ns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.telemetry.ChannelValue.time_ns" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelValue.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.telemetry.ChannelValue.update" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.telemetry.</span></span><span class="sig-name descname"><span class="pre">ChannelGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupCfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../config/index.html#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">volatus.config.GroupConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.telemetry.ChannelGroup" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.config" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.time_ns">
+<span class="sig-name descname"><span class="pre">time_ns</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.telemetry.ChannelGroup.time_ns" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.chanByName">
+<span class="sig-name descname"><span class="pre">chanByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.telemetry.ChannelValue" title="volatus.telemetry.ChannelValue"><span class="pre">ChannelValue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.chanByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.chanIndex">
+<span class="sig-name descname"><span class="pre">chanIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.chanIndex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.chanByIndex">
+<span class="sig-name descname"><span class="pre">chanByIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.telemetry.ChannelValue" title="volatus.telemetry.ChannelValue"><span class="pre">ChannelValue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.chanByIndex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.valueByIndex">
+<span class="sig-name descname"><span class="pre">valueByIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanIndex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.valueByIndex" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.updateValues">
+<span class="sig-name descname"><span class="pre">updateValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_ns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.updateValues" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.ChannelGroup.allValues">
+<span class="sig-name descname"><span class="pre">allValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.telemetry.ChannelGroup.allValues" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the current values stored by the group of channels</p>
+<p>Return: tuple[values: list[str | float | None], time_ns: int]</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.telemetry.Telemetry">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.telemetry.</span></span><span class="sig-name descname"><span class="pre">Telemetry</span></span><a class="headerlink" href="#volatus.telemetry.Telemetry" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.Telemetry.createPublishGroupCfg">
+<span class="sig-name descname"><span class="pre">createPublishGroupCfg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupCfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../config/index.html#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">volatus.config.GroupConfig</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup"><span class="pre">ChannelGroup</span></a></span></span><a class="headerlink" href="#volatus.telemetry.Telemetry.createPublishGroupCfg" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.Telemetry.subscribeToGroupCfg">
+<span class="sig-name descname"><span class="pre">subscribeToGroupCfg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupCfg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../config/index.html#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">volatus.config.GroupConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bindAddress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'0.0.0.0'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup"><span class="pre">ChannelGroup</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.telemetry.Telemetry.subscribeToGroupCfg" title="Link to this definition">¶</a></dt>
+<dd><p>_summary_</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>groupCfg</strong> (<a class="reference internal" href="../config/index.html#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><em>GroupConfig</em></a>) – The configuration of the group to subscribe to. Must include publish configuration.</p></li>
+<li><p><strong>timeout_s</strong> (<em>int</em><em>, </em><em>optional</em>) – Wait up to this amount of time for data to arrive after subscribibg, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – The group config does not have a publish configuration.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The group that was subscribed to and true if data has been received before the timeout.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[<a class="reference internal" href="#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup">ChannelGroup</a>, bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.telemetry.Telemetry.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.telemetry.Telemetry.shutdown" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.telemetry</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue"><code class="docutils literal notranslate"><span class="pre">ChannelValue</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.name"><code class="docutils literal notranslate"><span class="pre">ChannelValue.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.value"><code class="docutils literal notranslate"><span class="pre">ChannelValue.value</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.time_ns"><code class="docutils literal notranslate"><span class="pre">ChannelValue.time_ns</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelValue.update"><code class="docutils literal notranslate"><span class="pre">ChannelValue.update()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup"><code class="docutils literal notranslate"><span class="pre">ChannelGroup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.config"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.config</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.name"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.time_ns"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.time_ns</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.chanByName"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.chanByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.chanIndex"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.chanIndex()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.chanByIndex"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.chanByIndex()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.valueByIndex"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.valueByIndex()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.updateValues"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.updateValues()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.ChannelGroup.allValues"><code class="docutils literal notranslate"><span class="pre">ChannelGroup.allValues()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry"><code class="docutils literal notranslate"><span class="pre">Telemetry</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry.createPublishGroupCfg"><code class="docutils literal notranslate"><span class="pre">Telemetry.createPublishGroupCfg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry.subscribeToGroupCfg"><code class="docutils literal notranslate"><span class="pre">Telemetry.subscribeToGroupCfg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.telemetry.Telemetry.shutdown"><code class="docutils literal notranslate"><span class="pre">Telemetry.shutdown()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../proto/sync_ticks_pb2/index.html"
+                          title="previous chapter">volatus.proto.sync_ticks_pb2</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../vecto/index.html"
+                          title="next chapter">volatus.vecto</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/volatus/telemetry/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../vecto/index.html" title="volatus.vecto"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../proto/sync_ticks_pb2/index.html" title="volatus.proto.sync_ticks_pb2"
+             >previous</a> |</li>
+          <li><img src="../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >volatus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.telemetry</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2025, Derrick Bommarito.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>
