@@ -26,6 +26,7 @@
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
+		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
 		<Item Name="Timing Module.lvclass" Type="LVClass" URL="../Timing Module/Timing Module.lvclass"/>
 		<Item Name="Vecto Message Bridge.lvclass" Type="LVClass" URL="../Vecto Message Bridge/Vecto Message Bridge.lvclass"/>
