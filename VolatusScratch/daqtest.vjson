@@ -74,6 +74,17 @@
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}
                                 },
+                                "SoftVar1": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
+                                    "Period_s": 0.1,
+                                    "GaugeSim": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Gauge_Value": {"Value": 0,    "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Gauge_Ideal": {"Value": 1350, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Gauge_Range": {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}}
+                                    }
+                                },
                                 "0-Logging": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "LogManager"},
                                     "Folder": "c:/logs",
