@@ -82,7 +82,10 @@
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Gauge_Value": {"Value": 0,    "Meta": {"VL_Type": "VL_Channel"}},
                                         "Gauge_Ideal": {"Value": 1350, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Gauge_Range": {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}}
+                                        "Gauge_Range": {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Single_Value":   {"Value": 0,    "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Single_Ideal":   {"Value": 1100, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Single_Range":   {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
                                 "0-Logging": {
