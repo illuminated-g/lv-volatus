@@ -17,9 +17,13 @@
 		<Item Name="Logger Stopped.ctl" Type="VI" URL="../Logger Stopped.ctl"/>
 		<Item Name="Logging State.ctl" Type="VI" URL="../Logging State.ctl"/>
 		<Item Name="New Data.ctl" Type="VI" URL="../New Data.ctl"/>
+		<Item Name="Prep State.ctl" Type="VI" URL="../Prep State.ctl"/>
 		<Item Name="Prepare Log.ctl" Type="VI" URL="../Prepare Log.ctl"/>
 		<Item Name="Register Logger.ctl" Type="VI" URL="../Register Logger.ctl"/>
 		<Item Name="Unregister Logger.ctl" Type="VI" URL="../Unregister Logger.ctl"/>
+	</Item>
+	<Item Name="HTTP" Type="Folder">
+		<Item Name="LogHTTPController.lvclass" Type="LVClass" URL="../LogHTTPController/LogHTTPController.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="DataProc Identity.lvclass" Type="LVClass" URL="../DataProc Identity/DataProc Identity.lvclass"/>
@@ -31,11 +35,15 @@
 		<Item Name="Send New Data (Array).vi" Type="VI" URL="../Send New Data (Array).vi"/>
 		<Item Name="Send New Data (Wfm).vi" Type="VI" URL="../Send New Data (Wfm).vi"/>
 	</Item>
+	<Item Name="Promise Values" Type="Folder">
+		<Item Name="Logs List Value.lvclass" Type="LVClass" URL="../Logs List Value/Logs List Value.lvclass"/>
+	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Data Buffer.lvclass" Type="LVClass" URL="../Data Buffer/Data Buffer.lvclass"/>
 	<Item Name="Data Logger Module.lvclass" Type="LVClass" URL="../Data Logger Module/Data Logger Module.lvclass"/>
 	<Item Name="Data Processor Module.lvclass" Type="LVClass" URL="../Data Processor Module/Data Processor Module.lvclass"/>
 	<Item Name="Log Manager Module.lvclass" Type="LVClass" URL="../Log Manager Module/Log Manager Module.lvclass"/>
+	<Item Name="Log Preparer Module.lvclass" Type="LVClass" URL="../Log Preparer Module/Log Preparer Module.lvclass"/>
 	<Item Name="Redlines Module.lvclass" Type="LVClass" URL="../Redlines Module/Redlines Module.lvclass"/>
 	<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
 </Library>
