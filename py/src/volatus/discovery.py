@@ -50,6 +50,9 @@ class DiscoveryService:
     def shutdown(self):
         self._actions.put(DiscoveryActionClose())
 
+    def lookupNodeByName(self, nodeName: str) -> discovery_pb2.Discovery:
+        return self._nodes.get(nodeName)
+
     def _writerLoop(self):
         interval = self._nodeCfg.network.announceInterval
         lastAnnounce = 0

@@ -3,12 +3,20 @@
 from pathlib import Path
 from collections.abc import Callable
 from datetime import datetime
-
 from fastapi import FastAPI, APIRouter
+from enum import Enum
+
 import uvicorn
 import threading
 import os
 import signal
+import ipaddress
+import requests
+import json
+import time
+import asyncio
+import aiohttp
+import aiofiles
 
 from volatus.discovery import DiscoveryService
 from volatus.telemetry import Telemetry, ChannelGroup
@@ -19,6 +27,25 @@ from volatus.proto.cmd_analog_pb2 import CmdAnalog, CmdAnalogMultiple
 from volatus.proto.start_log_pb2 import StartLog
 from volatus.proto.stop_log_pb2 import StopLog
 from volatus.proto.event_pb2 import EventLevel, Event, Events
+
+class LogState(Enum):
+    Unknown = 0
+    Idle = 1
+    Starting = 2
+    Logging = 3
+    Stopping = 4
+
+    def __str__(self):
+        return f'{self.name}'
+
+class LogStatus:
+
+    def __init__(self, state: LogState, log: str):
+        self.state = state
+        self.log = log
+    
+    def __str__(self) -> str:
+        return json.dumps(self.__dict__)
 
 class VCommand:
     """Constructed command that is ready to be sent to a Volatus system.
@@ -176,6 +203,7 @@ class Volatus:
 
 
         self._httpThread.start()
+        time.sleep(1) # give uvicorn server a chance to start
 
     def __initFromConfig(self):
         node = self._node
@@ -232,6 +260,126 @@ class Volatus:
         targetGroup = self._cluster.lookupTargetGroupId(targetName)
         return targetGroup
     
+    def nodeHttpUrl(self, nodeName: str, urlPath: str) -> str | None:
+        cluster = self.config.lookupClusterByName(self._node.clusterName)
+        target = cluster.lookupNodeByName(nodeName)
+        httpPort = target.network.httpPort
+        discovery = self._discovery.lookupNodeByName(nodeName)
+        
+        if not discovery or not httpPort:
+            return None
+        
+        ip = ipaddress.ip_address(discovery.ip)
+        return f"http://{ip}:{httpPort}{urlPath}"
+
+    async def requestLogStatus(self, nodeName: str = None) -> dict[str, LogStatus]:
+        cluster = self.config.lookupClusterByName(self._node.clusterName)
+        nodes = cluster.nodes
+
+        status: dict[str, LogStatus] = dict()
+        for nodeName, node in nodes.items():
+            if nodeName != self.nodeName:
+                url = self.nodeHttpUrl(nodeName, "/log")
+
+                if not url:
+                    continue
+
+                async with aiohttp.ClientSession() as session:
+                    async with session.get(url) as response:
+                        try:
+                            logStatus = json.loads(await response.text())
+                        except json.JSONDecodeError:
+                            logStatus = dict()
+
+                stateStr = logStatus.get('State')
+                state = LogState[stateStr]
+                log = logStatus.get('Log')
+
+                status[nodeName] = LogStatus(state, log)
+
+        return status
+    
+    async def waitForLogState(self, state: LogState, timeoutS: float = 5) -> bool:
+        start = time.time()
+        matched = False
+        while not matched:
+            status = await self.requestLogStatus()
+
+            for nodeStatus in status.values():
+                if nodeStatus.state != state:   
+                    if time.time() - start >= timeoutS:
+                        break
+
+                    continue
+
+            matched = True
+
+        return matched
+    
+    async def currentLog()
+    
+    async def listLogs(self, nodeName: str) -> list[str] | None:
+        logs = []
+        url = self.nodeHttpUrl(nodeName, "/log/list")
+
+        if not url:
+            return None
+        
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                try:
+                    logs = json.loads(await response.text())
+                finally:
+                    pass
+
+        return logs
+    
+    async def prepareLog(self, nodeName: str, logName: str, waitUntilDone: bool = True) -> bool | None:
+        logs = await self.listLogs(nodeName)
+        if not logName in logs:
+            return None
+        
+        prepUrl = self.nodeHttpUrl(nodeName, f'/log/prepare/{logName}')
+
+        if not prepUrl:
+            return None
+        
+        statusUrl = self.nodeHttpUrl(nodeName, f'/log/status/{logName}')
+
+        async with aiohttp.ClientSession() as session:
+            async with session.get(prepUrl) as response:
+                result = await response.text()
+                if result != "Preparing":
+                    return None
+                
+            if waitUntilDone:
+                done = False
+                while not done:
+                    async with session.get(statusUrl) as response:
+                        status = await response.text()
+
+                        if status != 'In Progress':
+                            done = True
+
+                return True
+            
+        return False
+
+    async def downloadLog(self, nodeName: str, logName: str, localFolder: Path) -> Path | None:
+        downloadUrl = self.nodeHttpUrl(nodeName, f'/log/download/{logName}')
+        async with aiohttp.ClientSession() as session:
+            async with session.get(downloadUrl) as response:
+                if response.status != 200:
+                    raise aiohttp.ClientError(f'({response.status} - {await response.text()})')
+                
+                filePath = localFolder.joinpath(f'{logName}.zip')
+                async with aiofiles.open(filePath, 'wb') as file:
+                    async for data, _ in response.content.iter_chunks():
+                        await file.write(data)
+
+                return filePath
+
+
     def createDigitalCommand(self, chanName: str, value: bool) -> VCommand:
         """Prepares a digital command to be sent to a Volatus system.
 
