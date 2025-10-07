@@ -145,6 +145,8 @@ class Volatus:
         self.config: VolatusConfig = ConfigLoader.load(configPath)
         """The configuration from the configPath argument."""
 
+        self.path: Path = configPath
+
         self._cluster: ClusterConfig
         self._node: NodeConfig
         self._telemetry: Telemetry
@@ -189,7 +191,7 @@ class Volatus:
             'System': self.config.system.name,
             'Cluster': self._node.clusterName,
             'Node': self._node.name,
-            'Path': '',
+            'Path': str(self.path),
             'Version': str(self.config.version),
             'Hash': self.config.hash.upper()
         }
