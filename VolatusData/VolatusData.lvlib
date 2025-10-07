@@ -11,6 +11,7 @@
 </Property>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="DataProc Options.ctl" Type="VI" URL="../DataProc Options.ctl"/>
+		<Item Name="Log Status.ctl" Type="VI" URL="../Log Status.ctl"/>
 		<Item Name="Logger Ready.ctl" Type="VI" URL="../Logger Ready.ctl"/>
 		<Item Name="Logger Started.ctl" Type="VI" URL="../Logger Started.ctl"/>
 		<Item Name="Logger State.ctl" Type="VI" URL="../Logger State.ctl"/>
@@ -36,6 +37,7 @@
 		<Item Name="Send New Data (Wfm).vi" Type="VI" URL="../Send New Data (Wfm).vi"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
+		<Item Name="Log Status Value.lvclass" Type="LVClass" URL="../Log Status Value/Log Status Value.lvclass"/>
 		<Item Name="Logs List Value.lvclass" Type="LVClass" URL="../Logs List Value/Logs List Value.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
