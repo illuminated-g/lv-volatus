@@ -19,10 +19,13 @@
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
 	</Item>
 	<Item Name="Base" Type="Folder">
+		<Item Name="Config Updater.lvclass" Type="LVClass" URL="../Config Updater/Config Updater.lvclass"/>
 		<Item Name="Module.lvclass" Type="LVClass" URL="../Module/Module.lvclass"/>
 	</Item>
+	<Item Name="Config Updaters" Type="Folder">
+		<Item Name="Git Updater Module.lvclass" Type="LVClass" URL="../Git Updater Module/Git Updater Module.lvclass"/>
+	</Item>
 	<Item Name="Core" Type="Folder">
-		<Item Name="Nested" Type="Folder"/>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
@@ -45,6 +48,7 @@
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
 		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
 		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
+		<Item Name="Reload Options.ctl" Type="VI" URL="../Reload Options.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 	</Item>
 	<Item Name="Error Utilities" Type="Folder">
@@ -59,6 +63,7 @@
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Config Monitor Identity.lvclass" Type="LVClass" URL="../Config Monitor Identity/Config Monitor Identity.lvclass"/>
 		<Item Name="Event Reporter Identity.lvclass" Type="LVClass" URL="../Event Reporter Identity/Event Reporter Identity.lvclass"/>
+		<Item Name="GUI Manager Identity.lvclass" Type="LVClass" URL="../GUI Manager Identity/GUI Manager Identity.lvclass"/>
 		<Item Name="Hardware Info Identity.lvclass" Type="LVClass" URL="../Hardware Info Identity/Hardware Info Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
 		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>

@@ -182,14 +182,23 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1115685376</Property>
 		</Item>
-		<Item Name="Lookup Channels by Meta Values.vi" Type="VI" URL="../Lookup Channels by Meta Values.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(T!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;*!=!!?!!!F%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)01WBB&lt;GZF&lt;#ZM&gt;G.M98.T!#.7&lt;WRB&gt;(6T1W^O:GFH,GRW&lt;'FC/E.I97ZO:7QO&lt;(:D&lt;'&amp;T=Q!71%!!!@````]!"1B$;'&amp;O&lt;G6M=Q!!.E"Q!"Y!!#-46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9AV(=G^V=#ZM&gt;G.M98.T!!F(=G^V=#"P&gt;81!"U!$!!&amp;G!"2!1!!"`````Q!)"UFO:'FD:8-!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!11$$`````"F.U=GFO:Q!!'%"!!!(`````!!M,476U93"797RV:8-!%E!Q`````QF.:82B)%ZB&lt;75!.E"Q!"Y!!#-46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9AV(=G^V=#ZM&gt;G.M98.T!!B(=G^V=#"J&lt;A!!91$Q!!Q!!Q!%!!9!"Q!%!!E!"!!%!!I!$!!.!!Y$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!E!!!!!!!!!!!!!!!A!!!!1!!!!%!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$Q!!!!!</Property>
+		<Item Name="Lookup Channel Indices by Name.vi" Type="VI" URL="../Lookup Channel Indices by Name.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'"!!!!$1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!V!!Q!(4H6N:8*J9Q!51%!!!@````]!"1&gt;*&lt;G2J9W6T!$:!=!!?!!!D%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7).2X*P&gt;8!O&lt;(:D&lt;'&amp;T=Q!*2X*P&gt;8!A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!%%!Q`````Q:4&gt;(*J&lt;G=!!"J!1!!"`````Q!*$5.I97ZO:7QA4G&amp;N:8-!.E"Q!"Y!!#-46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9AV(=G^V=#ZM&gt;G.M98.T!!B(=G^V=#"J&lt;A!!91$Q!!Q!!Q!%!!9!"Q!%!!1!"!!%!!A!"!!+!!M$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!%!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
 			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+		</Item>
+		<Item Name="Lookup Channels by Meta Values.vi" Type="VI" URL="../Lookup Channels by Meta Values.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(T!!!!%!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;*!=!!?!!!F%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7)01WBB&lt;GZF&lt;#ZM&gt;G.M98.T!#.7&lt;WRB&gt;(6T1W^O:GFH,GRW&lt;'FC/E.I97ZO:7QO&lt;(:D&lt;'&amp;T=Q!71%!!!@````]!"1B$;'&amp;O&lt;G6M=Q!!.E"Q!"Y!!#-46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9AV(=G^V=#ZM&gt;G.M98.T!!F(=G^V=#"P&gt;81!"U!$!!&amp;G!"2!1!!"`````Q!)"UFO:'FD:8-!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!11$$`````"F.U=GFO:Q!!'%"!!!(`````!!M,476U93"797RV:8-!%E!Q`````QF.:82B)%ZB&lt;75!.E"Q!"Y!!#-46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9AV(=G^V=#ZM&gt;G.M98.T!!B(=G^V=#"J&lt;A!!91$Q!!Q!!Q!%!!9!"Q!%!!E!"!!%!!I!$!!.!!Y$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!E!!!!!!!!!!!!!!!I!!!)1!!!!%!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!$Q!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
 		</Item>
 		<Item Name="New.vi" Type="VI" URL="../New.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!',!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$:!=!!?!!!D%V:P&lt;'&amp;U&gt;8.$&lt;WZG;7=O&lt;(:M;7).2X*P&gt;8!O&lt;(:D&lt;'&amp;T=Q!*2X*P&gt;8!A&lt;X6U!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!5!$R!!!!!!!!!!)46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9AZ(=G^V=#"5?8"F,G.U&lt;!!F1"9!!A:%&lt;X6C&lt;'5'5X2S;7ZH!!J(=G^V=#"5?8"F!!![1(!!(A!!+2"$2%UN1W^O:GFH,GRW&lt;'FC&amp;E.P&lt;G:J:S"&amp;&lt;'6N:7ZU,GRW9WRB=X-!"F"B=G6O&gt;!!!$E!Q`````Q2/97VF!!"5!0!!$!!$!!1!"!!&amp;!!1!"!!%!!1!"A!(!!A!#1-!!(A!!!U)!!!!!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!#A!!!"!!!!!1!!!#%!!!!!!"!!I!!!!!</Property>

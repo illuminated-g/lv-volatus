@@ -38,7 +38,6 @@
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Event Viewer Identity.lvclass" Type="LVClass" URL="../Event Viewer Identity/Event Viewer Identity.lvclass"/>
 		<Item Name="GUI Identity.lvclass" Type="LVClass" URL="../GUI Identity/GUI Identity.lvclass"/>
-		<Item Name="GUI Manager Identity.lvclass" Type="LVClass" URL="../GUI Manager Identity/GUI Manager Identity.lvclass"/>
 	</Item>
 	<Item Name="Plugins" Type="Folder">
 		<Item Name="Control Event Registrations.lvclass" Type="LVClass" URL="../Control Event Registrations/Control Event Registrations.lvclass"/>
