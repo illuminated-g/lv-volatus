@@ -10,11 +10,13 @@
 	<Item Name="Controls" Type="Folder">
 		<Item Name="BangBangControl.lvclass" Type="LVClass" URL="../BangBangControl/BangBangControl.lvclass"/>
 		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
+		<Item Name="LimitControl.lvclass" Type="LVClass" URL="../LimitControl/LimitControl.lvclass"/>
 		<Item Name="MultiControl.lvclass" Type="LVClass" URL="../MultiControl/MultiControl.lvclass"/>
 		<Item Name="PeriodicControl.lvclass" Type="LVClass" URL="../PeriodicControl/PeriodicControl.lvclass"/>
 		<Item Name="PulsedControl.lvclass" Type="LVClass" URL="../PulsedControl/PulsedControl.lvclass"/>
 		<Item Name="SeqDelayControl.lvclass" Type="LVClass" URL="../SeqDelayControl/SeqDelayControl.lvclass"/>
 		<Item Name="TimedPWMControl.lvclass" Type="LVClass" URL="../TimedPWMControl/TimedPWMControl.lvclass"/>
+		<Item Name="ValueSetControl.lvclass" Type="LVClass" URL="../ValueSetControl/ValueSetControl.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Valve Action.ctl" Type="VI" URL="../Valve Action.ctl"/>
