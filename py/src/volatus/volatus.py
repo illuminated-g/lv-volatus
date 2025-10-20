@@ -318,8 +318,6 @@ class Volatus:
 
         return matched
     
-    async def currentLog()
-    
     async def listLogs(self, nodeName: str) -> list[str] | None:
         logs = []
         url = self.nodeHttpUrl(nodeName, "/log/list")
