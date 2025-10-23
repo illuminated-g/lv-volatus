@@ -1,0 +1,23 @@
+volatus.vecto.util
+==================
+
+.. automodule:: volatus.vecto.util
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      intToIp
+      ipToInt
+      ipType
+      localIPs
+      resolveAddress
+      splitSubnet
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      IPType
+   

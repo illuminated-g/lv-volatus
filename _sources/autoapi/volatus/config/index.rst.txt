@@ -1,0 +1,669 @@
+volatus.config
+==============
+
+.. py:module:: volatus.config
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   volatus.config.VL_Type
+   volatus.config.VL_Meta
+   volatus.config.EndpointConfig
+   volatus.config.ChannelConfig
+   volatus.config.GroupConfig
+   volatus.config.TaskConfig
+   volatus.config.TCPConfig
+   volatus.config.NodeNetworkConfig
+   volatus.config.NodeConfig
+   volatus.config.ClusterConfig
+   volatus.config.SystemConfig
+   volatus.config.VersionBump
+   volatus.config.VolatusVersion
+   volatus.config.ClusterLookup
+   volatus.config.NodeLookup
+   volatus.config.TaskLookup
+   volatus.config.GroupLookup
+   volatus.config.ChannelLookup
+   volatus.config.VolatusConfig
+   volatus.config.Cfg
+   volatus.config.ConfigLoader
+
+
+Module Contents
+---------------
+
+.. py:class:: VL_Type(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access:
+
+     >>> Color.RED
+     <Color.RED: 1>
+
+   - value lookup:
+
+     >>> Color(1)
+     <Color.RED: 1>
+
+   - name lookup:
+
+     >>> Color['RED']
+     <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+
+   .. py:attribute:: UNKNOWN
+      :value: 0
+
+
+
+   .. py:attribute:: VL_System
+      :value: 1
+
+
+
+   .. py:attribute:: VL_Cluster
+      :value: 2
+
+
+
+   .. py:attribute:: VL_Node
+      :value: 3
+
+
+
+   .. py:attribute:: VL_Task
+      :value: 4
+
+
+
+   .. py:attribute:: VL_Group
+      :value: 5
+
+
+
+   .. py:attribute:: VL_Channel
+      :value: 6
+
+
+
+   .. py:attribute:: VL_Task_List
+      :value: 7
+
+
+
+   .. py:attribute:: VL_Scaling
+      :value: 8
+
+
+
+   .. py:attribute:: VL_Sensor
+      :value: 9
+
+
+
+   .. py:attribute:: VL_Sensor_List
+      :value: 10
+
+
+
+   .. py:attribute:: VL_Scale
+      :value: 11
+
+
+
+   .. py:method:: fromStr() -> VL_Type
+
+
+.. py:class:: VL_Meta(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access:
+
+     >>> Color.RED
+     <Color.RED: 1>
+
+   - value lookup:
+
+     >>> Color(1)
+     <Color.RED: 1>
+
+   - name lookup:
+
+     >>> Color['RED']
+     <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+
+   .. py:attribute:: UNKNOWN
+      :value: 0
+
+
+
+   .. py:attribute:: VL_Type
+      :value: 1
+
+
+
+   .. py:attribute:: VL_Task_Type
+      :value: 2
+
+
+
+   .. py:attribute:: VL_Group_Type
+      :value: 3
+
+
+
+   .. py:attribute:: VL_Config_Version
+      :value: 4
+
+
+
+.. py:class:: EndpointConfig(address: str, port: int)
+
+   .. py:attribute:: address
+      :type:  str
+
+
+   .. py:attribute:: port
+      :type:  int
+
+
+   .. py:method:: tuple() -> tuple[str, int]
+
+
+.. py:class:: ChannelConfig(name: str, groupName: str, taskName: str, nodeName: str, clusterName: str, defaultValue: str | float = None, resource: str = '')
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: defaultValue
+      :value: None
+
+
+
+   .. py:attribute:: resource
+      :value: ''
+
+
+
+   .. py:attribute:: groupName
+
+
+   .. py:attribute:: taskName
+
+
+   .. py:attribute:: nodeName
+
+
+   .. py:method:: clusterName() -> str
+
+
+   .. py:method:: setClusterName(clusterName: str)
+
+
+.. py:class:: GroupConfig(name: str, taskName: str, nodeName: str, clusterName: str, channels: list[ChannelConfig] = [], publishConfig: EndpointConfig = None)
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: publishConfig
+      :value: None
+
+
+
+   .. py:attribute:: channels
+      :type:  dict[str, ChannelConfig]
+
+
+   .. py:attribute:: taskName
+
+
+   .. py:attribute:: nodeName
+
+
+   .. py:attribute:: clusterName
+
+
+   .. py:method:: isPublished() -> bool
+
+
+   .. py:method:: addChannel(channel: ChannelConfig)
+
+
+   .. py:method:: setClusterName(clusterName: str)
+
+
+   .. py:method:: lookupChannelByName(channelName: str) -> ChannelConfig
+
+
+.. py:class:: TaskConfig(name: str, type: str, nodeName: str, clusterName: str, groups: list[GroupConfig] = [])
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: type
+
+
+   .. py:attribute:: groups
+      :type:  dict[str, GroupConfig]
+
+
+   .. py:attribute:: nodeName
+
+
+   .. py:attribute:: clusterName
+
+
+   .. py:method:: setClusterName(clusterName: str)
+
+
+   .. py:method:: addGroup(group: GroupConfig)
+
+
+   .. py:method:: lookupGroupByName(groupName: str) -> GroupConfig | None
+
+
+.. py:class:: TCPConfig(address: str, port: int, server: bool)
+
+   .. py:attribute:: address
+
+
+   .. py:attribute:: port
+
+
+   .. py:attribute:: server
+
+
+.. py:class:: NodeNetworkConfig(tcpConfig: TCPConfig, httpPort: int = None, announceInterval: int = None, bindAddress: str = '0.0.0.0')
+
+   .. py:attribute:: tcp
+
+
+   .. py:attribute:: httpPort
+      :value: None
+
+
+
+   .. py:attribute:: announceInterval
+      :value: None
+
+
+
+   .. py:attribute:: bindAddress
+      :value: '0.0.0.0'
+
+
+
+.. py:class:: NodeConfig(name: str, id: int, clusterName: str, eventLogFolder: pathlib.Path = None, network: NodeNetworkConfig = None, targetGroups: list[str] = [], tasks: list[TaskConfig] = [])
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: id
+
+
+   .. py:attribute:: logFolder
+      :value: None
+
+
+
+   .. py:attribute:: network
+      :value: None
+
+
+
+   .. py:attribute:: targetGroups
+      :value: []
+
+
+
+   .. py:attribute:: tasks
+      :type:  dict[str, TaskConfig]
+
+
+   .. py:attribute:: clusterName
+
+
+   .. py:method:: tcpConfig() -> TCPConfig | None
+
+
+   .. py:method:: addTask(task: TaskConfig)
+
+
+   .. py:method:: setClusterName(clusterName: str)
+
+
+   .. py:method:: lookupTaskByName(taskName: str) -> TaskConfig | None
+
+
+.. py:class:: ClusterConfig(name: str, discoveryEndpoint: EndpointConfig = None, targetGroups: dict[str, int] = None, nodes: list[NodeConfig] = None)
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: discovery
+      :value: None
+
+
+
+   .. py:attribute:: targetGroups
+      :value: None
+
+
+
+   .. py:attribute:: nodes
+      :type:  dict[str, NodeConfig]
+
+
+   .. py:method:: lookupTargetGroupId(targetName: str) -> int | None
+
+
+   .. py:method:: lookupNodeByName(nodeName: str) -> NodeConfig | None
+
+
+   .. py:method:: addNode(node: NodeConfig)
+
+
+.. py:class:: SystemConfig(name: str, clusters: list[ClusterConfig] = [])
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: clusters
+      :type:  dict[str, ClusterConfig]
+
+
+   .. py:method:: lookupClusterByName(clusterName: str) -> ClusterConfig | None
+
+
+   .. py:method:: addCluster(cluster: ClusterConfig)
+
+
+.. py:class:: VersionBump(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access:
+
+     >>> Color.RED
+     <Color.RED: 1>
+
+   - value lookup:
+
+     >>> Color(1)
+     <Color.RED: 1>
+
+   - name lookup:
+
+     >>> Color['RED']
+     <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+
+   .. py:attribute:: NONE
+      :value: 0
+
+
+
+   .. py:attribute:: FIX
+      :value: 1
+
+
+
+   .. py:attribute:: MINOR
+      :value: 2
+
+
+
+   .. py:attribute:: MAJOR
+      :value: 3
+
+
+
+.. py:class:: VolatusVersion(major: int, minor: int, fix: int, build: int = 0, prerelease: str = '')
+
+   .. py:attribute:: major
+
+
+   .. py:attribute:: minor
+
+
+   .. py:attribute:: fix
+
+
+   .. py:attribute:: build
+      :value: 0
+
+
+
+   .. py:attribute:: prerelease
+      :value: ''
+
+
+
+   .. py:method:: fromString() -> VolatusVersion
+
+
+   .. py:method:: bump(bumpType: VersionBump)
+
+
+.. py:class:: ClusterLookup(clusterName: str)
+
+   .. py:attribute:: clusterName
+
+
+.. py:class:: NodeLookup(nodeName: str, clusterName: str)
+
+   Bases: :py:obj:`ClusterLookup`
+
+
+   .. py:attribute:: nodeName
+
+
+.. py:class:: TaskLookup(taskName: str, nodeName: str, clusterName: str)
+
+   Bases: :py:obj:`NodeLookup`
+
+
+   .. py:attribute:: taskName
+
+
+.. py:class:: GroupLookup(groupName: str, taskName: str, nodeName: str, clusterName: str)
+
+   Bases: :py:obj:`TaskLookup`
+
+
+   .. py:attribute:: groupName
+
+
+.. py:class:: ChannelLookup(channelName: str, groupName: str, taskName: str, nodeName: str, clusterName: str)
+
+   Bases: :py:obj:`GroupLookup`
+
+
+   .. py:attribute:: channelName
+
+
+.. py:class:: VolatusConfig(version: VolatusVersion = None, hash: str = None, system: SystemConfig = None)
+
+   .. py:attribute:: version
+      :value: None
+
+
+
+   .. py:attribute:: hash
+      :value: None
+
+
+
+   .. py:attribute:: system
+      :value: None
+
+
+
+   .. py:attribute:: groups
+      :type:  dict[str, TaskLookup]
+
+
+   .. py:attribute:: channels
+      :type:  dict[str, GroupLookup]
+
+
+   .. py:method:: refreshLookups()
+
+
+   .. py:method:: lookupCluster(cl: ClusterLookup) -> ClusterConfig | None
+
+
+   .. py:method:: lookupClusterByName(clusterName: str) -> ClusterConfig | None
+
+
+   .. py:method:: lookupNode(nl: NodeLookup) -> NodeConfig | None
+
+
+   .. py:method:: lookupNodeByName(nodeName: str, clusterName: str = None) -> NodeConfig | None
+
+
+   .. py:method:: lookupTask(tl: TaskLookup) -> TaskConfig | None
+
+
+   .. py:method:: lookupTaskByName(taskName: str, nodeName: str, clusterName: str = None) -> TaskConfig | None
+
+
+   .. py:method:: lookupGroup(gl: GroupLookup) -> GroupConfig | None
+
+
+   .. py:method:: lookupGroupByName(groupName: str) -> GroupConfig | None
+
+
+   .. py:method:: lookupChannel(cl: ChannelLookup) -> ChannelConfig | None
+
+
+   .. py:method:: lookupChannelByName(channelName: str) -> ChannelConfig | None
+
+
+.. py:class:: Cfg
+
+   .. py:method:: normalizePath() -> pathlib.Path
+
+
+   .. py:method:: childrenOf() -> dict[str, dict]
+
+
+   .. py:method:: readMetaValue(name: str) -> str | None
+
+
+   .. py:method:: writeMetaValue(name: str, value: str)
+
+
+   .. py:method:: vlReadMeta(meta: VL_Meta) -> str | None
+
+
+   .. py:method:: vlWriteMeta(meta: VL_Meta, value: str)
+
+
+   .. py:method:: vlSetType(type: VL_Type)
+
+
+   .. py:method:: vlTypeOf() -> VL_Type | None
+
+
+   .. py:method:: vlFindType(type: VL_Type, recursePastMatch: bool = True) -> dict[str, dict]
+
+
+.. py:class:: ConfigLoader
+
+   .. py:method:: load() -> VolatusConfig
+
+
+   .. py:method:: save(config: VolatusConfig)
+
+
+   .. py:method:: loadGroup(groupName: str, groupObj: dict)
+
+
+   .. py:method:: loadTask(taskName: str, taskObj: dict)
+
+
+   .. py:method:: loadNode(nodeName: str, nodeObj: dict)
+
+
+   .. py:method:: loadCluster(clusterName: str, clusterObj: dict)
+
+
+   .. py:method:: loadSystem(sysObj: dict)
+
+
