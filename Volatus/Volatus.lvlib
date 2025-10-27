@@ -31,6 +31,7 @@
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
 		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
+		<Item Name="System Health Module.lvclass" Type="LVClass" URL="../System Health Module/System Health Module.lvclass"/>
 		<Item Name="Timing Module.lvclass" Type="LVClass" URL="../Timing Module/Timing Module.lvclass"/>
 		<Item Name="Vecto Message Bridge.lvclass" Type="LVClass" URL="../Vecto Message Bridge/Vecto Message Bridge.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>
@@ -94,5 +95,10 @@
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
 		<Item Name="PathValue.lvclass" Type="LVClass" URL="../PathValue/PathValue.lvclass"/>
 		<Item Name="StringValue.lvclass" Type="LVClass" URL="../StringValue/StringValue.lvclass"/>
+	</Item>
+	<Item Name="System" Type="Folder">
+		<Item Name="Linux System SAL.lvclass" Type="LVClass" URL="../Linux System SAL/Linux System SAL.lvclass"/>
+		<Item Name="System SAL.lvclass" Type="LVClass" URL="../System SAL/System SAL.lvclass"/>
+		<Item Name="Windows System SAL.lvclass" Type="LVClass" URL="../Windows System SAL/Windows System SAL.lvclass"/>
 	</Item>
 </Library>

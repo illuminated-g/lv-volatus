@@ -107,6 +107,33 @@
                                         "Logging_Timestamp":    {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Timestamp"}}
                                     }
                                 },
+                                "1-SystemHealth": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
+                                    "DAQ_Health": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": "36987"},
+                                        "Drives": [
+                                            {
+                                                "Path": "c:",
+                                                "Warning_GB": 120,
+                                                "Error_GB": 80,
+                                                "DAQ_C_Available": {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"}},
+                                                "DAQ_C_Used": {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"}}
+                                            },
+                                            {
+                                                "Path": "d:",
+                                                "Warning_GB": 200,
+                                                "Error_GB": 80,
+                                                "DAQ_D_Available": {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"}},
+                                                "DAQ_D_Used":      {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"}}
+                                            }
+                                        ],
+                                        "DAQ_CPU_Total_Pct":       {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "CPU_Total"}},
+                                        "DAQ_Mem_Available_GB":    {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "Mem_Available"}},
+                                        "DAQ_Mem_Free_GB":         {"Meta": {"VL_Type": "VL_Channel", "Health_Type": "Mem_Free"}}
+                                    },
+                                    "CPU_Warning_Pct": 60
+                                },
                                 "1-TestAI": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
                                     "Sampling": {"Rate": 50000, "ChunkSize": 500},
