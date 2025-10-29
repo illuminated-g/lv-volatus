@@ -10,6 +10,7 @@
 	<Item Name="Controls" Type="Folder">
 		<Item Name="Buttons" Type="Folder">
 			<Item Name="DigitalButtonControl.lvclass" Type="LVClass" URL="../DigitalButtonControl/DigitalButtonControl.lvclass"/>
+			<Item Name="HttpButtonControl.lvclass" Type="LVClass" URL="../HttpButtonControl/HttpButtonControl.lvclass"/>
 		</Item>
 		<Item Name="Numeric" Type="Folder">
 			<Item Name="DblPopupControl.lvclass" Type="LVClass" URL="../DblPopupControl/DblPopupControl.lvclass"/>
