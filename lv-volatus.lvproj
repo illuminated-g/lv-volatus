@@ -68,7 +68,6 @@
 		<Item Name="VolatusDAQGenericGUI.lvlib" Type="Library" URL="../VolatusDAQGenericGUI/VolatusDAQGenericGUI.lvlib"/>
 		<Item Name="VolatusControl.lvlib" Type="Library" URL="../VolatusControl/VolatusControl.lvlib"/>
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
-		<Item Name="VolatusHistorian.lvlib" Type="Library" URL="../VolatusHistorian/VolatusHistorian.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
