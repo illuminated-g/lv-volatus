@@ -138,7 +138,9 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
                                     "Sampling": {"Rate": 50000, "ChunkSize": 500},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100
+                                        "Logging": {
+                                            "Group": "HighSpeed"
+                                        }
                                     },
                                     "TestAI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
@@ -166,7 +168,10 @@
                                 "1-TestAO": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAO"},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100
+                                        "Publish_Period_ms": 100,
+                                        "Logging": {
+                                            "Group": "LowSpeed"
+                                        }
                                     },
                                     "AO_Group": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
@@ -185,7 +190,10 @@
                                 "1-TestDO": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDO"},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100
+                                        "Publish_Period_ms": 100,
+                                        "Logging": {
+                                            "Group": "LowSpeed"
+                                        }
                                     },
                                     "TestDO": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
@@ -202,7 +210,10 @@
                                 "2-DigitalControl": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100
+                                        "Publish_Period_ms": 100,
+                                        "Logging": {
+                                            "Group": "Auto"
+                                        }
                                     },
                                     "Period_ms": 5,
                                     "ControlGroup": {
@@ -272,7 +283,12 @@
                                 },
                                 "2-HeaterControl": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
-                                    "DataProc": {},
+                                    "DataProc": {
+                                        "Publish_Period_ms": 100,
+                                        "Logging": {
+                                            "Group": "Auto"
+                                        }
+                                    },
                                     "Period_ms": 100,
                                     "HeaterGroup": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
@@ -300,18 +316,6 @@
                                             }
                                         }
                                     }
-                                },
-                                "GuiAI": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"},
-                                    "Shutdown_On_Close": true
-                                },
-                                "GuiAO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"},
-                                    "Shutdown_On_Close": true
-                                },
-                                "GuiDO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"},
-                                    "Shutdown_On_Close": true
                                 }
                             }
                         },
@@ -350,6 +354,18 @@
                                 },
                                 "EventViewer": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
+                                },
+                                "GuiAI": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"},
+                                    "Shutdown_On_Close": true
+                                },
+                                "GuiAO": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"},
+                                    "Shutdown_On_Close": true
+                                },
+                                "GuiDO": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"},
+                                    "Shutdown_On_Close": true
                                 }
                             }
                         },
