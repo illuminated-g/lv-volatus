@@ -2,5 +2,5 @@ syntax = "proto3";
 
 message StopLog {
     string reason = 1;
-    string group = 2;
+    repeated string groups = 2;
 }
