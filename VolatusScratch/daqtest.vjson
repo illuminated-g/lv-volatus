@@ -94,17 +94,19 @@
                                     "Logging_Status": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "String"},
                                         "Publish": {"Address": "239.0.0.11", "Port": "36987"},
-                                        "Logging_State_Num":    {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"}},
-                                        "Logging_Num_Loggers":  {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers"}},
-                                        "Logging_Num_Idle":     {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"}},
-                                        "Logging_Num_Prep":     {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Prep"}},
-                                        "Logging_Num_Ready":    {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Ready"}},
-                                        "Logging_Num_Active":   {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Active"}},
-                                        "Logging_Num_Stopping": {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"}},
-                                        "Logging_All_Active":   {"Value": 0,        "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"}},
-                                        "Logging_State":        {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State"}},
-                                        "Logging_Series":       {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Series"}},
-                                        "Logging_Timestamp":    {"Value": "",       "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Timestamp"}}
+                                        "Logging_State_Num":    {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"}},
+                                        "Logging_Num_Loggers":  {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers"}},
+                                        "Logging_Num_Idle":     {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"}},
+                                        "Logging_Num_Prep":     {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Prep"}},
+                                        "Logging_Num_Ready":    {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Ready"}},
+                                        "Logging_Num_Active":   {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Active"}},
+                                        "Logging_Num_Stopping": {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"}},
+                                        "Logging_All_Active":   {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"}},
+                                        "Logging_State":        {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State"}},
+                                        "Logging_Series":       {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Series"}},
+                                        "Logging_Timestamp":    {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Timestamp"}},
+                                        "LowSpeed_State":       {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "LowSpeed"}},
+                                        "HighSpeed_State":      {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "HighSpeed"}}
                                     }
                                 },
                                 "1-SystemHealth": {
@@ -139,7 +141,8 @@
                                     "Sampling": {"Rate": 50000, "ChunkSize": 500},
                                     "DataProc": {
                                         "Logging": {
-                                            "Group": "HighSpeed"
+                                            "Group": "HighSpeed",
+                                            "Split_GB": 0.01
                                         }
                                     },
                                     "TestAI": {
