@@ -106,7 +106,8 @@
                                         "Logging_Series":       {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Series"}},
                                         "Logging_Timestamp":    {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Timestamp"}},
                                         "LowSpeed_State":       {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "LowSpeed"}},
-                                        "HighSpeed_State":      {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "HighSpeed"}}
+                                        "HighSpeed_State":      {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "HighSpeed"}},
+                                        "Auto_State":           {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "Auto"}}
                                     }
                                 },
                                 "1-SystemHealth": {
