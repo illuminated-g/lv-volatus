@@ -47,6 +47,8 @@
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
 		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
+		<Item Name="mod stat.ctl" Type="VI" URL="../mod stat.ctl"/>
+		<Item Name="Module Status.ctl" Type="VI" URL="../Module/Module Status.ctl"/>
 		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
 		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
 		<Item Name="Reload Options.ctl" Type="VI" URL="../Reload Options.ctl"/>
@@ -68,6 +70,7 @@
 		<Item Name="Hardware Info Identity.lvclass" Type="LVClass" URL="../Hardware Info Identity/Hardware Info Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
 		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>
+		<Item Name="Status Tree Identity.lvclass" Type="LVClass" URL="../Status Tree Identity/Status Tree Identity.lvclass"/>
 		<Item Name="System Config Identity.lvclass" Type="LVClass" URL="../System Config Identity/System Config Identity.lvclass"/>
 		<Item Name="Volatus Core Identity.lvclass" Type="LVClass" URL="../Volatus Core Identity/Volatus Core Identity.lvclass"/>
 	</Item>
@@ -94,6 +97,7 @@
 		<Item Name="Events Summary Value.lvclass" Type="LVClass" URL="../Events Summary Value/Events Summary Value.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
 		<Item Name="PathValue.lvclass" Type="LVClass" URL="../PathValue/PathValue.lvclass"/>
+		<Item Name="StatusTreeValue.lvclass" Type="LVClass" URL="../StatusTreeValue/StatusTreeValue.lvclass"/>
 		<Item Name="StringValue.lvclass" Type="LVClass" URL="../StringValue/StringValue.lvclass"/>
 	</Item>
 	<Item Name="System" Type="Folder">
