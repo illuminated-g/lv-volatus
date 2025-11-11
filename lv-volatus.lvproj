@@ -801,9 +801,9 @@
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="LV Config Read Pathlist.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Pathlist.vi"/>
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
+			<Item Name="2WayValveH.ctl" Type="VI" URL="../VolatusGUIControls/2WayValveH.ctl"/>
+			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../VolatusGUIControls/DblNumericStatus.ctl"/>
+			<Item Name="DblControl.ctl" Type="VI" URL="../VolatusGUIControls/DblControl.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
@@ -913,10 +913,10 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{53E88FC8-62FE-49BC-B0E8-31027488BA4F}</Property>
-				<Property Name="Bld_version.build" Type="Int">9</Property>
+				<Property Name="Bld_version.build" Type="Int">18</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">2</Property>
-				<Property Name="Bld_version.patch" Type="Int">6</Property>
+				<Property Name="Bld_version.patch" Type="Int">15</Property>
 				<Property Name="Destination[0].destName" Type="Str">volatus-full.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/volatus-full.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -927,7 +927,7 @@
 				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/graphics</Property>
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{4794C64C-1216-4D1C-80F2-08A2CE85CCE9}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{6EE8E65B-7EAF-42EA-B356-0BF9FDA818B3}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Generic PC App.vi</Property>
