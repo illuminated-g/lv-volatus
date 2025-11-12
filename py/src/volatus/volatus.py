@@ -1,7 +1,7 @@
 """The core module containing the Volatus class to be used for handling configs and system interactions."""
 
 from pathlib import Path
-from collections.abc import Callable, Awaitable
+from collections.abc import Callable
 from datetime import datetime
 from fastapi import FastAPI, APIRouter
 from enum import Enum
@@ -55,7 +55,7 @@ class VCommand:
                  type: str,
                  payload: bytes,
                  seqFunc: Callable[[], int],
-                 sendFunc: Callable[[str, str, bytes, int, str], Awaitable[None]],
+                 sendFunc: Callable[[str, str, bytes, int, str], None],
                  taskName: str = ''):
         """Initializes a new command that is ready to be sent.
 
@@ -68,7 +68,7 @@ class VCommand:
         :param seqFunc: A reference to the function used to generate the next sequence number sent in the message header.
         :type seqFunc: Callable[[], int]
         :param sendFunc: A reference to the function that sends the message out over TCP. Expected to be the send function of the TCP class.
-        :type sendFunc: Callable[[str, str, bytes, int, str], Awaitable[None]]
+        :type sendFunc: Callable[[str, str, bytes, int, str], None]
         :param taskName: The target task for the command, defaults to '' which requires tasks to be subscribed to the specific message type.
         :type taskName: str, optional
         """
@@ -79,10 +79,10 @@ class VCommand:
         self._taskName = taskName
         self._sendFunc = sendFunc
 
-    async def send(self):
+    def send(self):
         """Sends the command over TCP as initialized.
         """
-        await self._sendFunc(self._targetName, self._type, self._payload, self._seqFunc(), self._taskName)
+        self._sendFunc(self._targetName, self._type, self._payload, self._seqFunc(), self._taskName)
 
 class StartLogCommand(VCommand):
     """A prepared command to start logging across a set of target nodes that can be sent with send()
@@ -92,7 +92,7 @@ class StartLogCommand(VCommand):
                  targetName: str,
                  testName: str,
                  seqFunc: Callable[[], int],
-                 sendFunc: Callable[[str, str, bytes, int, str], Awaitable[None]],
+                 sendFunc: Callable[[str, str, bytes, int, str], None],
                  startedBy: str,
                  timestamp: str = ''):
         self._seqFunc = seqFunc
@@ -104,13 +104,13 @@ class StartLogCommand(VCommand):
         self._cmd.series = testName
         self._cmd.started_by = startedBy
 
-    async def send(self):
+    def send(self):
         if not self._timestamp:
             self._timestamp = datetime.now().strftime('%Y%m%dT%H%M%S')
 
         self._cmd.timestamp = self._timestamp
 
-        return self._sendFunc(self._targetName, 'start_log', self._cmd.SerializeToString(), self._seqFunc(), '')
+        self._sendFunc(self._targetName, 'start_log', self._cmd.SerializeToString(), self._seqFunc(), '')
 
 class Volatus:
     """The main API class for interacting with Volatus configs and systems.
@@ -273,8 +273,6 @@ class Volatus:
         
         ip = ipaddress.ip_address(discovery.ip)
         return f"http://{ip}:{httpPort}{urlPath}"
-    
-    def task(self,)
 
     async def requestLogStatus(self, nodeName: str = None) -> dict[str, LogStatus]:
         cluster = self.config.lookupClusterByName(self._node.clusterName)

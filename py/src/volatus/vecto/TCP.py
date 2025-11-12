@@ -86,7 +86,7 @@ class TCPMessaging:
     def shutdown(self):
         self._actionQ.put(TCPAction.SHUTDOWN)
 
-    async def sendMsg(self, target: str | int, msgType: str, payload: bytes, sequence: int, task: str = ''):
+    def sendMsg(self, target: str | int, msgType: str, payload: bytes, sequence: int, task: str = ''):
         targetId: int
         if type(target) == int:
             targetId = target
