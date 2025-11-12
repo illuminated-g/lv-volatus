@@ -344,7 +344,7 @@
                                     "Port": 12082,
                                     "Server": false
                                 },
-                                "Foo": "Bar"
+                                "Foo": "Baz"
                             },
                             "Groups": ["Config", "Events"],
                             "Tasks": {
