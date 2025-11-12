@@ -50,6 +50,15 @@ class ChannelGroup:
 
         self._count = i
 
+    def __eq__(self, other) -> bool:
+        if isinstance(other, ChannelGroup):
+            return self.name == other.name
+        else:
+            return NotImplemented
+        
+    def __hash__(self) -> int:
+        return hash(self.name)
+
     def chanByName(self, chanName: str) -> ChannelValue | None:
         return self._channel.get(chanName)
 
@@ -166,7 +175,7 @@ class Subscriber:
                         stringData.ParseFromString(udpPayload.payload)
                         group = self._groups.get(stringData.group_name)
                         if group:
-                            group.updateValues(stringData.scaled_data, stringData.data_timestamp)
+                            group.updateValues(stringData.strings, stringData.data_timestamp)
 
             except TimeoutError:
                 pass
@@ -216,8 +225,6 @@ class Telemetry:
                     sub = Subscriber(endpt, bindAddress)
                     self._subscribers[endpt] = sub
                     sub.addGroup(group)
-
-
 
         #get first channel to check for data
         chan = group.chanByIndex(0)

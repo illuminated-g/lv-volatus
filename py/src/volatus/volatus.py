@@ -246,7 +246,7 @@ class Volatus:
             self._telemetry.shutdown()
 
         if hasattr(self, '_http'):
-            os.kill(os.getpid(), signal.SIGTERM)
+            self._httpThread.join(timeout=0.0)
 
     def lookupTargetId(self, targetName: str) -> int | None:
         """Looks up the numeric ID used to route a message to the desired node(s).
@@ -555,8 +555,6 @@ class Volatus:
 
             if not groupCfg:
                 raise ValueError(f'Unknown group name "{groupName}".')
-            
-            bindAddress = self._node.network.bindAddress
             
             return self._telemetry.subscribeToGroupCfg(groupCfg, timeout_s)
 

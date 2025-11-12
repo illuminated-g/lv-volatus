@@ -47,6 +47,15 @@ class EndpointConfig:
         self.address: str = address
         self.port: int = port
 
+    def __eq__(self, other) -> bool:
+        if isinstance(other, EndpointConfig):
+            return self.address == other.address and self.port == other.port
+        else:
+            return NotImplemented
+        
+    def __hash__(self) -> int:
+        return hash(str(self))
+
     def __str__(self) -> str:
         return f'{self.address}:{self.port}'
     
