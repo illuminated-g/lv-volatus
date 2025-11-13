@@ -350,7 +350,8 @@
                             "Tasks": {
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
-                                    "Plugins": "gui"
+                                    "Plugins": "gui",
+                                    "Title": "Volatus Test"
                                 },
                                 "Config_Monitor": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "ConfigMonitor"},
