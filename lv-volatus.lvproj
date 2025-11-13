@@ -804,6 +804,9 @@
 			<Item Name="2WayValveH.ctl" Type="VI" URL="../VolatusGUIControls/2WayValveH.ctl"/>
 			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../VolatusGUIControls/DblNumericStatus.ctl"/>
 			<Item Name="DblControl.ctl" Type="VI" URL="../VolatusGUIControls/DblControl.ctl"/>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">

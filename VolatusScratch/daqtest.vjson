@@ -93,7 +93,7 @@
                                     "Folder": "c:/logs",
                                     "Logging_Status": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "String"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": "36987"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Logging_State_Num":    {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"}},
                                         "Logging_Num_Loggers":  {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers"}},
                                         "Logging_Num_Idle":     {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"}},
@@ -114,7 +114,7 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": "36987"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Drives": [
                                             {
                                                 "Path": "c:",
@@ -377,7 +377,7 @@
                             "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 3,
                             "Network": {
-                                "Bind_Address": "0.0.0.0",
+                                "Bind_Address": "10.42.0.0/16",
                                 "Announce_Interval": 5,
                                 "TCP": {
                                     "Address": "localhost",
