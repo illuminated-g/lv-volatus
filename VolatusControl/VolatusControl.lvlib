@@ -9,7 +9,6 @@
 </Property>
 	<Item Name="Controls" Type="Folder">
 		<Item Name="BangBangControl.lvclass" Type="LVClass" URL="../BangBangControl/BangBangControl.lvclass"/>
-		<Item Name="DelayControl.lvclass" Type="LVClass" URL="../DelayControl/DelayControl.lvclass"/>
 		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
 		<Item Name="LimitControl.lvclass" Type="LVClass" URL="../LimitControl/LimitControl.lvclass"/>
 		<Item Name="MultiControl.lvclass" Type="LVClass" URL="../MultiControl/MultiControl.lvclass"/>
@@ -17,6 +16,7 @@
 		<Item Name="PulsedControl.lvclass" Type="LVClass" URL="../PulsedControl/PulsedControl.lvclass"/>
 		<Item Name="SeqDelayControl.lvclass" Type="LVClass" URL="../SeqDelayControl/SeqDelayControl.lvclass"/>
 		<Item Name="TimedPWMControl.lvclass" Type="LVClass" URL="../TimedPWMControl/TimedPWMControl.lvclass"/>
+		<Item Name="TriggerDelayControl.lvclass" Type="LVClass" URL="../DelayControl/TriggerDelayControl.lvclass"/>
 		<Item Name="ValueSetControl.lvclass" Type="LVClass" URL="../ValueSetControl/ValueSetControl.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">

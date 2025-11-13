@@ -8,6 +8,7 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
+		<Item Name="Boolean" Type="Folder"/>
 		<Item Name="Buttons" Type="Folder">
 			<Item Name="DigitalButtonControl.lvclass" Type="LVClass" URL="../DigitalButtonControl/DigitalButtonControl.lvclass"/>
 			<Item Name="HttpButtonControl.lvclass" Type="LVClass" URL="../HttpButtonControl/HttpButtonControl.lvclass"/>
