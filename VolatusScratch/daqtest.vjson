@@ -281,6 +281,16 @@
                                                 "Type": "Multi",
                                                 "Value": 0,
                                                 "Channels": ["Pulse1", "Pulse2"]
+                                            },
+                                            "Spark_Trigger": {
+                                                "Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "TriggerDelay",
+                                                "Value": 1,
+                                                "Control": "Heater_En",
+                                                "Trigger": "HighSpeed_State",
+                                                "Trigger_String": "Logging",
+                                                "Spark_Countdown_s":   {"Value": 0, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Countdown_s"}},
+                                                "Spark_Delay_s":       {"Value": 5, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Delay_s"}}
                                             }
                                         }
                                     }
