@@ -1,0 +1,19 @@
+﻿volatus
+=======
+
+.. automodule:: volatus
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   config
+   discovery
+   messaging
+   proto
+   telemetry
+   vecto
+   volatus

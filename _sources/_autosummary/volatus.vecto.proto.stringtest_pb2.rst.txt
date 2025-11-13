@@ -1,0 +1,6 @@
+volatus.vecto.proto.stringtest\_pb2
+===================================
+
+.. automodule:: volatus.vecto.proto.stringtest_pb2
+
+   
