@@ -48,4 +48,5 @@
 	<Item Name="Log Preparer Module.lvclass" Type="LVClass" URL="../Log Preparer Module/Log Preparer Module.lvclass"/>
 	<Item Name="Redlines Module.lvclass" Type="LVClass" URL="../Redlines Module/Redlines Module.lvclass"/>
 	<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
+	<Item Name="Triggered Logger.lvclass" Type="LVClass" URL="../Triggered Logger/Triggered Logger.lvclass"/>
 </Library>
