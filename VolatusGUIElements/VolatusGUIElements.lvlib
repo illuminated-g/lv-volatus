@@ -8,6 +8,9 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
+		<Item Name="Boolean" Type="Folder">
+			<Item Name="BooleanControl.lvclass" Type="LVClass" URL="../BooleanControl/BooleanControl.lvclass"/>
+		</Item>
 		<Item Name="Buttons" Type="Folder">
 			<Item Name="DigitalButtonControl.lvclass" Type="LVClass" URL="../DigitalButtonControl/DigitalButtonControl.lvclass"/>
 			<Item Name="HttpButtonControl.lvclass" Type="LVClass" URL="../HttpButtonControl/HttpButtonControl.lvclass"/>
@@ -17,6 +20,7 @@
 			<Item Name="SliderControl.lvclass" Type="LVClass" URL="../DoubleControl/SliderControl.lvclass"/>
 		</Item>
 		<Item Name="Special" Type="Folder">
+			<Item Name="GroupLoggingControl.lvclass" Type="LVClass" URL="../GroupLoggingControl/GroupLoggingControl.lvclass"/>
 			<Item Name="LoggingControl.lvclass" Type="LVClass" URL="../LoggingControl/LoggingControl.lvclass"/>
 		</Item>
 		<Item Name="Valves" Type="Folder">

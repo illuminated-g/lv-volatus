@@ -62,6 +62,7 @@ class TCPMessaging:
         self.vCfg = vCfg
         self.nodeCfg = nodeCfg
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.connected = False
 
         self.id = nodeCfg.id
 
@@ -86,7 +87,25 @@ class TCPMessaging:
     def shutdown(self):
         self._actionQ.put(TCPAction.SHUTDOWN)
 
-    async def sendMsg(self, target: str | int, msgType: str, payload: bytes, sequence: int, task: str = ''):
+    def sendMsg(self, target: str | int, msgType: str, payload: bytes, sequence: int, task: str = '') -> int:
+        """Enqueues a message to be sent and returns the approximate size of the message queue.
+
+        Messages that are sent while not connected are discarded.
+
+        :param target: The ID or name of the target to send the message to.
+        :type target: str | int
+        :param msgType: The message ID that identifies the data type and purpose of the message being sent.
+        :type msgType: str
+        :param payload: A serialized message to be embedded within the TCP message that gets sent. Typically will be a serialized protobuf message.
+        :type payload: bytes
+        :param sequence: The count of payloads that have been sent from this application.
+        :type sequence: int
+        :param task: The specific task to send the message to in the target. If not specified will dispatch based on message ID, defaults to ''
+        :type task: str, optional
+        :raises ValueError: Raised when an invalid target is specified.
+        :return: The approximate queue size of messges to be sent.
+        :rtype: int
+        """
         targetId: int
         if type(target) == int:
             targetId = target
@@ -108,6 +127,8 @@ class TCPMessaging:
             toSend.task_id = task
             toSend.payload = payload
             self._sendQueue.put(toSend)
+
+        return self._sendQueue.qsize()
 
     def _clientLoop(self):
         clientHello = TcpClientHello()
@@ -214,6 +235,8 @@ class TCPMessaging:
                     state = ClientState.SHUTDOWN
                     self.state = str(state)
 
+            self.connected = state == ClientState.CONNECTED
+
     def __sendSized(self, payload: bytes):
         l = len(payload)
         lb = l.to_bytes(4, 'little')
@@ -231,6 +254,9 @@ class TCPMessaging:
                 return bytes()
             
             return recvBytes
+        
+    def isConnected(self) -> bool:
+        return self.connected
 
     def _serverClientLoop(self):
         pass

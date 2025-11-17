@@ -25,6 +25,13 @@ async def main():
             print("Data valid within timeout.")
         else:
             print("No data received yet.")
+        
+        gLog, hasLogData = v.subscribe('Logging_Status', 5)
+
+        if hasLogData:
+            print("Subscribed to logging status")
+        else:
+            print("No data within timeout for logging status")
 
         # get a single channel to read live values from
         ch0: ChannelValue = gAI.chanByName('Alpha')

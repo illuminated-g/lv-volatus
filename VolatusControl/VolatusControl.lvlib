@@ -16,6 +16,7 @@
 		<Item Name="PulsedControl.lvclass" Type="LVClass" URL="../PulsedControl/PulsedControl.lvclass"/>
 		<Item Name="SeqDelayControl.lvclass" Type="LVClass" URL="../SeqDelayControl/SeqDelayControl.lvclass"/>
 		<Item Name="TimedPWMControl.lvclass" Type="LVClass" URL="../TimedPWMControl/TimedPWMControl.lvclass"/>
+		<Item Name="TriggerDelayControl.lvclass" Type="LVClass" URL="../DelayControl/TriggerDelayControl.lvclass"/>
 		<Item Name="ValueSetControl.lvclass" Type="LVClass" URL="../ValueSetControl/ValueSetControl.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">

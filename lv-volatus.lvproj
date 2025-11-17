@@ -41,6 +41,7 @@
 			<Item Name="Builder Core.lvlib" Type="Library" URL="../../lv-builder/Builder Core/Builder Core.lvlib"/>
 			<Item Name="User Prefs.lvlib" Type="Library" URL="../../lv-userprefs/User Prefs/User Prefs.lvlib"/>
 			<Item Name="ExecAnchor.lvclass" Type="LVClass" URL="../../lv-exec-anchor/ExecAnchor/ExecAnchor.lvclass"/>
+			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
 		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -68,7 +69,6 @@
 		<Item Name="VolatusDAQGenericGUI.lvlib" Type="Library" URL="../VolatusDAQGenericGUI/VolatusDAQGenericGUI.lvlib"/>
 		<Item Name="VolatusControl.lvlib" Type="Library" URL="../VolatusControl/VolatusControl.lvlib"/>
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
-		<Item Name="VolatusHistorian.lvlib" Type="Library" URL="../VolatusHistorian/VolatusHistorian.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
@@ -801,6 +801,8 @@
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="LV Config Read Pathlist.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Pathlist.vi"/>
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
+			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../VolatusGUIControls/DblNumericStatus.ctl"/>
+			<Item Name="DblControl.ctl" Type="VI" URL="../VolatusGUIControls/DblControl.ctl"/>
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -913,10 +915,10 @@
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{53E88FC8-62FE-49BC-B0E8-31027488BA4F}</Property>
-				<Property Name="Bld_version.build" Type="Int">9</Property>
+				<Property Name="Bld_version.build" Type="Int">19</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Bld_version.minor" Type="Int">2</Property>
-				<Property Name="Bld_version.patch" Type="Int">6</Property>
+				<Property Name="Bld_version.patch" Type="Int">16</Property>
 				<Property Name="Destination[0].destName" Type="Str">volatus-full.exe</Property>
 				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/volatus-full.exe</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
@@ -927,7 +929,7 @@
 				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/graphics</Property>
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{4794C64C-1216-4D1C-80F2-08A2CE85CCE9}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{C4DE4E80-CFAC-4755-89A0-C17F21C00911}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Generic PC App.vi</Property>

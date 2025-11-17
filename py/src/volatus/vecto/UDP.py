@@ -17,9 +17,12 @@ class MulticastReader(socket.socket):
         self._bind = resolveAddress(bindAddress)
         self._joinReq = struct.pack("4sl", socket.inet_aton(self._address), socket.INADDR_ANY)
 
-        super(MulticastReader, self).__init__(socket.AF_INET, socket.SOCK_DGRAM)
-        self.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.bind((self._bind, self._port))
+        try:
+            super(MulticastReader, self).__init__(socket.AF_INET, socket.SOCK_DGRAM)
+            self.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            self.bind((self._bind, self._port))
+        except Exception as e:
+            print (str(e))
 
         self.settimeout(1)
 

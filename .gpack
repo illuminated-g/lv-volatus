@@ -1,65 +1,53 @@
 {
   "Info":{
-    "Name":"git:lv-volatus",
+    "Name":"lv-volatus",
     "Type":"git",
     "Host":"https://github.com/illuminated-g/lv-volatus.git",
     "Path":"",
-    "Branch":"feature/module",
-    "Version":"db7d34b8b6a3ead0730944b0afc766a55a8176de",
+    "Branch":"feature/log-groups",
+    "Version":"669a5f3d5947e110d40485beb070c3a974a386bc",
     "License":""
   },
   "Dependencies":[
     {
       "Info":{
-        "Name":"git:lv-builder",
+        "Name":"lv-builder",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-builder.git",
+        "Host":"https://github.com/illuminated-g/lv-builder.git",
         "Path":"",
         "Branch":"main",
-        "Version":"3fab66f41c0692c7ef5df0e1ea117eadad56473f",
+        "Version":"65c3e186656e7cf47f094c600336a96bc3879fa4",
         "License":""
       },
       "Path":"..\\lv-builder"
     },
     {
       "Info":{
-        "Name":"git:lv-cdm",
+        "Name":"lv-cdm",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-cdm.git",
+        "Host":"https://github.com/illuminated-g/lv-cdm.git",
         "Path":"",
         "Branch":"main",
-        "Version":"c319d0a1169bae85b2f53b44edebd40f74f1d234",
+        "Version":"f4dcb7c7b90ae9ee62d87e916d14ff4cb797c3be",
         "License":""
       },
       "Path":"..\\lv-cdm"
     },
     {
       "Info":{
-        "Name":"git:lv-control",
-        "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-control.git",
-        "Path":"",
-        "Branch":"main",
-        "Version":"291f3d7d72e85fa2c24727eaf4ecbc399b4dcced",
-        "License":""
-      },
-      "Path":"..\\lv-control"
-    },
-    {
-      "Info":{
-        "Name":"git:lv-http-server",
+        "Name":"lv-http-server",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-http-server.git",
         "Path":"",
-        "Branch":"feature/serversentevents",
-        "Version":"a3dd5be52b985c5b6904ae750eb09cad4e3670fd",
+        "Branch":"main",
+        "Version":"72634a8a03523dfdd2f203d4228bbdc9cf8ad105",
         "License":""
       },
       "Path":"..\\lv-http-server"
     },
     {
       "Info":{
-        "Name":"git:lv-http-util",
+        "Name":"lv-http-util",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-http-util.git",
         "Path":"",
@@ -71,7 +59,7 @@
     },
     {
       "Info":{
-        "Name":"git:lv-promises",
+        "Name":"lv-promises",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-promises.git",
         "Path":"",
@@ -83,19 +71,19 @@
     },
     {
       "Info":{
-        "Name":"git:lv-protoc",
+        "Name":"lv-protoc",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-protoc.git",
         "Path":"",
         "Branch":"main",
-        "Version":"fca7465018893de352641c1d074f7996efcaa68b",
+        "Version":"07cb95a74760d59b7bdaa4fbfa5ce09c8c6f0864",
         "License":""
       },
       "Path":"..\\lv-protoc"
     },
     {
       "Info":{
-        "Name":"git:lv-stream",
+        "Name":"lv-stream",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-stream.git",
         "Path":"",
@@ -107,7 +95,7 @@
     },
     {
       "Info":{
-        "Name":"git:lv-stream-tcp",
+        "Name":"lv-stream-tcp",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-stream-tcp.git",
         "Path":"",
@@ -119,7 +107,7 @@
     },
     {
       "Info":{
-        "Name":"git:lv-stream-websocket",
+        "Name":"lv-stream-websocket",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-stream-websocket.git",
         "Path":"",
@@ -131,19 +119,19 @@
     },
     {
       "Info":{
-        "Name":"git:lv-vecto",
+        "Name":"lv-vecto",
         "Type":"git",
         "Host":"https://github.com/illuminated-g/lv-vecto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"cd9fd31116944569460dfe9b6e11a3e1a8a3eecf",
+        "Version":"d26a4b951d527cd0285a01599103ebc24218cd7b",
         "License":""
       },
       "Path":"..\\lv-vecto"
     },
     {
       "Info":{
-        "Name":"git:lv-web-crypto",
+        "Name":"lv-web-crypto",
         "Type":"git",
         "Host":"git@github.com:illuminated-g/lv-web-crypto.git",
         "Path":"",
@@ -152,6 +140,54 @@
         "License":""
       },
       "Path":"..\\lv-web-crypto"
+    },
+    {
+      "Info":{
+        "Name":"lv-control",
+        "Type":"git",
+        "Host":"git@github.com:illuminated-g/lv-control.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"291f3d7d72e85fa2c24727eaf4ecbc399b4dcced",
+        "License":""
+      },
+      "Path":"..\\lv-control"
+    },
+    {
+      "Info":{
+        "Name":"lv-exec-anchor",
+        "Type":"git",
+        "Host":"git@github.com:illuminated-g/lv-exec-anchor.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"f2d93d1e0584d708702eba042ca93ab0f5888a55",
+        "License":""
+      },
+      "Path":"..\\lv-exec-anchor"
+    },
+    {
+      "Info":{
+        "Name":"lv-userprefs",
+        "Type":"git",
+        "Host":"https://github.com/illuminated-g/lv-userprefs.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"b7d5c5a32c1aeba2935a0c82d5dc3d9f7ad248da",
+        "License":""
+      },
+      "Path":"..\\lv-userprefs"
+    },
+    {
+      "Info":{
+        "Name":"volatus-gui-controls",
+        "Type":"git",
+        "Host":"https://github.com/illuminated-g/volatus-gui-controls.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"71a1e9d397ab46ac1c6df71676dcf5f452b0e35e",
+        "License":""
+      },
+      "Path":"..\\volatus-gui-controls"
     }
   ]
 }
