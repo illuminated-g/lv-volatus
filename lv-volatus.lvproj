@@ -61,6 +61,7 @@
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
 		<Item Name="VolatusDAQ.lvlib" Type="Library" URL="../VolatusDAQ/VolatusDAQ.lvlib"/>
 		<Item Name="VolatusData.lvlib" Type="Library" URL="../VolatusData/VolatusData.lvlib"/>
+		<Item Name="VolatusHistorian.lvlib" Type="Library" URL="../VolatusHistorian/VolatusHistorian.lvlib"/>
 		<Item Name="VolatusDAQConfig.lvlib" Type="Library" URL="../VolatusDAQConfig/VolatusDAQConfig.lvlib"/>
 		<Item Name="VolatusGUIControls.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIControls/VolatusGUIControls.lvlib"/>
 		<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
