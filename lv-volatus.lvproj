@@ -803,9 +803,6 @@
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
 			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../VolatusGUIControls/DblNumericStatus.ctl"/>
 			<Item Name="DblControl.ctl" Type="VI" URL="../VolatusGUIControls/DblControl.ctl"/>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">

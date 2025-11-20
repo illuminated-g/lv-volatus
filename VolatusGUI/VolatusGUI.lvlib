@@ -31,6 +31,9 @@
 		<Item Name="Event Registration.ctl" Type="VI" URL="../Event Registration.ctl"/>
 		<Item Name="GUI State.ctl" Type="VI" URL="../GUI State.ctl"/>
 	</Item>
+	<Item Name="Debug" Type="Folder">
+		<Item Name="Debug GUI Launcher.lvclass" Type="LVClass" URL="../Debug GUI Launcher/Debug GUI Launcher.lvclass"/>
+	</Item>
 	<Item Name="Elements" Type="Folder">
 		<Item Name="Lookup Group.vi" Type="VI" URL="../Lookup Group.vi"/>
 		<Item Name="Lookup Indicator Type.vi" Type="VI" URL="../Lookup Indicator Type.vi"/>
@@ -48,6 +51,7 @@
 	</Item>
 	<Item Name="Standard" Type="Folder">
 		<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../../Volatus/Config Alert Module/Config Monitor Module.lvclass"/>
+		<Item Name="Debug GUI Module.lvclass" Type="LVClass" URL="../Debug GUI Module/Debug GUI Module.lvclass"/>
 		<Item Name="Event Viewer Module.lvclass" Type="LVClass" URL="../Event Viewer Module/Event Viewer Module.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
