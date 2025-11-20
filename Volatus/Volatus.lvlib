@@ -53,6 +53,7 @@
 		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
 		<Item Name="Reload Options.ctl" Type="VI" URL="../Reload Options.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
+		<Item Name="Show GUI Options.ctl" Type="VI" URL="../Show GUI Options.ctl"/>
 	</Item>
 	<Item Name="Error Utilities" Type="Folder">
 		<Item Name="Modify Error.vi" Type="VI" URL="../Modify Error.vi"/>
