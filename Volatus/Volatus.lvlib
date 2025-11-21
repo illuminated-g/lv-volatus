@@ -48,6 +48,7 @@
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
 		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
+		<Item Name="Metric Update.ctl" Type="VI" URL="../Metric Update.ctl"/>
 		<Item Name="mod stat.ctl" Type="VI" URL="../mod stat.ctl"/>
 		<Item Name="Module Status Update.ctl" Type="VI" URL="../Module/Module Status Update.ctl"/>
 		<Item Name="Module Status.ctl" Type="VI" URL="../Module Status.ctl"/>
