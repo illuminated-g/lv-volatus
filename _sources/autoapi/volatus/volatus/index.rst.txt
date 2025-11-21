@@ -1,0 +1,334 @@
+volatus.volatus
+===============
+
+.. py:module:: volatus.volatus
+
+.. autoapi-nested-parse::
+
+   The core module containing the Volatus class to be used for handling configs and system interactions.
+
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   volatus.volatus.LogState
+   volatus.volatus.LogStatus
+   volatus.volatus.VCommand
+   volatus.volatus.StartLogCommand
+   volatus.volatus.Volatus
+
+
+Module Contents
+---------------
+
+.. py:class:: LogState(*args, **kwds)
+
+   Bases: :py:obj:`enum.Enum`
+
+
+   Create a collection of name/value pairs.
+
+   Example enumeration:
+
+   >>> class Color(Enum):
+   ...     RED = 1
+   ...     BLUE = 2
+   ...     GREEN = 3
+
+   Access them by:
+
+   - attribute access:
+
+     >>> Color.RED
+     <Color.RED: 1>
+
+   - value lookup:
+
+     >>> Color(1)
+     <Color.RED: 1>
+
+   - name lookup:
+
+     >>> Color['RED']
+     <Color.RED: 1>
+
+   Enumerations can be iterated over, and know how many members they have:
+
+   >>> len(Color)
+   3
+
+   >>> list(Color)
+   [<Color.RED: 1>, <Color.BLUE: 2>, <Color.GREEN: 3>]
+
+   Methods can be added to enumerations, and members can have their own
+   attributes -- see the documentation for details.
+
+
+   .. py:attribute:: Unknown
+      :value: 0
+
+
+
+   .. py:attribute:: Idle
+      :value: 1
+
+
+
+   .. py:attribute:: Starting
+      :value: 2
+
+
+
+   .. py:attribute:: Logging
+      :value: 3
+
+
+
+   .. py:attribute:: Stopping
+      :value: 4
+
+
+
+.. py:class:: LogStatus(state: LogState, log: str)
+
+   .. py:attribute:: state
+
+
+   .. py:attribute:: log
+
+
+.. py:class:: VCommand(targetName: str, type: str, payload: bytes, seqFunc: collections.abc.Callable[[], int], sendFunc: collections.abc.Callable[[str, str, bytes, int, str], None], taskName: str = '')
+
+   Constructed command that is ready to be sent to a Volatus system.
+       
+
+
+   .. py:method:: send()
+
+      Sends the command over TCP as initialized.
+              
+
+
+
+.. py:class:: StartLogCommand(targetName: str, testName: str, seqFunc: collections.abc.Callable[[], int], sendFunc: collections.abc.Callable[[str, str, bytes, int, str], None], startedBy: str, timestamp: str = '')
+
+   Bases: :py:obj:`VCommand`
+
+
+   A prepared command to start logging across a set of target nodes that can be sent with send()
+       
+
+
+   .. py:method:: send()
+
+      Sends the command over TCP as initialized.
+              
+
+
+
+.. py:class:: Volatus(configPath: pathlib.Path, systemName: str, clusterName: str, nodeName: str)
+
+   The main API class for interacting with Volatus configs and systems.
+       
+
+
+   .. py:attribute:: systemName
+      :type:  str
+
+      The name of the system in the configuration to validate the correct system is being referenced.
+
+
+
+   .. py:attribute:: clusterName
+      :type:  str
+
+      The name of the cluster this app belongs to in the configuration.
+
+
+
+   .. py:attribute:: nodeName
+      :type:  str
+
+      The name of the node (application) to use from the configuration.
+
+
+
+   .. py:attribute:: config
+      :type:  volatus.config.VolatusConfig
+
+      The configuration from the configPath argument.
+
+
+
+   .. py:attribute:: path
+      :type:  pathlib.Path
+
+
+   .. py:method:: shutdown()
+
+      Stops all communication threads managed by the Volatus framework to prepare for reloading configuration or stopping the Python app.
+              
+
+
+
+   .. py:method:: lookupTargetId(targetName: str) -> int | None
+
+      Looks up the numeric ID used to route a message to the desired node(s).
+
+      Also useful for verifying if a target name is valid; unknown target names return None as the value.
+
+
+
+   .. py:method:: nodeHttpUrl(nodeName: str, urlPath: str) -> str | None
+
+
+   .. py:method:: requestLogStatus(nodeName: str = None) -> dict[str, LogStatus]
+      :async:
+
+
+
+   .. py:method:: waitForLogState(state: LogState, timeoutS: float = 5) -> bool
+      :async:
+
+
+
+   .. py:method:: listLogs(nodeName: str) -> list[str] | None
+      :async:
+
+
+
+   .. py:method:: prepareLog(nodeName: str, logName: str, waitUntilDone: bool = True) -> bool | None
+      :async:
+
+
+
+   .. py:method:: downloadLog(nodeName: str, logName: str, localFolder: pathlib.Path) -> pathlib.Path | None
+      :async:
+
+
+
+   .. py:method:: createDigitalCommand(chanName: str, value: bool) -> VCommand
+
+      Prepares a digital command to be sent to a Volatus system.
+
+      Digital commands are typically used to set an output value or trigger a control component.
+
+      :param chanName: The name of the channel to update the value for.
+      :type chanName: str
+      :param value: The new value to set the channel to.
+      :type value: bool
+      :raises ValueError: The specified channel name was not found in the system.
+      :return: The initialized command ready to be sent.
+      :rtype: VCommand
+
+
+
+   .. py:method:: createAnalogCommand(chanName: str, value: float) -> VCommand
+
+      Prepares an analog/numeric command to send to a Volatus system.
+
+      Analog commands are typically used to update analog outputs or change numeric parameters of a control component.
+
+      :param chanName: The name of the channel to update the value of.
+      :type chanName: str
+      :param value: The new value to set the channel to.
+      :type value: float
+      :raises ValueError: The specified channel was not found in the system.
+      :return: The initialized command ready to be sent.
+      :rtype: VCommand
+
+
+
+   .. py:method:: createDigitalMultipleCommand(values: list[tuple[str, bool]]) -> VCommand
+
+      Creates a command that can update multiple digital values simultaneously.
+
+      This is the multiple version of DigitalCommand. All values specified must belong to the same task.
+
+      :param values: Pairs of channel names and values to update.
+      :type values: list[tuple[str, bool]]
+      :raises ValueError: A specified channel was not found in the system.
+      :raises ValueError: Channels are not all part of the same task.
+      :return: The intiialized command ready to be sent.
+      :rtype: VCommand
+
+
+
+   .. py:method:: createAnalogMultipleCommand(values: list[tuple[str, float]]) -> VCommand
+
+      Prepares a command that can update multiple numeric values simultaneously
+
+      This is the multiple version of AnalogCommand. All channels in this command must belong to the same task.
+
+      :param values: Pairs of channel names and values to update.
+      :type values: list[tuple[str, float]]
+      :raises ValueError: A specified channel name was not found in the system.
+      :raises ValueError: Channels are not all part of the same task.
+      :return: The initialized commmand ready to be sent.
+      :rtype: VCommand
+
+
+
+   .. py:method:: createStartLogCommand(targetName: str, testName: str, startedBy: str, timestamp: str = '') -> VCommand
+
+      Prepare a Start Log command to send to a Volatus system.
+
+      :param targetName: Either the node or targetGroup to send the log command to.
+      :type targetName: str
+      :param testName: The primary name used for the log.
+      :type testName: str
+      :param startedBy: The user or source of the start log command.
+      :type startedBy: str
+      :param timestamp: The string representation of the time of the start log command, should be in basic ISO-8601
+          format with second precision, when defaulted to '' it generates a timestamp string when the command is sent.
+      :type timestamp: str, optional
+      :return: The prepared command ready to be sent with send()
+      :rtype: VCommand
+
+
+
+   .. py:method:: createStopLogCommand(targetName: str, reason: str) -> VCommand
+
+
+   .. py:method:: subscribe(groupName: str, timeout_s: float = None) -> tuple[volatus.telemetry.ChannelGroup, bool]
+
+      Subscribes to the telemetry data from the specified group.
+
+      Groups are named collections of channels that are published together. Once subscribed, the channels within the group
+      will be updated and values can be read from channel objects directly or all at once directly from the group.
+
+      :param groupName: The name of the group to subscribe to.
+      :type groupName: str
+      :param timeout_s: How much time to wait for data to arrive after subscribing, defaults to None
+      :type timeout_s: float
+      :raises ValueError: The specified group name was not found in the system configuration.
+      :raises RuntimeError: The configuration for the node this Python app is running as was not configured for networking.
+      :return: The group that has been subscribed to.
+      :rtype: tuple[ChannelGroup, bool]
+
+
+
+   .. py:method:: unsubscribe(group: volatus.telemetry.ChannelGroup)
+
+      Not implemented yet.
+
+      :param group: The group that was subscribed to.
+      :type group: ChannelGroup
+
+
+
+   .. py:method:: createReportEventMsg(targetName: str, level: volatus.proto.event_pb2.EventLevel, context: str, message: str = '') -> VCommand
+
+
+   .. py:method:: createReportErrorMsg(targetName: str, errCode: int, errMsg: str, context: str, message: str = '') -> VCommand
+
+
+   .. py:method:: reportEvent(targetName: str, level: volatus.proto.event_pb2.EventLevel, context: str, message: str = '')
+
+
+   .. py:method:: reportError(targetName: str, errCode: int, errMsg: str, context: str, message: str = '')
+
+

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>volatus.vecto.UDP &#8212; Volatus  documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pydoctheme.css?v=5ff89526" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="volatus.vecto.proto" href="../proto/index.html" />
+    <link rel="prev" title="volatus.vecto.TCP" href="../TCP/index.html" /><link rel="stylesheet" href="../../../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../../../_static/py.svg">
+            <script type="text/javascript" src="../../../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../../../_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../../../search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="../../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.vecto.UDP</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader"><code class="docutils literal notranslate"><span class="pre">MulticastReader</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.join"><code class="docutils literal notranslate"><span class="pre">MulticastReader.join()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.leave"><code class="docutils literal notranslate"><span class="pre">MulticastReader.leave()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.close"><code class="docutils literal notranslate"><span class="pre">MulticastReader.close()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.readUdpPayload"><code class="docutils literal notranslate"><span class="pre">MulticastReader.readUdpPayload()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastWriter"><code class="docutils literal notranslate"><span class="pre">MulticastWriter</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastWriter.sendPayload"><code class="docutils literal notranslate"><span class="pre">MulticastWriter.sendPayload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../TCP/index.html"
+                          title="previous chapter">volatus.vecto.TCP</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../proto/index.html"
+                          title="next chapter">volatus.vecto.proto</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/autoapi/volatus/vecto/UDP/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../proto/index.html" title="volatus.vecto.proto"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../TCP/index.html" title="volatus.vecto.TCP"
+             accesskey="P">previous</a> |</li>
+          <li><img src="../../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >volatus</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" accesskey="U">volatus.vecto</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.vecto.UDP</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-volatus.vecto.UDP">
+<span id="volatus-vecto-udp"></span><h1>volatus.vecto.UDP<a class="headerlink" href="#module-volatus.vecto.UDP" title="Link to this heading">¶</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader" title="volatus.vecto.UDP.MulticastReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MulticastReader</span></code></a></p></td>
+<td><p>socket(family=AF_INET, type=SOCK_STREAM, proto=0) -&gt; socket object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.vecto.UDP.MulticastWriter" title="volatus.vecto.UDP.MulticastWriter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MulticastWriter</span></code></a></p></td>
+<td><p>socket(family=AF_INET, type=SOCK_STREAM, proto=0) -&gt; socket object</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastReader">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.vecto.UDP.</span></span><span class="sig-name descname"><span class="pre">MulticastReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multicastAddress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multicastPort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bindAddress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.vecto.UDP.MulticastReader" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">socket.socket</span></code></p>
+<p>socket(family=AF_INET, type=SOCK_STREAM, proto=0) -&gt; socket object
+socket(family=-1, type=-1, proto=-1, fileno=None) -&gt; socket object</p>
+<p>Open a socket of the given type.  The family argument specifies the
+address family; it defaults to AF_INET.  The type argument specifies
+whether this is a stream (SOCK_STREAM, this is the default)
+or datagram (SOCK_DGRAM) socket.  The protocol argument defaults to 0,
+specifying the default protocol.  Keyword arguments are accepted.
+The socket is created as non-inheritable.</p>
+<p>When a fileno is passed in, family, type and proto are auto-detected,
+unless they are explicitly set.</p>
+<p>A socket object represents one endpoint of a network connection.</p>
+<p>Methods of socket objects (keyword arguments not allowed):</p>
+<p>_accept() – accept connection, returning new socket fd and client address
+bind(addr) – bind the socket to a local address
+close() – close the socket
+connect(addr) – connect the socket to a remote address
+connect_ex(addr) – connect, return an error code instead of an exception
+dup() – return a new socket fd duplicated from fileno()
+fileno() – return underlying file descriptor
+getpeername() – return remote address [*]
+getsockname() – return local address
+getsockopt(level, optname[, buflen]) – get socket options
+gettimeout() – return timeout or None
+listen([n]) – start listening for incoming connections
+recv(buflen[, flags]) – receive data
+recv_into(buffer[, nbytes[, flags]]) – receive data (into a buffer)
+recvfrom(buflen[, flags]) – receive data and sender’s address
+recvfrom_into(buffer[, nbytes, [, flags])</p>
+<blockquote>
+<div><p>– receive data and sender’s address (into a buffer)</p>
+</div></blockquote>
+<p>sendall(data[, flags]) – send all data
+send(data[, flags]) – send data, may not send all of it
+sendto(data[, flags], addr) – send data to a given address
+setblocking(bool) – set or clear the blocking I/O flag
+getblocking() – return True if socket is blocking, False if non-blocking
+setsockopt(level, optname, value[, optlen]) – set socket options
+settimeout(None | float) – set or clear the timeout
+shutdown(how) – shut down traffic in one or both directions</p>
+<blockquote>
+<div><p>[*] not available on all platforms!</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastReader.join">
+<span class="sig-name descname"><span class="pre">join</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.vecto.UDP.MulticastReader.join" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastReader.leave">
+<span class="sig-name descname"><span class="pre">leave</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.vecto.UDP.MulticastReader.leave" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastReader.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.vecto.UDP.MulticastReader.close" title="Link to this definition">¶</a></dt>
+<dd><p>close()</p>
+<p>Close the socket.  It cannot be used after this call.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastReader.readUdpPayload">
+<span class="sig-name descname"><span class="pre">readUdpPayload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">UdpPayload</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.vecto.UDP.MulticastReader.readUdpPayload" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastWriter">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.vecto.UDP.</span></span><span class="sig-name descname"><span class="pre">MulticastWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">multicastAddress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multicastPort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bindAddress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.vecto.UDP.MulticastWriter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">socket.socket</span></code></p>
+<p>socket(family=AF_INET, type=SOCK_STREAM, proto=0) -&gt; socket object
+socket(family=-1, type=-1, proto=-1, fileno=None) -&gt; socket object</p>
+<p>Open a socket of the given type.  The family argument specifies the
+address family; it defaults to AF_INET.  The type argument specifies
+whether this is a stream (SOCK_STREAM, this is the default)
+or datagram (SOCK_DGRAM) socket.  The protocol argument defaults to 0,
+specifying the default protocol.  Keyword arguments are accepted.
+The socket is created as non-inheritable.</p>
+<p>When a fileno is passed in, family, type and proto are auto-detected,
+unless they are explicitly set.</p>
+<p>A socket object represents one endpoint of a network connection.</p>
+<p>Methods of socket objects (keyword arguments not allowed):</p>
+<p>_accept() – accept connection, returning new socket fd and client address
+bind(addr) – bind the socket to a local address
+close() – close the socket
+connect(addr) – connect the socket to a remote address
+connect_ex(addr) – connect, return an error code instead of an exception
+dup() – return a new socket fd duplicated from fileno()
+fileno() – return underlying file descriptor
+getpeername() – return remote address [*]
+getsockname() – return local address
+getsockopt(level, optname[, buflen]) – get socket options
+gettimeout() – return timeout or None
+listen([n]) – start listening for incoming connections
+recv(buflen[, flags]) – receive data
+recv_into(buffer[, nbytes[, flags]]) – receive data (into a buffer)
+recvfrom(buflen[, flags]) – receive data and sender’s address
+recvfrom_into(buffer[, nbytes, [, flags])</p>
+<blockquote>
+<div><p>– receive data and sender’s address (into a buffer)</p>
+</div></blockquote>
+<p>sendall(data[, flags]) – send all data
+send(data[, flags]) – send data, may not send all of it
+sendto(data[, flags], addr) – send data to a given address
+setblocking(bool) – set or clear the blocking I/O flag
+getblocking() – return True if socket is blocking, False if non-blocking
+setsockopt(level, optname, value[, optlen]) – set socket options
+settimeout(None | float) – set or clear the timeout
+shutdown(how) – shut down traffic in one or both directions</p>
+<blockquote>
+<div><p>[*] not available on all platforms!</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.vecto.UDP.MulticastWriter.sendPayload">
+<span class="sig-name descname"><span class="pre">sendPayload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#volatus.vecto.UDP.MulticastWriter.sendPayload" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.vecto.UDP</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader"><code class="docutils literal notranslate"><span class="pre">MulticastReader</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.join"><code class="docutils literal notranslate"><span class="pre">MulticastReader.join()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.leave"><code class="docutils literal notranslate"><span class="pre">MulticastReader.leave()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.close"><code class="docutils literal notranslate"><span class="pre">MulticastReader.close()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastReader.readUdpPayload"><code class="docutils literal notranslate"><span class="pre">MulticastReader.readUdpPayload()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastWriter"><code class="docutils literal notranslate"><span class="pre">MulticastWriter</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.vecto.UDP.MulticastWriter.sendPayload"><code class="docutils literal notranslate"><span class="pre">MulticastWriter.sendPayload()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../TCP/index.html"
+                          title="previous chapter">volatus.vecto.TCP</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../proto/index.html"
+                          title="next chapter">volatus.vecto.proto</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/autoapi/volatus/vecto/UDP/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../proto/index.html" title="volatus.vecto.proto"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../TCP/index.html" title="volatus.vecto.TCP"
+             >previous</a> |</li>
+          <li><img src="../../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../index.html" >volatus</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../index.html" >volatus.vecto</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.vecto.UDP</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2025, Derrick Bommarito.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>

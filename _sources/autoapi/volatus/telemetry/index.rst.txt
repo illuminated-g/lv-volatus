@@ -1,0 +1,93 @@
+volatus.telemetry
+=================
+
+.. py:module:: volatus.telemetry
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   volatus.telemetry.ChannelValue
+   volatus.telemetry.ChannelGroup
+   volatus.telemetry.Telemetry
+
+
+Module Contents
+---------------
+
+.. py:class:: ChannelValue(chanCfg: volatus.config.ChannelConfig)
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: value
+
+
+   .. py:attribute:: time_ns
+      :value: 0
+
+
+
+   .. py:method:: update(value, timestamp: int)
+
+
+.. py:class:: ChannelGroup(groupCfg: volatus.config.GroupConfig)
+
+   .. py:attribute:: config
+
+
+   .. py:attribute:: name
+
+
+   .. py:attribute:: time_ns
+      :value: 0
+
+
+
+   .. py:method:: chanByName(chanName: str) -> ChannelValue | None
+
+
+   .. py:method:: chanIndex(chanName: str) -> int | None
+
+
+   .. py:method:: chanByIndex(chanIndex: int) -> ChannelValue | None
+
+
+   .. py:method:: valueByIndex(chanIndex: int) -> str | float | None
+
+
+   .. py:method:: updateValues(values: list[str | float], time_ns: int = None)
+
+
+   .. py:method:: allValues() -> tuple[list[str | float], int]
+
+      Returns the current values stored by the group of channels
+
+      Return: tuple[values: list[str | float | None], time_ns: int]
+
+
+
+.. py:class:: Telemetry
+
+   .. py:method:: createPublishGroupCfg(groupCfg: volatus.config.GroupConfig) -> ChannelGroup
+
+
+   .. py:method:: subscribeToGroupCfg(groupCfg: volatus.config.GroupConfig, timeout_s: float = None, bindAddress: str = '0.0.0.0') -> tuple[ChannelGroup, bool]
+
+      _summary_
+
+      :param groupCfg: The configuration of the group to subscribe to. Must include publish configuration.
+      :type groupCfg: GroupConfig
+      :param timeout_s: Wait up to this amount of time for data to arrive after subscribibg, defaults to None
+      :type timeout_s: int, optional
+      :raises ValueError: The group config does not have a publish configuration.
+      :return: The group that was subscribed to and true if data has been received before the timeout.
+      :rtype: tuple[ChannelGroup, bool]
+
+
+
+   .. py:method:: shutdown()
+
+
