@@ -29,18 +29,6 @@
 	<Item Name="DebugHTTPController.ctl" Type="Class Private Data" URL="DebugHTTPController.ctl">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
-	<Item Name="Private" Type="Folder">
-		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
-		<Item Name="Status Tree to JSON.vi" Type="VI" URL="../Status Tree to JSON.vi">
-			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(7!!!!$!!%!!!!#!!Q`````Q!71%!!!@````]!!1F);76S98*D;(E!.%"Q!"Y!!#!.6G^M982V=SZM&gt;GRJ9B".:8.T97&gt;F53ZM&gt;G.M98.T!!!)476T=W&amp;H:6%!!+)!]1!!!!!!!!!$$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)/47^E&gt;7RF,GRW9WRB=X-*5X2B&gt;'5O9X2M!(.!&amp;A!*"V6O;WZP&gt;WY)4'&amp;V&lt;G.I:71)5X2B=H2J&lt;G=(5H6O&lt;GFO:QB4&gt;'^Q='FO:Q&gt;4&gt;'^Q='6E%%6S=G^S)#UA5X2B=H2J&lt;G=,28*S&lt;X)A,3"3&gt;7Y128*S&lt;X)A,3"4&gt;'^Q='FO:Q!!"6.U982F!""!-0````]'5X2S;7ZH!!!71%!!!@````]!"1F);76S98*D;(E!$E!B#5:P=H&gt;B=G2F:!"#!0%!!!!!!!!!!AV7&lt;WRB&gt;(6T,GRW&lt;'FC%5VP:(6M:3"4&gt;'&amp;U&gt;8-O9X2M!"J!5!!%!!-!"!!'!!='5X2B&gt;(6T!!!71(1!!A!#!!A,5X2B&gt;(6T)&amp;2S:75!$E!Q`````Q2+5U^/!!!]!0!!#!!!!!!!!!!!!!E!!!!!!!I$!!"B!!!!!!!!!!!!!!!!!!!!!!!!%!!!!!!!!!!!!!!!#1!!!!!"!!M!!!!!</Property>
-			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-			<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
-			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
-			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
-			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-			<Property Name="NI.ClassItem.State" Type="Int">1074536976</Property>
-		</Item>
-	</Item>
 	<Item Name="Create.vi" Type="VI" URL="../Create.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;\!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!%R!=!!?!!!L$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)&lt;2'6C&gt;7&gt;)6&amp;211W^O&gt;(*P&lt;'RF=CZM&gt;G.M98.T!"&gt;%:7*V:UB56&amp;"$&lt;WZU=G^M&lt;'6S)'^V&gt;!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!$J!=!!?!!!A$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)1476T=W&amp;H:6%O&lt;(:D&lt;'&amp;T=Q!!$E6W:7ZU)%VP:(6M:3"2!!!Y1(!!(A!!)!V7&lt;WRB&gt;(6T,GRW&lt;'FC%%VF=X.B:W62,GRW9WRB=X-!!!V$&lt;X*F)%VP:(6M:3"2!&amp;1!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"Q!)!A!!?!!!$1A!!!!!!!!!!!!!#1!!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!")!!!!3!!!!!!%!#1!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
@@ -67,5 +55,23 @@
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1082667520</Property>
+	</Item>
+	<Item Name="JSON to Status Tree.vi" Type="VI" URL="../JSON to Status Tree.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!*3!!!!&amp;!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!!A!-0````]!&amp;E"!!!(`````!!5*3'FF=G&amp;S9WBZ!""!-0````]'5X2S;7ZH!!!71%!!!@````]!"QF);76S98*D;(E!IA$R!!!!!!!!!!-.6G^M982V=SZM&gt;GRJ9AZ.&lt;W2V&lt;'5O&lt;(:D&lt;'&amp;T=QF4&gt;'&amp;U:3ZD&gt;'Q!=U!7!!E(67ZL&lt;G^X&lt;AB-986O9WBF:!B4&gt;'&amp;S&gt;'FO:Q&gt;3&gt;7ZO;7ZH#&amp;.U&lt;X"Q;7ZH"V.U&lt;X"Q:71128*S&lt;X)A,3"4&gt;'&amp;S&gt;'FO:QN&amp;=H*P=C!N)&amp;*V&lt;B"&amp;=H*P=C!N)&amp;.U&lt;X"Q;7ZH!!!&amp;5X2B&gt;'5!$E!Q`````Q2/97VF!!!11$$`````"F.U982V=Q!!&amp;%"U!!)!#A!,#6.V9H.U982V=Q!,1!I!"6:B&lt;(6F!"*!&gt;!!#!!I!$1&gt;.:82S;7.T!%)!]1!!!!!!!!!#$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)247^E&gt;7RF)&amp;.U982V=SZD&gt;'Q!'E"1!!1!#!!*!!Q!$A:4&gt;'&amp;U&gt;8-!!":!&gt;!!#!!9!$QN4&gt;'&amp;U&gt;8-A6(*F:1!/1$$`````"%J44UY!!"J!&gt;!!#!!9!$QZ4&gt;'&amp;U&gt;8-A6(*F:3"J&lt;A!!6!$Q!!Q!!Q!%!"!!"!!%!!1!"!!%!!1!%1!3!!1$!!"Y!!!*!!!!!!!!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!%!!!!!!!!!!!!1!4!!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1342710290</Property>
+	</Item>
+	<Item Name="Status Tree to JSON.vi" Type="VI" URL="../Status Tree to JSON.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!(D!!!!$Q!%!!!!#!!Q`````Q!71%!!!@````]!!1F);76S98*D;(E!%%!Q`````Q:4&gt;(*J&lt;G=!!":!1!!"`````Q!$#5BJ:8*B=G.I?1#C!0%!!!!!!!!!!QV7&lt;WRB&gt;(6T,GRW&lt;'FC$EVP:(6M:3ZM&gt;G.M98.T#6.U982F,G.U&lt;!"T1"9!#1&gt;6&lt;GNO&lt;X&gt;O#%RB&gt;7ZD;'6E#&amp;.U98*U;7ZH"V*V&lt;GZJ&lt;G=)5X2P=("J&lt;G=(5X2P=("F:""&amp;=H*P=C!N)&amp;.U98*U;7ZH#U6S=G^S)#UA5H6O%%6S=G^S)#UA5X2P=("J&lt;G=!!!64&gt;'&amp;U:1!/1$$`````"%ZB&lt;75!!""!-0````]'5X2B&gt;(6T!!!51(1!!A!'!!=*5X6C=X2B&gt;(6T!!N!#A!&amp;6G&amp;M&gt;75!%E"U!!)!"A!*"UVF&gt;(*J9X-!1A$R!!!!!!!!!!).6G^M982V=SZM&gt;GRJ9B&amp;.&lt;W2V&lt;'5A5X2B&gt;(6T,G.U&lt;!!;1&amp;!!"!!%!!5!#!!+"F.U982V=Q!!&amp;E"U!!)!!A!,#V.U982V=S"5=G6F!!Z!-0````]%3F.04A!!0!$Q!!A!!!!!!!!!!!!-!!!!!!!.!Q!!91!!!!!!!!!!!!!!!!!!!!!!!"!!!!!!!!!!!!!!!!E!!!!!!1!/!!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082139152</Property>
 	</Item>
 </LVClass>

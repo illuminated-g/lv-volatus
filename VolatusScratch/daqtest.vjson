@@ -57,7 +57,7 @@
                         "DaqTest": {
                             "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 1,
-                            "DebugGUIs": true,
+                            "Debug": false,
                             "Events": {
                                 "LogFolder": "c:/logs",
                                 "Can_Close": true
@@ -338,7 +338,7 @@
                                 "VL_Type": "VL_Node"
                             },
                             "Node_ID": 2,
-                            "DebugGUIs": true,
+                            "Debug": true,
                             "Config": {
                                 "Updater": "GitUpdater"
                             },
