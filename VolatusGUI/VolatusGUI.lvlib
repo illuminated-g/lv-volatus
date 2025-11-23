@@ -55,6 +55,7 @@
 		<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../../Volatus/Config Alert Module/Config Monitor Module.lvclass"/>
 		<Item Name="Debug GUI Module.lvclass" Type="LVClass" URL="../Debug GUI Module/Debug GUI Module.lvclass"/>
 		<Item Name="Event Viewer Module.lvclass" Type="LVClass" URL="../Event Viewer Module/Event Viewer Module.lvclass"/>
+		<Item Name="System Status Module.lvclass" Type="LVClass" URL="../System Status Module/System Status Module.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="GUI Helper.lvclass" Type="LVClass" URL="../GUI Helper/GUI Helper.lvclass"/>
