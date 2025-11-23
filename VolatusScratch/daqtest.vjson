@@ -371,16 +371,13 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
                                 "GuiAI": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"},
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"}
                                 },
                                 "GuiAO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"},
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"}
                                 },
                                 "GuiDO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"},
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"}
                                 }
                             }
                         },

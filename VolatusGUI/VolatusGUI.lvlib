@@ -24,7 +24,9 @@
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Messages" Type="Folder">
+			<Item Name="GUI Registration.ctl" Type="VI" URL="../GUI Registration.ctl"/>
 			<Item Name="Position Data.ctl" Type="VI" URL="../Position Data.ctl"/>
+			<Item Name="Unregister GUI.ctl" Type="VI" URL="../Unregister GUI.ctl"/>
 			<Item Name="Visibility Data.ctl" Type="VI" URL="../Visibility Data.ctl"/>
 		</Item>
 		<Item Name="Control Event.ctl" Type="VI" URL="../Control Event.ctl"/>
