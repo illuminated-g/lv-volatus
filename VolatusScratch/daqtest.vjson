@@ -50,7 +50,8 @@
                     "Groups": {
                         "Events": 5,
                         "Config": 6,
-                        "Logging": 7
+                        "Logging": 7,
+                        "Clients": 8
                     },
                     "Nodes": {
                         "Meta": {"VL_Type": "VL_Node_List"},
@@ -356,7 +357,7 @@
                                 },
                                 "Foo": "Baz"
                             },
-                            "Groups": ["Config", "Events"],
+                            "Groups": ["Config", "Events", "Clients"],
                             "Tasks": {
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
