@@ -40,6 +40,9 @@
 		<Item Name="Log Status Value.lvclass" Type="LVClass" URL="../Log Status Value/Log Status Value.lvclass"/>
 		<Item Name="Logs List Value.lvclass" Type="LVClass" URL="../Logs List Value/Logs List Value.lvclass"/>
 	</Item>
+	<Item Name="Support" Type="Folder">
+		<Item Name="Update Logger State.vi" Type="VI" URL="../Update Logger State.vi"/>
+	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Data Buffer.lvclass" Type="LVClass" URL="../Data Buffer/Data Buffer.lvclass"/>
 	<Item Name="Data Logger Module.lvclass" Type="LVClass" URL="../Data Logger Module/Data Logger Module.lvclass"/>

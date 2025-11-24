@@ -43,16 +43,21 @@
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
 		<Item Name="Events Summary.ctl" Type="VI" URL="../Events Summary.ctl"/>
 		<Item Name="Hardware Type.ctl" Type="VI" URL="../Hardware Type.ctl"/>
+		<Item Name="Launch Nested Message.ctl" Type="VI" URL="../Launch Nested Message.ctl"/>
 		<Item Name="Message Forward (ID).ctl" Type="VI" URL="../Message Forward (ID).ctl"/>
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
 		<Item Name="Message Unregistration.ctl" Type="VI" URL="../Message Unregistration.ctl"/>
 		<Item Name="Messages Registration.ctl" Type="VI" URL="../Messages Registration.ctl"/>
+		<Item Name="Metric Update.ctl" Type="VI" URL="../Metric Update.ctl"/>
 		<Item Name="mod stat.ctl" Type="VI" URL="../mod stat.ctl"/>
-		<Item Name="Module Status.ctl" Type="VI" URL="../Module/Module Status.ctl"/>
+		<Item Name="Module Status Update.ctl" Type="VI" URL="../Module/Module Status Update.ctl"/>
+		<Item Name="Module Status.ctl" Type="VI" URL="../Module Status.ctl"/>
+		<Item Name="Module Substatus.ctl" Type="VI" URL="../Module Substatus.ctl"/>
 		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
 		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
 		<Item Name="Reload Options.ctl" Type="VI" URL="../Reload Options.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
+		<Item Name="Show GUI Options.ctl" Type="VI" URL="../Show GUI Options.ctl"/>
 	</Item>
 	<Item Name="Error Utilities" Type="Folder">
 		<Item Name="Modify Error.vi" Type="VI" URL="../Modify Error.vi"/>
@@ -75,6 +80,7 @@
 		<Item Name="Volatus Core Identity.lvclass" Type="LVClass" URL="../Volatus Core Identity/Volatus Core Identity.lvclass"/>
 	</Item>
 	<Item Name="Interfaces" Type="Folder">
+		<Item Name="Debug Launcher.lvclass" Type="LVClass" URL="../Debug Launcher/Debug Launcher.lvclass"/>
 		<Item Name="Identity.lvclass" Type="LVClass" URL="../Identity/Identity.lvclass"/>
 	</Item>
 	<Item Name="Messaging" Type="Folder">

@@ -50,14 +50,15 @@
                     "Groups": {
                         "Events": 5,
                         "Config": 6,
-                        "Logging": 7
+                        "Logging": 7,
+                        "Clients": 8
                     },
                     "Nodes": {
                         "Meta": {"VL_Type": "VL_Node_List"},
                         "DaqTest": {
                             "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 1,
-                            "DebugGUIs": true,
+                            "Debug": false,
                             "Events": {
                                 "LogFolder": "c:/logs",
                                 "Can_Close": true
@@ -338,7 +339,7 @@
                                 "VL_Type": "VL_Node"
                             },
                             "Node_ID": 2,
-                            "DebugGUIs": true,
+                            "Debug": true,
                             "Config": {
                                 "Updater": "GitUpdater"
                             },
@@ -356,7 +357,7 @@
                                 },
                                 "Foo": "Baz"
                             },
-                            "Groups": ["Config", "Events"],
+                            "Groups": ["Config", "Events", "Clients"],
                             "Tasks": {
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
@@ -371,16 +372,13 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
                                 "GuiAI": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"},
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"}
                                 },
                                 "GuiAO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"},
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"}
                                 },
                                 "GuiDO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"},
-                                    "Shutdown_On_Close": true
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"}
                                 }
                             }
                         },
