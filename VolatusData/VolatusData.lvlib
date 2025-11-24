@@ -44,7 +44,7 @@
 		<Item Name="Update Logger State.vi" Type="VI" URL="../Update Logger State.vi"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
-	<Item Name="Data Buffer.lvclass" Type="LVClass" URL="../Data Buffer/Data Buffer.lvclass"/>
+	<Item Name="Data Buffer DBL.lvclass" Type="LVClass" URL="../Data Buffer DBL/Data Buffer DBL.lvclass"/>
 	<Item Name="Data Logger Module.lvclass" Type="LVClass" URL="../Data Logger Module/Data Logger Module.lvclass"/>
 	<Item Name="Data Processor Module.lvclass" Type="LVClass" URL="../Data Processor Module/Data Processor Module.lvclass"/>
 	<Item Name="Log Manager Module.lvclass" Type="LVClass" URL="../Log Manager Module/Log Manager Module.lvclass"/>
