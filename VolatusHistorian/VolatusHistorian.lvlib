@@ -5,7 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Buffers" Type="Folder">
-		<Item Name="Channel Buffer.lvclass" Type="LVClass" URL="../Channel Buffer/Channel Buffer.lvclass"/>
+		<Item Name="Channel Buffer DBL.lvclass" Type="LVClass" URL="../Channel Buffer DBL/Channel Buffer DBL.lvclass"/>
+		<Item Name="Group Buffer DBL.lvclass" Type="LVClass" URL="../Group Buffer DBL/Group Buffer DBL.lvclass"/>
 	</Item>
 	<Item Name="Historian Identity.lvclass" Type="LVClass" URL="../Historian Identity/Historian Identity.lvclass"/>
 	<Item Name="Historian Module.lvclass" Type="LVClass" URL="../Historian Module/Historian Module.lvclass"/>

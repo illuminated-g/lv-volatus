@@ -29,16 +29,16 @@
 		<Item Name="Target Group.ctl" Type="VI" URL="../Target Group.ctl"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
-		<Item Name="Channel.lvclass" Type="LVClass" URL="../Channel/Channel.lvclass"/>
-		<Item Name="Cluster.lvclass" Type="LVClass" URL="../Cluster/Cluster.lvclass"/>
-		<Item Name="Group.lvclass" Type="LVClass" URL="../Group/Group.lvclass"/>
-		<Item Name="Node.lvclass" Type="LVClass" URL="../Node/Node.lvclass"/>
-		<Item Name="Scale.lvclass" Type="LVClass" URL="../Scale/Scale.lvclass"/>
-		<Item Name="Scaling.lvclass" Type="LVClass" URL="../Scaling/Scaling.lvclass"/>
-		<Item Name="Sensor.lvclass" Type="LVClass" URL="../Sensor/Sensor.lvclass"/>
+		<Item Name="Channel Config.lvclass" Type="LVClass" URL="../Channel/Channel Config.lvclass"/>
+		<Item Name="Cluster Config.lvclass" Type="LVClass" URL="../Cluster/Cluster Config.lvclass"/>
+		<Item Name="Group Config.lvclass" Type="LVClass" URL="../Group/Group Config.lvclass"/>
+		<Item Name="Node Config.lvclass" Type="LVClass" URL="../Node/Node Config.lvclass"/>
+		<Item Name="Scale Config.lvclass" Type="LVClass" URL="../Scale/Scale Config.lvclass"/>
+		<Item Name="Scaling Config.lvclass" Type="LVClass" URL="../Scaling/Scaling Config.lvclass"/>
+		<Item Name="Sensor Config.lvclass" Type="LVClass" URL="../Sensor/Sensor Config.lvclass"/>
 		<Item Name="SensorList.lvclass" Type="LVClass" URL="../SensorList/SensorList.lvclass"/>
-		<Item Name="System.lvclass" Type="LVClass" URL="../System/System.lvclass"/>
-		<Item Name="Task.lvclass" Type="LVClass" URL="../Task/Task.lvclass"/>
+		<Item Name="System Config.lvclass" Type="LVClass" URL="../System/System Config.lvclass"/>
+		<Item Name="Task Config.lvclass" Type="LVClass" URL="../Task/Task Config.lvclass"/>
 	</Item>
 	<Item Name="Errors" Type="Folder">
 		<Item Name="Invalid Format Error.vi" Type="VI" URL="../Invalid Format Error.vi"/>
