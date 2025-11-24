@@ -803,15 +803,6 @@
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="LV Config Read Pathlist.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Pathlist.vi"/>
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
-			<Item Name="DblNumericStatus.ctl" Type="VI" URL="../VolatusGUIControls/DblNumericStatus.ctl"/>
-			<Item Name="DblControl.ctl" Type="VI" URL="../VolatusGUIControls/DblControl.ctl"/>
-			<Item Name="Group DBL.lvclass" Type="LVClass" URL="../../lv-vecto/Vecto/Group/Group DBL.lvclass"/>
-			<Item Name="Update Values.vi" Type="VI" URL="../../lv-vecto/Vecto/Group/Update Values.vi"/>
-			<Item Name="Channel Names.vi" Type="VI" URL="../../lv-vecto/Vecto/GroupAbstract/Channel Names.vi"/>
-			<Item Name="All Values.vi" Type="VI" URL="../../lv-vecto/Vecto/Group/All Values.vi"/>
-			<Item Name="Update Strings.vi" Type="VI" URL="../../lv-vecto/Vecto/StringGroup/Update Strings.vi"/>
-			<Item Name="Group STR.lvclass" Type="LVClass" URL="../../lv-vecto/Vecto/StringGroup/Group STR.lvclass"/>
-			<Item Name="Group.lvclass" Type="LVClass" URL="../../lv-vecto/Vecto/GroupAbstract/Group.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
