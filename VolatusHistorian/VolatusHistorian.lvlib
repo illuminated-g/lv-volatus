@@ -8,6 +8,10 @@
 		<Item Name="Channel Buffer DBL.lvclass" Type="LVClass" URL="../Channel Buffer DBL/Channel Buffer DBL.lvclass"/>
 		<Item Name="Group Buffer DBL.lvclass" Type="LVClass" URL="../Group Buffer DBL/Group Buffer DBL.lvclass"/>
 	</Item>
+	<Item Name="Data Types" Type="Folder">
+		<Item Name="Channel Data.ctl" Type="VI" URL="../Channel Data.ctl"/>
+		<Item Name="Group Data.ctl" Type="VI" URL="../Group Data.ctl"/>
+	</Item>
 	<Item Name="Historian Identity.lvclass" Type="LVClass" URL="../Historian Identity/Historian Identity.lvclass"/>
 	<Item Name="Historian Module.lvclass" Type="LVClass" URL="../Historian Module/Historian Module.lvclass"/>
 </Library>

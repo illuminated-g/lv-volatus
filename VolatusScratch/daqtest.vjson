@@ -75,6 +75,9 @@
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}
                                 },
+                                "EventViewer": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
+                                },
                                 "SoftVar1": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
                                     "Period_s": 0.1,
