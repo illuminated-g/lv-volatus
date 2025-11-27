@@ -11,6 +11,7 @@
 	<Item Name="Support" Type="Folder">
 		<Item Name="Prepare DAQmx Module.vi" Type="VI" URL="../Prepare DAQmx Module.vi"/>
 		<Item Name="Sampling to Loop ms.vi" Type="VI" URL="../Sampling to Loop ms.vi"/>
+		<Item Name="Sample Timing.vi" Type="VI" URL="../Sample Timing.vi"/>
 	</Item>
 	<Item Name="DAQmxAI.lvclass" Type="LVClass" URL="../DAQmxAI/DAQmxAI.lvclass"/>
 	<Item Name="DAQmxAO.lvclass" Type="LVClass" URL="../DAQmxAO/DAQmxAO.lvclass"/>

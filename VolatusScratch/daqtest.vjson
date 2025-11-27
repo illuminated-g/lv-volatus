@@ -60,8 +60,7 @@
                             "Node_ID": 1,
                             "Debug": false,
                             "Events": {
-                                "LogFolder": "c:/logs",
-                                "Can_Close": true
+                                "LogFolder": "c:/logs"
                             },
                             "Config": {},
                             "Network": {
@@ -79,7 +78,7 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
                                 "SoftVar1": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
+                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SoftVar"},
                                     "Period_s": 0.1,
                                     "GaugeSim": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
@@ -92,7 +91,7 @@
                                         "Single_Range":   {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
-                                "0-Logging": {
+                                "Logging": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "LogManager"},
                                     "Folder": "c:/logs",
                                     "Logging_Status": {
@@ -114,8 +113,8 @@
                                         "Auto_State":           {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "Auto"}}
                                     }
                                 },
-                                "1-SystemHealth": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
+                                "SystemHealth": {
+                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
@@ -141,197 +140,240 @@
                                     },
                                     "CPU_Warning_Pct": 60
                                 },
-                                "1-TestAI": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
-                                    "Sampling": {"Rate": 50000, "ChunkSize": 500},
+                                "TestAI": {
+                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "DAQmxAI"},
+                                    "Sampling": {"Rate": 1000, "ChunkSize": 100},
                                     "DataProc": {
                                         "Logging": {
-                                            "Group": "HighSpeed",
-                                            "Split_GB": 0.01
+                                            "Split_GB": 1
                                         }
                                     },
                                     "TestAI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
-                                            "Alpha":    {"Resource": "cDAQ1Mod5/ai0", "Unit": "psia", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Beta":     {"Resource": "cDAQ1Mod5/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Gamma":    {"Resource": "cDAQ1Mod5/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Delta":    {"Resource": "cDAQ1Mod5/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Wheeee":   {"Resource": "cDAQ1Mod6/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "bxchb":    {"Resource": "cDAQ1Mod6/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI06": {"Resource": "cDAQ1Mod6/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI07": {"Resource": "cDAQ1Mod6/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI08": {"Resource": "cDAQ1Mod7/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI09": {"Resource": "cDAQ1Mod7/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI10": {"Resource": "cDAQ1Mod7/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI11": {"Resource": "cDAQ1Mod7/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI12": {"Resource": "cDAQ1Mod8/ai0", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI13": {"Resource": "cDAQ1Mod8/ai1", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI14": {"Resource": "cDAQ1Mod8/ai2", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "TestAI15": {"Resource": "cDAQ1Mod8/ai3", "Type": "Voltage_In", "Terminal": "Differential", "Min": -10, "Max": 10, "Scale": { "Type": "Polynomial", "Coefficients": [-250, 250]}, "Meta": {"VL_Type": "VL_Channel"}}
+                                            "AI00": {"Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI01": {"Resource": "cDAQ1Mod1/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI02": {"Resource": "cDAQ1Mod1/ai2",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI03": {"Resource": "cDAQ1Mod1/ai3",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI04": {"Resource": "cDAQ1Mod1/ai4",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI05": {"Resource": "cDAQ1Mod1/ai5",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI06": {"Resource": "cDAQ1Mod1/ai6",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI07": {"Resource": "cDAQ1Mod1/ai7",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI08": {"Resource": "cDAQ1Mod1/ai8",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI09": {"Resource": "cDAQ1Mod1/ai9",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI10": {"Resource": "cDAQ1Mod1/ai10", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI11": {"Resource": "cDAQ1Mod1/ai11", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI12": {"Resource": "cDAQ1Mod1/ai12", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI13": {"Resource": "cDAQ1Mod1/ai13", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI14": {"Resource": "cDAQ1Mod1/ai14", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI15": {"Resource": "cDAQ1Mod1/ai15", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI16": {"Resource": "cDAQ1Mod1/ai16", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI17": {"Resource": "cDAQ1Mod1/ai17", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI18": {"Resource": "cDAQ1Mod1/ai18", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI19": {"Resource": "cDAQ1Mod1/ai19", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI20": {"Resource": "cDAQ1Mod1/ai20", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI21": {"Resource": "cDAQ1Mod1/ai21", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI22": {"Resource": "cDAQ1Mod1/ai22", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI23": {"Resource": "cDAQ1Mod1/ai23", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI24": {"Resource": "cDAQ1Mod1/ai24", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI25": {"Resource": "cDAQ1Mod1/ai25", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI26": {"Resource": "cDAQ1Mod1/ai26", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI27": {"Resource": "cDAQ1Mod1/ai27", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI28": {"Resource": "cDAQ1Mod1/ai28", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI29": {"Resource": "cDAQ1Mod1/ai29", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI30": {"Resource": "cDAQ1Mod1/ai30", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI31": {"Resource": "cDAQ1Mod1/ai31", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            
+                                            "Current00": {"Resource": "cDAQ1Mod4/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current01": {"Resource": "cDAQ1Mod4/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current02": {"Resource": "cDAQ1Mod4/ai2",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current03": {"Resource": "cDAQ1Mod4/ai3",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current04": {"Resource": "cDAQ1Mod4/ai4",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current05": {"Resource": "cDAQ1Mod4/ai5",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current06": {"Resource": "cDAQ1Mod4/ai6",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current07": {"Resource": "cDAQ1Mod4/ai7",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current08": {"Resource": "cDAQ1Mod4/ai8",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current09": {"Resource": "cDAQ1Mod4/ai9",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current10": {"Resource": "cDAQ1Mod4/ai10", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current11": {"Resource": "cDAQ1Mod4/ai11", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current12": {"Resource": "cDAQ1Mod4/ai12", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current13": {"Resource": "cDAQ1Mod4/ai13", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current14": {"Resource": "cDAQ1Mod4/ai14", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current15": {"Resource": "cDAQ1Mod4/ai15", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current16": {"Resource": "cDAQ1Mod4/ai16", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current17": {"Resource": "cDAQ1Mod4/ai17", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current18": {"Resource": "cDAQ1Mod4/ai18", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current19": {"Resource": "cDAQ1Mod4/ai19", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current20": {"Resource": "cDAQ1Mod4/ai20", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current21": {"Resource": "cDAQ1Mod4/ai21", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current22": {"Resource": "cDAQ1Mod4/ai22", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current23": {"Resource": "cDAQ1Mod4/ai23", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current24": {"Resource": "cDAQ1Mod4/ai24", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current25": {"Resource": "cDAQ1Mod4/ai25", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current26": {"Resource": "cDAQ1Mod4/ai26", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current27": {"Resource": "cDAQ1Mod4/ai27", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current28": {"Resource": "cDAQ1Mod4/ai28", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current29": {"Resource": "cDAQ1Mod4/ai29", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current30": {"Resource": "cDAQ1Mod4/ai30", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Current31": {"Resource": "cDAQ1Mod4/ai31", "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}}
                                         }
                                     }
                                 },
-                                "1-TestAO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAO"},
+                                "TestDO": {
+                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "DAQmxDO"},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100,
                                         "Logging": {
-                                            "Group": "LowSpeed"
-                                        }
-                                    },
-                                    "AO_Group": {
-                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
-                                        "Channels": {
-                                            "Heat_PV1": {"Resource": "cDAQ1Mod4/ao0", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Heat_PV2": {"Resource": "cDAQ1Mod4/ao1", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Heat_PV3": {"Resource": "cDAQ1Mod4/ao2", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Heat_PV4": {"Resource": "cDAQ1Mod4/ao3", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "BB_PV1":   {"Resource": "cDAQ1Mod2/ao0", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "BB_PV2":   {"Resource": "cDAQ1Mod2/ao1", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "BB_PV3":   {"Resource": "cDAQ1Mod2/ao2", "Type": "Voltage_Out", "Value": 0, "Scale": {"Type": "Polynomial", "Coefficients": [0, 0]}, "Meta": {"VL_Type": "VL_Channel"}}
-                                        }
-                                    }
-                                },
-                                "1-TestDO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDO"},
-                                    "DataProc": {
-                                        "Publish_Period_ms": 100,
-                                        "Logging": {
-                                            "Group": "LowSpeed"
+                                            "Split_GB": 1
                                         }
                                     },
                                     "TestDO": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
-                                            "Latch1En":  {"Resource": "cDAQ1Mod1/port0/line0", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Latch1Dir": {"Resource": "cDAQ1Mod1/port0/line1", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Pulse1":    {"Resource": "cDAQ1Mod1/port0/line2", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Pulse2":    {"Resource": "cDAQ1Mod1/port0/line3", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "Heater_En": {"Resource": "cDAQ1Mod1/port0/line4", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
+                                            "DO00": {"Resource": "cDAQ1Mod2/port0/line0",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO01": {"Resource": "cDAQ1Mod2/port0/line1",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO02": {"Resource": "cDAQ1Mod2/port0/line2",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO03": {"Resource": "cDAQ1Mod2/port0/line3",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO04": {"Resource": "cDAQ1Mod2/port0/line4",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO05": {"Resource": "cDAQ1Mod2/port0/line5",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO06": {"Resource": "cDAQ1Mod2/port0/line6",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO07": {"Resource": "cDAQ1Mod2/port0/line7",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO08": {"Resource": "cDAQ1Mod2/port0/line8",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO09": {"Resource": "cDAQ1Mod2/port0/line9",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO10": {"Resource": "cDAQ1Mod2/port0/line10", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO11": {"Resource": "cDAQ1Mod2/port0/line11", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO12": {"Resource": "cDAQ1Mod2/port0/line12", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO13": {"Resource": "cDAQ1Mod2/port0/line13", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO14": {"Resource": "cDAQ1Mod2/port0/line14", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO15": {"Resource": "cDAQ1Mod2/port0/line15", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO16": {"Resource": "cDAQ1Mod2/port0/line16", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO17": {"Resource": "cDAQ1Mod2/port0/line17", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO18": {"Resource": "cDAQ1Mod2/port0/line18", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO19": {"Resource": "cDAQ1Mod2/port0/line19", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO20": {"Resource": "cDAQ1Mod2/port0/line20", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO21": {"Resource": "cDAQ1Mod2/port0/line21", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO22": {"Resource": "cDAQ1Mod2/port0/line22", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO23": {"Resource": "cDAQ1Mod2/port0/line23", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO24": {"Resource": "cDAQ1Mod2/port0/line24", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO25": {"Resource": "cDAQ1Mod2/port0/line25", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO26": {"Resource": "cDAQ1Mod2/port0/line26", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO27": {"Resource": "cDAQ1Mod2/port0/line27", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO28": {"Resource": "cDAQ1Mod2/port0/line28", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO29": {"Resource": "cDAQ1Mod2/port0/line29", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO30": {"Resource": "cDAQ1Mod2/port0/line30", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DO31": {"Resource": "cDAQ1Mod2/port0/line31", "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
                                         }
                                     }
                                 },
-                                "2-DigitalControl": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
+                                "TestDI": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDI"},
+                                    "Sampling": {"Rate": 10, "ChunkSize": 1},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100,
                                         "Logging": {
-                                            "Group": "Auto"
+                                            "Split_GB": 1
                                         }
                                     },
-                                    "Period_ms": 5,
-                                    "ControlGroup": {
+                                    "TestDI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
-                                        "Status": {
-                                            "DC_LastDt":   {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"}},
-                                            "DC_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
-                                        },
-                                        "Controls": {
-                                            "Latch1Control": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Latched",
-                                                "En_Channel": "Latch1En",
-                                                "Dir_Channel": "Latch1Dir",
-                                                "Latch1_Settle_s":    {"Value": 0.005, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Settle_s"}},
-                                                "Latch1_Actuation_s": {"Value": 0.2,   "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Actuation_s"}}
-                                            },
-                                            "Pulse1Control": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Pulsed",
-                                                "Channel": "Pulse1",
-                                                "Pulse1_Duration_s": {"Value": 0.1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Duration_s"}}
-                                            },
-                                            "Pulse2Control": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Pulsed",
-                                                "Channel": "Pulse2",
-                                                "Pulse2_Duration_s": {"Value": 0.1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Duration_s"}}
-                                            },
-                                            "Seq1Control": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "SeqDelay",
-                                                "Control_A": "Pulse1Control",
-                                                "Control_B": "Pulse2Control",
-                                                "Seq1_Delay_s": {"Value": 0.135, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Delay_s"}}
-                                            },
-                                            "Periodic1Control": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Periodic",
-                                                "Channel": "Pulse1Control",
-                                                "Periodic1_Period_s": {"Value": 1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Period_s"}}
-                                            },
-                                            "PeriodicSeqControl": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Periodic",
-                                                "Channel": "Seq1Control",
-                                                "PeriodicSeq_Period_s": {"Value": 1, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Period_s"}}
-                                            },
-                                            "Multi_1": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Multi",
-                                                "Value": 0,
-                                                "Channels": ["Pulse1Control", "Pulse2Control"]
-                                            },
-                                            "BangBang_1": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "BangBang",
-                                                "Value": 0,
-                                                "Output": "BB_Multi",
-                                                "Process_Value": ["BB_PV1", "BB_PV2", "BB_PV3"],
-                                                "PV_Calc": "Median",
-                                                "Invert": false,
-                                                "Normal_Output": false,
-                                                "BangBang_1_Upper_Limit": {"Value": 4, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Upper_Limit"}},
-                                                "BangBang_1_Lower_Limit": {"Value": 2, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Lower_Limit"}}
-                                            },
-                                            "BB_Multi": {"Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "Multi",
-                                                "Value": 0,
-                                                "Channels": ["Pulse1", "Pulse2"]
-                                            },
-                                            "Spark_Trigger": {
-                                                "Meta": {"VL_Type": "VL_Channel"},
-                                                "Type": "TriggerDelay",
-                                                "Value": 1,
-                                                "Control": "Heater_En",
-                                                "Trigger": "HighSpeed_State",
-                                                "Trigger_String": "Logging",
-                                                "Spark_Countdown_s":   {"Value": 0, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Countdown_s"}},
-                                                "Spark_Delay_s":       {"Value": 5, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Delay_s"}}
-                                            }
+                                        "Channels": {
+                                            "DI00":   {"Resource": "cDAQ1Mod3/port0/line0",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI01":   {"Resource": "cDAQ1Mod3/port0/line1",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI02":   {"Resource": "cDAQ1Mod3/port0/line2",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI03":   {"Resource": "cDAQ1Mod3/port0/line3",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI04":   {"Resource": "cDAQ1Mod3/port0/line4",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI05":   {"Resource": "cDAQ1Mod3/port0/line5",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI06":   {"Resource": "cDAQ1Mod3/port0/line6",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI07":   {"Resource": "cDAQ1Mod3/port0/line7",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI08":   {"Resource": "cDAQ1Mod3/port0/line8",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI09":   {"Resource": "cDAQ1Mod3/port0/line9",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI10":   {"Resource": "cDAQ1Mod3/port0/line10", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI11":   {"Resource": "cDAQ1Mod3/port0/line11", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI12":   {"Resource": "cDAQ1Mod3/port0/line12", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI13":   {"Resource": "cDAQ1Mod3/port0/line13", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI14":   {"Resource": "cDAQ1Mod3/port0/line14", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI15":   {"Resource": "cDAQ1Mod3/port0/line15", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI16":   {"Resource": "cDAQ1Mod3/port0/line16", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI17":   {"Resource": "cDAQ1Mod3/port0/line17", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI18":   {"Resource": "cDAQ1Mod3/port0/line18", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI19":   {"Resource": "cDAQ1Mod3/port0/line19", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI20":   {"Resource": "cDAQ1Mod3/port0/line20", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI21":   {"Resource": "cDAQ1Mod3/port0/line21", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI22":   {"Resource": "cDAQ1Mod3/port0/line22", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI23":   {"Resource": "cDAQ1Mod3/port0/line23", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI24":   {"Resource": "cDAQ1Mod3/port0/line24", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI25":   {"Resource": "cDAQ1Mod3/port0/line25", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI26":   {"Resource": "cDAQ1Mod3/port0/line26", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI27":   {"Resource": "cDAQ1Mod3/port0/line27", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI28":   {"Resource": "cDAQ1Mod3/port0/line28", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI29":   {"Resource": "cDAQ1Mod3/port0/line29", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI30":   {"Resource": "cDAQ1Mod3/port0/line30", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "DI31":   {"Resource": "cDAQ1Mod3/port0/line31", "Meta": {"VL_Type": "VL_Channel"}},
+                                            
+                                            "Fuse00": {"Resource": "cDAQ1Mod5/port0/line0",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse01": {"Resource": "cDAQ1Mod5/port0/line1",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse02": {"Resource": "cDAQ1Mod5/port0/line2",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse03": {"Resource": "cDAQ1Mod5/port0/line3",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse04": {"Resource": "cDAQ1Mod5/port0/line4",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse05": {"Resource": "cDAQ1Mod5/port0/line5",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse06": {"Resource": "cDAQ1Mod5/port0/line6",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse07": {"Resource": "cDAQ1Mod5/port0/line7",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse08": {"Resource": "cDAQ1Mod5/port0/line8",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse09": {"Resource": "cDAQ1Mod5/port0/line9",  "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse10": {"Resource": "cDAQ1Mod5/port0/line10", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse11": {"Resource": "cDAQ1Mod5/port0/line11", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse12": {"Resource": "cDAQ1Mod5/port0/line12", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse13": {"Resource": "cDAQ1Mod5/port0/line13", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse14": {"Resource": "cDAQ1Mod5/port0/line14", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse15": {"Resource": "cDAQ1Mod5/port0/line15", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse16": {"Resource": "cDAQ1Mod5/port0/line16", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse17": {"Resource": "cDAQ1Mod5/port0/line17", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse18": {"Resource": "cDAQ1Mod5/port0/line18", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse19": {"Resource": "cDAQ1Mod5/port0/line19", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse20": {"Resource": "cDAQ1Mod5/port0/line20", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse21": {"Resource": "cDAQ1Mod5/port0/line21", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse22": {"Resource": "cDAQ1Mod5/port0/line22", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse23": {"Resource": "cDAQ1Mod5/port0/line23", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse24": {"Resource": "cDAQ1Mod5/port0/line24", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse25": {"Resource": "cDAQ1Mod5/port0/line25", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse26": {"Resource": "cDAQ1Mod5/port0/line26", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse27": {"Resource": "cDAQ1Mod5/port0/line27", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse28": {"Resource": "cDAQ1Mod5/port0/line28", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse29": {"Resource": "cDAQ1Mod5/port0/line29", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse30": {"Resource": "cDAQ1Mod5/port0/line30", "Meta": {"VL_Type": "~VL_Channel"}},
+                                            "Fuse31": {"Resource": "cDAQ1Mod5/port0/line31", "Meta": {"VL_Type": "~VL_Channel"}}
                                         }
                                     }
                                 },
-                                "2-HeaterControl": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
+                                "TestTC": {
+                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "DAQmxAI"},
+                                    "Sampling": {"Rate": 50, "ChunkSize": 10},
                                     "DataProc": {
-                                        "Publish_Period_ms": 100,
                                         "Logging": {
-                                            "Group": "Auto"
+                                            "Split_GB": 1
                                         }
                                     },
-                                    "Period_ms": 100,
-                                    "HeaterGroup": {
+                                    "TestTC": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
-                                        "Status": {
-                                            "Heater_LastDt":   {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"}},
-                                            "Heater_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
-                                        },
-                                        "Controls": {
-                                            "Heater_1": {
-                                                "Meta": {"VL_Type": "VL_Channel"},
-                                                "Value": 0,
-                                                "Type": "TimedPWM",
-                                                "Output": "Heater_En",
-                                                "Process_Value": ["Heat_PV1", "Heat_PV2", "Heat_PV3", "Heat_PV4"],
-                                                "PV_Calc": "Average",
-                                                "Heater_1_Setpoint":   {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Setpoint"}},
-                                                "Heater_1_P_Band":     {"Value": 5,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "P_Band"}},
-                                                "Heater_1_I_Gain":     {"Value": 0.001, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "I_Gain"}},
-                                                "Heater_1_D_Gain":     {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "D_Gain"}},
-                                                "Heater_1_F_Gain":     {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "F_Gain"}},
-                                                "Heater_1_Cycle_s":    {"Value": 5,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Cycle_s"}},
-                                                "Heater_1_Min_s":      {"Value": 0.2,   "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Min_s"}},
-                                                "Heater_1_Out":        {"Value": 0,     "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Out"}}
-                                            }
+                                        "Channels": {
+                                            "TC00": {"Resource": "cDAQ1Mod6/ai0",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC01": {"Resource": "cDAQ1Mod6/ai1",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC02": {"Resource": "cDAQ1Mod6/ai2",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC03": {"Resource": "cDAQ1Mod6/ai3",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC04": {"Resource": "cDAQ1Mod6/ai4",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC05": {"Resource": "cDAQ1Mod6/ai5",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC06": {"Resource": "cDAQ1Mod6/ai6",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC07": {"Resource": "cDAQ1Mod6/ai7",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC08": {"Resource": "cDAQ1Mod6/ai8",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC09": {"Resource": "cDAQ1Mod6/ai9",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC10": {"Resource": "cDAQ1Mod6/ai10", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC11": {"Resource": "cDAQ1Mod6/ai11", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC12": {"Resource": "cDAQ1Mod6/ai12", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC13": {"Resource": "cDAQ1Mod6/ai13", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC14": {"Resource": "cDAQ1Mod6/ai14", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "TC15": {"Resource": "cDAQ1Mod6/ai15", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}}
                                         }
                                     }
                                 }
@@ -347,8 +389,7 @@
                                 "Updater": "GitUpdater"
                             },
                             "Events": {
-                                "LogFolder": "c:/logs",
-                                "Can_Close": true
+                                "LogFolder": "c:/logs"
                             },
                             "Network": {
                                 "Bind_Address": "0.0.0.0",
