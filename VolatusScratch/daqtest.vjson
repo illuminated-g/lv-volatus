@@ -417,7 +417,7 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
                                 "Historian": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian"},
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
                                     "Buffer_Size": 500000,
                                     "Exclude": []
                                 },

@@ -12,10 +12,13 @@
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Channel Data.ctl" Type="VI" URL="../Channel Data.ctl"/>
-		<Item Name="Channel History.ctl" Type="VI" URL="../Channel History.ctl"/>
+		<Item Name="Channel History (LV Dbl).ctl" Type="VI" URL="../Channel History (LV Dbl).ctl"/>
+		<Item Name="Channel History (unix ns).ctl" Type="VI" URL="../Channel History (unix ns).ctl"/>
 		<Item Name="Data Request.ctl" Type="VI" URL="../Data Request.ctl"/>
 		<Item Name="Group Data.ctl" Type="VI" URL="../Group Data.ctl"/>
-		<Item Name="History Data.ctl" Type="VI" URL="../History Data.ctl"/>
+		<Item Name="History Data (LV Dbl).ctl" Type="VI" URL="../History Data (LV Dbl).ctl"/>
+		<Item Name="History Data (unix ns).ctl" Type="VI" URL="../History Data (unix ns).ctl"/>
+		<Item Name="Time Format.ctl" Type="VI" URL="../Time Format.ctl"/>
 	</Item>
 	<Item Name="Handlers" Type="Folder">
 		<Item Name="Group Data Handler.lvclass" Type="LVClass" URL="../Group Data Handler/Group Data Handler.lvclass"/>
@@ -26,6 +29,7 @@
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="History Data Value.lvclass" Type="LVClass" URL="../History Data Value/History Data Value.lvclass"/>
+		<Item Name="Local Data Value.lvclass" Type="LVClass" URL="../Local Data Value/Local Data Value.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Historian Module.lvclass" Type="LVClass" URL="../Historian Module/Historian Module.lvclass"/>
