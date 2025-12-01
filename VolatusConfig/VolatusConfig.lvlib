@@ -45,6 +45,7 @@
 	</Item>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="Lookups" Type="Folder">
+			<Item Name="Task Cluster.vi" Type="VI" URL="../Task Cluster.vi"/>
 			<Item Name="Volatus Meta Value Lookup.vi" Type="VI" URL="../Volatus Meta Value Lookup.vi"/>
 			<Item Name="Volatus Type Lookup.vi" Type="VI" URL="../Volatus Type Lookup.vi"/>
 		</Item>
