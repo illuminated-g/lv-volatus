@@ -38,6 +38,15 @@
 	<Item Name="Private" Type="Folder">
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 		<Item Name="Data Types" Type="Folder"/>
+		<Item Name="Publish Update.vi" Type="VI" URL="../Publish Update.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%[!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$B!=!!?!!!C%&amp;:P&lt;'&amp;U&gt;8.%16%O&lt;(:M;7)02%&amp;2&lt;8B"4SZM&gt;G.M98.T!!!,2%&amp;2&lt;8B"4S"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!Y1(!!(A!!)B"7&lt;WRB&gt;(6T2%&amp;2,GRW&lt;'FC$U2"57VY15]O&lt;(:D&lt;'&amp;T=Q!!#E2"57VY15]A;7Y!!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"!!(!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!A!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342713872</Property>
+		</Item>
 	</Item>
 	<Item Name="Properties" Type="Folder"/>
 	<Item Name="Protected" Type="Folder">
