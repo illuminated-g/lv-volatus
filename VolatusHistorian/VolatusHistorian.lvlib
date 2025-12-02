@@ -28,9 +28,10 @@
 		<Item Name="Historian Identity.lvclass" Type="LVClass" URL="../Historian Identity/Historian Identity.lvclass"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
-		<Item Name="History Data Value.lvclass" Type="LVClass" URL="../History Data Value/History Data Value.lvclass"/>
-		<Item Name="Local Data Value.lvclass" Type="LVClass" URL="../Local Data Value/Local Data Value.lvclass"/>
+		<Item Name="LV Dbl Data Value.lvclass" Type="LVClass" URL="../Local Data Value/LV Dbl Data Value.lvclass"/>
+		<Item Name="Unix ns Data Value.lvclass" Type="LVClass" URL="../History Data Value/Unix ns Data Value.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
+	<Item Name="Historian API.lvclass" Type="LVClass" URL="../Historian API/Historian API.lvclass"/>
 	<Item Name="Historian Module.lvclass" Type="LVClass" URL="../Historian Module/Historian Module.lvclass"/>
 </Library>
