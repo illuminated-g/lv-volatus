@@ -47,6 +47,15 @@
 				<Property Name="NI.ClassItem.State" Type="Int">1074541056</Property>
 			</Item>
 		</Item>
+		<Item Name="Check Time Range.vi" Type="VI" URL="../Check Time Range.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$,!!!!#1!%!!!!&amp;5!+!!Z*&lt;G.P&lt;8"M:82F)%6O:!!!&amp;U!+!""*&lt;G.P&lt;8"M:82F)&amp;.U98*U!!!51#%/1W^N='RF&gt;'5A5G&amp;O:W5!!!F!#A!$27ZE!!N!#A!&amp;5X2B=H1!"1!+!!!31%!!!@````]!"A25;7VF!!"5!0!!$!!!!!%!!A!$!!!!!!!!!!!!!!!%!!5!"Q1!!(A!!!!!!!!.#1!!$1I!!!E!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")!!!!3!!!#%!!!!!!"!!A!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16908288</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">5</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342709762</Property>
+		</Item>
 	</Item>
 	<Item Name="Properties" Type="Folder">
 		<Item Name="Group Name.vi" Type="VI" URL="../Group Name.vi">
@@ -100,6 +109,15 @@
 			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1074274832</Property>
+		</Item>
+		<Item Name="Has Time Range.vi" Type="VI" URL="../Has Time Range.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!']!!!!$A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!&amp;U!+!""*&lt;G.P&lt;8"M:82F)&amp;.U98*U!!!51#%/1W^N='RF&gt;'5A5G&amp;O:W5!!&amp;"!=!!?!!!R&amp;F:P&lt;'&amp;U&gt;8.);8.U&lt;X*J97YO&lt;(:M;7)92X*P&gt;8!A1H6G:G6S)%2#4#ZM&gt;G.M98.T!"2(=G^V=#"#&gt;7:G:8)A2%*-)'^V&gt;!!!&amp;5!+!!Z*&lt;G.P&lt;8"M:82F)%6O:!!!"!!!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!#5!+!!.&amp;&lt;G1!#U!+!!64&gt;'&amp;S&gt;!"/1(!!(A!!-2:7&lt;WRB&gt;(6T3'FT&gt;'^S;7&amp;O,GRW&lt;'FC'%&gt;S&lt;X6Q)%*V:G:F=C"%1EQO&lt;(:D&lt;'&amp;T=Q!42X*P&gt;8!A1H6G:G6S)%2#4#"J&lt;A"B!0!!$!!$!!1!"1!'!!=!#!!)!!A!#1!+!!M!$!-!!(A!!!U)!!!*!!!!#1!!!!U,!!!*!!!!!!!!!!!!!!!!!!!!#!!!!"!!!!!1!!!!%!!!$1!!!!Q!!!!!!!!!!!!!!1!.!!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342709776</Property>
 		</Item>
 	</Item>
 </LVClass>

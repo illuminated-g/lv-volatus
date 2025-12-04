@@ -26,6 +26,7 @@
 		<Item Name="Git Updater Module.lvclass" Type="LVClass" URL="../Git Updater Module/Git Updater Module.lvclass"/>
 	</Item>
 	<Item Name="Core" Type="Folder">
+		<Item Name="Basic Splash.lvclass" Type="LVClass" URL="../Basic Splash/Basic Splash.lvclass"/>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
@@ -84,6 +85,7 @@
 	<Item Name="Interfaces" Type="Folder">
 		<Item Name="Debug Launcher.lvclass" Type="LVClass" URL="../Debug Launcher/Debug Launcher.lvclass"/>
 		<Item Name="Identity.lvclass" Type="LVClass" URL="../Identity/Identity.lvclass"/>
+		<Item Name="Splash Screen.lvclass" Type="LVClass" URL="../Splash Screen/Splash Screen.lvclass"/>
 	</Item>
 	<Item Name="Messaging" Type="Folder">
 		<Item Name="Common" Type="Folder">

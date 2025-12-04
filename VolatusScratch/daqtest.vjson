@@ -4,43 +4,12 @@
             "VL_Config_Version": "0.1.0+1"
         },
         "TestSystem": {
-            "Meta": {
-                "VL_Type": "VL_System"
-            },
+            "Meta": {"VL_Type": "VL_System"},
             "Sensors": {
-                "Meta": {
-                    "VL_Overlay_Type": "Sensors",
-                    "VL_Type": "VL_Sensor_List"
-                },
+                "Meta": {"VL_Overlay_Type": "Sensors", "VL_Type": "VL_Sensor_List"},
                 "Value": [
-                    {
-                        "Meta": {
-                            "VL_Type": "VL_Sensor"
-                        },
-                        "Model": "GP50",
-                        "Serial": "123456",
-                        "Scale": {
-                            "Meta": {
-                                "VL_Type": "VL_Scale"
-                            },
-                            "Type": "Polynomial",
-                            "Coefficients": [0.01, 0.9967]
-                        }
-                    },
-                    {
-                        "Meta": {
-                            "VL_Type": "VL_Sensor"
-                        },
-                        "Model": "GP50",
-                        "Serial": "234567",
-                        "Scale": {
-                            "Meta": {
-                                "VL_Type": "VL_Scale"
-                            },
-                            "Type": "Polynomial",
-                            "Coefficients": [-0.002, 1.00027]
-                        }
-                    }
+                    {"Model": "GP50", "Serial": "123456", "Scale": {"Type": "Polynomial", "Coefficients": [0.01,  0.9967],  "Meta": {"VL_Type": "VL_Scale"}}, "Meta": {"VL_Type": "VL_Sensor"}},
+                    {"Model": "GP50", "Serial": "234567", "Scale": {"Type": "Polynomial", "Coefficients": [0.002, 0.00027], "Meta": {"VL_Type": "VL_Scale"}}, "Meta": {"VL_Type": "VL_Sensor"}}
                 ]
             },
             "Clusters": {
@@ -78,10 +47,10 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
                                 "SoftVar1": {
-                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SoftVar"},
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
                                     "Period_s": 0.1,
                                     "GaugeSim": {
-                                        "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Gauge_Value":    {"Value": 0,    "Meta": {"VL_Type": "VL_Channel"}},
                                         "Gauge_Ideal":    {"Value": 1350, "Meta": {"VL_Type": "VL_Channel"}},
@@ -114,9 +83,9 @@
                                     }
                                 },
                                 "SystemHealth": {
-                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SystemHealth"},
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health": {
-                                        "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Drives": [
                                             {
@@ -141,7 +110,7 @@
                                     "CPU_Warning_Pct": 60
                                 },
                                 "TestAI": {
-                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "DAQmxAI"},
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
                                     "Sampling": {"Rate": 1000, "ChunkSize": 100},
                                     "DataProc": {
                                         "Logging": {
@@ -149,7 +118,7 @@
                                         }
                                     },
                                     "TestAI": {
-                                        "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "AI00": {"Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
@@ -221,14 +190,14 @@
                                     }
                                 },
                                 "TestDO": {
-                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "DAQmxDO"},
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDO"},
                                     "DataProc": {
                                         "Logging": {
                                             "Split_GB": 1
                                         }
                                     },
                                     "TestDO": {
-                                        "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "DO00": {"Resource": "cDAQ1Mod2/port0/line0",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
@@ -268,7 +237,7 @@
                                 },
                                 "TestDI": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDI"},
-                                    "Sampling": {"Rate": 10, "ChunkSize": 1},
+                                    "Sampling": {"Rate": 100, "ChunkSize": 10},
                                     "DataProc": {
                                         "Logging": {
                                             "Split_GB": 1
@@ -311,43 +280,43 @@
                                             "DI30":   {"Resource": "cDAQ1Mod3/port0/line30", "Meta": {"VL_Type": "VL_Channel"}},
                                             "DI31":   {"Resource": "cDAQ1Mod3/port0/line31", "Meta": {"VL_Type": "VL_Channel"}},
                                             
-                                            "Fuse00": {"Resource": "cDAQ1Mod5/port0/line0",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse01": {"Resource": "cDAQ1Mod5/port0/line1",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse02": {"Resource": "cDAQ1Mod5/port0/line2",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse03": {"Resource": "cDAQ1Mod5/port0/line3",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse04": {"Resource": "cDAQ1Mod5/port0/line4",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse05": {"Resource": "cDAQ1Mod5/port0/line5",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse06": {"Resource": "cDAQ1Mod5/port0/line6",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse07": {"Resource": "cDAQ1Mod5/port0/line7",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse08": {"Resource": "cDAQ1Mod5/port0/line8",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse09": {"Resource": "cDAQ1Mod5/port0/line9",  "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse10": {"Resource": "cDAQ1Mod5/port0/line10", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse11": {"Resource": "cDAQ1Mod5/port0/line11", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse12": {"Resource": "cDAQ1Mod5/port0/line12", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse13": {"Resource": "cDAQ1Mod5/port0/line13", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse14": {"Resource": "cDAQ1Mod5/port0/line14", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse15": {"Resource": "cDAQ1Mod5/port0/line15", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse16": {"Resource": "cDAQ1Mod5/port0/line16", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse17": {"Resource": "cDAQ1Mod5/port0/line17", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse18": {"Resource": "cDAQ1Mod5/port0/line18", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse19": {"Resource": "cDAQ1Mod5/port0/line19", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse20": {"Resource": "cDAQ1Mod5/port0/line20", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse21": {"Resource": "cDAQ1Mod5/port0/line21", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse22": {"Resource": "cDAQ1Mod5/port0/line22", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse23": {"Resource": "cDAQ1Mod5/port0/line23", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse24": {"Resource": "cDAQ1Mod5/port0/line24", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse25": {"Resource": "cDAQ1Mod5/port0/line25", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse26": {"Resource": "cDAQ1Mod5/port0/line26", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse27": {"Resource": "cDAQ1Mod5/port0/line27", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse28": {"Resource": "cDAQ1Mod5/port0/line28", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse29": {"Resource": "cDAQ1Mod5/port0/line29", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse30": {"Resource": "cDAQ1Mod5/port0/line30", "Meta": {"VL_Type": "~VL_Channel"}},
-                                            "Fuse31": {"Resource": "cDAQ1Mod5/port0/line31", "Meta": {"VL_Type": "~VL_Channel"}}
+                                            "Fuse00": {"Resource": "cDAQ1Mod5/port0/line0",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse01": {"Resource": "cDAQ1Mod5/port0/line1",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse02": {"Resource": "cDAQ1Mod5/port0/line2",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse03": {"Resource": "cDAQ1Mod5/port0/line3",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse04": {"Resource": "cDAQ1Mod5/port0/line4",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse05": {"Resource": "cDAQ1Mod5/port0/line5",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse06": {"Resource": "cDAQ1Mod5/port0/line6",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse07": {"Resource": "cDAQ1Mod5/port0/line7",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse08": {"Resource": "cDAQ1Mod5/port0/line8",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse09": {"Resource": "cDAQ1Mod5/port0/line9",  "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse10": {"Resource": "cDAQ1Mod5/port0/line10", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse11": {"Resource": "cDAQ1Mod5/port0/line11", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse12": {"Resource": "cDAQ1Mod5/port0/line12", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse13": {"Resource": "cDAQ1Mod5/port0/line13", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse14": {"Resource": "cDAQ1Mod5/port0/line14", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse15": {"Resource": "cDAQ1Mod5/port0/line15", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse16": {"Resource": "cDAQ1Mod5/port0/line16", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse17": {"Resource": "cDAQ1Mod5/port0/line17", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse18": {"Resource": "cDAQ1Mod5/port0/line18", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse19": {"Resource": "cDAQ1Mod5/port0/line19", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse20": {"Resource": "cDAQ1Mod5/port0/line20", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse21": {"Resource": "cDAQ1Mod5/port0/line21", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse22": {"Resource": "cDAQ1Mod5/port0/line22", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse23": {"Resource": "cDAQ1Mod5/port0/line23", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse24": {"Resource": "cDAQ1Mod5/port0/line24", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse25": {"Resource": "cDAQ1Mod5/port0/line25", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse26": {"Resource": "cDAQ1Mod5/port0/line26", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse27": {"Resource": "cDAQ1Mod5/port0/line27", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse28": {"Resource": "cDAQ1Mod5/port0/line28", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse29": {"Resource": "cDAQ1Mod5/port0/line29", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse30": {"Resource": "cDAQ1Mod5/port0/line30", "Meta": {"VL_Type": "VL_Channel"}},
+                                            "Fuse31": {"Resource": "cDAQ1Mod5/port0/line31", "Meta": {"VL_Type": "VL_Channel"}}
                                         }
                                     }
                                 },
                                 "TestTC": {
-                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "DAQmxAI"},
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
                                     "Sampling": {"Rate": 50, "ChunkSize": 10},
                                     "DataProc": {
                                         "Logging": {
@@ -355,7 +324,7 @@
                                         }
                                     },
                                     "TestTC": {
-                                        "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "TC00": {"Resource": "cDAQ1Mod6/ai0",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
@@ -374,6 +343,81 @@
                                             "TC13": {"Resource": "cDAQ1Mod6/ai13", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
                                             "TC14": {"Resource": "cDAQ1Mod6/ai14", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
                                             "TC15": {"Resource": "cDAQ1Mod6/ai15", "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}}
+                                        }
+                                    }
+                                },
+                                "DigitalControl": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
+                                    "Period_ms": 10,
+                                    "DataProc": {
+                                        "Logging": {
+                                            "Split_GB": 1
+                                        }
+                                    },
+                                    "ControlGroup": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Status": {
+                                            "DigitalControl_LastDt":   {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"}},
+                                            "DigitalControl_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
+                                        },
+                                        "Controls": {
+                                            "OxFillBB": {
+                                                "Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "BangBang",
+                                                "Output": "OxFillUllage",
+                                                "Process_Value": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],
+                                                "PV_Calc": "Median",
+                                                "Invert": false,
+                                                "Normal_Output": false,
+                                                "In_Range_Enable": false,
+                                                "OxFillBB_Upper": {"Value": 650, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Upper_Limit"}},
+                                                "OxFillBB_Lower": {"Value": 600, "Meta": {"VL_Type": "VL_Channel", "Control_Param": "Lower_Limit"}}
+                                            },
+                                            "OxFillUllage": {
+                                                "Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "DiscreteRange",
+                                                "Outputs": ["OxHighFillValve", "OxMidFillValve", "OxLowFillValve"],
+                                                "Process_Value": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"],
+                                                "PV_Calc": "Median",
+                                                "Abort": {
+                                                    "Control": "OxFillBB",
+                                                    "Control_Value": false,
+                                                    "Outputs": [false, false, false]
+                                                },
+                                                "Ranges": {
+                                                    "OxFillFull": {
+                                                        "Meta": {"VL_Type": "VL_Channel"},
+                                                        "OxHighOffHighLimit": {"Value": 330, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
+                                                        "OxHighOffLowLimit":  {"Value": 290, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                        "Outputs": [false, false, false]
+                                                    },
+                                                    "OxFillHigh": {
+                                                        "Meta": {"VL_Type": "VL_Channel"},
+                                                        "OxHighFillHighLimit": {"Value": 300, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
+                                                        "OxHighFillLowLimit":  {"Value": 200, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                        "Outputs": [false, false, true]
+                                                    },
+                                                    "OxFillMid": {
+                                                        "Meta": {"VL_Type": "VL_Channel"},
+                                                        "OxMidFillHighLimit": {"Value": 220, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
+                                                        "OxMidFillLowLimit":  {"Value": 100, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                        "Outputs": [false, true, true]
+                                                    },
+                                                    "OxFillLow": {
+                                                        "Meta": {"VL_Type": "VL_Channel"},
+                                                        "OxLowFillHighLimit": {"Value": 120, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
+                                                        "OxLowFillLowLimit":  {"Value": -10, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                        "Outputs": [true, true, true]
+                                                    },
+                                                    "OxFillLowAbort": {
+                                                        "Meta": {"VL_Type": "VL_Channel"},
+                                                        "OxHighAbortHighLimit": {"Value": -10, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
+                                                        "OxHighAbortLowLimit":  {"Value": -30, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                        "Outputs": [false, false, false]
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
