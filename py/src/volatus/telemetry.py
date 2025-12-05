@@ -38,7 +38,8 @@ class ChannelGroup:
         self._valLock = threading.Lock()
         self._count = 0
 
-        channels = groupCfg.channels
+        #channel order is by alphabetical name
+        channels = dict(sorted(groupCfg.channels.items()))
 
         i:int = 0
         for chanCfg in channels.values():
