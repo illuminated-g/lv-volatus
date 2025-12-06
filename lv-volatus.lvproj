@@ -42,6 +42,7 @@
 			<Item Name="User Prefs.lvlib" Type="Library" URL="../../lv-userprefs/User Prefs/User Prefs.lvlib"/>
 			<Item Name="ExecAnchor.lvclass" Type="LVClass" URL="../../lv-exec-anchor/ExecAnchor/ExecAnchor.lvclass"/>
 			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
+			<Item Name="OOPanel.lvlib" Type="Library" URL="../../lv-oopanel/OOPanel/OOPanel.lvlib"/>
 		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -70,6 +71,7 @@
 		<Item Name="VolatusDAQGenericGUI.lvlib" Type="Library" URL="../VolatusDAQGenericGUI/VolatusDAQGenericGUI.lvlib"/>
 		<Item Name="VolatusControl.lvlib" Type="Library" URL="../VolatusControl/VolatusControl.lvlib"/>
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
+		<Item Name="VolatusTools.lvlib" Type="Library" URL="../Volatus/VolatusTools/VolatusTools.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>

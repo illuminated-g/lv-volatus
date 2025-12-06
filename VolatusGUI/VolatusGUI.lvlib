@@ -22,6 +22,10 @@
 		</Item>
 		<Item Name="GUI Element.lvclass" Type="LVClass" URL="../GUI Element/GUI Element.lvclass"/>
 	</Item>
+	<Item Name="Commands" Type="Folder">
+		<Item Name="Command Panel.lvclass" Type="LVClass" URL="../Command Panel/Command Panel.lvclass"/>
+		<Item Name="Numeric Analog Panel.lvclass" Type="LVClass" URL="../Numeric Analog Panel/Numeric Analog Panel.lvclass"/>
+	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Messages" Type="Folder">
 			<Item Name="GUI Registration.ctl" Type="VI" URL="../GUI Registration.ctl"/>

@@ -4,21 +4,4 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Item Name="configs" Type="Folder">
-		<Item Name="daqtest.vjson" Type="Document" URL="../daqtest.vjson"/>
-	</Item>
-	<Item Name="DAQmx Test.vi" Type="VI" URL="../DAQmx Test.vi"/>
-	<Item Name="Demo2.vi" Type="VI" URL="../Demo2.vi"/>
-	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
-	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
-	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
-	<Item Name="StandaloneServer.lvlib" Type="Library" URL="../StandaloneServer/StandaloneServer.lvlib"/>
-	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
-	<Item Name="Test MinMax Decimation.vi" Type="VI" URL="../Test MinMax Decimation.vi"/>
-	<Item Name="TestGUI.vi" Type="VI" URL="../TestGUI.vi"/>
-	<Item Name="Toggle Main.vi" Type="VI" URL="../Toggle Main.vi"/>
-	<Item Name="ValveGUI Main.vi" Type="VI" URL="../ValveGUI Main.vi"/>
-	<Item Name="ValveGUI.vi" Type="VI" URL="../gui/ValveGUI.vi"/>
-	<Item Name="ValveSim Main.vi" Type="VI" URL="../ValveSim Main.vi"/>
-	<Item Name="ValveSimModule.lvclass" Type="LVClass" URL="../ValveSimModule/ValveSimModule.lvclass"/>
 </Library>
