@@ -21,10 +21,11 @@
 		<Item Name="ValueSetControl.lvclass" Type="LVClass" URL="../ValueSetControl/ValueSetControl.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
-		<Item Name="Valve Action.ctl" Type="VI" URL="../Valve Action.ctl"/>
+		<Item Name="Control Action.ctl" Type="VI" URL="../Control Action.ctl"/>
 	</Item>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="Lookup Channel Index.vi" Type="VI" URL="../Lookup Channel Index.vi"/>
+		<Item Name="PV Calc.lvclass" Type="LVClass" URL="../PV Calc/PV Calc.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="DigitalControl.lvclass" Type="LVClass" URL="../DigitalControl/DigitalControl.lvclass"/>
