@@ -46,18 +46,21 @@
                                 "EventViewer": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
-                                "SoftVar1": {
+                                "SimValues": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
                                     "Period_s": 0.1,
-                                    "GaugeSim": {
+                                    "SimValues": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
-                                        "Gauge_Value":    {"Value": 0,    "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Gauge_Ideal":    {"Value": 1350, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Gauge_Range":    {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Single_Value":   {"Value": 0,    "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Single_Ideal":   {"Value": 1100, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Single_Range":   {"Value": 100,  "Meta": {"VL_Type": "VL_Channel"}}
+                                        "Ox_PT_01":        {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_PT_02":        {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_PT_03":        {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_Level_1":      {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_Level_2":      {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_Level_3":      {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxHighFillValve": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxMidFillValve":  {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxLowFillValve":  {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
                                 "Logging": {
@@ -378,45 +381,44 @@
                                                 "Meta": {"VL_Type": "VL_Channel"},
                                                 "Type": "DiscreteRange",
                                                 "Outputs": ["OxHighFillValve", "OxMidFillValve", "OxLowFillValve"],
-                                                "Process_Value": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"],
-                                                "PV_Calc": "Median",
+                                                "Process_Value": {
+                                                    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"],
+                                                    "Calc": "Median"
+                                                },
+                                                "Disable_Outputs": [false, false, false],
                                                 "Abort": {
                                                     "Control": "OxFillBB",
                                                     "Control_Value": false,
                                                     "Outputs": [false, false, false]
                                                 },
-                                                "Ranges": {
-                                                    "OxFillFull": {
-                                                        "Meta": {"VL_Type": "VL_Channel"},
-                                                        "OxHighOffHighLimit": {"Value": 330, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
-                                                        "OxHighOffLowLimit":  {"Value": 290, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                "OxFillUllage_PV": {"Meta": {"VL_Type": "VL_Channel", "Range_Type": "PV"}},
+                                                "Ranges": [
+                                                    {
+                                                        "OxHighAbortLowLimit":  {"Value": -30, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "Low"}},
+                                                        "OxHighAbortHighLimit": {"Value": -10, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "High"}},
                                                         "Outputs": [false, false, false]
                                                     },
-                                                    "OxFillHigh": {
-                                                        "Meta": {"VL_Type": "VL_Channel"},
-                                                        "OxHighFillHighLimit": {"Value": 300, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
-                                                        "OxHighFillLowLimit":  {"Value": 200, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
-                                                        "Outputs": [false, false, true]
-                                                    },
-                                                    "OxFillMid": {
-                                                        "Meta": {"VL_Type": "VL_Channel"},
-                                                        "OxMidFillHighLimit": {"Value": 220, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
-                                                        "OxMidFillLowLimit":  {"Value": 100, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
-                                                        "Outputs": [false, true, true]
-                                                    },
-                                                    "OxFillLow": {
-                                                        "Meta": {"VL_Type": "VL_Channel"},
-                                                        "OxLowFillHighLimit": {"Value": 120, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
-                                                        "OxLowFillLowLimit":  {"Value": -10, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                    {
+                                                        "OxLowFillLowLimit":  {"Value": -10, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "Low"}},
+                                                        "OxLowFillHighLimit": {"Value": 120, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "High"}},
                                                         "Outputs": [true, true, true]
                                                     },
-                                                    "OxFillLowAbort": {
-                                                        "Meta": {"VL_Type": "VL_Channel"},
-                                                        "OxHighAbortHighLimit": {"Value": -10, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "HighLimit"}},
-                                                        "OxHighAbortLowLimit":  {"Value": -30, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "LowLimit"}},
+                                                    {
+                                                        "OxMidFillLowLimit":  {"Value": 100, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "Low"}},
+                                                        "OxMidFillHighLimit": {"Value": 220, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "High"}},
+                                                        "Outputs": [false, true, true]
+                                                    },
+                                                    {
+                                                        "OxHighFillLowLimit":  {"Value": 200, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "Low"}},
+                                                        "OxHighFillHighLimit": {"Value": 300, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "High"}},
+                                                        "Outputs": [false, false, true]
+                                                    },
+                                                    {
+                                                        "OxHighOffLowLimit":  {"Value": 290, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "Low"}},
+                                                        "OxHighOffHighLimit": {"Value": 330, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "High"}},
                                                         "Outputs": [false, false, false]
                                                     }
-                                                }
+                                                ]
                                             }
                                         }
                                     }
