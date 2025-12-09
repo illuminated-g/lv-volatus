@@ -1,0 +1,118 @@
+{
+    "Sequence": {
+        "Name": "Engine Test Alpha",
+        "Version": "0.1.0+1",
+        "Comment": "Demo rocket engine firing sequence",
+        "Variables": {
+            "Chill_Time":      {"Value": 240,    "Comment": "Seconds to hold chill bluelines"},
+            "Chill_TC_01":     {"Value": -200,   "Comment": "Chill blueline limit for TC_01"},
+            "Runtank_Press":   {"Value": 80,     "Comment": "Target fuel feed pressure"}
+        },
+        "States": [
+            {
+                "Name": "Start",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "Fuel_01", "Command": false},
+                            {"Type": "Digital", "Channel": "Ox_01",   "Command": false}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Chill",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "Time", "Timer": "State", "Elapsed": 0.1}
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Chill_Start",
+                "Comment": "Open valves to flow for chill",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "Ox_01", "Command": true}
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Chill",
+                "Steps": [],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Chill_Wait",
+                        "Logic": "All",
+                        "Comment": "Wait for temps to hit bluelines",
+                        "Conditions": [
+                            {"Type": "Expression", "Expression": "{TC_01}<={Chill_TC_01}"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Chill_Wait",
+                "Comment": "Hold chill bluelines for desired time",
+                "Steps": [],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Chill",
+                        "Logic": "Any",
+                        "Comment": "Out of chill bluelines",
+                        "Conditions": [
+                            {"Type": "Expression", "Expression": "{TC_01}>-200"}
+                        ]
+                    },
+                    {
+                        "Type": "State",
+                        "Target": "Press",
+                        "Logic": "Any",
+                        "Comment": "Chill bluelines met for required time",
+                        "Conditions": [
+                            {"Type": "Time", "Timer": "State", "Elapsed": "{Chill_Time}"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Press",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": []
+                    }
+                ],
+                "Conditions": []
+            },
+            {
+                "Name": "Fire",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": []
+                    }
+                ],
+                "Conditions": []
+            },
+            {
+                "Name": "Shutdown",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": []
+                    }
+                ],
+                "Conditions": []
+            }
+        ]
+    }
+}

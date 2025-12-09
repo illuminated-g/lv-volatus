@@ -46,7 +46,7 @@
                                 "EventViewer": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
-                                "SimValues": {
+                                "0-SimValues": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
                                     "Period_s": 0.1,
                                     "SimValues": {
@@ -369,8 +369,11 @@
                                                 "Meta": {"VL_Type": "VL_Channel"},
                                                 "Type": "BangBang",
                                                 "Output": "OxFillUllage",
-                                                "Process_Value": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],
-                                                "PV_Calc": "Median",
+                                                "Process_Value": {
+                                                    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],
+                                                    "Calc": "Median"
+                                                },
+                                                "OxFillBB_PV": {"Meta": {"VL_Type": "VL_Channel", "Control_Param": "PV"}},
                                                 "Invert": false,
                                                 "Normal_Output": false,
                                                 "In_Range_Enable": false,
@@ -391,7 +394,7 @@
                                                     "Control_Value": false,
                                                     "Outputs": [false, false, false]
                                                 },
-                                                "OxFillUllage_PV": {"Meta": {"VL_Type": "VL_Channel", "Range_Type": "PV"}},
+                                                "OxFillUllage_PV": {"Meta": {"VL_Type": "VL_Channel", "Control_Param": "PV"}},
                                                 "Ranges": [
                                                     {
                                                         "OxHighAbortLowLimit":  {"Value": -30, "Meta": {"VL_Type": "VL_Channel", "Range_Type": "Low"}},
