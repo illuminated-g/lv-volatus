@@ -8,7 +8,9 @@
 		<Item Name="daqtest.vjson" Type="Document" URL="../daqtest.vjson"/>
 	</Item>
 	<Item Name="Sequencing" Type="Folder">
-		<Item Name="seq" Type="Folder"/>
+		<Item Name="seq" Type="Folder">
+			<Item Name="alpha_sequence.vseq" Type="Document" URL="../alpha_sequence.vseq"/>
+		</Item>
 	</Item>
 	<Item Name="DAQmx Test.vi" Type="VI" URL="../DAQmx Test.vi"/>
 	<Item Name="Demo2.vi" Type="VI" URL="../Demo2.vi"/>

@@ -4,7 +4,30 @@
 	<Property Name="NI.Lib.SourceVersion" Type="Int">536903680</Property>
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
+	<Item Name="Data Types" Type="Folder">
+		<Item Name="Condition Logic.ctl" Type="VI" URL="../Condition Logic.ctl"/>
+		<Item Name="State.ctl" Type="VI" URL="../State.ctl"/>
+		<Item Name="Step.ctl" Type="VI" URL="../Step.ctl"/>
+		<Item Name="Timer.ctl" Type="VI" URL="../Timer.ctl"/>
+		<Item Name="Variable.ctl" Type="VI" URL="../Variable.ctl"/>
+	</Item>
+	<Item Name="Subtypes" Type="Folder">
+		<Item Name="Commands" Type="Folder">
+			<Item Name="Digital Command Config.lvclass" Type="LVClass" URL="../Digital Command Config/Digital Command Config.lvclass"/>
+			<Item Name="Lookup Command Type.vi" Type="VI" URL="../Lookup Command Type.vi"/>
+		</Item>
+		<Item Name="Conditions" Type="Folder">
+			<Item Name="Expression Condition Config.lvclass" Type="LVClass" URL="../Expression Condition Config/Expression Condition Config.lvclass"/>
+			<Item Name="Lookup Condition Type.vi" Type="VI" URL="../Lookup Condition Type.vi"/>
+			<Item Name="Time Condition Config.lvclass" Type="LVClass" URL="../Time Condition Config/Time Condition Config.lvclass"/>
+		</Item>
+		<Item Name="Transitions" Type="Folder">
+			<Item Name="Lookup Transition Type.vi" Type="VI" URL="../Lookup Transition Type.vi"/>
+			<Item Name="State Transition Config.lvclass" Type="LVClass" URL="../State Transition Config/State Transition Config.lvclass"/>
+		</Item>
+	</Item>
+	<Item Name="Command Config.lvclass" Type="LVClass" URL="../Command Config/Command Config.lvclass"/>
 	<Item Name="Condition Config.lvclass" Type="LVClass" URL="../Condition Config/Condition Config.lvclass"/>
 	<Item Name="Sequence Config.lvclass" Type="LVClass" URL="../Sequence Config/Sequence Config.lvclass"/>
-	<Item Name="State Config.lvclass" Type="LVClass" URL="../State Config/State Config.lvclass"/>
+	<Item Name="Transition Config.lvclass" Type="LVClass" URL="../Transition Config/Transition Config.lvclass"/>
 </Library>

@@ -4,7 +4,6 @@
         "Version": "0.1.0+1",
         "Comment": "Demo rocket engine firing sequence",
         "Variables": {
-            "Chill_Time":      {"Value": 240,    "Comment": "Seconds to hold chill bluelines"},
             "Chill_TC_01":     {"Value": -200,   "Comment": "Chill blueline limit for TC_01"},
             "Runtank_Press":   {"Value": 80,     "Comment": "Target fuel feed pressure"}
         },
@@ -15,18 +14,19 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "Fuel_01", "Command": false},
-                            {"Type": "Digital", "Channel": "Ox_01",   "Command": false}
+                            {"Type": "Digital", "Channel": "Fuel_01",  "Command": false},
+                            {"Type": "Digital", "Channel": "Ox_01",    "Command": false},
+                            {"Type": "Numeric", "Channel": "Throttle", "Command": 10}
                         ]
                     }
                 ],
                 "Transitions": [
                     {
                         "Type": "State",
-                        "Target": "Chill",
+                        "Target": "Chill_Start",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "Time", "Timer": "State", "Elapsed": 0.1}
+                            {"Type": "Time", "Timer": "State", "Time": 0.1}
                         ]
                     }
                 ]
@@ -53,7 +53,9 @@
                         "Logic": "All",
                         "Comment": "Wait for temps to hit bluelines",
                         "Conditions": [
-                            {"Type": "Expression", "Expression": "{TC_01}<={Chill_TC_01}"}
+                            {"Type": "Expression", "Expression": "{TC_01}<={Chill_TC_01}"},
+                            {"Type": "Expression", "Expression": "{TC_02}<={Chill_TC_01}"},
+                            {"Type": "Expression", "Expression": "{TC_03}<={Chill_TC_01}"}
                         ]
                     }
                 ]
@@ -78,7 +80,7 @@
                         "Logic": "Any",
                         "Comment": "Chill bluelines met for required time",
                         "Conditions": [
-                            {"Type": "Time", "Timer": "State", "Elapsed": "{Chill_Time}"}
+                            {"Type": "Time", "Timer": "State", "Time": "240"}
                         ]
                     }
                 ]
