@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>volatus.volatus &#8212; Volatus  documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pydoctheme.css?v=5ff89526" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="volatus.vecto.util" href="../vecto/util/index.html" /><link rel="stylesheet" href="../../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../../_static/py.svg">
+            <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../../_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../../search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.volatus</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.volatus.LogState"><code class="docutils literal notranslate"><span class="pre">LogState</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Unknown"><code class="docutils literal notranslate"><span class="pre">LogState.Unknown</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Idle"><code class="docutils literal notranslate"><span class="pre">LogState.Idle</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Starting"><code class="docutils literal notranslate"><span class="pre">LogState.Starting</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Logging"><code class="docutils literal notranslate"><span class="pre">LogState.Logging</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Stopping"><code class="docutils literal notranslate"><span class="pre">LogState.Stopping</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.LogStatus"><code class="docutils literal notranslate"><span class="pre">LogStatus</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.LogStatus.state"><code class="docutils literal notranslate"><span class="pre">LogStatus.state</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogStatus.log"><code class="docutils literal notranslate"><span class="pre">LogStatus.log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.VCommand"><code class="docutils literal notranslate"><span class="pre">VCommand</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.VCommand.send"><code class="docutils literal notranslate"><span class="pre">VCommand.send()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.StartLogCommand"><code class="docutils literal notranslate"><span class="pre">StartLogCommand</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.StartLogCommand.send"><code class="docutils literal notranslate"><span class="pre">StartLogCommand.send()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus"><code class="docutils literal notranslate"><span class="pre">Volatus</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.systemName"><code class="docutils literal notranslate"><span class="pre">Volatus.systemName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.clusterName"><code class="docutils literal notranslate"><span class="pre">Volatus.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.nodeName"><code class="docutils literal notranslate"><span class="pre">Volatus.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.config"><code class="docutils literal notranslate"><span class="pre">Volatus.config</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.path"><code class="docutils literal notranslate"><span class="pre">Volatus.path</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.shutdown"><code class="docutils literal notranslate"><span class="pre">Volatus.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.lookupTargetId"><code class="docutils literal notranslate"><span class="pre">Volatus.lookupTargetId()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.nodeHttpUrl"><code class="docutils literal notranslate"><span class="pre">Volatus.nodeHttpUrl()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.requestLogStatus"><code class="docutils literal notranslate"><span class="pre">Volatus.requestLogStatus()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.waitForLogState"><code class="docutils literal notranslate"><span class="pre">Volatus.waitForLogState()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.listLogs"><code class="docutils literal notranslate"><span class="pre">Volatus.listLogs()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.prepareLog"><code class="docutils literal notranslate"><span class="pre">Volatus.prepareLog()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.downloadLog"><code class="docutils literal notranslate"><span class="pre">Volatus.downloadLog()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createDigitalCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createDigitalCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createAnalogCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createAnalogCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createDigitalMultipleCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createDigitalMultipleCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createAnalogMultipleCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createAnalogMultipleCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createStartLogCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createStartLogCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createStopLogCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createStopLogCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.subscribe"><code class="docutils literal notranslate"><span class="pre">Volatus.subscribe()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.unsubscribe"><code class="docutils literal notranslate"><span class="pre">Volatus.unsubscribe()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createReportEventMsg"><code class="docutils literal notranslate"><span class="pre">Volatus.createReportEventMsg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createReportErrorMsg"><code class="docutils literal notranslate"><span class="pre">Volatus.createReportErrorMsg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.reportEvent"><code class="docutils literal notranslate"><span class="pre">Volatus.reportEvent()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.reportError"><code class="docutils literal notranslate"><span class="pre">Volatus.reportError()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../vecto/util/index.html"
+                          title="previous chapter">volatus.vecto.util</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/volatus/volatus/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../vecto/util/index.html" title="volatus.vecto.util"
+             accesskey="P">previous</a> |</li>
+          <li><img src="../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">volatus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.volatus</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-volatus.volatus">
+<span id="volatus-volatus"></span><h1>volatus.volatus<a class="headerlink" href="#module-volatus.volatus" title="Link to this heading">¶</a></h1>
+<p>The core module containing the Volatus class to be used for handling configs and system interactions.</p>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.volatus.LogState" title="volatus.volatus.LogState"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogState</span></code></a></p></td>
+<td><p>Create a collection of name/value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.volatus.LogStatus" title="volatus.volatus.LogStatus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LogStatus</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VCommand</span></code></a></p></td>
+<td><p>Constructed command that is ready to be sent to a Volatus system.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.volatus.StartLogCommand" title="volatus.volatus.StartLogCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StartLogCommand</span></code></a></p></td>
+<td><p>A prepared command to start logging across a set of target nodes that can be sent with send()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.volatus.Volatus" title="volatus.volatus.Volatus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volatus</span></code></a></p></td>
+<td><p>The main API class for interacting with Volatus configs and systems.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.volatus.LogState">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.volatus.</span></span><span class="sig-name descname"><span class="pre">LogState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.LogState" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Access them by:</p>
+<ul>
+<li><p>attribute access:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>value lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>name lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre></div>
+</div>
+<p>Methods can be added to enumerations, and members can have their own
+attributes – see the documentation for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogState.Unknown">
+<span class="sig-name descname"><span class="pre">Unknown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.volatus.LogState.Unknown" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogState.Idle">
+<span class="sig-name descname"><span class="pre">Idle</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#volatus.volatus.LogState.Idle" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogState.Starting">
+<span class="sig-name descname"><span class="pre">Starting</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#volatus.volatus.LogState.Starting" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogState.Logging">
+<span class="sig-name descname"><span class="pre">Logging</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#volatus.volatus.LogState.Logging" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogState.Stopping">
+<span class="sig-name descname"><span class="pre">Stopping</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#volatus.volatus.LogState.Stopping" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.volatus.LogStatus">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.volatus.</span></span><span class="sig-name descname"><span class="pre">LogStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.volatus.LogState" title="volatus.volatus.LogState"><span class="pre">LogState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.LogStatus" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogStatus.state">
+<span class="sig-name descname"><span class="pre">state</span></span><a class="headerlink" href="#volatus.volatus.LogStatus.state" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.LogStatus.log">
+<span class="sig-name descname"><span class="pre">log</span></span><a class="headerlink" href="#volatus.volatus.LogStatus.log" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.volatus.VCommand">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.volatus.</span></span><span class="sig-name descname"><span class="pre">VCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payload</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqFunc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sendFunc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.VCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Constructed command that is ready to be sent to a Volatus system.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.VCommand.send">
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.VCommand.send" title="Link to this definition">¶</a></dt>
+<dd><p>Sends the command over TCP as initialized.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.volatus.StartLogCommand">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.volatus.</span></span><span class="sig-name descname"><span class="pre">StartLogCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqFunc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sendFunc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">collections.abc.Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startedBy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.StartLogCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VCommand</span></code></a></p>
+<p>A prepared command to start logging across a set of target nodes that can be sent with send()</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.StartLogCommand.send">
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.StartLogCommand.send" title="Link to this definition">¶</a></dt>
+<dd><p>Sends the command over TCP as initialized.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.volatus.</span></span><span class="sig-name descname"><span class="pre">Volatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">systemName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.Volatus" title="Link to this definition">¶</a></dt>
+<dd><p>The main API class for interacting with Volatus configs and systems.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.systemName">
+<span class="sig-name descname"><span class="pre">systemName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#volatus.volatus.Volatus.systemName" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the system in the configuration to validate the correct system is being referenced.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.clusterName">
+<span class="sig-name descname"><span class="pre">clusterName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#volatus.volatus.Volatus.clusterName" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the cluster this app belongs to in the configuration.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.nodeName">
+<span class="sig-name descname"><span class="pre">nodeName</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#volatus.volatus.Volatus.nodeName" title="Link to this definition">¶</a></dt>
+<dd><p>The name of the node (application) to use from the configuration.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.config">
+<span class="sig-name descname"><span class="pre">config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../config/index.html#volatus.config.VolatusConfig" title="volatus.config.VolatusConfig"><span class="pre">volatus.config.VolatusConfig</span></a></em><a class="headerlink" href="#volatus.volatus.Volatus.config" title="Link to this definition">¶</a></dt>
+<dd><p>The configuration from the configPath argument.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">pathlib.Path</span></em><a class="headerlink" href="#volatus.volatus.Volatus.path" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.Volatus.shutdown" title="Link to this definition">¶</a></dt>
+<dd><p>Stops all communication threads managed by the Volatus framework to prepare for reloading configuration or stopping the Python app.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.lookupTargetId">
+<span class="sig-name descname"><span class="pre">lookupTargetId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.lookupTargetId" title="Link to this definition">¶</a></dt>
+<dd><p>Looks up the numeric ID used to route a message to the desired node(s).</p>
+<p>Also useful for verifying if a target name is valid; unknown target names return None as the value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.nodeHttpUrl">
+<span class="sig-name descname"><span class="pre">nodeHttpUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">urlPath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.nodeHttpUrl" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.requestLogStatus">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">requestLogStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.volatus.LogStatus" title="volatus.volatus.LogStatus"><span class="pre">LogStatus</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.requestLogStatus" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.waitForLogState">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">waitForLogState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.volatus.LogState" title="volatus.volatus.LogState"><span class="pre">LogState</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeoutS</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.waitForLogState" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.listLogs">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">listLogs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.listLogs" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.prepareLog">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">prepareLog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitUntilDone</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.prepareLog" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.downloadLog">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">downloadLog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localFolder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.downloadLog" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createDigitalCommand">
+<span class="sig-name descname"><span class="pre">createDigitalCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createDigitalCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Prepares a digital command to be sent to a Volatus system.</p>
+<p>Digital commands are typically used to set an output value or trigger a control component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chanName</strong> (<em>str</em>) – The name of the channel to update the value for.</p></li>
+<li><p><strong>value</strong> (<em>bool</em>) – The new value to set the channel to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – The specified channel name was not found in the system.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The initialized command ready to be sent.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand">VCommand</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createAnalogCommand">
+<span class="sig-name descname"><span class="pre">createAnalogCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chanName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createAnalogCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Prepares an analog/numeric command to send to a Volatus system.</p>
+<p>Analog commands are typically used to update analog outputs or change numeric parameters of a control component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chanName</strong> (<em>str</em>) – The name of the channel to update the value of.</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – The new value to set the channel to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – The specified channel was not found in the system.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The initialized command ready to be sent.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand">VCommand</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createDigitalMultipleCommand">
+<span class="sig-name descname"><span class="pre">createDigitalMultipleCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createDigitalMultipleCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a command that can update multiple digital values simultaneously.</p>
+<p>This is the multiple version of DigitalCommand. All values specified must belong to the same task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>list</em><em>[</em><em>tuple</em><em>[</em><em>str</em><em>, </em><em>bool</em><em>]</em><em>]</em>) – Pairs of channel names and values to update.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – A specified channel was not found in the system.</p></li>
+<li><p><strong>ValueError</strong> – Channels are not all part of the same task.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The intiialized command ready to be sent.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand">VCommand</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createAnalogMultipleCommand">
+<span class="sig-name descname"><span class="pre">createAnalogMultipleCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createAnalogMultipleCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Prepares a command that can update multiple numeric values simultaneously</p>
+<p>This is the multiple version of AnalogCommand. All channels in this command must belong to the same task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>values</strong> (<em>list</em><em>[</em><em>tuple</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em><em>]</em>) – Pairs of channel names and values to update.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – A specified channel name was not found in the system.</p></li>
+<li><p><strong>ValueError</strong> – Channels are not all part of the same task.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The initialized commmand ready to be sent.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand">VCommand</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createStartLogCommand">
+<span class="sig-name descname"><span class="pre">createStartLogCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startedBy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createStartLogCommand" title="Link to this definition">¶</a></dt>
+<dd><p>Prepare a Start Log command to send to a Volatus system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>targetName</strong> (<em>str</em>) – Either the node or targetGroup to send the log command to.</p></li>
+<li><p><strong>testName</strong> (<em>str</em>) – The primary name used for the log.</p></li>
+<li><p><strong>startedBy</strong> (<em>str</em>) – The user or source of the start log command.</p></li>
+<li><p><strong>timestamp</strong> (<em>str</em><em>, </em><em>optional</em>) – The string representation of the time of the start log command, should be in basic ISO-8601
+format with second precision, when defaulted to ‘’ it generates a timestamp string when the command is sent.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The prepared command ready to be sent with send()</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand">VCommand</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createStopLogCommand">
+<span class="sig-name descname"><span class="pre">createStopLogCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reason</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createStopLogCommand" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.subscribe">
+<span class="sig-name descname"><span class="pre">subscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../telemetry/index.html#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup"><span class="pre">volatus.telemetry.ChannelGroup</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.volatus.Volatus.subscribe" title="Link to this definition">¶</a></dt>
+<dd><p>Subscribes to the telemetry data from the specified group.</p>
+<p>Groups are named collections of channels that are published together. Once subscribed, the channels within the group
+will be updated and values can be read from channel objects directly or all at once directly from the group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>groupName</strong> (<em>str</em>) – The name of the group to subscribe to.</p></li>
+<li><p><strong>timeout_s</strong> (<em>float</em>) – How much time to wait for data to arrive after subscribing, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – The specified group name was not found in the system configuration.</p></li>
+<li><p><strong>RuntimeError</strong> – The configuration for the node this Python app is running as was not configured for networking.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The group that has been subscribed to.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple[<a class="reference internal" href="../telemetry/index.html#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup">ChannelGroup</a>, bool]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.unsubscribe">
+<span class="sig-name descname"><span class="pre">unsubscribe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../telemetry/index.html#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup"><span class="pre">volatus.telemetry.ChannelGroup</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.Volatus.unsubscribe" title="Link to this definition">¶</a></dt>
+<dd><p>Not implemented yet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>group</strong> (<a class="reference internal" href="../telemetry/index.html#volatus.telemetry.ChannelGroup" title="volatus.telemetry.ChannelGroup"><em>ChannelGroup</em></a>) – The group that was subscribed to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createReportEventMsg">
+<span class="sig-name descname"><span class="pre">createReportEventMsg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">volatus.proto.event_pb2.EventLevel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createReportEventMsg" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.createReportErrorMsg">
+<span class="sig-name descname"><span class="pre">createReportErrorMsg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errCode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errMsg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.volatus.VCommand" title="volatus.volatus.VCommand"><span class="pre">VCommand</span></a></span></span><a class="headerlink" href="#volatus.volatus.Volatus.createReportErrorMsg" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.reportEvent">
+<span class="sig-name descname"><span class="pre">reportEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">volatus.proto.event_pb2.EventLevel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.Volatus.reportEvent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.volatus.Volatus.reportError">
+<span class="sig-name descname"><span class="pre">reportError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errCode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errMsg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.volatus.Volatus.reportError" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.volatus</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.volatus.LogState"><code class="docutils literal notranslate"><span class="pre">LogState</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Unknown"><code class="docutils literal notranslate"><span class="pre">LogState.Unknown</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Idle"><code class="docutils literal notranslate"><span class="pre">LogState.Idle</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Starting"><code class="docutils literal notranslate"><span class="pre">LogState.Starting</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Logging"><code class="docutils literal notranslate"><span class="pre">LogState.Logging</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogState.Stopping"><code class="docutils literal notranslate"><span class="pre">LogState.Stopping</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.LogStatus"><code class="docutils literal notranslate"><span class="pre">LogStatus</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.LogStatus.state"><code class="docutils literal notranslate"><span class="pre">LogStatus.state</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.LogStatus.log"><code class="docutils literal notranslate"><span class="pre">LogStatus.log</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.VCommand"><code class="docutils literal notranslate"><span class="pre">VCommand</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.VCommand.send"><code class="docutils literal notranslate"><span class="pre">VCommand.send()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.StartLogCommand"><code class="docutils literal notranslate"><span class="pre">StartLogCommand</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.StartLogCommand.send"><code class="docutils literal notranslate"><span class="pre">StartLogCommand.send()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus"><code class="docutils literal notranslate"><span class="pre">Volatus</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.systemName"><code class="docutils literal notranslate"><span class="pre">Volatus.systemName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.clusterName"><code class="docutils literal notranslate"><span class="pre">Volatus.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.nodeName"><code class="docutils literal notranslate"><span class="pre">Volatus.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.config"><code class="docutils literal notranslate"><span class="pre">Volatus.config</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.path"><code class="docutils literal notranslate"><span class="pre">Volatus.path</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.shutdown"><code class="docutils literal notranslate"><span class="pre">Volatus.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.lookupTargetId"><code class="docutils literal notranslate"><span class="pre">Volatus.lookupTargetId()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.nodeHttpUrl"><code class="docutils literal notranslate"><span class="pre">Volatus.nodeHttpUrl()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.requestLogStatus"><code class="docutils literal notranslate"><span class="pre">Volatus.requestLogStatus()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.waitForLogState"><code class="docutils literal notranslate"><span class="pre">Volatus.waitForLogState()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.listLogs"><code class="docutils literal notranslate"><span class="pre">Volatus.listLogs()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.prepareLog"><code class="docutils literal notranslate"><span class="pre">Volatus.prepareLog()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.downloadLog"><code class="docutils literal notranslate"><span class="pre">Volatus.downloadLog()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createDigitalCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createDigitalCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createAnalogCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createAnalogCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createDigitalMultipleCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createDigitalMultipleCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createAnalogMultipleCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createAnalogMultipleCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createStartLogCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createStartLogCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createStopLogCommand"><code class="docutils literal notranslate"><span class="pre">Volatus.createStopLogCommand()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.subscribe"><code class="docutils literal notranslate"><span class="pre">Volatus.subscribe()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.unsubscribe"><code class="docutils literal notranslate"><span class="pre">Volatus.unsubscribe()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createReportEventMsg"><code class="docutils literal notranslate"><span class="pre">Volatus.createReportEventMsg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.createReportErrorMsg"><code class="docutils literal notranslate"><span class="pre">Volatus.createReportErrorMsg()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.reportEvent"><code class="docutils literal notranslate"><span class="pre">Volatus.reportEvent()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.volatus.Volatus.reportError"><code class="docutils literal notranslate"><span class="pre">Volatus.reportError()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../vecto/util/index.html"
+                          title="previous chapter">volatus.vecto.util</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/volatus/volatus/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../vecto/util/index.html" title="volatus.vecto.util"
+             >previous</a> |</li>
+          <li><img src="../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >volatus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.volatus</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2025, Derrick Bommarito.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>
