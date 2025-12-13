@@ -52,15 +52,19 @@
                                     "SimValues": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
-                                        "Ox_PT_01":        {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Ox_PT_02":        {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Ox_PT_03":        {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Ox_Level_1":      {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Ox_Level_2":      {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Ox_Level_3":      {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "OxHighFillValve": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "OxMidFillValve":  {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "OxLowFillValve":  {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
+                                        "Ox_PT_01":        {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_PT_02":        {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_PT_03":        {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_Level_1":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_Level_2":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Ox_Level_3":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxHighFillValve": {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxMidFillValve":  {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxLowFillValve":  {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+
+                                        "BottlePSI":       {"Value": 200, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "BottleCool":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "BottleHeat":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
                                 "Logging": {
@@ -425,7 +429,8 @@
                                             }
                                         }
                                     }
-                                }
+                                },
+                                "Sequencing": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"}}
                             }
                         },
                         "ValveGUI": {

@@ -10,6 +10,7 @@
 	<Item Name="Sequencing" Type="Folder">
 		<Item Name="seq" Type="Folder">
 			<Item Name="alpha_sequence.vseq" Type="Document" URL="../alpha_sequence.vseq"/>
+			<Item Name="bottle_condition.vseq" Type="Document" URL="../bottle_condition.vseq"/>
 		</Item>
 	</Item>
 	<Item Name="DAQmx Test.vi" Type="VI" URL="../DAQmx Test.vi"/>
@@ -17,6 +18,7 @@
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
 	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
+	<Item Name="Sequence Control.vi" Type="VI" URL="../Sequence Control.vi"/>
 	<Item Name="StandaloneServer.lvlib" Type="Library" URL="../StandaloneServer/StandaloneServer.lvlib"/>
 	<Item Name="Test Main.vi" Type="VI" URL="../Test Main.vi"/>
 	<Item Name="Test MinMax Decimation.vi" Type="VI" URL="../Test MinMax Decimation.vi"/>

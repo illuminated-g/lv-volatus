@@ -3,6 +3,7 @@
         "Name": "Engine Test Alpha",
         "Version": "0.1.0+1",
         "Comment": "Demo rocket engine firing sequence",
+        "Entry": "Start",
         "Variables": {
             "Chill_TC_01":     {"Value": -200,   "Comment": "Chill blueline limit for TC_01"},
             "Runtank_Press":   {"Value": 80,     "Comment": "Target fuel feed pressure"}
@@ -14,9 +15,10 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "Fuel_01",  "Command": false},
-                            {"Type": "Digital", "Channel": "Ox_01",    "Command": false},
-                            {"Type": "Numeric", "Channel": "Throttle", "Command": 10}
+                            {"Type": "Digital", "Chanel": "Fuel_01",  "Value": false},
+                            {"Type": "Digital", "Channel": "Ox_01",    "Value": false},
+                            {"Type": "Numeric", "Channel": "Throttle", "Value": 10},
+                            {"Type": "MR_Config", "Rate": 0.1, "High": 750, "Low": 715}
                         ]
                     }
                 ],

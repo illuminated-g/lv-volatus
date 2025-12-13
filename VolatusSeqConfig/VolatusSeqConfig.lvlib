@@ -13,12 +13,21 @@
 	</Item>
 	<Item Name="Subtypes" Type="Folder">
 		<Item Name="Commands" Type="Folder">
-			<Item Name="Digital Command Config.lvclass" Type="LVClass" URL="../Digital Command Config/Digital Command Config.lvclass"/>
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Lookup Command Type.vi" Type="VI" URL="../Lookup Command Type.vi"/>
+			<Item Name="Digital Command Config.lvclass" Type="LVClass" URL="../Digital Command Config/Digital Command Config.lvclass"/>
+			<Item Name="Numeric Command Config.lvclass" Type="LVClass" URL="../Numeric Command Config/Numeric Command Config.lvclass"/>
+			<Item Name="Start Log Command Config.lvclass" Type="LVClass" URL="../Start Log Command Config/Start Log Command Config.lvclass"/>
+			<Item Name="Stop Log Command Config.lvclass" Type="LVClass" URL="../Stop Log Command Config/Stop Log Command Config.lvclass"/>
+			<Item Name="Transition Command Config.lvclass" Type="LVClass" URL="../Transition Command Config/Transition Command Config.lvclass"/>
 		</Item>
 		<Item Name="Conditions" Type="Folder">
-			<Item Name="Expression Condition Config.lvclass" Type="LVClass" URL="../Expression Condition Config/Expression Condition Config.lvclass"/>
+			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Lookup Condition Type.vi" Type="VI" URL="../Lookup Condition Type.vi"/>
+			<Item Name="Expression Condition Config.lvclass" Type="LVClass" URL="../Expression Condition Config/Expression Condition Config.lvclass"/>
+			<Item Name="HighLimit Condition Config.lvclass" Type="LVClass" URL="../HighLimit Condition Config/HighLimit Condition Config.lvclass"/>
+			<Item Name="LowLimit Condition Config.lvclass" Type="LVClass" URL="../LowLimit Condition Config/LowLimit Condition Config.lvclass"/>
+			<Item Name="OutOfRange Condition Config.lvclass" Type="LVClass" URL="../OutOfRange Condition Config/OutOfRange Condition Config.lvclass"/>
 			<Item Name="Time Condition Config.lvclass" Type="LVClass" URL="../Time Condition Config/Time Condition Config.lvclass"/>
 		</Item>
 		<Item Name="Transitions" Type="Folder">
@@ -28,6 +37,7 @@
 	</Item>
 	<Item Name="Command Config.lvclass" Type="LVClass" URL="../Command Config/Command Config.lvclass"/>
 	<Item Name="Condition Config.lvclass" Type="LVClass" URL="../Condition Config/Condition Config.lvclass"/>
+	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Sequence Config.lvclass" Type="LVClass" URL="../Sequence Config/Sequence Config.lvclass"/>
 	<Item Name="Transition Config.lvclass" Type="LVClass" URL="../Transition Config/Transition Config.lvclass"/>
 </Library>

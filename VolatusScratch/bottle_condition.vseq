@@ -1,0 +1,112 @@
+{
+    "Sequence": {
+        "Name": "Bottle Condition",
+        "Version": "1",
+        "Comment": "Control state machine for bottle heating/cooling.",
+        "Entry": "Start",
+        "Abort": "Stop",
+        "States": {
+            "Start": {
+                "Comment": "Reset bottle controls to off state.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BottleCool", "Value": false},
+                            {"Type": "Digital", "Channel": "BottleHeat", "Value": false}
+                        ]
+                    },
+                    {
+                        "Time": 0.1,
+                        "Commands": [
+                            {"Type": "Transition", "Target": "Hold"}
+                        ]
+                    }
+                ]
+            },
+            "Hold": {
+                "Comment": "Bottle in range, controls off.",
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "StartCool",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "HighLimit", "Channel": "BottlePSI", "Limit": 850}
+                        ]
+                    },
+                    {
+                        "Type": "State",
+                        "Target": "StartHeat",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "LowLimit", "Channel": "BottlePSI", "Limit": 750}
+                        ]
+                    }
+                ]
+            },
+            "StartCool": {
+                "Comment": "Turn on bottle cooler.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BottleCool", "Value": true},
+                            {"Type": "Transition", "Target": "Cool"}
+                        ]
+                    }
+                ]
+            },
+            "Cool": {
+                "Comment": "Cooling, wait for pressure to drop.",
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Start",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "LowLimit", "Channel": "BottlePSI", "Limit": 800}
+                        ]
+                    }
+                ]
+            },
+            "StartHeat": {
+                "Comment": "Turn on bottle heater.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BottleHeat", "Value": true},
+                            {"Type": "Transition", "Target": "Heat"}
+                        ]
+                    }
+                ]
+            },
+            "Heat": {
+                "Comment": "Heating, wait for pressure to rise.",
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Start",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "HighLimit", "Channel": "BottlePSI", "Limit": 800}
+                        ]
+                    }
+                ]
+            },
+            "Stop": {
+                "Comment": "Stopping, ensure controls off.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BottleCool", "Value": false},
+                            {"Type": "Digital", "Channel": "BottleHeat", "Value": false}
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
