@@ -20,6 +20,7 @@
 			<Item Name="Start Log Command Config.lvclass" Type="LVClass" URL="../Start Log Command Config/Start Log Command Config.lvclass"/>
 			<Item Name="Stop Log Command Config.lvclass" Type="LVClass" URL="../Stop Log Command Config/Stop Log Command Config.lvclass"/>
 			<Item Name="Transition Command Config.lvclass" Type="LVClass" URL="../Transition Command Config/Transition Command Config.lvclass"/>
+			<Item Name="Stop Seq Command Config.lvclass" Type="LVClass" URL="../Stop Seq Command Config/Stop Seq Command Config.lvclass"/>
 		</Item>
 		<Item Name="Conditions" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>

@@ -15,6 +15,7 @@
 			<Item Name="Transition Command.lvclass" Type="LVClass" URL="../Transition Command/Transition Command.lvclass"/>
 			<Item Name="Start Log Command.lvclass" Type="LVClass" URL="../Start Log Command/Start Log Command.lvclass"/>
 			<Item Name="Stop Log Command.lvclass" Type="LVClass" URL="../Stop Log Command/Stop Log Command.lvclass"/>
+			<Item Name="Stop Seq Command.lvclass" Type="LVClass" URL="../Stop Seq Command/Stop Seq Command.lvclass"/>
 		</Item>
 		<Item Name="Transitions" Type="Folder">
 			<Item Name="State Transition.lvclass" Type="LVClass" URL="../State Transition/State Transition.lvclass"/>

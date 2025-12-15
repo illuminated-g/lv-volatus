@@ -3,20 +3,9 @@
         "Name": "Bottle Condition",
         "Version": "1",
         "Comment": "Control state machine for bottle heating/cooling.",
-        "Entry": "Start",
+        "Entry": "Hold",
         "Abort": "Stop",
         "States": {
-            "Start": {
-                "Comment": "Reset bottle controls to off state.",
-                "Steps": [
-                    {
-                        "Time": 0,
-                        "Commands": [
-                            {"Type": "Transition", "Target": "Hold"}
-                        ]
-                    }
-                ]
-            },
             "Hold": {
                 "Comment": "Bottle in range, controls off.",
                 "Steps": [
@@ -96,7 +85,8 @@
                         "Time": 0,
                         "Commands": [
                             {"Type": "Digital", "Channel": "BottleCool", "Value": false},
-                            {"Type": "Digital", "Channel": "BottleHeat", "Value": false}
+                            {"Type": "Digital", "Channel": "BottleHeat", "Value": false},
+                            {"Type": "Stop"}
                         ]
                     }
                 ]
