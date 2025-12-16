@@ -41,9 +41,13 @@
 		<Item Name="Load Result.ctl" Type="VI" URL="../Load Result.ctl"/>
 		<Item Name="Sequence Load Data.ctl" Type="VI" URL="../Sequence Load Data.ctl"/>
 		<Item Name="Sequence Mode.ctl" Type="VI" URL="../Sequence Mode.ctl"/>
+		<Item Name="Sequence Status Extended.ctl" Type="VI" URL="../Sequence Status Extended.ctl"/>
+		<Item Name="Sequence Status JSON.ctl" Type="VI" URL="../Sequence Status JSON.ctl"/>
 		<Item Name="Sequence Status.ctl" Type="VI" URL="../Sequence Status.ctl"/>
 		<Item Name="Sequence Time.ctl" Type="VI" URL="../Sequence Time.ctl"/>
 		<Item Name="Sequencer Action.ctl" Type="VI" URL="../Sequencer Action.ctl"/>
+		<Item Name="Sequencing Status JSON.ctl" Type="VI" URL="../Sequencing Status JSON.ctl"/>
+		<Item Name="Sequencing Status.ctl" Type="VI" URL="../Sequencing Status.ctl"/>
 		<Item Name="State Control.ctl" Type="VI" URL="../State Control.ctl"/>
 		<Item Name="Timer.ctl" Type="VI" URL="../Timer.ctl"/>
 		<Item Name="Timing.ctl" Type="VI" URL="../Timing.ctl"/>
@@ -58,8 +62,10 @@
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="Load Result Value.lvclass" Type="LVClass" URL="../Load Result Value/Load Result Value.lvclass"/>
+		<Item Name="Sequencing Status Value.lvclass" Type="LVClass" URL="../Sequencing Status Value/Sequencing Status Value.lvclass"/>
 		<Item Name="State Launch Result Value.lvclass" Type="LVClass" URL="../State Launch Result Value/State Launch Result Value.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
+	<Item Name="Scratch.vi" Type="VI" URL="../Scratch.vi"/>
 	<Item Name="Sequencing.lvclass" Type="LVClass" URL="../Sequencing/Sequencing.lvclass"/>
 </Library>
