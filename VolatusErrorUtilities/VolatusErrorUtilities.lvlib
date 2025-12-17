@@ -6,12 +6,12 @@
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI_IconEditor" Type="Str">50 48 48 49 56 48 48 48 13 0 0 0 0 1 23 21 76 111 97 100 32 38 32 85 110 108 111 97 100 46 108 118 99 108 97 115 115 0 0 1 0 0 0 0 0 9 0 0 0 76 1 100 1 100 80 84 72 48 0 0 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11 83 109 97 108 108 32 70 111 110 116 115 0 1 8 1 1
 </Property>
-	<Item Name="Data Types" Type="Folder">
-		<Item Name="MultiError.ctl" Type="VI" URL="../MultiError.ctl"/>
-	</Item>
-	<Item Name="Error Wires" Type="Folder">
+	<Item Name="Cluster Errors" Type="Folder">
 		<Item Name="Modify Error.vi" Type="VI" URL="../Modify Error.vi"/>
 		<Item Name="Replace Error Source.vi" Type="VI" URL="../Replace Error Source.vi"/>
+	</Item>
+	<Item Name="Data Types" Type="Folder">
+		<Item Name="MultiError.ctl" Type="VI" URL="../MultiError.ctl"/>
 	</Item>
 	<Item Name="MultiError Formatter.lvclass" Type="LVClass" URL="../MultiError Formatter/MultiError Formatter.lvclass"/>
 	<Item Name="MultiErrors.lvclass" Type="LVClass" URL="../MultiErrors/MultiErrors.lvclass"/>
