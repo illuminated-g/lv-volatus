@@ -57,6 +57,7 @@
 		</Item>
 		<Item Name="graphics" Type="Folder"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
+		<Item Name="VolatusErrorUtilities.lvlib" Type="Library" URL="../VolatusErrorUtilities/VolatusErrorUtilities.lvlib"/>
 		<Item Name="VolatusGUI.lvlib" Type="Library" URL="../VolatusGUI/VolatusGUI.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>

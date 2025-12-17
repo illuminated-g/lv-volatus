@@ -63,10 +63,7 @@
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 		<Item Name="Show GUI Options.ctl" Type="VI" URL="../Show GUI Options.ctl"/>
 	</Item>
-	<Item Name="Error Utilities" Type="Folder">
-		<Item Name="Modify Error.vi" Type="VI" URL="../Modify Error.vi"/>
-		<Item Name="MultiErrors.lvclass" Type="LVClass" URL="../MultiErrors/MultiErrors.lvclass"/>
-	</Item>
+	<Item Name="Error Utilities" Type="Folder"/>
 	<Item Name="HTTP" Type="Folder">
 		<Item Name="ConfigHTTPController.lvclass" Type="LVClass" URL="../ConfigHTTPController/ConfigHTTPController.lvclass"/>
 		<Item Name="DebugHTTPController.lvclass" Type="LVClass" URL="../DebugHTTPController/DebugHTTPController.lvclass"/>
