@@ -128,8 +128,8 @@
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
-                                            "AI00": {"Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "Sensor": {"ID": "123456"}}, "Meta": {"VL_Type": "VL_Channel"}},
-                                            "AI01": {"Resource": "cDAQ1Mod1/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "Sensor": {"ID": "234567"}}, "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI00": {"Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "ID": "123456"},             "Meta": {"VL_Type": "VL_Channel"}},
+                                            "AI01": {"Resource": "cDAQ1Mod1/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "ID": "234567"},             "Meta": {"VL_Type": "VL_Channel"}},
                                             "AI02": {"Resource": "cDAQ1Mod1/ai2",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
                                             "AI03": {"Resource": "cDAQ1Mod1/ai3",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
                                             "AI04": {"Resource": "cDAQ1Mod1/ai4",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Polynomial", "Coefficients": [0, 1]}, "Meta": {"VL_Type": "VL_Channel"}},
