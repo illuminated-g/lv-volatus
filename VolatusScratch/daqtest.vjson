@@ -434,9 +434,7 @@
                             }
                         },
                         "ValveGUI": {
-                            "Meta": {
-                                "VL_Type": "VL_Node"
-                            },
+                            "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 2,
                             "Debug": true,
                             "Config": {
@@ -457,6 +455,9 @@
                                 "HTTP_Port": 13084
                             },
                             "Groups": ["Config", "Events", "Clients"],
+                            "Sequencing": {
+                                "Folder": "sequence"
+                            },
                             "Tasks": {
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},

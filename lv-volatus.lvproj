@@ -68,6 +68,7 @@
 		<Item Name="VolatusGUIControls.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIControls/VolatusGUIControls.lvlib"/>
 		<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
+		<Item Name="VolatusSeqGUI.lvlib" Type="Library" URL="../VolatusSeqGUI/VolatusSeqGUI.lvlib"/>
 		<Item Name="VolatusSeqConfig.lvlib" Type="Library" URL="../VolatusSeqConfig/VolatusSeqConfig.lvlib"/>
 		<Item Name="VolatusSeq.lvlib" Type="Library" URL="../VolatusSeq/VolatusSeq.lvlib"/>
 		<Item Name="VolatusDAQGenericGUI.lvlib" Type="Library" URL="../VolatusDAQGenericGUI/VolatusDAQGenericGUI.lvlib"/>
