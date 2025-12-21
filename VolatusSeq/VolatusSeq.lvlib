@@ -67,5 +67,6 @@
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Scratch.vi" Type="VI" URL="../Scratch.vi"/>
+	<Item Name="Sequence Validation.lvclass" Type="LVClass" URL="../../VolatusSeqConfig/Sequence Validation/Sequence Validation.lvclass"/>
 	<Item Name="Sequencing.lvclass" Type="LVClass" URL="../Sequencing/Sequencing.lvclass"/>
 </Library>
