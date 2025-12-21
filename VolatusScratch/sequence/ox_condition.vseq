@@ -1,20 +1,21 @@
 {
     "Sequence": {
-        "Name": "Bottle Condition",
+        "Name": "Ox Condition",
         "Version": "1",
         "Comment": "hControl state machine for bottle heating/cooling.",
+        "Period": 5,
         "Entry": "Hold",
         "Abort": "Stop",
         "States": {
             "Hold": {
-                "Comment": "Bottle in range, controls off.",
+                "Comment": "Ox in range, controls off.",
                 "Color": "#006304",
                 "Steps": [
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "BottleCool", "Value": false},
-                            {"Type": "Digital", "Channel": "BottleHeat", "Value": false}
+                            {"Type": "Digital", "Channel": "OxCool", "Value": false},
+                            {"Type": "Digital", "Channel": "OxHeat", "Value": false}
                         ]
                     }
                 ],
@@ -24,7 +25,7 @@
                         "Target": "Cool",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "HighLimit", "Channel": "BottlePSI", "Limit": 850}
+                            {"Type": "HighLimit", "Channel": "OxPSI", "Limit": 850}
                         ]
                     },
                     {
@@ -32,7 +33,7 @@
                         "Target": "Heat",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "LowLimit", "Channel": "BottlePSI", "Limit": 750}
+                            {"Type": "LowLimit", "Channel": "OxPSI", "Limit": 750}
                         ]
                     }
                 ]
@@ -44,7 +45,7 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "BottleCool", "Value": true}
+                            {"Type": "Digital", "Channel": "OxCool", "Value": true}
                         ]
                     }
                 ],
@@ -54,7 +55,7 @@
                         "Target": "Hold",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "LowLimit", "Channel": "BottlePSI", "Limit": 800}
+                            {"Type": "LowLimit", "Channel": "OxPSI", "Limit": 800}
                         ]
                     }
                 ]
@@ -66,7 +67,7 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "BottleHeat", "Value": true}
+                            {"Type": "Digital", "Channel": "OxHeat", "Value": true}
                         ]
                     }
                 ],
@@ -76,7 +77,7 @@
                         "Target": "Hold",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "HighLimit", "Channel": "BottlePSI", "Limit": 800}
+                            {"Type": "HighLimit", "Channel": "OxPSI", "Limit": 800}
                         ]
                     }
                 ]
@@ -87,8 +88,8 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "BottleCool", "Value": false},
-                            {"Type": "Digital", "Channel": "BottleHeat", "Value": false},
+                            {"Type": "Digital", "Channel": "OxCool", "Value": false},
+                            {"Type": "Digital", "Channel": "OxHeat", "Value": false},
                             {"Type": "Stop"}
                         ]
                     }

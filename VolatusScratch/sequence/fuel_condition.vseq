@@ -1,0 +1,100 @@
+{
+    "Sequence": {
+        "Name": "Fuel Condition",
+        "Version": "1",
+        "Comment": "hControl state machine for bottle heating/cooling.",
+        "Period": 2,
+        "Entry": "Hold",
+        "Abort": "Stop",
+        "States": {
+            "Hold": {
+                "Comment": "Fuel in range, controls off.",
+                "Color": "#006304",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "FuelCool", "Value": false},
+                            {"Type": "Digital", "Channel": "FuelHeat", "Value": false}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Cool",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "HighLimit", "Channel": "FuelPSI", "Limit": 850}
+                        ]
+                    },
+                    {
+                        "Type": "State",
+                        "Target": "Heat",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "LowLimit", "Channel": "FuelPSI", "Limit": 750}
+                        ]
+                    }
+                ]
+            },
+            "Cool": {
+                "Comment": "Cooling, wait for pressure to drop.",
+                "Color": "#033c8a",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "FuelCool", "Value": true}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Hold",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "LowLimit", "Channel": "FuelPSI", "Limit": 800}
+                        ]
+                    }
+                ]
+            },
+            "Heat": {
+                "Comment": "Heating, wait for pressure to rise.",
+                "Color": "#906b00",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "FuelHeat", "Value": true}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Hold",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "HighLimit", "Channel": "FuelPSI", "Limit": 800}
+                        ]
+                    }
+                ]
+            },
+            "Stop": {
+                "Comment": "Stopping, ensure controls off.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "FuelCool", "Value": false},
+                            {"Type": "Digital", "Channel": "FuelHeat", "Value": false},
+                            {"Type": "Stop"}
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
