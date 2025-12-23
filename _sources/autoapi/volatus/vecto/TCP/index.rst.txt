@@ -1,0 +1,85 @@
+volatus.vecto.TCP
+=================
+
+.. py:module:: volatus.vecto.TCP
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   volatus.vecto.TCP.TCPMessaging
+
+
+Module Contents
+---------------
+
+.. py:class:: TCPMessaging(address: str, port: int, server: bool, vCfg: volatus.config.VolatusConfig, nodeCfg: volatus.config.NodeConfig)
+
+   .. py:attribute:: address
+
+
+   .. py:attribute:: port
+
+
+   .. py:attribute:: server
+
+
+   .. py:attribute:: state
+      :type:  str
+      :value: 'UNKNOWN'
+
+
+
+   .. py:attribute:: vCfg
+
+
+   .. py:attribute:: nodeCfg
+
+
+   .. py:attribute:: socket
+
+
+   .. py:attribute:: connected
+      :value: False
+
+
+
+   .. py:attribute:: id
+
+
+   .. py:method:: open()
+
+
+   .. py:method:: close()
+
+
+   .. py:method:: shutdown()
+
+
+   .. py:method:: sendMsg(target: str | int, msgType: str, payload: bytes, sequence: int, task: str = '') -> int
+
+      Enqueues a message to be sent and returns the approximate size of the message queue.
+
+      Messages that are sent while not connected are discarded.
+
+      :param target: The ID or name of the target to send the message to.
+      :type target: str | int
+      :param msgType: The message ID that identifies the data type and purpose of the message being sent.
+      :type msgType: str
+      :param payload: A serialized message to be embedded within the TCP message that gets sent. Typically will be a serialized protobuf message.
+      :type payload: bytes
+      :param sequence: The count of payloads that have been sent from this application.
+      :type sequence: int
+      :param task: The specific task to send the message to in the target. If not specified will dispatch based on message ID, defaults to ''
+      :type task: str, optional
+      :raises ValueError: Raised when an invalid target is specified.
+      :return: The approximate queue size of messges to be sent.
+      :rtype: int
+
+
+
+   .. py:method:: isConnected() -> bool
+
+
