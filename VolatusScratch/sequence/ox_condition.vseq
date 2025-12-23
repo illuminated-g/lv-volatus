@@ -3,7 +3,7 @@
         "Name": "Ox Condition",
         "Version": "1",
         "Comment": "hControl state machine for bottle heating/cooling.",
-        "Period": 5,
+        "Period": 10,
         "Entry": "Hold",
         "Abort": "Stop",
         "States": {

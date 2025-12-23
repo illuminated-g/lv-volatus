@@ -35,6 +35,7 @@
 		<Item Name="Variables.lvclass" Type="LVClass" URL="../Variables/Variables.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
+		<Item Name="Command.ctl" Type="VI" URL="../Command.ctl"/>
 		<Item Name="Condition Operator.ctl" Type="VI" URL="../Condition Operator.ctl"/>
 		<Item Name="Condition Type.ctl" Type="VI" URL="../Condition Type.ctl"/>
 		<Item Name="Iteration Result.ctl" Type="VI" URL="../Iteration Result.ctl"/>
