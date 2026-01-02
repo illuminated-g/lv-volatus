@@ -29,9 +29,6 @@
 			<Item Name="JSON.lvlib" Type="Library" URL="../../lv-web-crypto/lv-json/JSON/JSON.lvlib"/>
 			<Item Name="LV-Proto.lvlib" Type="Library" URL="../../lv-protoc/LV-Proto/LV-Proto.lvlib"/>
 			<Item Name="Promises.lvlib" Type="Library" URL="../../lv-promises/Promises/Promises.lvlib"/>
-			<Item Name="Stream-TCP.lvlib" Type="Library" URL="../../lv-stream-tcp/Stream-TCP/Stream-TCP.lvlib"/>
-			<Item Name="Stream-Websocket.lvlib" Type="Library" URL="../../lv-stream-websocket/Stream-Websocket/Stream-Websocket.lvlib"/>
-			<Item Name="Stream.lvlib" Type="Library" URL="../../lv-stream/stream/Stream.lvlib"/>
 			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
 			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
@@ -43,6 +40,7 @@
 			<Item Name="ExecAnchor.lvclass" Type="LVClass" URL="../../lv-exec-anchor/ExecAnchor/ExecAnchor.lvclass"/>
 			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
 			<Item Name="OOPanel.lvlib" Type="Library" URL="../../lv-oopanel/OOPanel/OOPanel.lvlib"/>
+			<Item Name="URI.lvlib" Type="Library" URL="../../lv-uri/URI/URI.lvlib"/>
 		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -804,9 +802,6 @@
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
 			<Item Name="LV Config Read Pathlist.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Pathlist.vi"/>
 			<Item Name="LV Config Read Color.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read Color.vi"/>
-			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
