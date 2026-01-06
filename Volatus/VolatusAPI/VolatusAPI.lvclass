@@ -224,13 +224,13 @@
 				<Property Name="NI.ClassItem.State" Type="Int">1117782544</Property>
 			</Item>
 			<Item Name="Lookup Channel DBL.vi" Type="VI" URL="../Lookup Channel DBL.vi">
-				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'%!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$:!=!!?!!!B#V:F9X2P,GRW&lt;'FC%U.I97ZO:7QA2%*-,GRW9WRB=X-!#U.I97ZO:7QA2%*-!$R!=!!?!!!C$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)36G^M982V=U&amp;133ZM&gt;G.M98.T!!!/6G^M982V=U&amp;133"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$E!Q`````Q2/97VF!!![1(!!(A!!)AV7&lt;WRB&gt;(6T,GRW&lt;'FC%F:P&lt;'&amp;U&gt;8."5%EO&lt;(:D&lt;'&amp;T=Q!!$6:P&lt;'&amp;U&gt;8."5%EA;7Y!91$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!)!!E$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!A!!!!!!!!!%!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!#A!!!!!</Property>
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'%!!!!#Q!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$:!=!!?!!!B#V:F9X2P,GRW&lt;'FC%U.I97ZO:7QA2%*-,GRW9WRB=X-!#U.I97ZO:7QA2%*-!$R!=!!?!!!C$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)36G^M982V=U&amp;133ZM&gt;G.M98.T!!!/6G^M982V=U&amp;133"P&gt;81!!#"!5!!$!!!!!1!#%W6S=G^S)'FO)#BO&lt;S"F=H*P=CE!$E!Q`````Q2/97VF!!![1(!!(A!!)AV7&lt;WRB&gt;(6T,GRW&lt;'FC%F:P&lt;'&amp;U&gt;8."5%EO&lt;(:D&lt;'&amp;T=Q!!$6:P&lt;'&amp;U&gt;8."5%EA;7Y!91$Q!!Q!!Q!%!!5!"A!%!!1!"!!%!!=!"!!)!!E$!!"Y!!!.#!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!I!!!!!!!!#%!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!#A!!!!!</Property>
 				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
 				<Property Name="NI.ClassItem.Flags" Type="Int">16777216</Property>
 				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 				<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-				<Property Name="NI.ClassItem.State" Type="Int">1342713872</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">1117782032</Property>
 			</Item>
 			<Item Name="Lookup Channel Info.vi" Type="VI" URL="../Lookup Channel Info.vi">
 				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)$!!!!%1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!#E!B"5RP9W&amp;M!!Z!-0````]%4G&amp;N:1!!$E!Q`````Q6(=G^V=!!51$$`````#U^X&lt;GFO:S"/&lt;W2F!"2!-0````],4X&gt;O;7ZH)&amp;2B=WM!%E!Q`````QB3:8.P&gt;8*D:1!!41$R!!!!!!!!!!)26G6D&gt;'^$&lt;WZG;7=O&lt;(:M;7)11WBB&lt;GZF&lt;#"*&lt;G:P,G.U&lt;!!C1&amp;!!"1!&amp;!!9!"Q!)!!E-1WBB&lt;GZF&lt;#"*&lt;G:P!!!]1(!!(A!!)AV7&lt;WRB&gt;(6T,GRW&lt;'FC%F:P&lt;'&amp;U&gt;8."5%EO&lt;(:D&lt;'&amp;T=Q!!$F:P&lt;'&amp;U&gt;8."5%EA&lt;X6U!!!%!!!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!71$$`````$%.I97ZO:7QA4G&amp;N:1!!/E"Q!"Y!!#).6G^M982V=SZM&gt;GRJ9B*7&lt;WRB&gt;(6T16"*,GRW9WRB=X-!!!V7&lt;WRB&gt;(6T16"*)'FO!'%!]!!-!!-!"!!+!!M!$!!-!!Q!$!!.!!Q!$A!0!Q!!?!!!$1A!!!E!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!"!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!"!!!!!!</Property>

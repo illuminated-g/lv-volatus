@@ -49,8 +49,8 @@
 				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
+				<Item Name="GIT-API-for-LabVIEW.lvlib" Type="Library" URL="/&lt;vilib&gt;/Hampel Software Engineering/Git API/GIT-API-for-LabVIEW.lvlib"/>
 				<Item Name="High Resolution Relative Seconds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/High Resolution Relative Seconds.vi"/>
-				<Item Name="Is Path and Not Empty.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Is Path and Not Empty.vi"/>
 				<Item Name="JDP Timestamp.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/Timestamp/JDP Timestamp.lvlib"/>
 				<Item Name="JDP Utility.lvlib" Type="Library" URL="/&lt;vilib&gt;/JDP Science/JDP Science Common Utilities/JDP Utility.lvlib"/>
 				<Item Name="JSONtext LVClass Serializer.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/JDP Science/JSONtext/LVClass Serializer/JSONtext LVClass Serializer.lvclass"/>
@@ -65,16 +65,12 @@
 				<Item Name="LVMapReplaceAction.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVMapReplaceAction.ctl"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
-				<Item Name="NI_Bit Manipulation.lvlib" Type="Library" URL="/&lt;vilib&gt;/Bit Manipulation/NI_Bit Manipulation.lvlib"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
 				<Item Name="NI_Data Type.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/Data Type/NI_Data Type.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
-				<Item Name="NI_Keccak.lvlib" Type="Library" URL="/&lt;vilib&gt;/security/Message Digest/Keccak/NI_Keccak.lvlib"/>
 				<Item Name="NI_LVConfig.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/config.llb/NI_LVConfig.lvlib"/>
-				<Item Name="NI_Message Digest API.lvlib" Type="Library" URL="/&lt;vilib&gt;/security/Message Digest/API/NI_Message Digest API.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
-				<Item Name="NI_SHA-3.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/security/Message Digest/SHA-3/NI_SHA-3.lvclass"/>
-				<Item Name="NI_SHA-256.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/security/Message Digest/SHA-2/SHA-256/NI_SHA-256.lvclass"/>
-				<Item Name="NI_SHA-512.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/security/Message Digest/SHA-2/SHA-512/NI_SHA-512.lvclass"/>
+				<Item Name="NI_PtbyPt.lvlib" Type="Library" URL="/&lt;vilib&gt;/ptbypt/NI_PtbyPt.lvlib"/>
 				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
 				<Item Name="Path To Command Line String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Path To Command Line String.vi"/>
@@ -85,7 +81,6 @@
 				<Item Name="Search Unsorted 1D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Search Unsorted 1D Array.vim"/>
 				<Item Name="Set Bold Text.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set Bold Text.vi"/>
 				<Item Name="Set String Value.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Set String Value.vi"/>
-				<Item Name="Show in File System.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Show in File System.vi"/>
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="Sort 1D Array Core.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Helpers/Sort 1D Array Core.vim"/>
 				<Item Name="Sort 1D Array.vim" Type="VI" URL="/&lt;vilib&gt;/Array/Sort 1D Array.vim"/>
@@ -109,6 +104,7 @@
 			</Item>
 			<Item Name="AckNackResult.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/AckNackResult/AckNackResult.lvlib"/>
 			<Item Name="Base64.lvlib" Type="Library" URL="../../lv-web-crypto/lv-base64/Base64.lvlib"/>
+			<Item Name="BoolData.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/BoolData/BoolData.lvlib"/>
 			<Item Name="Builder Core.lvlib" Type="Library" URL="../../lv-builder/Builder Core/Builder Core.lvlib"/>
 			<Item Name="CDM-Config.lvlib" Type="Library" URL="../../lv-cdm/CDM-Config/CDM-Config.lvlib"/>
 			<Item Name="CmdAnalog.lvlib" Type="Library" URL="../messages/CmdAnalog/CmdAnalog.lvlib"/>
@@ -124,11 +120,13 @@
 			<Item Name="Event.lvlib" Type="Library" URL="../messages/Event/Event.lvlib"/>
 			<Item Name="EventLevel.lvlib" Type="Library" URL="../messages/EventLevel/EventLevel.lvlib"/>
 			<Item Name="Events.lvlib" Type="Library" URL="../messages/Events/Events.lvlib"/>
+			<Item Name="ExecAnchor.lvclass" Type="LVClass" URL="../../lv-exec-anchor/ExecAnchor/ExecAnchor.lvclass"/>
 			<Item Name="GroupData.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/GroupData/GroupData.lvlib"/>
 			<Item Name="HTTP Server.lvlib" Type="Library" URL="../../lv-http-server/HTTP Server/HTTP Server.lvlib"/>
 			<Item Name="HTTP Utils.lvlib" Type="Library" URL="../../lv-http-util/HTTP Utils/HTTP Utils.lvlib"/>
 			<Item Name="JSON.lvlib" Type="Library" URL="../../lv-web-crypto/lv-json/JSON/JSON.lvlib"/>
 			<Item Name="LV-Proto.lvlib" Type="Library" URL="../../lv-protoc/LV-Proto/LV-Proto.lvlib"/>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -138,21 +136,23 @@
 			<Item Name="StartLog.lvlib" Type="Library" URL="../messages/StartLog/StartLog.lvlib"/>
 			<Item Name="StartSeq.lvlib" Type="Library" URL="../messages/StartSeq/StartSeq.lvlib"/>
 			<Item Name="StopLog.lvlib" Type="Library" URL="../messages/StopLog/StopLog.lvlib"/>
-			<Item Name="Stream-TCP.lvlib" Type="Library" URL="../../lv-stream-tcp/Stream-TCP/Stream-TCP.lvlib"/>
-			<Item Name="Stream-Websocket.lvlib" Type="Library" URL="../../lv-stream-websocket/Stream-Websocket/Stream-Websocket.lvlib"/>
-			<Item Name="Stream.lvlib" Type="Library" URL="../../lv-stream/stream/Stream.lvlib"/>
 			<Item Name="StringData.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/StringData/StringData.lvlib"/>
 			<Item Name="SyncTicks.lvlib" Type="Library" URL="../messages/SyncTicks/SyncTicks.lvlib"/>
 			<Item Name="TcpAckNack.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpAckNack/TcpAckNack.lvlib"/>
 			<Item Name="TcpClientHello.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpClientHello/TcpClientHello.lvlib"/>
+			<Item Name="TcpClientInfo.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpClientInfo/TcpClientInfo.lvlib"/>
+			<Item Name="TcpClientList.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpClientList/TcpClientList.lvlib"/>
 			<Item Name="TcpPayload.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpPayload/TcpPayload.lvlib"/>
 			<Item Name="TcpReply.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpReply/TcpReply.lvlib"/>
 			<Item Name="TcpServerHello.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/TcpServerHello/TcpServerHello.lvlib"/>
+			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
 			<Item Name="Type to Config.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Config-JSON/Type to Config.vim"/>
 			<Item Name="UdpPayload.lvlib" Type="Library" URL="../../lv-vecto/Vecto/proto/UdpPayload/UdpPayload.lvlib"/>
+			<Item Name="URI.lvlib" Type="Library" URL="../../lv-uri/URI/URI.lvlib"/>
 			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
 			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
 			<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
+			<Item Name="VolatusErrorUtilities.lvlib" Type="Library" URL="../VolatusErrorUtilities/VolatusErrorUtilities.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
