@@ -41,6 +41,7 @@
 			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
 			<Item Name="OOPanel.lvlib" Type="Library" URL="../../lv-oopanel/OOPanel/OOPanel.lvlib"/>
 			<Item Name="URI.lvlib" Type="Library" URL="../../lv-uri/URI/URI.lvlib"/>
+			<Item Name="AutoComplete.lvlib" Type="Library" URL="../../lv-autocomplete/AutoComplete/AutoComplete.lvlib"/>
 		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -73,6 +74,8 @@
 		<Item Name="VolatusControl.lvlib" Type="Library" URL="../VolatusControl/VolatusControl.lvlib"/>
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
 		<Item Name="VolatusTools.lvlib" Type="Library" URL="../Volatus/VolatusTools/VolatusTools.lvlib"/>
+		<Item Name="VolatusGUIEditor.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIEditor/VolatusGUIEditor.lvlib"/>
+		<Item Name="Editor.rtm" Type="Document" URL="../../volatus-gui-controls/VolatusGUIEditor/Editor.rtm"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
@@ -805,6 +808,7 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Init Events.vi" Type="VI" URL="../../volatus-gui-controls/VolatusGUIControls/BooleanControlEditorPanel/Init Events.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">

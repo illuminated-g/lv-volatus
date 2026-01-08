@@ -42,8 +42,9 @@
 		<Item Name="Debug GUI Launcher.lvclass" Type="LVClass" URL="../Debug GUI Launcher/Debug GUI Launcher.lvclass"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
+		<Item Name="Extract Element JSON.vi" Type="VI" URL="../Extract Element JSON.vi"/>
+		<Item Name="Lookup Element Type.vi" Type="VI" URL="../Lookup Element Type.vi"/>
 		<Item Name="Lookup Group.vi" Type="VI" URL="../Lookup Group.vi"/>
-		<Item Name="Lookup Indicator Type.vi" Type="VI" URL="../Lookup Indicator Type.vi"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Event Viewer Identity.lvclass" Type="LVClass" URL="../Event Viewer Identity/Event Viewer Identity.lvclass"/>
