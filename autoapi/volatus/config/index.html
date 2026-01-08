@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>volatus.config &#8212; Volatus  documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/classic.css?v=67a6116b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pydoctheme.css?v=5ff89526" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../../../_static/pygments_dark.css?v=5349f25f" />
+    
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="volatus.discovery" href="../discovery/index.html" />
+    <link rel="prev" title="volatus" href="../index.html" /><link rel="stylesheet" href="../../../_static/pydoctheme_dark.css" media="(prefers-color-scheme: dark)" id="pydoctheme_dark_css">
+    <link rel="shortcut icon" type="image/png" href="../../../_static/py.svg">
+            <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../../../_static/menu.js"></script>
+            <script type="text/javascript" src="../../../_static/search-focus.js"></script>
+            <script type="text/javascript" src="../../../_static/themetoggle.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu">
+    <nav class="nav-content" role="navigation">
+        <label for="menuToggler" class="toggler__label">
+            <span></span>
+        </label>
+        <span class="nav-items-wrapper">
+            <a href="https://www.python.org/" class="nav-logo">
+                <img src="../../../_static/py.svg" alt="Python logo">
+            </a>
+            <span class="version_switcher_placeholder"></span>
+            <form role="search" class="search" action="../../../search.html" method="get">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                    <path fill-rule="nonzero" fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                </svg>
+                <input placeholder="Quick search" aria-label="Quick search" type="search" name="q">
+                <input type="submit" value="Go">
+            </form>
+        </span>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+            
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label>
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.config</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.config.VL_Type"><code class="docutils literal notranslate"><span class="pre">VL_Type</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VL_Type.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">VL_Type.UNKNOWN</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_System"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_System</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Cluster"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Cluster</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Node"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Node</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Task"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Task</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Group"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Group</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Channel"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Channel</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Task_List"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Task_List</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Scaling"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Scaling</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Sensor"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Sensor</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Sensor_List"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Sensor_List</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Scale"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Scale</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.fromStr"><code class="docutils literal notranslate"><span class="pre">VL_Type.fromStr()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta"><code class="docutils literal notranslate"><span class="pre">VL_Meta</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">VL_Meta.UNKNOWN</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Type"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Task_Type"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Task_Type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Group_Type"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Group_Type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Config_Version"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Config_Version</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig"><code class="docutils literal notranslate"><span class="pre">EndpointConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig.address"><code class="docutils literal notranslate"><span class="pre">EndpointConfig.address</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig.port"><code class="docutils literal notranslate"><span class="pre">EndpointConfig.port</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig.tuple"><code class="docutils literal notranslate"><span class="pre">EndpointConfig.tuple()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig"><code class="docutils literal notranslate"><span class="pre">ChannelConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.name"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.defaultValue"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.defaultValue</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.resource"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.resource</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.groupName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.groupName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.taskName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.taskName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.nodeName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.clusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.setClusterName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig"><code class="docutils literal notranslate"><span class="pre">GroupConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.name"><code class="docutils literal notranslate"><span class="pre">GroupConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.publishConfig"><code class="docutils literal notranslate"><span class="pre">GroupConfig.publishConfig</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.channels"><code class="docutils literal notranslate"><span class="pre">GroupConfig.channels</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.taskName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.taskName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.nodeName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.isPublished"><code class="docutils literal notranslate"><span class="pre">GroupConfig.isPublished()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.addChannel"><code class="docutils literal notranslate"><span class="pre">GroupConfig.addChannel()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.setClusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.lookupChannelByName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.lookupChannelByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig"><code class="docutils literal notranslate"><span class="pre">TaskConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.name"><code class="docutils literal notranslate"><span class="pre">TaskConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.type"><code class="docutils literal notranslate"><span class="pre">TaskConfig.type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.groups"><code class="docutils literal notranslate"><span class="pre">TaskConfig.groups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.nodeName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.setClusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.addGroup"><code class="docutils literal notranslate"><span class="pre">TaskConfig.addGroup()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.lookupGroupByName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.lookupGroupByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.TCPConfig"><code class="docutils literal notranslate"><span class="pre">TCPConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.TCPConfig.address"><code class="docutils literal notranslate"><span class="pre">TCPConfig.address</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TCPConfig.port"><code class="docutils literal notranslate"><span class="pre">TCPConfig.port</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TCPConfig.server"><code class="docutils literal notranslate"><span class="pre">TCPConfig.server</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.tcp"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.tcp</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.httpPort"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.httpPort</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.announceInterval"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.announceInterval</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.bindAddress"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.bindAddress</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig"><code class="docutils literal notranslate"><span class="pre">NodeConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.name"><code class="docutils literal notranslate"><span class="pre">NodeConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.id"><code class="docutils literal notranslate"><span class="pre">NodeConfig.id</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.logFolder"><code class="docutils literal notranslate"><span class="pre">NodeConfig.logFolder</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.network"><code class="docutils literal notranslate"><span class="pre">NodeConfig.network</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.targetGroups"><code class="docutils literal notranslate"><span class="pre">NodeConfig.targetGroups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.tasks"><code class="docutils literal notranslate"><span class="pre">NodeConfig.tasks</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">NodeConfig.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.tcpConfig"><code class="docutils literal notranslate"><span class="pre">NodeConfig.tcpConfig()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.addTask"><code class="docutils literal notranslate"><span class="pre">NodeConfig.addTask()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">NodeConfig.setClusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.lookupTaskByName"><code class="docutils literal notranslate"><span class="pre">NodeConfig.lookupTaskByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig"><code class="docutils literal notranslate"><span class="pre">ClusterConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.name"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.discovery"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.discovery</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.targetGroups"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.targetGroups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.nodes"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.nodes</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.lookupTargetGroupId"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.lookupTargetGroupId()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.lookupNodeByName"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.lookupNodeByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.addNode"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.addNode()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig"><code class="docutils literal notranslate"><span class="pre">SystemConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.name"><code class="docutils literal notranslate"><span class="pre">SystemConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.clusters"><code class="docutils literal notranslate"><span class="pre">SystemConfig.clusters</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.lookupClusterByName"><code class="docutils literal notranslate"><span class="pre">SystemConfig.lookupClusterByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.addCluster"><code class="docutils literal notranslate"><span class="pre">SystemConfig.addCluster()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VersionBump"><code class="docutils literal notranslate"><span class="pre">VersionBump</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VersionBump.NONE"><code class="docutils literal notranslate"><span class="pre">VersionBump.NONE</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VersionBump.FIX"><code class="docutils literal notranslate"><span class="pre">VersionBump.FIX</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VersionBump.MINOR"><code class="docutils literal notranslate"><span class="pre">VersionBump.MINOR</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VersionBump.MAJOR"><code class="docutils literal notranslate"><span class="pre">VersionBump.MAJOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion"><code class="docutils literal notranslate"><span class="pre">VolatusVersion</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.major"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.major</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.minor"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.minor</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.fix"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.fix</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.build"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.build</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.prerelease"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.prerelease</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.fromString"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.fromString()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.bump"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.bump()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ClusterLookup"><code class="docutils literal notranslate"><span class="pre">ClusterLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ClusterLookup.clusterName"><code class="docutils literal notranslate"><span class="pre">ClusterLookup.clusterName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.NodeLookup"><code class="docutils literal notranslate"><span class="pre">NodeLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.NodeLookup.nodeName"><code class="docutils literal notranslate"><span class="pre">NodeLookup.nodeName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.TaskLookup"><code class="docutils literal notranslate"><span class="pre">TaskLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.TaskLookup.taskName"><code class="docutils literal notranslate"><span class="pre">TaskLookup.taskName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.GroupLookup"><code class="docutils literal notranslate"><span class="pre">GroupLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.GroupLookup.groupName"><code class="docutils literal notranslate"><span class="pre">GroupLookup.groupName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ChannelLookup"><code class="docutils literal notranslate"><span class="pre">ChannelLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ChannelLookup.channelName"><code class="docutils literal notranslate"><span class="pre">ChannelLookup.channelName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig"><code class="docutils literal notranslate"><span class="pre">VolatusConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.version"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.version</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.hash"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.hash</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.system"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.system</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.groups"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.groups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.channels"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.channels</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.refreshLookups"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.refreshLookups()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupCluster"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupCluster()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupClusterByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupClusterByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupNode"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupNode()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupNodeByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupNodeByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupTask"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupTask()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupTaskByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupTaskByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupGroup"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupGroup()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupGroupByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupGroupByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupChannel"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupChannel()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupChannelByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupChannelByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.Cfg"><code class="docutils literal notranslate"><span class="pre">Cfg</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.Cfg.normalizePath"><code class="docutils literal notranslate"><span class="pre">Cfg.normalizePath()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.childrenOf"><code class="docutils literal notranslate"><span class="pre">Cfg.childrenOf()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.readMetaValue"><code class="docutils literal notranslate"><span class="pre">Cfg.readMetaValue()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.writeMetaValue"><code class="docutils literal notranslate"><span class="pre">Cfg.writeMetaValue()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlReadMeta"><code class="docutils literal notranslate"><span class="pre">Cfg.vlReadMeta()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlWriteMeta"><code class="docutils literal notranslate"><span class="pre">Cfg.vlWriteMeta()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlSetType"><code class="docutils literal notranslate"><span class="pre">Cfg.vlSetType()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlTypeOf"><code class="docutils literal notranslate"><span class="pre">Cfg.vlTypeOf()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlFindType"><code class="docutils literal notranslate"><span class="pre">Cfg.vlFindType()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader"><code class="docutils literal notranslate"><span class="pre">ConfigLoader</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.load"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.load()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.save"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.save()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadGroup"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadGroup()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadTask"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadTask()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadNode"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadNode()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadCluster"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadCluster()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadSystem"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadSystem()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">volatus</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../discovery/index.html"
+                          title="next chapter">volatus.discovery</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/volatus/config/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../discovery/index.html" title="volatus.discovery"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="volatus"
+             accesskey="P">previous</a> |</li>
+          <li><img src="../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">volatus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.config</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-volatus.config">
+<span id="volatus-config"></span><h1>volatus.config<a class="headerlink" href="#module-volatus.config" title="Link to this heading">¶</a></h1>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.VL_Type" title="volatus.config.VL_Type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VL_Type</span></code></a></p></td>
+<td><p>Create a collection of name/value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.VL_Meta" title="volatus.config.VL_Meta"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VL_Meta</span></code></a></p></td>
+<td><p>Create a collection of name/value pairs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.EndpointConfig" title="volatus.config.EndpointConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EndpointConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.TCPConfig" title="volatus.config.TCPConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TCPConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.NodeNetworkConfig" title="volatus.config.NodeNetworkConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeNetworkConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClusterConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.SystemConfig" title="volatus.config.SystemConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SystemConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.VersionBump" title="volatus.config.VersionBump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VersionBump</span></code></a></p></td>
+<td><p>Create a collection of name/value pairs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.VolatusVersion" title="volatus.config.VolatusVersion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VolatusVersion</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.ClusterLookup" title="volatus.config.ClusterLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClusterLookup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.NodeLookup" title="volatus.config.NodeLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeLookup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.TaskLookup" title="volatus.config.TaskLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskLookup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.GroupLookup" title="volatus.config.GroupLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupLookup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.ChannelLookup" title="volatus.config.ChannelLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ChannelLookup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.VolatusConfig" title="volatus.config.VolatusConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VolatusConfig</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#volatus.config.Cfg" title="volatus.config.Cfg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Cfg</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#volatus.config.ConfigLoader" title="volatus.config.ConfigLoader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigLoader</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.VL_Type">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">VL_Type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VL_Type" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Access them by:</p>
+<ul>
+<li><p>attribute access:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>value lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>name lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre></div>
+</div>
+<p>Methods can be added to enumerations, and members can have their own
+attributes – see the documentation for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.config.VL_Type.UNKNOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_System">
+<span class="sig-name descname"><span class="pre">VL_System</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_System" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Cluster">
+<span class="sig-name descname"><span class="pre">VL_Cluster</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Cluster" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Node">
+<span class="sig-name descname"><span class="pre">VL_Node</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Node" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Task">
+<span class="sig-name descname"><span class="pre">VL_Task</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Task" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Group">
+<span class="sig-name descname"><span class="pre">VL_Group</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Group" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Channel">
+<span class="sig-name descname"><span class="pre">VL_Channel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Channel" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Task_List">
+<span class="sig-name descname"><span class="pre">VL_Task_List</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Task_List" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Scaling">
+<span class="sig-name descname"><span class="pre">VL_Scaling</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Scaling" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Sensor">
+<span class="sig-name descname"><span class="pre">VL_Sensor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Sensor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Sensor_List">
+<span class="sig-name descname"><span class="pre">VL_Sensor_List</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Sensor_List" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.VL_Scale">
+<span class="sig-name descname"><span class="pre">VL_Scale</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">11</span></em><a class="headerlink" href="#volatus.config.VL_Type.VL_Scale" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VL_Type.fromStr">
+<span class="sig-name descname"><span class="pre">fromStr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.VL_Type" title="volatus.config.VL_Type"><span class="pre">VL_Type</span></a></span></span><a class="headerlink" href="#volatus.config.VL_Type.fromStr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.VL_Meta">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">VL_Meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VL_Meta" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Access them by:</p>
+<ul>
+<li><p>attribute access:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>value lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>name lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre></div>
+</div>
+<p>Methods can be added to enumerations, and members can have their own
+attributes – see the documentation for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Meta.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.config.VL_Meta.UNKNOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Meta.VL_Type">
+<span class="sig-name descname"><span class="pre">VL_Type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#volatus.config.VL_Meta.VL_Type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Meta.VL_Task_Type">
+<span class="sig-name descname"><span class="pre">VL_Task_Type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#volatus.config.VL_Meta.VL_Task_Type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Meta.VL_Group_Type">
+<span class="sig-name descname"><span class="pre">VL_Group_Type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#volatus.config.VL_Meta.VL_Group_Type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VL_Meta.VL_Config_Version">
+<span class="sig-name descname"><span class="pre">VL_Config_Version</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#volatus.config.VL_Meta.VL_Config_Version" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.EndpointConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">EndpointConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.EndpointConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.EndpointConfig.address">
+<span class="sig-name descname"><span class="pre">address</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#volatus.config.EndpointConfig.address" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.EndpointConfig.port">
+<span class="sig-name descname"><span class="pre">port</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#volatus.config.EndpointConfig.port" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.EndpointConfig.tuple">
+<span class="sig-name descname"><span class="pre">tuple</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.config.EndpointConfig.tuple" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">ChannelConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultValue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ChannelConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.config.ChannelConfig.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.defaultValue">
+<span class="sig-name descname"><span class="pre">defaultValue</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.ChannelConfig.defaultValue" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.resource">
+<span class="sig-name descname"><span class="pre">resource</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#volatus.config.ChannelConfig.resource" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.groupName">
+<span class="sig-name descname"><span class="pre">groupName</span></span><a class="headerlink" href="#volatus.config.ChannelConfig.groupName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.taskName">
+<span class="sig-name descname"><span class="pre">taskName</span></span><a class="headerlink" href="#volatus.config.ChannelConfig.taskName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.nodeName">
+<span class="sig-name descname"><span class="pre">nodeName</span></span><a class="headerlink" href="#volatus.config.ChannelConfig.nodeName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.clusterName">
+<span class="sig-name descname"><span class="pre">clusterName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#volatus.config.ChannelConfig.clusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ChannelConfig.setClusterName">
+<span class="sig-name descname"><span class="pre">setClusterName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ChannelConfig.setClusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">GroupConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">ChannelConfig</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publishConfig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.EndpointConfig" title="volatus.config.EndpointConfig"><span class="pre">EndpointConfig</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.GroupConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.config.GroupConfig.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.publishConfig">
+<span class="sig-name descname"><span class="pre">publishConfig</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.GroupConfig.publishConfig" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.channels">
+<span class="sig-name descname"><span class="pre">channels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">ChannelConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.GroupConfig.channels" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.taskName">
+<span class="sig-name descname"><span class="pre">taskName</span></span><a class="headerlink" href="#volatus.config.GroupConfig.taskName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.nodeName">
+<span class="sig-name descname"><span class="pre">nodeName</span></span><a class="headerlink" href="#volatus.config.GroupConfig.nodeName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.clusterName">
+<span class="sig-name descname"><span class="pre">clusterName</span></span><a class="headerlink" href="#volatus.config.GroupConfig.clusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.isPublished">
+<span class="sig-name descname"><span class="pre">isPublished</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#volatus.config.GroupConfig.isPublished" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.addChannel">
+<span class="sig-name descname"><span class="pre">addChannel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">ChannelConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.GroupConfig.addChannel" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.setClusterName">
+<span class="sig-name descname"><span class="pre">setClusterName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.GroupConfig.setClusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.GroupConfig.lookupChannelByName">
+<span class="sig-name descname"><span class="pre">lookupChannelByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channelName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">ChannelConfig</span></a></span></span><a class="headerlink" href="#volatus.config.GroupConfig.lookupChannelByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">TaskConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">GroupConfig</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.TaskConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.config.TaskConfig.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#volatus.config.TaskConfig.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.groups">
+<span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">GroupConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.TaskConfig.groups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.nodeName">
+<span class="sig-name descname"><span class="pre">nodeName</span></span><a class="headerlink" href="#volatus.config.TaskConfig.nodeName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.clusterName">
+<span class="sig-name descname"><span class="pre">clusterName</span></span><a class="headerlink" href="#volatus.config.TaskConfig.clusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.setClusterName">
+<span class="sig-name descname"><span class="pre">setClusterName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.TaskConfig.setClusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.addGroup">
+<span class="sig-name descname"><span class="pre">addGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">GroupConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.TaskConfig.addGroup" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.TaskConfig.lookupGroupByName">
+<span class="sig-name descname"><span class="pre">lookupGroupByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">GroupConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.TaskConfig.lookupGroupByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.TCPConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">TCPConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.TCPConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TCPConfig.address">
+<span class="sig-name descname"><span class="pre">address</span></span><a class="headerlink" href="#volatus.config.TCPConfig.address" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TCPConfig.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#volatus.config.TCPConfig.port" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TCPConfig.server">
+<span class="sig-name descname"><span class="pre">server</span></span><a class="headerlink" href="#volatus.config.TCPConfig.server" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.NodeNetworkConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">NodeNetworkConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tcpConfig</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.TCPConfig" title="volatus.config.TCPConfig"><span class="pre">TCPConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">httpPort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">announceInterval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bindAddress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'0.0.0.0'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.NodeNetworkConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeNetworkConfig.tcp">
+<span class="sig-name descname"><span class="pre">tcp</span></span><a class="headerlink" href="#volatus.config.NodeNetworkConfig.tcp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeNetworkConfig.httpPort">
+<span class="sig-name descname"><span class="pre">httpPort</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.NodeNetworkConfig.httpPort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeNetworkConfig.announceInterval">
+<span class="sig-name descname"><span class="pre">announceInterval</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.NodeNetworkConfig.announceInterval" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeNetworkConfig.bindAddress">
+<span class="sig-name descname"><span class="pre">bindAddress</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'0.0.0.0'</span></em><a class="headerlink" href="#volatus.config.NodeNetworkConfig.bindAddress" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">NodeConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eventLogFolder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.NodeNetworkConfig" title="volatus.config.NodeNetworkConfig"><span class="pre">NodeNetworkConfig</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetGroups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tasks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><span class="pre">TaskConfig</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.NodeConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.config.NodeConfig.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#volatus.config.NodeConfig.id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.logFolder">
+<span class="sig-name descname"><span class="pre">logFolder</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.NodeConfig.logFolder" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.network">
+<span class="sig-name descname"><span class="pre">network</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.NodeConfig.network" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.targetGroups">
+<span class="sig-name descname"><span class="pre">targetGroups</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#volatus.config.NodeConfig.targetGroups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.tasks">
+<span class="sig-name descname"><span class="pre">tasks</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><span class="pre">TaskConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.NodeConfig.tasks" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.clusterName">
+<span class="sig-name descname"><span class="pre">clusterName</span></span><a class="headerlink" href="#volatus.config.NodeConfig.clusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.tcpConfig">
+<span class="sig-name descname"><span class="pre">tcpConfig</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.TCPConfig" title="volatus.config.TCPConfig"><span class="pre">TCPConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.NodeConfig.tcpConfig" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.addTask">
+<span class="sig-name descname"><span class="pre">addTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><span class="pre">TaskConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.NodeConfig.addTask" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.setClusterName">
+<span class="sig-name descname"><span class="pre">setClusterName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.NodeConfig.setClusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.NodeConfig.lookupTaskByName">
+<span class="sig-name descname"><span class="pre">lookupTaskByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><span class="pre">TaskConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.NodeConfig.lookupTaskByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">ClusterConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discoveryEndpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.EndpointConfig" title="volatus.config.EndpointConfig"><span class="pre">EndpointConfig</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetGroups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><span class="pre">NodeConfig</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ClusterConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.config.ClusterConfig.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.discovery">
+<span class="sig-name descname"><span class="pre">discovery</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.ClusterConfig.discovery" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.targetGroups">
+<span class="sig-name descname"><span class="pre">targetGroups</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.ClusterConfig.targetGroups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.nodes">
+<span class="sig-name descname"><span class="pre">nodes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><span class="pre">NodeConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.ClusterConfig.nodes" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.lookupTargetGroupId">
+<span class="sig-name descname"><span class="pre">lookupTargetGroupId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targetName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.ClusterConfig.lookupTargetGroupId" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.lookupNodeByName">
+<span class="sig-name descname"><span class="pre">lookupNodeByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><span class="pre">NodeConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.ClusterConfig.lookupNodeByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ClusterConfig.addNode">
+<span class="sig-name descname"><span class="pre">addNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><span class="pre">NodeConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ClusterConfig.addNode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.SystemConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">SystemConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><span class="pre">ClusterConfig</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.SystemConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.SystemConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#volatus.config.SystemConfig.name" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.SystemConfig.clusters">
+<span class="sig-name descname"><span class="pre">clusters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><span class="pre">ClusterConfig</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.SystemConfig.clusters" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.SystemConfig.lookupClusterByName">
+<span class="sig-name descname"><span class="pre">lookupClusterByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><span class="pre">ClusterConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.SystemConfig.lookupClusterByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.SystemConfig.addCluster">
+<span class="sig-name descname"><span class="pre">addCluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><span class="pre">ClusterConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.SystemConfig.addCluster" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.VersionBump">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">VersionBump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VersionBump" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Create a collection of name/value pairs.</p>
+<p>Example enumeration:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span><span class="w"> </span><span class="nc">Color</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">RED</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">... </span>    <span class="n">BLUE</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">... </span>    <span class="n">GREEN</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Access them by:</p>
+<ul>
+<li><p>attribute access:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>value lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>name lookup:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Color</span><span class="p">[</span><span class="s1">&#39;RED&#39;</span><span class="p">]</span>
+<span class="go">&lt;Color.RED: 1&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Enumerations can be iterated over, and know how many members they have:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">Color</span><span class="p">)</span>
+<span class="go">[&lt;Color.RED: 1&gt;, &lt;Color.BLUE: 2&gt;, &lt;Color.GREEN: 3&gt;]</span>
+</pre></div>
+</div>
+<p>Methods can be added to enumerations, and members can have their own
+attributes – see the documentation for details.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VersionBump.NONE">
+<span class="sig-name descname"><span class="pre">NONE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.config.VersionBump.NONE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VersionBump.FIX">
+<span class="sig-name descname"><span class="pre">FIX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#volatus.config.VersionBump.FIX" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VersionBump.MINOR">
+<span class="sig-name descname"><span class="pre">MINOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#volatus.config.VersionBump.MINOR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VersionBump.MAJOR">
+<span class="sig-name descname"><span class="pre">MAJOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#volatus.config.VersionBump.MAJOR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">VolatusVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">build</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prerelease</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VolatusVersion" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.major">
+<span class="sig-name descname"><span class="pre">major</span></span><a class="headerlink" href="#volatus.config.VolatusVersion.major" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.minor">
+<span class="sig-name descname"><span class="pre">minor</span></span><a class="headerlink" href="#volatus.config.VolatusVersion.minor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.fix">
+<span class="sig-name descname"><span class="pre">fix</span></span><a class="headerlink" href="#volatus.config.VolatusVersion.fix" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.build">
+<span class="sig-name descname"><span class="pre">build</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#volatus.config.VolatusVersion.build" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.prerelease">
+<span class="sig-name descname"><span class="pre">prerelease</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#volatus.config.VolatusVersion.prerelease" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.fromString">
+<span class="sig-name descname"><span class="pre">fromString</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.VolatusVersion" title="volatus.config.VolatusVersion"><span class="pre">VolatusVersion</span></a></span></span><a class="headerlink" href="#volatus.config.VolatusVersion.fromString" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusVersion.bump">
+<span class="sig-name descname"><span class="pre">bump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bumpType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VersionBump" title="volatus.config.VersionBump"><span class="pre">VersionBump</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VolatusVersion.bump" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.ClusterLookup">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">ClusterLookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ClusterLookup" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ClusterLookup.clusterName">
+<span class="sig-name descname"><span class="pre">clusterName</span></span><a class="headerlink" href="#volatus.config.ClusterLookup.clusterName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.NodeLookup">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">NodeLookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.NodeLookup" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#volatus.config.ClusterLookup" title="volatus.config.ClusterLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClusterLookup</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.NodeLookup.nodeName">
+<span class="sig-name descname"><span class="pre">nodeName</span></span><a class="headerlink" href="#volatus.config.NodeLookup.nodeName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.TaskLookup">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">TaskLookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.TaskLookup" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#volatus.config.NodeLookup" title="volatus.config.NodeLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NodeLookup</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.TaskLookup.taskName">
+<span class="sig-name descname"><span class="pre">taskName</span></span><a class="headerlink" href="#volatus.config.TaskLookup.taskName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.GroupLookup">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">GroupLookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.GroupLookup" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#volatus.config.TaskLookup" title="volatus.config.TaskLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TaskLookup</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.GroupLookup.groupName">
+<span class="sig-name descname"><span class="pre">groupName</span></span><a class="headerlink" href="#volatus.config.GroupLookup.groupName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.ChannelLookup">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">ChannelLookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channelName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ChannelLookup" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#volatus.config.GroupLookup" title="volatus.config.GroupLookup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupLookup</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.ChannelLookup.channelName">
+<span class="sig-name descname"><span class="pre">channelName</span></span><a class="headerlink" href="#volatus.config.ChannelLookup.channelName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">VolatusConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VolatusVersion" title="volatus.config.VolatusVersion"><span class="pre">VolatusVersion</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hash</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.SystemConfig" title="volatus.config.SystemConfig"><span class="pre">SystemConfig</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VolatusConfig" title="Link to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.version">
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.VolatusConfig.version" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.hash">
+<span class="sig-name descname"><span class="pre">hash</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.VolatusConfig.hash" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.system">
+<span class="sig-name descname"><span class="pre">system</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#volatus.config.VolatusConfig.system" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.groups">
+<span class="sig-name descname"><span class="pre">groups</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.TaskLookup" title="volatus.config.TaskLookup"><span class="pre">TaskLookup</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.VolatusConfig.groups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.channels">
+<span class="sig-name descname"><span class="pre">channels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#volatus.config.GroupLookup" title="volatus.config.GroupLookup"><span class="pre">GroupLookup</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#volatus.config.VolatusConfig.channels" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.refreshLookups">
+<span class="sig-name descname"><span class="pre">refreshLookups</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.VolatusConfig.refreshLookups" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupCluster">
+<span class="sig-name descname"><span class="pre">lookupCluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.ClusterLookup" title="volatus.config.ClusterLookup"><span class="pre">ClusterLookup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><span class="pre">ClusterConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupCluster" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupClusterByName">
+<span class="sig-name descname"><span class="pre">lookupClusterByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.ClusterConfig" title="volatus.config.ClusterConfig"><span class="pre">ClusterConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupClusterByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupNode">
+<span class="sig-name descname"><span class="pre">lookupNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.NodeLookup" title="volatus.config.NodeLookup"><span class="pre">NodeLookup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><span class="pre">NodeConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupNode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupNodeByName">
+<span class="sig-name descname"><span class="pre">lookupNodeByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.NodeConfig" title="volatus.config.NodeConfig"><span class="pre">NodeConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupNodeByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupTask">
+<span class="sig-name descname"><span class="pre">lookupTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.TaskLookup" title="volatus.config.TaskLookup"><span class="pre">TaskLookup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><span class="pre">TaskConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupTask" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupTaskByName">
+<span class="sig-name descname"><span class="pre">lookupTaskByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.TaskConfig" title="volatus.config.TaskConfig"><span class="pre">TaskConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupTaskByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupGroup">
+<span class="sig-name descname"><span class="pre">lookupGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.GroupLookup" title="volatus.config.GroupLookup"><span class="pre">GroupLookup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">GroupConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupGroup" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupGroupByName">
+<span class="sig-name descname"><span class="pre">lookupGroupByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.GroupConfig" title="volatus.config.GroupConfig"><span class="pre">GroupConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupGroupByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupChannel">
+<span class="sig-name descname"><span class="pre">lookupChannel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cl</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.ChannelLookup" title="volatus.config.ChannelLookup"><span class="pre">ChannelLookup</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">ChannelConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupChannel" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.VolatusConfig.lookupChannelByName">
+<span class="sig-name descname"><span class="pre">lookupChannelByName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channelName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.ChannelConfig" title="volatus.config.ChannelConfig"><span class="pre">ChannelConfig</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.VolatusConfig.lookupChannelByName" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.Cfg">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">Cfg</span></span><a class="headerlink" href="#volatus.config.Cfg" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.normalizePath">
+<span class="sig-name descname"><span class="pre">normalizePath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#volatus.config.Cfg.normalizePath" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.childrenOf">
+<span class="sig-name descname"><span class="pre">childrenOf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.config.Cfg.childrenOf" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.readMetaValue">
+<span class="sig-name descname"><span class="pre">readMetaValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.Cfg.readMetaValue" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.writeMetaValue">
+<span class="sig-name descname"><span class="pre">writeMetaValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.Cfg.writeMetaValue" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.vlReadMeta">
+<span class="sig-name descname"><span class="pre">vlReadMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VL_Meta" title="volatus.config.VL_Meta"><span class="pre">VL_Meta</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.Cfg.vlReadMeta" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.vlWriteMeta">
+<span class="sig-name descname"><span class="pre">vlWriteMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VL_Meta" title="volatus.config.VL_Meta"><span class="pre">VL_Meta</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.Cfg.vlWriteMeta" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.vlSetType">
+<span class="sig-name descname"><span class="pre">vlSetType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VL_Type" title="volatus.config.VL_Type"><span class="pre">VL_Type</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.Cfg.vlSetType" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.vlTypeOf">
+<span class="sig-name descname"><span class="pre">vlTypeOf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.VL_Type" title="volatus.config.VL_Type"><span class="pre">VL_Type</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#volatus.config.Cfg.vlTypeOf" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.Cfg.vlFindType">
+<span class="sig-name descname"><span class="pre">vlFindType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VL_Type" title="volatus.config.VL_Type"><span class="pre">VL_Type</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursePastMatch</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#volatus.config.Cfg.vlFindType" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">volatus.config.</span></span><span class="sig-name descname"><span class="pre">ConfigLoader</span></span><a class="headerlink" href="#volatus.config.ConfigLoader" title="Link to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#volatus.config.VolatusConfig" title="volatus.config.VolatusConfig"><span class="pre">VolatusConfig</span></a></span></span><a class="headerlink" href="#volatus.config.ConfigLoader.load" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#volatus.config.VolatusConfig" title="volatus.config.VolatusConfig"><span class="pre">VolatusConfig</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ConfigLoader.save" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.loadGroup">
+<span class="sig-name descname"><span class="pre">loadGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groupName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groupObj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ConfigLoader.loadGroup" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.loadTask">
+<span class="sig-name descname"><span class="pre">loadTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">taskObj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ConfigLoader.loadTask" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.loadNode">
+<span class="sig-name descname"><span class="pre">loadNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeObj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ConfigLoader.loadNode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.loadCluster">
+<span class="sig-name descname"><span class="pre">loadCluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clusterName</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clusterObj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ConfigLoader.loadCluster" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="volatus.config.ConfigLoader.loadSystem">
+<span class="sig-name descname"><span class="pre">loadSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sysObj</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#volatus.config.ConfigLoader.loadSystem" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">volatus.config</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#volatus.config.VL_Type"><code class="docutils literal notranslate"><span class="pre">VL_Type</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VL_Type.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">VL_Type.UNKNOWN</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_System"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_System</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Cluster"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Cluster</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Node"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Node</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Task"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Task</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Group"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Group</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Channel"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Channel</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Task_List"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Task_List</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Scaling"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Scaling</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Sensor"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Sensor</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Sensor_List"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Sensor_List</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.VL_Scale"><code class="docutils literal notranslate"><span class="pre">VL_Type.VL_Scale</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Type.fromStr"><code class="docutils literal notranslate"><span class="pre">VL_Type.fromStr()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta"><code class="docutils literal notranslate"><span class="pre">VL_Meta</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">VL_Meta.UNKNOWN</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Type"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Task_Type"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Task_Type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Group_Type"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Group_Type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VL_Meta.VL_Config_Version"><code class="docutils literal notranslate"><span class="pre">VL_Meta.VL_Config_Version</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig"><code class="docutils literal notranslate"><span class="pre">EndpointConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig.address"><code class="docutils literal notranslate"><span class="pre">EndpointConfig.address</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig.port"><code class="docutils literal notranslate"><span class="pre">EndpointConfig.port</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.EndpointConfig.tuple"><code class="docutils literal notranslate"><span class="pre">EndpointConfig.tuple()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig"><code class="docutils literal notranslate"><span class="pre">ChannelConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.name"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.defaultValue"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.defaultValue</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.resource"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.resource</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.groupName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.groupName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.taskName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.taskName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.nodeName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.clusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ChannelConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">ChannelConfig.setClusterName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig"><code class="docutils literal notranslate"><span class="pre">GroupConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.name"><code class="docutils literal notranslate"><span class="pre">GroupConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.publishConfig"><code class="docutils literal notranslate"><span class="pre">GroupConfig.publishConfig</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.channels"><code class="docutils literal notranslate"><span class="pre">GroupConfig.channels</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.taskName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.taskName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.nodeName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.isPublished"><code class="docutils literal notranslate"><span class="pre">GroupConfig.isPublished()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.addChannel"><code class="docutils literal notranslate"><span class="pre">GroupConfig.addChannel()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.setClusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.GroupConfig.lookupChannelByName"><code class="docutils literal notranslate"><span class="pre">GroupConfig.lookupChannelByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig"><code class="docutils literal notranslate"><span class="pre">TaskConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.name"><code class="docutils literal notranslate"><span class="pre">TaskConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.type"><code class="docutils literal notranslate"><span class="pre">TaskConfig.type</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.groups"><code class="docutils literal notranslate"><span class="pre">TaskConfig.groups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.nodeName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.nodeName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.setClusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.addGroup"><code class="docutils literal notranslate"><span class="pre">TaskConfig.addGroup()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TaskConfig.lookupGroupByName"><code class="docutils literal notranslate"><span class="pre">TaskConfig.lookupGroupByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.TCPConfig"><code class="docutils literal notranslate"><span class="pre">TCPConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.TCPConfig.address"><code class="docutils literal notranslate"><span class="pre">TCPConfig.address</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TCPConfig.port"><code class="docutils literal notranslate"><span class="pre">TCPConfig.port</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.TCPConfig.server"><code class="docutils literal notranslate"><span class="pre">TCPConfig.server</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.tcp"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.tcp</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.httpPort"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.httpPort</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.announceInterval"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.announceInterval</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeNetworkConfig.bindAddress"><code class="docutils literal notranslate"><span class="pre">NodeNetworkConfig.bindAddress</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig"><code class="docutils literal notranslate"><span class="pre">NodeConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.name"><code class="docutils literal notranslate"><span class="pre">NodeConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.id"><code class="docutils literal notranslate"><span class="pre">NodeConfig.id</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.logFolder"><code class="docutils literal notranslate"><span class="pre">NodeConfig.logFolder</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.network"><code class="docutils literal notranslate"><span class="pre">NodeConfig.network</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.targetGroups"><code class="docutils literal notranslate"><span class="pre">NodeConfig.targetGroups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.tasks"><code class="docutils literal notranslate"><span class="pre">NodeConfig.tasks</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.clusterName"><code class="docutils literal notranslate"><span class="pre">NodeConfig.clusterName</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.tcpConfig"><code class="docutils literal notranslate"><span class="pre">NodeConfig.tcpConfig()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.addTask"><code class="docutils literal notranslate"><span class="pre">NodeConfig.addTask()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.setClusterName"><code class="docutils literal notranslate"><span class="pre">NodeConfig.setClusterName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.NodeConfig.lookupTaskByName"><code class="docutils literal notranslate"><span class="pre">NodeConfig.lookupTaskByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig"><code class="docutils literal notranslate"><span class="pre">ClusterConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.name"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.discovery"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.discovery</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.targetGroups"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.targetGroups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.nodes"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.nodes</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.lookupTargetGroupId"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.lookupTargetGroupId()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.lookupNodeByName"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.lookupNodeByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ClusterConfig.addNode"><code class="docutils literal notranslate"><span class="pre">ClusterConfig.addNode()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig"><code class="docutils literal notranslate"><span class="pre">SystemConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.name"><code class="docutils literal notranslate"><span class="pre">SystemConfig.name</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.clusters"><code class="docutils literal notranslate"><span class="pre">SystemConfig.clusters</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.lookupClusterByName"><code class="docutils literal notranslate"><span class="pre">SystemConfig.lookupClusterByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.SystemConfig.addCluster"><code class="docutils literal notranslate"><span class="pre">SystemConfig.addCluster()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VersionBump"><code class="docutils literal notranslate"><span class="pre">VersionBump</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VersionBump.NONE"><code class="docutils literal notranslate"><span class="pre">VersionBump.NONE</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VersionBump.FIX"><code class="docutils literal notranslate"><span class="pre">VersionBump.FIX</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VersionBump.MINOR"><code class="docutils literal notranslate"><span class="pre">VersionBump.MINOR</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VersionBump.MAJOR"><code class="docutils literal notranslate"><span class="pre">VersionBump.MAJOR</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion"><code class="docutils literal notranslate"><span class="pre">VolatusVersion</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.major"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.major</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.minor"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.minor</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.fix"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.fix</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.build"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.build</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.prerelease"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.prerelease</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.fromString"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.fromString()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusVersion.bump"><code class="docutils literal notranslate"><span class="pre">VolatusVersion.bump()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ClusterLookup"><code class="docutils literal notranslate"><span class="pre">ClusterLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ClusterLookup.clusterName"><code class="docutils literal notranslate"><span class="pre">ClusterLookup.clusterName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.NodeLookup"><code class="docutils literal notranslate"><span class="pre">NodeLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.NodeLookup.nodeName"><code class="docutils literal notranslate"><span class="pre">NodeLookup.nodeName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.TaskLookup"><code class="docutils literal notranslate"><span class="pre">TaskLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.TaskLookup.taskName"><code class="docutils literal notranslate"><span class="pre">TaskLookup.taskName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.GroupLookup"><code class="docutils literal notranslate"><span class="pre">GroupLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.GroupLookup.groupName"><code class="docutils literal notranslate"><span class="pre">GroupLookup.groupName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ChannelLookup"><code class="docutils literal notranslate"><span class="pre">ChannelLookup</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ChannelLookup.channelName"><code class="docutils literal notranslate"><span class="pre">ChannelLookup.channelName</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig"><code class="docutils literal notranslate"><span class="pre">VolatusConfig</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.version"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.version</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.hash"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.hash</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.system"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.system</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.groups"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.groups</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.channels"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.channels</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.refreshLookups"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.refreshLookups()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupCluster"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupCluster()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupClusterByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupClusterByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupNode"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupNode()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupNodeByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupNodeByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupTask"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupTask()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupTaskByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupTaskByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupGroup"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupGroup()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupGroupByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupGroupByName()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupChannel"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupChannel()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.VolatusConfig.lookupChannelByName"><code class="docutils literal notranslate"><span class="pre">VolatusConfig.lookupChannelByName()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.Cfg"><code class="docutils literal notranslate"><span class="pre">Cfg</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.Cfg.normalizePath"><code class="docutils literal notranslate"><span class="pre">Cfg.normalizePath()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.childrenOf"><code class="docutils literal notranslate"><span class="pre">Cfg.childrenOf()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.readMetaValue"><code class="docutils literal notranslate"><span class="pre">Cfg.readMetaValue()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.writeMetaValue"><code class="docutils literal notranslate"><span class="pre">Cfg.writeMetaValue()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlReadMeta"><code class="docutils literal notranslate"><span class="pre">Cfg.vlReadMeta()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlWriteMeta"><code class="docutils literal notranslate"><span class="pre">Cfg.vlWriteMeta()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlSetType"><code class="docutils literal notranslate"><span class="pre">Cfg.vlSetType()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlTypeOf"><code class="docutils literal notranslate"><span class="pre">Cfg.vlTypeOf()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.Cfg.vlFindType"><code class="docutils literal notranslate"><span class="pre">Cfg.vlFindType()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader"><code class="docutils literal notranslate"><span class="pre">ConfigLoader</span></code></a><ul>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.load"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.load()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.save"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.save()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadGroup"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadGroup()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadTask"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadTask()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadNode"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadNode()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadCluster"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadCluster()</span></code></a></li>
+<li><a class="reference internal" href="#volatus.config.ConfigLoader.loadSystem"><code class="docutils literal notranslate"><span class="pre">ConfigLoader.loadSystem()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">volatus</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../discovery/index.html"
+                          title="next chapter">volatus.discovery</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/volatus/config/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../discovery/index.html" title="volatus.discovery"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="volatus"
+             >previous</a> |</li>
+          <li><img src="../../../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../../../index.html">Volatus  documentation</a> &#187;
+              
+          </li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >volatus</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">volatus.config</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../../../search.html" method="get">
+          <input placeholder="Quick search" aria-label="Quick search" type="search" name="q" id="search-box">
+          <input type="submit" value="Go">
+        </form>
+    </div>
+                     |
+                </li>
+            <li class="right">
+<label class="theme-selector-label">
+    Theme
+    <select class="theme-selector" oninput="activateTheme(this.value)">
+        <option value="auto" selected>Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+    </select>
+</label> |</li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; 
+    Copyright
+     2025, Derrick Bommarito.
+    <br>
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br>
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br>
+    
+    
+    <br>
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br>
+    <br>
+    
+    <br>
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    </div>
+
+  </body>
+</html>
