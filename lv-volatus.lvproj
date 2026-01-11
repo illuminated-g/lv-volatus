@@ -75,7 +75,7 @@
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
 		<Item Name="VolatusTools.lvlib" Type="Library" URL="../Volatus/VolatusTools/VolatusTools.lvlib"/>
 		<Item Name="VolatusGUIEditor.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIEditor/VolatusGUIEditor.lvlib"/>
-		<Item Name="Editor.rtm" Type="Document" URL="../../volatus-gui-controls/VolatusGUIEditor/Editor.rtm"/>
+		<Item Name="VolatusGUIEditorCore.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIEditorCore/VolatusGUIEditorCore.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
