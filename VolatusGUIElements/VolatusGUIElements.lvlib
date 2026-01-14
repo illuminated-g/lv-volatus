@@ -10,9 +10,10 @@
 	<Item Name="Controls" Type="Folder">
 		<Item Name="Boolean" Type="Folder">
 			<Item Name="BooleanControl.lvclass" Type="LVClass" URL="../BooleanControl/BooleanControl.lvclass"/>
-		</Item>
-		<Item Name="Buttons" Type="Folder">
 			<Item Name="DigitalButtonControl.lvclass" Type="LVClass" URL="../DigitalButtonControl/DigitalButtonControl.lvclass"/>
+			<Item Name="ImageButtonControl.lvclass" Type="LVClass" URL="../ImageButtonControl/ImageButtonControl.lvclass"/>
+		</Item>
+		<Item Name="HTTP" Type="Folder">
 			<Item Name="HttpButtonControl.lvclass" Type="LVClass" URL="../HttpButtonControl/HttpButtonControl.lvclass"/>
 		</Item>
 		<Item Name="Numeric" Type="Folder">

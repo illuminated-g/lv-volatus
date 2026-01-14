@@ -68,7 +68,9 @@
 
                                         "FuelPSI":       {"Value": 200, "Meta": {"VL_Type": "VL_Channel"}},
                                         "FuelCool":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
-                                        "FuelHeat":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}}
+                                        "FuelHeat":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+
+                                        "BoolTest": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
                                 "Logging": {
