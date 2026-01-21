@@ -55,6 +55,7 @@
 			<Item Name="Full PC Build.vi" Type="VI" URL="../_build/Full PC Build.vi"/>
 		</Item>
 		<Item Name="graphics" Type="Folder"/>
+		<Item Name="Tools" Type="Folder"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusErrorUtilities.lvlib" Type="Library" URL="../VolatusErrorUtilities/VolatusErrorUtilities.lvlib"/>
 		<Item Name="VolatusGUI.lvlib" Type="Library" URL="../VolatusGUI/VolatusGUI.lvlib"/>
