@@ -25,6 +25,8 @@
 		<Item Name="Overlays.ctl" Type="VI" URL="../Overlays.ctl"/>
 		<Item Name="Scale Type.ctl" Type="VI" URL="../Scale Type.ctl"/>
 		<Item Name="Target Group.ctl" Type="VI" URL="../Target Group.ctl"/>
+		<Item Name="Target Info.ctl" Type="VI" URL="../Target Info.ctl"/>
+		<Item Name="Target Type.ctl" Type="VI" URL="../Target Type.ctl"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
 		<Item Name="Channel Config.lvclass" Type="LVClass" URL="../Channel/Channel Config.lvclass"/>
