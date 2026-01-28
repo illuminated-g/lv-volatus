@@ -48,8 +48,18 @@
 		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
+		<Item Name="Data Types" Type="Folder">
+			<Item Name="Decimation Params.ctl" Type="VI" URL="../Decimation Params.ctl"/>
+		</Item>
 		<Item Name="Plotting" Type="Folder">
 			<Item Name="MinMax Decimation.vi" Type="VI" URL="../MinMax Decimation.vi"/>
+		</Item>
+		<Item Name="Private" Type="Folder">
+			<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
+			<Item Name="Decimate Segments.vi" Type="VI" URL="../Decimate Segments.vi"/>
+			<Item Name="First Last Samples.vi" Type="VI" URL="../First Last Samples.vi"/>
+			<Item Name="Pixel Segments.vi" Type="VI" URL="../Pixel Segments.vi"/>
+			<Item Name="Plot Time Range.vi" Type="VI" URL="../Plot Time Range.vi"/>
 		</Item>
 		<Item Name="Is Stale.vi" Type="VI" URL="../Is Stale.vi"/>
 		<Item Name="Parse Color.vi" Type="VI" URL="../DblNumericStatusIndicator/Parse Color.vi"/>
