@@ -16,6 +16,10 @@
                 "TestCluster": {
                     "Meta": {"VL_Type": "VL_Cluster"},
                     "Discovery": {"Address": "239.0.0.10", "Port": 36987},
+                    "Telemetry": {
+                        "Routing": "Multicast",
+                        "Endpoint": {"Address": "239.0.0.11", "Port": 12083}
+                    },
                     "Groups": {
                         "Events": 5,
                         "Config": 6,
@@ -51,7 +55,7 @@
                                     "Period_s": 0.1,
                                     "SimValues": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Ox_PT_01":        {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
                                         "Ox_PT_02":        {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
                                         "Ox_PT_03":        {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
@@ -78,7 +82,7 @@
                                     "Folder": "c:/logs",
                                     "Logging_Status": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "String"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Logging_State_Num":    {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"}},
                                         "Logging_Num_Loggers":  {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers"}},
                                         "Logging_Num_Idle":     {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"}},
@@ -99,7 +103,7 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Drives": [
                                             {
                                                 "Path": "c:",
@@ -132,7 +136,7 @@
                                     },
                                     "TestAI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "AI00": {"Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "ID": "123456"},             "Meta": {"VL_Type": "VL_Channel"}},
                                             "AI01": {"Resource": "cDAQ1Mod1/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "ID": "234567"},             "Meta": {"VL_Type": "VL_Channel"}},
@@ -211,7 +215,7 @@
                                     },
                                     "TestDO": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "DO00": {"Resource": "cDAQ1Mod2/port0/line0",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
                                             "DO01": {"Resource": "cDAQ1Mod2/port0/line1",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
@@ -258,7 +262,7 @@
                                     },
                                     "TestDI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "DI00":   {"Resource": "cDAQ1Mod3/port0/line0",  "Meta": {"VL_Type": "VL_Channel"}},
                                             "DI01":   {"Resource": "cDAQ1Mod3/port0/line1",  "Meta": {"VL_Type": "VL_Channel"}},
@@ -338,7 +342,7 @@
                                     },
                                     "TestTC": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "TC00": {"Resource": "cDAQ1Mod6/ai0",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
                                             "TC01": {"Resource": "cDAQ1Mod6/ai1",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
@@ -369,7 +373,7 @@
                                     },
                                     "ControlGroup": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Status": {
                                             "DigitalControl_LastDt":   {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"}},
                                             "DigitalControl_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
@@ -479,8 +483,16 @@
                                 },
                                 "Historian": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
-                                    "Buffer_Size": 500000,
-                                    "Exclude": []
+                                    "Buffer_Size": 100000,
+                                    "Exclude": [],
+                                    "Logger": {
+                                        "Folder": "c:/logs/historian"
+                                    },
+                                    "Historian": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Historian_Logging":      {            "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Historian_Logging_Rate": {"Value": 1, "Meta": {"VL_Type": "VL_Channel"}}
+                                    }
                                 },
                                 "GuiAI": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"}
