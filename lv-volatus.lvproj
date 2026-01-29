@@ -17,31 +17,31 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="libs" Type="Folder">
-			<Property Name="NI.SortType" Type="Int">3</Property>
+			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="proto" Type="Folder" URL="../../lv-vecto/Vecto/proto">
 				<Property Name="NI.DISK" Type="Bool">true</Property>
 			</Item>
+			<Item Name="AutoComplete.lvlib" Type="Library" URL="../../lv-autocomplete/AutoComplete/AutoComplete.lvlib"/>
 			<Item Name="Base64.lvlib" Type="Library" URL="../../lv-web-crypto/lv-base64/Base64.lvlib"/>
+			<Item Name="Builder Core.lvlib" Type="Library" URL="../../lv-builder/Builder Core/Builder Core.lvlib"/>
+			<Item Name="Builder Tools.lvlib" Type="Library" URL="../../lv-builder/Builder Tools/Builder Tools.lvlib"/>
 			<Item Name="CDM-Config.lvlib" Type="Library" URL="../../lv-cdm/CDM-Config/CDM-Config.lvlib"/>
 			<Item Name="Crypto.lvlib" Type="Library" URL="../../lv-web-crypto/lv-crypto/Crypto/Crypto.lvlib"/>
+			<Item Name="ExecAnchor.lvclass" Type="LVClass" URL="../../lv-exec-anchor/ExecAnchor/ExecAnchor.lvclass"/>
 			<Item Name="HTTP Server.lvlib" Type="Library" URL="../../lv-http-server/HTTP Server/HTTP Server.lvlib"/>
 			<Item Name="HTTP Utils.lvlib" Type="Library" URL="../../lv-http-util/HTTP Utils/HTTP Utils.lvlib"/>
+			<Item Name="IG PID.lvlib" Type="Library" URL="../../lv-control/IG PID/IG PID.lvlib"/>
 			<Item Name="JSON.lvlib" Type="Library" URL="../../lv-web-crypto/lv-json/JSON/JSON.lvlib"/>
 			<Item Name="LV-Proto.lvlib" Type="Library" URL="../../lv-protoc/LV-Proto/LV-Proto.lvlib"/>
-			<Item Name="Promises.lvlib" Type="Library" URL="../../lv-promises/Promises/Promises.lvlib"/>
-			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
-			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
-			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
-			<Item Name="VectoScratch.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/VectoScratch.lvlib"/>
-			<Item Name="IG PID.lvlib" Type="Library" URL="../../lv-control/IG PID/IG PID.lvlib"/>
-			<Item Name="Builder Tools.lvlib" Type="Library" URL="../../lv-builder/Builder Tools/Builder Tools.lvlib"/>
-			<Item Name="Builder Core.lvlib" Type="Library" URL="../../lv-builder/Builder Core/Builder Core.lvlib"/>
-			<Item Name="User Prefs.lvlib" Type="Library" URL="../../lv-userprefs/User Prefs/User Prefs.lvlib"/>
-			<Item Name="ExecAnchor.lvclass" Type="LVClass" URL="../../lv-exec-anchor/ExecAnchor/ExecAnchor.lvclass"/>
-			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
 			<Item Name="OOPanel.lvlib" Type="Library" URL="../../lv-oopanel/OOPanel/OOPanel.lvlib"/>
+			<Item Name="Promises.lvlib" Type="Library" URL="../../lv-promises/Promises/Promises.lvlib"/>
+			<Item Name="Tree Map.lvlib" Type="Library" URL="../../lv-tree-tools/Tree Map/Tree Map.lvlib"/>
 			<Item Name="URI.lvlib" Type="Library" URL="../../lv-uri/URI/URI.lvlib"/>
-			<Item Name="AutoComplete.lvlib" Type="Library" URL="../../lv-autocomplete/AutoComplete/AutoComplete.lvlib"/>
+			<Item Name="User Prefs.lvlib" Type="Library" URL="../../lv-userprefs/User Prefs/User Prefs.lvlib"/>
+			<Item Name="Vecto.lvlib" Type="Library" URL="../../lv-vecto/Vecto/Vecto.lvlib"/>
+			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
+			<Item Name="VectoScratch.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/VectoScratch.lvlib"/>
+			<Item Name="VectoTools.lvlib" Type="Library" URL="../../lv-vecto/VectoTools/VectoTools.lvlib"/>
 		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
