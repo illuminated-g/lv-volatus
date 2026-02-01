@@ -93,6 +93,7 @@
 			<Item Name="Send Show GUI Message.vi" Type="VI" URL="../Send Show GUI Message.vi"/>
 		</Item>
 		<Item Name="MessageQ.lvclass" Type="LVClass" URL="../MessageQ/MessageQ.lvclass"/>
+		<Item Name="Repeat Message Control.lvclass" Type="LVClass" URL="../Repeat Message Control/Repeat Message Control.lvclass"/>
 	</Item>
 	<Item Name="Paths" Type="Folder">
 		<Item Name="App Path.vi" Type="VI" URL="../App Path.vi"/>
@@ -105,7 +106,6 @@
 		<Item Name="ConfigMonitorInfoValue.lvclass" Type="LVClass" URL="../ConfigMonitorInfoValue/ConfigMonitorInfoValue.lvclass"/>
 		<Item Name="Events Summary Value.lvclass" Type="LVClass" URL="../Events Summary Value/Events Summary Value.lvclass"/>
 		<Item Name="MessageQ Value.lvclass" Type="LVClass" URL="../MessageQ Value/MessageQ Value.lvclass"/>
-		<Item Name="MultiError Value.lvclass" Type="LVClass" URL="../MultiError Value/MultiError Value.lvclass"/>
 		<Item Name="PathValue.lvclass" Type="LVClass" URL="../PathValue/PathValue.lvclass"/>
 		<Item Name="StatusTreeValue.lvclass" Type="LVClass" URL="../StatusTreeValue/StatusTreeValue.lvclass"/>
 		<Item Name="StringValue.lvclass" Type="LVClass" URL="../StringValue/StringValue.lvclass"/>

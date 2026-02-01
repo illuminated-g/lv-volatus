@@ -33,6 +33,11 @@
 		<Item Name="Redlines Identity.lvclass" Type="LVClass" URL="../Redlines Identity/Redlines Identity.lvclass"/>
 	</Item>
 	<Item Name="Messaging" Type="Folder">
+		<Item Name="Loggers" Type="Folder">
+			<Item Name="Prepare Logger.vi" Type="VI" URL="../Prepare Logger.vi"/>
+			<Item Name="Start Logger.vi" Type="VI" URL="../Start Logger.vi"/>
+			<Item Name="Stop Logger.vi" Type="VI" URL="../Stop Logger.vi"/>
+		</Item>
 		<Item Name="Send New Data (Array).vi" Type="VI" URL="../Send New Data (Array).vi"/>
 		<Item Name="Send New Data (Wfm).vi" Type="VI" URL="../Send New Data (Wfm).vi"/>
 	</Item>

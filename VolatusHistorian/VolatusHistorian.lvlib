@@ -19,6 +19,7 @@
 		<Item Name="Group Data.ctl" Type="VI" URL="../Group Data.ctl"/>
 		<Item Name="History Data (LV Dbl).ctl" Type="VI" URL="../History Data (LV Dbl).ctl"/>
 		<Item Name="History Data (unix ns).ctl" Type="VI" URL="../History Data (unix ns).ctl"/>
+		<Item Name="Logger Status.ctl" Type="VI" URL="../Logger Status.ctl"/>
 		<Item Name="Time Format.ctl" Type="VI" URL="../Time Format.ctl"/>
 	</Item>
 	<Item Name="Handlers" Type="Folder">
@@ -29,6 +30,7 @@
 		<Item Name="Historian Identity.lvclass" Type="LVClass" URL="../Historian Identity/Historian Identity.lvclass"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
+		<Item Name="Logger Status Value.lvclass" Type="LVClass" URL="../Logger Status Value/Logger Status Value.lvclass"/>
 		<Item Name="LV Dbl Data Value.lvclass" Type="LVClass" URL="../Local Data Value/LV Dbl Data Value.lvclass"/>
 		<Item Name="Unix ns Data Value.lvclass" Type="LVClass" URL="../History Data Value/Unix ns Data Value.lvclass"/>
 	</Item>

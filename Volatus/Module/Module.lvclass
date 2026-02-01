@@ -299,6 +299,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">5</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342709760</Property>
 		</Item>
+		<Item Name="Is Closing.vi" Type="VI" URL="../Is Closing.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$D!!!!"1!%!!!!%%!B#EFT)%.M&lt;X.J&lt;G=!!$2!=!!?!!!?$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)/47^E&gt;7RF,GRW9WRB=X-!!!J.&lt;W2V&lt;'5A&lt;X6U!!!S1(!!(A!!(AV7&lt;WRB&gt;(6T,GRW&lt;'FC$EVP:(6M:3ZM&gt;G.M98.T!!!*47^E&gt;7RF)'FO!'%!]!!-!!!!!!!"!!)!!!!!!!!!!!!!!!!!!!!$"!!!?!!!!!!!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!1!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16908288</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">5</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342709760</Property>
+		</Item>
 		<Item Name="Is Root.vi" Type="VI" URL="../Is Root.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$@!!!!"1!%!!!!$%!B"UFT)&amp;*P&lt;X1!.%"Q!"Y!!"Y.6G^M982V=SZM&gt;GRJ9AZ.&lt;W2V&lt;'5O&lt;(:D&lt;'&amp;T=Q!!#EVP:(6M:3"P&gt;81!!$*!=!!?!!!?$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)/47^E&gt;7RF,GRW9WRB=X-!!!F.&lt;W2V&lt;'5A;7Y!91$Q!!Q!!!!!!!%!!A!!!!!!!!!!!!!!!!!!!!-'!!"Y!!!!!!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!"!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>

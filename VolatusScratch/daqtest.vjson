@@ -17,8 +17,7 @@
                     "Meta": {"VL_Type": "VL_Cluster"},
                     "Discovery": {"Address": "239.0.0.10", "Port": 36987},
                     "Telemetry": {
-                        "Routing": "Multicast",
-                        "Endpoint": {"Address": "239.0.0.11", "Port": 12083}
+                        "Routing": "Multicast"
                     },
                     "Groups": {
                         "Events": 5,
@@ -136,7 +135,7 @@
                                     },
                                     "TestAI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "AI00": {"Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "ID": "123456"},             "Meta": {"VL_Type": "VL_Channel"}},
                                             "AI01": {"Resource": "cDAQ1Mod1/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": {"Type": "Sensor", "ID": "234567"},             "Meta": {"VL_Type": "VL_Channel"}},
@@ -215,7 +214,7 @@
                                     },
                                     "TestDO": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "DO00": {"Resource": "cDAQ1Mod2/port0/line0",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
                                             "DO01": {"Resource": "cDAQ1Mod2/port0/line1",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
@@ -262,7 +261,7 @@
                                     },
                                     "TestDI": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "DI00":   {"Resource": "cDAQ1Mod3/port0/line0",  "Meta": {"VL_Type": "VL_Channel"}},
                                             "DI01":   {"Resource": "cDAQ1Mod3/port0/line1",  "Meta": {"VL_Type": "VL_Channel"}},
@@ -342,7 +341,7 @@
                                     },
                                     "TestTC": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish": {"Address": "239.0.0.11", "Port": 36987},
                                         "Channels": {
                                             "TC00": {"Resource": "cDAQ1Mod6/ai0",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
                                             "TC01": {"Resource": "cDAQ1Mod6/ai1",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"}},
@@ -483,15 +482,15 @@
                                 },
                                 "Historian": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
-                                    "Buffer_Size": 100000,
+                                    "Buffer_Size": 10000,
                                     "Exclude": [],
                                     "Logger": {
-                                        "Folder": "c:/logs/historian"
-                                    },
-                                    "Historian": {
-                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Historian_Logging":      {            "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Historian_Logging_Rate": {"Value": 1, "Meta": {"VL_Type": "VL_Channel"}}
+                                        "Rate": 1,
+                                        "Folder": "c:/logs/historian",
+                                        "Groups": [
+                                            "TestTC",
+                                            "TestAI"
+                                        ]
                                     }
                                 },
                                 "GuiAI": {
