@@ -77,6 +77,7 @@
 		<Item Name="VolatusTools.lvlib" Type="Library" URL="../Volatus/VolatusTools/VolatusTools.lvlib"/>
 		<Item Name="VolatusGUIEditor.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIEditor/VolatusGUIEditor.lvlib"/>
 		<Item Name="VolatusGUIEditorCore.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIEditorCore/VolatusGUIEditorCore.lvlib"/>
+		<Item Name="VolatusTelemetry.lvlib" Type="Library" URL="../VolatusTelemetry/VolatusTelemetry.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="1D String Array to Delimited String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/1D String Array to Delimited String.vi"/>
