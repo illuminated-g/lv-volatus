@@ -5,7 +5,7 @@
     "Host":"https://github.com/illuminated-g/lv-volatus.git",
     "Path":"",
     "Branch":"feature/log-groups",
-    "Version":"669a5f3d5947e110d40485beb070c3a974a386bc",
+    "Version":"f5eae8908a6a51ca1dc701b8ce6a1ceebc9b3aa0",
     "License":""
   },
   "Dependencies":[
@@ -16,7 +16,7 @@
         "Host":"https://github.com/illuminated-g/lv-builder.git",
         "Path":"",
         "Branch":"main",
-        "Version":"65c3e186656e7cf47f094c600336a96bc3879fa4",
+        "Version":"790969b63293344d18f701fe7680cc3b02c5f624",
         "License":""
       },
       "Path":"..\\lv-builder"
@@ -28,7 +28,7 @@
         "Host":"https://github.com/illuminated-g/lv-cdm.git",
         "Path":"",
         "Branch":"main",
-        "Version":"f4dcb7c7b90ae9ee62d87e916d14ff4cb797c3be",
+        "Version":"809e1ee9bb93d6d968c253206e513bcef792a392",
         "License":""
       },
       "Path":"..\\lv-cdm"
@@ -37,10 +37,10 @@
       "Info":{
         "Name":"lv-http-server",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-http-server.git",
+        "Host":"https://github.com/illuminated-g/lv-http-server.git",
         "Path":"",
         "Branch":"main",
-        "Version":"72634a8a03523dfdd2f203d4228bbdc9cf8ad105",
+        "Version":"2ea421b20e8f55769bbe21c89afc3e5605f61f33",
         "License":""
       },
       "Path":"..\\lv-http-server"
@@ -49,10 +49,10 @@
       "Info":{
         "Name":"lv-http-util",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-http-util.git",
+        "Host":"https://github.com/illuminated-g/lv-http-util.git",
         "Path":"",
         "Branch":"main",
-        "Version":"ee75373876fd159ac76f15aee5f629821ff9bb7d",
+        "Version":"bfa714893915a93a35df9f3c7978e3a3d368275a",
         "License":""
       },
       "Path":"..\\lv-http-util"
@@ -61,10 +61,10 @@
       "Info":{
         "Name":"lv-promises",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-promises.git",
+        "Host":"https://github.com/illuminated-g/lv-promises.git",
         "Path":"",
         "Branch":"main",
-        "Version":"c5c3c03c030db07e8a550fdd0b8806ab727244da",
+        "Version":"2f72f5843638e3488e01ee273494cd77768478e6",
         "License":""
       },
       "Path":"..\\lv-promises"
@@ -76,7 +76,7 @@
         "Host":"git@github.com:illuminated-g/lv-protoc.git",
         "Path":"",
         "Branch":"main",
-        "Version":"07cb95a74760d59b7bdaa4fbfa5ce09c8c6f0864",
+        "Version":"d118e79454bb4c4c6371444b238d67db4e3baec0",
         "License":""
       },
       "Path":"..\\lv-protoc"
@@ -124,7 +124,7 @@
         "Host":"https://github.com/illuminated-g/lv-vecto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"d26a4b951d527cd0285a01599103ebc24218cd7b",
+        "Version":"c077664cfb5c636629fb7573f6429d85f2b9f054",
         "License":""
       },
       "Path":"..\\lv-vecto"
@@ -133,10 +133,10 @@
       "Info":{
         "Name":"lv-web-crypto",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-web-crypto.git",
+        "Host":"https://github.com/illuminated-g/lv-web-crypto.git",
         "Path":"",
         "Branch":"main",
-        "Version":"2041e1864f16d4cfb88ca307a908817f5b0048b3",
+        "Version":"0e8585ff771f5f60acdaee11258295ac034fd2bd",
         "License":""
       },
       "Path":"..\\lv-web-crypto"
@@ -157,10 +157,10 @@
       "Info":{
         "Name":"lv-exec-anchor",
         "Type":"git",
-        "Host":"git@github.com:illuminated-g/lv-exec-anchor.git",
+        "Host":"https://github.com/illuminated-g/lv-exec-anchor.git",
         "Path":"",
         "Branch":"main",
-        "Version":"f2d93d1e0584d708702eba042ca93ab0f5888a55",
+        "Version":"cf4d2785f5d20f7de44825e84f963bd9c9e58d1c",
         "License":""
       },
       "Path":"..\\lv-exec-anchor"
@@ -172,7 +172,7 @@
         "Host":"https://github.com/illuminated-g/lv-userprefs.git",
         "Path":"",
         "Branch":"main",
-        "Version":"b7d5c5a32c1aeba2935a0c82d5dc3d9f7ad248da",
+        "Version":"98c692e975611026dd8da90e16d9c7ee2177d6cf",
         "License":""
       },
       "Path":"..\\lv-userprefs"
@@ -184,10 +184,58 @@
         "Host":"https://github.com/illuminated-g/volatus-gui-controls.git",
         "Path":"",
         "Branch":"main",
-        "Version":"71a1e9d397ab46ac1c6df71676dcf5f452b0e35e",
+        "Version":"e4703c997d88f14643f2720e6fd17df125820938",
         "License":""
       },
       "Path":"..\\volatus-gui-controls"
+    },
+    {
+      "Info":{
+        "Name":"lv-tree-tools",
+        "Type":"git",
+        "Host":"https://github.com/illuminated-g/lv-tree-tools.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"be518bca60f9313970a8008ddfd72dfe64c21cce",
+        "License":""
+      },
+      "Path":"..\\lv-tree-tools"
+    },
+    {
+      "Info":{
+        "Name":"lv-uri",
+        "Type":"git",
+        "Host":"https://github.com/illuminated-g/lv-uri.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"e35380c6a51f219a6c03b4e408feb375d451fd89",
+        "License":""
+      },
+      "Path":"..\\lv-uri"
+    },
+    {
+      "Info":{
+        "Name":"lv-autocomplete",
+        "Type":"git",
+        "Host":"https://github.com/illuminated-g/lv-autocomplete.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"5adf4365cfb928dc4df82327b6f8854340dbc263",
+        "License":""
+      },
+      "Path":"..\\lv-autocomplete"
+    },
+    {
+      "Info":{
+        "Name":"lv-oopanel",
+        "Type":"git",
+        "Host":"git@github.com:illuminated-g/lv-oopanel.git",
+        "Path":"",
+        "Branch":"main",
+        "Version":"87535e4221cfbca53ff17bef15ff69edd1edd898",
+        "License":""
+      },
+      "Path":"..\\lv-oopanel"
     }
   ]
 }
