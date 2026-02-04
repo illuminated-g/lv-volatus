@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message TcpClientInfo {
+    fixed32 node_id = 1;
+    string node_name = 2;
+    string app_version = 3;
+    string config_version = 4;
+    string config_hash = 5;
+    string node_alias = 6;
+    string address = 7;
+}
+
+message TcpClientList {
+    repeated TcpClientInfo clients = 1;
+}

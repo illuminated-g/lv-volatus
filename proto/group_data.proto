@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+// GroupData is intended to be encapsulated in a UdpPayload message
+message GroupData {
+    string group_name = 1;
+    int64 data_timestamp = 2;
+    repeated double scaled_data = 3;
+    repeated double raw_data = 4;
+    uint32 names_crc = 5;
+}

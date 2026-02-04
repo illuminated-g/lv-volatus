@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+enum ConnectStatus {
+    STATUS_UNKNOWN     = 0;
+    STATUS_SUCCESS     = 1;
+    STATUS_ERROR       = 2;
+    STATUS_BAD_CONFIG  = 3;
+    STATUS_BAD_SYSTEM  = 4;
+    STATUS_BAD_CLUSTER = 5;
+}
+
+message TcpServerHello {
+    ConnectStatus status = 1;
+}

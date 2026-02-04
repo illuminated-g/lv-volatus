@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message TcpClientHello {
+    fixed32 node_id = 1;
+    string system = 2;
+    string cluster = 3;
+    string node_name = 4;
+    string app_version = 5;
+    string config_version = 6;
+    string config_hash = 7;
+    string node_alias = 8;
+}

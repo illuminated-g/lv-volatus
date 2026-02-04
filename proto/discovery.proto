@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+enum ServiceType {
+    // always need an "unknown" 0 element
+    SERVICETYPE_UNKNOWN = 0;
+
+    // TCP Server is used for command / request and response routing
+    SERVICETYPE_TCPSERVER = 1;
+
+    // HTTP Server is used for aperiodic requests and file transfers
+    SERVICETYPE_HTTPSERVER = 2;
+}
+
+message Service {
+    ServiceType type = 1;
+    int32 port = 2;
+}
+
+message Discovery {
+    fixed32 node_id = 1;
+    string name = 2;
+    fixed32 ip = 3;
+    string status = 4;
+    repeated Service services = 10;
+    repeated string capabilities = 11;
+    string system = 20;
+    string cluster = 21;
+    string app_version = 30;
+    string cfg_version = 31;
+}

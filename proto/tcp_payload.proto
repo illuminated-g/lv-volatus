@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+// Payload wrappers primarily use fixed-sized elements to make it easier
+// for message handling to pass messages without needing to do full
+// decodes of the wrapper layer.
+
+message TcpPayload {
+    // id of target node to receive payload
+    fixed32 target_node = 1;
+
+    // id of node that sent payload
+    fixed32 source_id = 3;
+
+    // payload count shared across tcp, udp, and http for source node
+    fixed32 sequence = 4;
+
+    // ns unix epoch time
+    sfixed64 timestamp = 5;
+
+    // payload message type for shared channels
+    string type = 6;
+
+    // target task id within node to send message to, falls back to type dispatching
+    string task_id = 7;
+
+    // flattened encapsulated message
+    bytes payload = 10;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// Encapsulates a reply payload within a TcpPayload
+
+message TcpReply {
+    
+    // original sequence number for identifying the pending request
+    fixed32 request_sequence = 1;
+
+    // orignal timestamp so that round-trip timing can be assessed if desired
+    fixed64 request_timestamp = 2;
+    
+    bytes payload = 3;
+
+    // the type for the response data
+    string type = 4;
+}
