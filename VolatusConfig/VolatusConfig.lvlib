@@ -19,6 +19,8 @@
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Config Format.ctl" Type="VI" URL="../Config Format.ctl"/>
+		<Item Name="Endpoint.ctl" Type="VI" URL="../Endpoint.ctl"/>
+		<Item Name="Group Type.ctl" Type="VI" URL="../Group Type.ctl"/>
 		<Item Name="Meta Name.ctl" Type="VI" URL="../Meta Name.ctl"/>
 		<Item Name="Meta Type.ctl" Type="VI" URL="../Meta Type.ctl"/>
 		<Item Name="Model Serial.ctl" Type="VI" URL="../Model Serial.ctl"/>

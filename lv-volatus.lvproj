@@ -821,6 +821,8 @@
 			<Item Name="Flatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/Discovery/Flatten.vi"/>
 			<Item Name="Unflatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/Discovery/Unflatten.vi"/>
 			<Item Name="Flatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/GroupData/Flatten.vi"/>
+			<Item Name="Msg.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/GroupData/Class/Msg.lvclass/Msg.ctl"/>
+			<Item Name="Msg.lvclass" Type="LVClass" URL="../../lv-vecto/Vecto/proto/GroupData/Class/Msg.lvclass"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
