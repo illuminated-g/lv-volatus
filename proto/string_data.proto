@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message StringData {
+    string group_name = 1;
+    int64 data_timestamp = 2;
+    uint32 names_crc = 4;
+    repeated string strings = 3;
+}

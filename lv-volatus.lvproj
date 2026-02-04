@@ -18,9 +18,7 @@
 		</Item>
 		<Item Name="libs" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="proto" Type="Folder" URL="../../lv-vecto/Vecto/proto">
-				<Property Name="NI.DISK" Type="Bool">true</Property>
-			</Item>
+			<Item Name="proto" Type="Folder"/>
 			<Item Name="AutoComplete.lvlib" Type="Library" URL="../../lv-autocomplete/AutoComplete/AutoComplete.lvlib"/>
 			<Item Name="Base64.lvlib" Type="Library" URL="../../lv-web-crypto/lv-base64/Base64.lvlib"/>
 			<Item Name="Builder Core.lvlib" Type="Library" URL="../../lv-builder/Builder Core/Builder Core.lvlib"/>
@@ -810,6 +808,19 @@
 			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Data.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/GroupData/Data.ctl"/>
+			<Item Name="Data.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/UdpPayload/Data.ctl"/>
+			<Item Name="Unflatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/GroupData/Unflatten.vi"/>
+			<Item Name="Flatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/UdpPayload/Flatten.vi"/>
+			<Item Name="Data.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/TcpPayload/Data.ctl"/>
+			<Item Name="Flatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/TcpPayload/Flatten.vi"/>
+			<Item Name="Data.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/TcpClientHello/Data.ctl"/>
+			<Item Name="Enumeration.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/ServiceType/Enumeration.ctl"/>
+			<Item Name="Data.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/Service/Data.ctl"/>
+			<Item Name="Data.ctl" Type="VI" URL="../../lv-vecto/Vecto/proto/Discovery/Data.ctl"/>
+			<Item Name="Flatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/Discovery/Flatten.vi"/>
+			<Item Name="Unflatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/Discovery/Unflatten.vi"/>
+			<Item Name="Flatten.vi" Type="VI" URL="../../lv-vecto/Vecto/proto/GroupData/Flatten.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="DemoApp" Type="EXE">
