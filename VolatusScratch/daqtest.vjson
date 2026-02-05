@@ -378,6 +378,28 @@
                                             "DigitalControl_LastLate": {"Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"}}
                                         },
                                         "Controls": {
+                                            "DO08_Int": {
+                                                "Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Interlock",
+                                                "Output": "DO08",
+                                                "Conditions": {
+                                                    "DO09": true,
+                                                    "DO10": true
+                                                },
+                                                "Logic": "Any",
+                                                "Inhibit_Value": false,
+                                                "DO08_Inhibit": {"Meta": {"VL_Type": "VL_Channel", "Control_Param": "PV"}}
+                                            },
+                                            "DO04_Int": {
+                                                "Meta": {"VL_Type": "VL_Channel"},
+                                                "Type": "Interlock",
+                                                "Output": "DO04",
+                                                "Conditions": {
+                                                    "DO10": true
+                                                },
+                                                "Inhibit_Value": false,
+                                                "DO04_Inhibit": {"Meta": {"VL_Type": "VL_Channel", "Control_Param": "PV"}}
+                                            },
                                             "OxFillBB": {
                                                 "Meta": {"VL_Type": "VL_Channel"},
                                                 "Type": "BangBang",

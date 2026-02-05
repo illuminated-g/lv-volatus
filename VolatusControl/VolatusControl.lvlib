@@ -10,6 +10,7 @@
 	<Item Name="Controls" Type="Folder">
 		<Item Name="BangBangControl.lvclass" Type="LVClass" URL="../BangBangControl/BangBangControl.lvclass"/>
 		<Item Name="DiscreteRangeControl.lvclass" Type="LVClass" URL="../DiscreteRangeControl/DiscreteRangeControl.lvclass"/>
+		<Item Name="InterlockControl.lvclass" Type="LVClass" URL="../InterlockControl/InterlockControl.lvclass"/>
 		<Item Name="LatchedValve.lvclass" Type="LVClass" URL="../LatchedValve/LatchedValve.lvclass"/>
 		<Item Name="LimitControl.lvclass" Type="LVClass" URL="../LimitControl/LimitControl.lvclass"/>
 		<Item Name="MultiControl.lvclass" Type="LVClass" URL="../MultiControl/MultiControl.lvclass"/>
