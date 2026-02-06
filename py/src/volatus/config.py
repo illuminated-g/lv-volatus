@@ -519,9 +519,15 @@ class ConfigLoader:
         groupType = Cfg.vlReadMeta(groupObj, VL_Meta.VL_Group_Type)
         
         pubCfg: EndpointConfig = None
-        pubObj = groupObj.get('Publish')
+        pubObj = groupObj.get('Multicast')
+
+        if not pubObj:
+            #backwards compatibility for older name
+            pubObj = groupObj.get('Publish')
+            
         if pubObj:
             pubCfg = EndpointConfig(pubObj['Address'], pubObj['Port'])
+
 
         group = GroupConfig(groupName, task.name, task.nodeName,
                             task.clusterName, publishConfig= pubCfg)
