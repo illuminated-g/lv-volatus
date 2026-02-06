@@ -460,8 +460,7 @@
                                             }
                                         }
                                     }
-                                },
-                                "Sequencing": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"}}
+                                }
                             }
                         },
                         "ValveGUI": {
@@ -523,7 +522,8 @@
                                 },
                                 "GuiDO": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"}
-                                }
+                                },
+                                "Sequencing": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"}}
                             }
                         },
                         "PyScript": {

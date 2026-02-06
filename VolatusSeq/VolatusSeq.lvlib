@@ -41,6 +41,9 @@
 		<Item Name="Condition Type.ctl" Type="VI" URL="../Condition Type.ctl"/>
 		<Item Name="Iteration Result.ctl" Type="VI" URL="../Iteration Result.ctl"/>
 		<Item Name="Load Result.ctl" Type="VI" URL="../Load Result.ctl"/>
+		<Item Name="Remote Analog.ctl" Type="VI" URL="../Remote Analog.ctl"/>
+		<Item Name="Remote Digital.ctl" Type="VI" URL="../Remote Digital.ctl"/>
+		<Item Name="Send Type.ctl" Type="VI" URL="../Send Type.ctl"/>
 		<Item Name="Sequence Load Data.ctl" Type="VI" URL="../Sequence Load Data.ctl"/>
 		<Item Name="Sequence Mode.ctl" Type="VI" URL="../Sequence Mode.ctl"/>
 		<Item Name="Sequence Status Extended.ctl" Type="VI" URL="../Sequence Status Extended.ctl"/>
