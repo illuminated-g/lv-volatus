@@ -1,0 +1,15 @@
+volatus.discovery
+=================
+
+.. automodule:: volatus.discovery
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      DiscoveryAction
+      DiscoveryActionClose
+      DiscoveryActionType
+      DiscoveryService
+   

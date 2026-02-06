@@ -1,0 +1,6 @@
+volatus.vecto.proto.string\_data\_pb2
+=====================================
+
+.. automodule:: volatus.vecto.proto.string_data_pb2
+
+   

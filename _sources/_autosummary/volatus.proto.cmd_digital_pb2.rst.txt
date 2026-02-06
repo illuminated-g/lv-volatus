@@ -1,0 +1,6 @@
+volatus.proto.cmd\_digital\_pb2
+===============================
+
+.. automodule:: volatus.proto.cmd_digital_pb2
+
+   

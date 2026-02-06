@@ -1,0 +1,6 @@
+volatus.vecto.proto.group\_data\_pb2
+====================================
+
+.. automodule:: volatus.vecto.proto.group_data_pb2
+
+   

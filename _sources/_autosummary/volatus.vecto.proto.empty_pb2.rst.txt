@@ -1,0 +1,6 @@
+volatus.vecto.proto.empty\_pb2
+==============================
+
+.. automodule:: volatus.vecto.proto.empty_pb2
+
+   

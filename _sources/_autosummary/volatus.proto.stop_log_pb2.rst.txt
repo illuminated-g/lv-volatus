@@ -1,0 +1,6 @@
+volatus.proto.stop\_log\_pb2
+============================
+
+.. automodule:: volatus.proto.stop_log_pb2
+
+   

@@ -1,0 +1,32 @@
+volatus.config
+==============
+
+.. automodule:: volatus.config
+
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Cfg
+      ChannelConfig
+      ChannelLookup
+      ClusterConfig
+      ClusterLookup
+      ConfigLoader
+      EndpointConfig
+      GroupConfig
+      GroupLookup
+      NodeConfig
+      NodeLookup
+      NodeNetworkConfig
+      SystemConfig
+      TCPConfig
+      TaskConfig
+      TaskLookup
+      VL_Meta
+      VL_Type
+      VersionBump
+      VolatusConfig
+      VolatusVersion
+   

@@ -1,0 +1,24 @@
+volatus.proto.cmd_digital_pb2
+=============================
+
+.. py:module:: volatus.proto.cmd_digital_pb2
+
+.. autoapi-nested-parse::
+
+   Generated protocol buffer code.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   volatus.proto.cmd_digital_pb2.DESCRIPTOR
+
+
+Module Contents
+---------------
+
+.. py:data:: DESCRIPTOR
+

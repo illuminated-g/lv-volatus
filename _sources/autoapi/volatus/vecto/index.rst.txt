@@ -1,0 +1,18 @@
+volatus.vecto
+=============
+
+.. py:module:: volatus.vecto
+
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/volatus/vecto/TCP/index
+   /autoapi/volatus/vecto/UDP/index
+   /autoapi/volatus/vecto/proto/index
+   /autoapi/volatus/vecto/util/index
+
+

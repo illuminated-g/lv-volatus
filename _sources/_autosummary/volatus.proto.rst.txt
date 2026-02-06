@@ -1,0 +1,20 @@
+volatus.proto
+=============
+
+.. automodule:: volatus.proto
+
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   cmd_analog_pb2
+   cmd_digital_pb2
+   doubles_pb2
+   event_pb2
+   start_log_pb2
+   start_seq_pb2
+   stop_log_pb2
+   sync_ticks_pb2

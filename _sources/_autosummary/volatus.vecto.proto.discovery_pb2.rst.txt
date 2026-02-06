@@ -1,0 +1,6 @@
+volatus.vecto.proto.discovery\_pb2
+==================================
+
+.. automodule:: volatus.vecto.proto.discovery_pb2
+
+   
