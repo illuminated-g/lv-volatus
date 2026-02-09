@@ -19,15 +19,15 @@
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082139136</Property>
 	</Item>
 	<Item Name="Handle Menu Selection.vi" Type="VI" URL="../Handle Menu Selection.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)[!!!!%1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;2!=!!?!!!Q%&amp;:P&lt;'&amp;U&gt;8.(65EO&lt;(:M;7)&gt;4WZ4;'^S&gt;'.V&gt;%VF&lt;H6)97ZE&lt;'6S,GRW9WRB=X-!!"F0&lt;F.I&lt;X*U9X6U476O&gt;5BB&lt;G2M:8)A&lt;X6U!"2!=!!)!!!!"A!!"F.V9E^C;A!!/%"Q!"Y!!#).6G^M982V=SZM&gt;GRJ9B*7&lt;WRB&gt;(6T16"*,GRW9WRB=X-!!!J7&lt;WRB&gt;(6T16"*!!!21!-!#EBP=GF[&lt;WZU97Q!!!^!!Q!)6G6S&gt;'FD97Q!!$-!]1!!!!!!!!!"&amp;%R75'^J&lt;H1T-F2Z='6%:79O9X2M!":!5!!#!!A!#1:$&lt;W^S:(-!!"2!=!!)!!!!"A!!"E.U&lt;&amp;*F:A!!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!31$$`````#%FU:7V1982I!!!11$$`````"UFU:7V597=!6%"Q!"Y!!$!16G^M982V=U&gt;633ZM&gt;GRJ9BV0&lt;F.I&lt;X*U9X6U476O&gt;5BB&lt;G2M:8)O&lt;(:D&lt;'&amp;T=Q!!'%^O5WBP=H2D&gt;82.:7ZV3'&amp;O:'RF=C"J&lt;A!!6!$Q!!Q!!Q!%!!1!"1!'!!=!#A!,!!Q!$1!/!!]#!!"Y!!!.#!!!!!!!!!!!!!#.#Q!!%!!!!"!!!!!1!!!!%!!!!!A!!!)1!!!#%!!!!*!!!!!!!1!1!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">1090519168</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">false</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1117782528</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1082139136</Property>
 	</Item>
 </LVClass>

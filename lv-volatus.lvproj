@@ -58,7 +58,6 @@
 		<Item Name="Tools" Type="Folder"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusErrorUtilities.lvlib" Type="Library" URL="../VolatusErrorUtilities/VolatusErrorUtilities.lvlib"/>
-		<Item Name="VolatusGUI.lvlib" Type="Library" URL="../VolatusGUI/VolatusGUI.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
 		<Item Name="VolatusDAQ.lvlib" Type="Library" URL="../VolatusDAQ/VolatusDAQ.lvlib"/>
@@ -66,6 +65,7 @@
 		<Item Name="VolatusHistorian.lvlib" Type="Library" URL="../VolatusHistorian/VolatusHistorian.lvlib"/>
 		<Item Name="VolatusDAQConfig.lvlib" Type="Library" URL="../VolatusDAQConfig/VolatusDAQConfig.lvlib"/>
 		<Item Name="VolatusGUIControls.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIControls/VolatusGUIControls.lvlib"/>
+		<Item Name="VolatusGUI.lvlib" Type="Library" URL="../VolatusGUI/VolatusGUI.lvlib"/>
 		<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
 		<Item Name="VolatusSeqGUI.lvlib" Type="Library" URL="../VolatusSeqGUI/VolatusSeqGUI.lvlib"/>

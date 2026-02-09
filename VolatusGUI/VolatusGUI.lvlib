@@ -42,6 +42,7 @@
 		<Item Name="Debug GUI Launcher.lvclass" Type="LVClass" URL="../Debug GUI Launcher/Debug GUI Launcher.lvclass"/>
 	</Item>
 	<Item Name="Elements" Type="Folder">
+		<Item Name="Element Inhibit.lvclass" Type="LVClass" URL="../Element Inhibit/Element Inhibit.lvclass"/>
 		<Item Name="Lookup Element Type.vi" Type="VI" URL="../Lookup Element Type.vi"/>
 		<Item Name="Lookup Group.vi" Type="VI" URL="../Lookup Group.vi"/>
 	</Item>

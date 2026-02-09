@@ -2,7 +2,7 @@
     "Sequence": {
         "Name": "Fuel Condition",
         "Version": "1",
-        "Comment": "hControl state machine for bottle heating/cooling.",
+        "Comment": "Control state machine for bottle heating/cooling.",
         "Period": 10,
         "Entry": "Hold",
         "Abort": "Stop",
