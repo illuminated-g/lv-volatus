@@ -16,6 +16,11 @@
 		<Item Name="Scratch" Type="Folder">
 			<Item Name="Test Overlays.vi" Type="VI" URL="../Test Overlays.vi"/>
 		</Item>
+		<Item Name="Validate" Type="Folder">
+			<Item Name="Check Duplicated Names.vi" Type="VI" URL="../Check Duplicated Names.vi"/>
+			<Item Name="Validate Cluster.vi" Type="VI" URL="../Validate Cluster.vi"/>
+			<Item Name="Validate System.vi" Type="VI" URL="../Validate System.vi"/>
+		</Item>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Config Format.ctl" Type="VI" URL="../Config Format.ctl"/>
@@ -53,6 +58,8 @@
 		<Item Name="Element Factory.vi" Type="VI" URL="../Element Factory.vi"/>
 		<Item Name="Format Extension.vi" Type="VI" URL="../Format Extension.vi"/>
 		<Item Name="Storage Factory.vi" Type="VI" URL="../Storage Factory.vi"/>
+		<Item Name="Validate Config.vi" Type="VI" URL="../Validate Config.vi"/>
+		<Item Name="Validation App.vi" Type="VI" URL="../Validation App.vi"/>
 	</Item>
 	<Item Name="VolatusConfig.lvclass" Type="LVClass" URL="../VolatusConfig/VolatusConfig.lvclass"/>
 	<Item Name="VolatusConfigElement.lvclass" Type="LVClass" URL="../VolatusConfigElement/VolatusConfigElement.lvclass"/>

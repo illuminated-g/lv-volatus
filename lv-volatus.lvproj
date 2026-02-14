@@ -1046,6 +1046,48 @@
 				<Property Name="PKG_synopsis" Type="Str">lv-volatus-general</Property>
 				<Property Name="PKG_version" Type="Str">1.2.5</Property>
 			</Item>
+			<Item Name="Validator" Type="EXE">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{63976E71-E74A-4A94-8B7C-6DD4595BB5CD}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{1AEA0F6D-934D-40C7-8691-FCCC1993309A}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_serverType" Type="Int">0</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.NI.com</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{4743D2E6-9550-4EB9-AC1E-94EC37C2B7A5}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">Validator</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/Validator</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{ADBE0A4A-1D82-4205-AC05-A9C6B34D9F94}</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">volatus-validator.exe</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/Validator/volatus-validator.exe</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/Validator/data</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{B9A90322-C874-4075-B998-FB5BB7554E20}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/VolatusConfig.lvlib/Utilities/Validation App.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">2</Property>
+				<Property Name="TgtF_companyName" Type="Str">NI</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">Validator</Property>
+				<Property Name="TgtF_internalName" Type="Str">Validator</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2026 NI</Property>
+				<Property Name="TgtF_productName" Type="Str">Validator</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{4A6BDEDB-F354-4978-A073-A18E63B3B0C6}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">volatus-validator.exe</Property>
+				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
+			</Item>
 		</Item>
 	</Item>
 </Project>
