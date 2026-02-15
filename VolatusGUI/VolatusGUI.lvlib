@@ -20,6 +20,7 @@
 			<Item Name="OnShortcutMenuHandler.lvclass" Type="LVClass" URL="../OnShortcutMenuHandler/OnShortcutMenuHandler.lvclass"/>
 			<Item Name="OnValueChangeHandler.lvclass" Type="LVClass" URL="../OnValueChangeHandler/OnValueChangeHandler.lvclass"/>
 		</Item>
+		<Item Name="BluelinesRedlines Source.lvclass" Type="LVClass" URL="../BluelinesRedlines Source/BluelinesRedlines Source.lvclass"/>
 		<Item Name="GUI Element.lvclass" Type="LVClass" URL="../GUI Element/GUI Element.lvclass"/>
 	</Item>
 	<Item Name="Commands" Type="Folder">

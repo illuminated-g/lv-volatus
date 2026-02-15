@@ -44,10 +44,14 @@
 			<Item Name="SimpleChart.lvclass" Type="LVClass" URL="../SimpleChart/SimpleChart.lvclass"/>
 		</Item>
 		<Item Name="Special" Type="Folder">
+			<Item Name="BluelinesRedlines.lvclass" Type="LVClass" URL="../BluelinesRedlines/BluelinesRedlines.lvclass"/>
 			<Item Name="SystemConfigStatusIndicator.lvclass" Type="LVClass" URL="../SystemConfigStatusIndicator/SystemConfigStatusIndicator.lvclass"/>
 		</Item>
 	</Item>
 	<Item Name="Support" Type="Folder">
+		<Item Name="BluelinesRedlines" Type="Folder">
+			<Item Name="User BluelinesRedlines.lvclass" Type="LVClass" URL="../User BluelinesRedlines/User BluelinesRedlines.lvclass"/>
+		</Item>
 		<Item Name="Data Types" Type="Folder">
 			<Item Name="Decimation Params.ctl" Type="VI" URL="../Decimation Params.ctl"/>
 		</Item>
