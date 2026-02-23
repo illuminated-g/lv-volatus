@@ -505,7 +505,7 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
                                     "Buffer_Size": 10000,
                                     "Exclude": [],
-                                    "Logger": {
+                                    "~Logger": {
                                         "Rate": 1,
                                         "Folder": "c:/logs/historian",
                                         "Groups": [
@@ -514,15 +514,7 @@
                                         ]
                                     }
                                 },
-                                "GuiAI": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAI"}
-                                },
-                                "GuiAO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericAO"}
-                                },
-                                "GuiDO": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GenericDO"}
-                                },
+                                "Charting": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"}},
                                 "Sequencing": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"}}
                             }
                         },

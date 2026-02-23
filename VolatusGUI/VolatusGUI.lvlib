@@ -28,6 +28,7 @@
 		<Item Name="Numeric Analog Panel.lvclass" Type="LVClass" URL="../Numeric Analog Panel/Numeric Analog Panel.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
+		<Item Name="Charting" Type="Folder"/>
 		<Item Name="Messages" Type="Folder">
 			<Item Name="GUI Registration.ctl" Type="VI" URL="../GUI Registration.ctl"/>
 			<Item Name="Position Data.ctl" Type="VI" URL="../Position Data.ctl"/>
@@ -50,6 +51,7 @@
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Event Viewer Identity.lvclass" Type="LVClass" URL="../Event Viewer Identity/Event Viewer Identity.lvclass"/>
 		<Item Name="GUI Identity.lvclass" Type="LVClass" URL="../GUI Identity/GUI Identity.lvclass"/>
+		<Item Name="Historian Charting Manager ID.lvclass" Type="LVClass" URL="../Historian Charting Manager ID/Historian Charting Manager ID.lvclass"/>
 	</Item>
 	<Item Name="Plugins" Type="Folder">
 		<Item Name="Control Event Registrations.lvclass" Type="LVClass" URL="../Control Event Registrations/Control Event Registrations.lvclass"/>
@@ -57,6 +59,7 @@
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="GUIStateValue.lvclass" Type="LVClass" URL="../GUIStateValue/GUIStateValue.lvclass"/>
+		<Item Name="Plot Group Events Value.lvclass" Type="LVClass" URL="../Plot Group Events Value/Plot Group Events Value.lvclass"/>
 	</Item>
 	<Item Name="Standard" Type="Folder">
 		<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../../Volatus/Config Alert Module/Config Monitor Module.lvclass"/>
@@ -68,4 +71,5 @@
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="GUI Helper.lvclass" Type="LVClass" URL="../GUI Helper/GUI Helper.lvclass"/>
 	<Item Name="GUI Manager Module.lvclass" Type="LVClass" URL="../GUI Manager Module/GUI Manager Module.lvclass"/>
+	<Item Name="Historian Charting Manager.lvclass" Type="LVClass" URL="../Historian Charting Manager/Historian Charting Manager.lvclass"/>
 </Library>

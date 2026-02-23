@@ -40,6 +40,7 @@
 			<Item Name="NumericIndicator.lvclass" Type="LVClass" URL="../NumericIndicator/NumericIndicator.lvclass"/>
 		</Item>
 		<Item Name="Plotting" Type="Folder">
+			<Item Name="HistorianCharting.lvclass" Type="LVClass" URL="../HistorianCharting/HistorianCharting.lvclass"/>
 			<Item Name="LocalGraphBuffer.lvclass" Type="LVClass" URL="../LocalGraphBuffer/LocalGraphBuffer.lvclass"/>
 			<Item Name="SimpleChart.lvclass" Type="LVClass" URL="../SimpleChart/SimpleChart.lvclass"/>
 		</Item>
