@@ -22,6 +22,10 @@
 		<Item Name="Config Updater.lvclass" Type="LVClass" URL="../Config Updater/Config Updater.lvclass"/>
 		<Item Name="Module.lvclass" Type="LVClass" URL="../Module/Module.lvclass"/>
 	</Item>
+	<Item Name="Commands" Type="Folder">
+		<Item Name="Digital Command.lvclass" Type="LVClass" URL="../Digital Command/Digital Command.lvclass"/>
+		<Item Name="Numeric Command.lvclass" Type="LVClass" URL="../Numeric Command/Numeric Command.lvclass"/>
+	</Item>
 	<Item Name="Config Updaters" Type="Folder">
 		<Item Name="Git Updater Module.lvclass" Type="LVClass" URL="../Git Updater Module/Git Updater Module.lvclass"/>
 	</Item>
@@ -63,7 +67,6 @@
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
 		<Item Name="Show GUI Options.ctl" Type="VI" URL="../Show GUI Options.ctl"/>
 	</Item>
-	<Item Name="Error Utilities" Type="Folder"/>
 	<Item Name="HTTP" Type="Folder">
 		<Item Name="ConfigHTTPController.lvclass" Type="LVClass" URL="../ConfigHTTPController/ConfigHTTPController.lvclass"/>
 		<Item Name="DebugHTTPController.lvclass" Type="LVClass" URL="../DebugHTTPController/DebugHTTPController.lvclass"/>
