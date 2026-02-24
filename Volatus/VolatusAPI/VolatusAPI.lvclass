@@ -189,6 +189,15 @@
 			<Property Name="NI.ClassItem.Priority" Type="Int">5</Property>
 			<Property Name="NI.ClassItem.State" Type="Int">1342709760</Property>
 		</Item>
+		<Item Name="Networking Enabled.vi" Type="VI" URL="../Networking Enabled.vi">
+			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!$\!!!!"1!%!!!!'%!B%EZF&gt;(&gt;P=GNJ&lt;G=A27ZB9GRF:!!!0%"Q!"Y!!#).6G^M982V=SZM&gt;GRJ9B*7&lt;WRB&gt;(6T16"*,GRW9WRB=X-!!!Z7&lt;WRB&gt;(6T16"*)'^V&gt;!!!/E"Q!"Y!!#).6G^M982V=SZM&gt;GRJ9B*7&lt;WRB&gt;(6T16"*,GRW9WRB=X-!!!V7&lt;WRB&gt;(6T16"*)'FO!'%!]!!-!!!!!!!"!!)!!!!!!!!!!!!!!!!!!!!$!A!!?!!!!!!!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!1!!!!!</Property>
+			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+			<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+			<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+			<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+			<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+			<Property Name="NI.ClassItem.State" Type="Int">1342710272</Property>
+		</Item>
 		<Item Name="Node Config.vi" Type="VI" URL="../Node Config.vi">
 			<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%B!!!!"1!%!!!!0E"Q!"Y!!#E46G^M982V=U.P&lt;G:J:SZM&gt;GRJ9B./&lt;W2F)%.P&lt;G:J:SZM&gt;G.M98.T!!N/&lt;W2F)%.P&lt;G:J:Q!]1(!!(A!!)AV7&lt;WRB&gt;(6T,GRW&lt;'FC%F:P&lt;'&amp;U&gt;8."5%EO&lt;(:D&lt;'&amp;T=Q!!$F:P&lt;'&amp;U&gt;8."5%EA&lt;X6U!!![1(!!(A!!)AV7&lt;WRB&gt;(6T,GRW&lt;'FC%F:P&lt;'&amp;U&gt;8."5%EO&lt;(:D&lt;'&amp;T=Q!!$6:P&lt;'&amp;U&gt;8."5%EA;7Y!91$Q!!Q!!!!!!!%!!A!!!!!!!!!!!!!!!!!!!!-%!!"Y!!!!!!!!!!!!!!E!!!!.#Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"!!!!U!!!!-!!!!!!!!!!!!!!%!"!!!!!!</Property>
 			<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
