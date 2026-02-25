@@ -44,7 +44,8 @@
                             "Groups": ["Config", "Logging"],
                             "Tasks": {
                                 "GUI_Manager": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
+                                    "Plugins": "gui"
                                 },
                                 "EventViewer": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
