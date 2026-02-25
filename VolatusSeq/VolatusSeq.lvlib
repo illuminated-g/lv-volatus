@@ -16,15 +16,18 @@
 			<Item Name="Start Log Command.lvclass" Type="LVClass" URL="../Start Log Command/Start Log Command.lvclass"/>
 			<Item Name="Stop Log Command.lvclass" Type="LVClass" URL="../Stop Log Command/Stop Log Command.lvclass"/>
 			<Item Name="Stop Seq Command.lvclass" Type="LVClass" URL="../Stop Seq Command/Stop Seq Command.lvclass"/>
+			<Item Name="Lookup Command.vi" Type="VI" URL="../Command/Lookup Command.vi"/>
 		</Item>
 		<Item Name="Transitions" Type="Folder">
 			<Item Name="State Transition.lvclass" Type="LVClass" URL="../State Transition/State Transition.lvclass"/>
+			<Item Name="Lookup Transition.vi" Type="VI" URL="../Transition/Lookup Transition.vi"/>
 		</Item>
 		<Item Name="Condition" Type="Folder">
 			<Item Name="OutOfRange Condition.lvclass" Type="LVClass" URL="../OutOfRange Condition/OutOfRange Condition.lvclass"/>
 			<Item Name="LowLimit Condition.lvclass" Type="LVClass" URL="../LowLimit Condition/LowLimit Condition.lvclass"/>
 			<Item Name="HighLimit Condition.lvclass" Type="LVClass" URL="../HighLimit Condition/HighLimit Condition.lvclass"/>
 			<Item Name="Time Condition.lvclass" Type="LVClass" URL="../Time Condition/Time Condition.lvclass"/>
+			<Item Name="Lookup Condition.vi" Type="VI" URL="../Condition/Lookup Condition.vi"/>
 		</Item>
 		<Item Name="Iteration Actions.lvclass" Type="LVClass" URL="../Iteration Actions/Iteration Actions.lvclass"/>
 		<Item Name="Command.lvclass" Type="LVClass" URL="../Command/Command.lvclass"/>
