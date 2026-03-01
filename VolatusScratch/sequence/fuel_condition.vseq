@@ -3,7 +3,7 @@
         "Name": "Fuel Condition",
         "Version": "1",
         "Comment": "Control state machine for bottle heating/cooling.",
-        "Period": 10,
+        "Period": 100,
         "Entry": "Hold",
         "Abort": "Stop",
         "States": {
@@ -15,7 +15,8 @@
                         "Time": 0,
                         "Commands": [
                             {"Type": "Digital", "Channel": "FuelCool", "Value": false},
-                            {"Type": "Digital", "Channel": "FuelHeat", "Value": false}
+                            {"Type": "Digital", "Channel": "FuelHeat", "Value": false},
+                            {"Type": "Event", "Message": "Fuel Holding"}
                         ]
                     }
                 ],
@@ -45,7 +46,8 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "FuelCool", "Value": true}
+                            {"Type": "Digital", "Channel": "FuelCool", "Value": true},
+                            {"Type": "Event", "Message": "Fuel Cooling"}
                         ]
                     }
                 ],
@@ -67,7 +69,8 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "FuelHeat", "Value": true}
+                            {"Type": "Digital", "Channel": "FuelHeat", "Value": true},
+                            {"Type": "Event", "Message": "Fuel Heating"}
                         ]
                     }
                 ],
@@ -90,6 +93,7 @@
                         "Commands": [
                             {"Type": "Digital", "Channel": "FuelCool", "Value": false},
                             {"Type": "Digital", "Channel": "FuelHeat", "Value": false},
+                            {"Type": "Error", "Message": "Fuel Stopping"},
                             {"Type": "Stop"}
                         ]
                     }

@@ -2,8 +2,8 @@
     "Sequence": {
         "Name": "Ox Condition",
         "Version": "1",
-        "Comment": "hControl state machine for bottle heating/cooling.",
-        "Period": 10,
+        "Comment": "Control state machine for bottle heating/cooling.",
+        "Period": 100,
         "Entry": "Hold",
         "Abort": "Stop",
         "States": {
