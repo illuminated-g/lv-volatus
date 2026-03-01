@@ -17,6 +17,10 @@
 			<Item Name="Stop Log Command.lvclass" Type="LVClass" URL="../Stop Log Command/Stop Log Command.lvclass"/>
 			<Item Name="Stop Seq Command.lvclass" Type="LVClass" URL="../Stop Seq Command/Stop Seq Command.lvclass"/>
 			<Item Name="Lookup Command.vi" Type="VI" URL="../Command/Lookup Command.vi"/>
+			<Item Name="Start Seq Command.lvclass" Type="LVClass" URL="../Start Seq Command/Start Seq Command.lvclass"/>
+			<Item Name="Event Command.lvclass" Type="LVClass" URL="../Event Command/Event Command.lvclass"/>
+			<Item Name="Error Command.lvclass" Type="LVClass" URL="../Error Command/Error Command.lvclass"/>
+			<Item Name="HTTP Command.lvclass" Type="LVClass" URL="../HTTP Command/HTTP Command.lvclass"/>
 		</Item>
 		<Item Name="Transitions" Type="Folder">
 			<Item Name="State Transition.lvclass" Type="LVClass" URL="../State Transition/State Transition.lvclass"/>

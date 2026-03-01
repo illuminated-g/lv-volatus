@@ -27,6 +27,10 @@
 			<Item Name="Stop Log Command Config.lvclass" Type="LVClass" URL="../Stop Log Command Config/Stop Log Command Config.lvclass"/>
 			<Item Name="Transition Command Config.lvclass" Type="LVClass" URL="../Transition Command Config/Transition Command Config.lvclass"/>
 			<Item Name="Stop Seq Command Config.lvclass" Type="LVClass" URL="../Stop Seq Command Config/Stop Seq Command Config.lvclass"/>
+			<Item Name="Start Seq Command Config.lvclass" Type="LVClass" URL="../Start Seq Command Config/Start Seq Command Config.lvclass"/>
+			<Item Name="Event Command Config.lvclass" Type="LVClass" URL="../Event Command Config/Event Command Config.lvclass"/>
+			<Item Name="Error Command Config.lvclass" Type="LVClass" URL="../Error Command Config/Error Command Config.lvclass"/>
+			<Item Name="HTTP Command Config.lvclass" Type="LVClass" URL="../HTTP Command Config/HTTP Command Config.lvclass"/>
 		</Item>
 		<Item Name="Conditions" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
