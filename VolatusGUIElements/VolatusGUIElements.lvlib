@@ -57,6 +57,7 @@
 			<Item Name="Decimation Params.ctl" Type="VI" URL="../Decimation Params.ctl"/>
 		</Item>
 		<Item Name="Plotting" Type="Folder">
+			<Item Name="Invert Indices.vi" Type="VI" URL="../Invert Indices.vi"/>
 			<Item Name="MinMax Decimation.vi" Type="VI" URL="../MinMax Decimation.vi"/>
 		</Item>
 		<Item Name="Private" Type="Folder">

@@ -504,7 +504,7 @@
                                 },
                                 "Historian": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
-                                    "Buffer_Size": 10000,
+                                    "Memory_GB": 1.5,
                                     "Exclude": [],
                                     "~Logger": {
                                         "Rate": 1,
