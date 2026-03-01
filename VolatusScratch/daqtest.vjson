@@ -69,10 +69,12 @@
                                         "OxPSI":       {"Value": 200, "Meta": {"VL_Type": "VL_Channel"}},
                                         "OxCool":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
                                         "OxHeat":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "OxFlow":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
 
                                         "FuelPSI":       {"Value": 200, "Meta": {"VL_Type": "VL_Channel"}},
                                         "FuelCool":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
                                         "FuelHeat":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "FuelFlow":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
 
                                         "BoolTest": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
                                     }
@@ -459,6 +461,38 @@
                                                     }
                                                 ]
                                             }
+                                        }
+                                    }
+                                },
+                                "Calcs": {
+                                    "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SlowCalcs"},
+                                    "Period_ms": 100,
+                                    "DataProc": {
+                                        "Logging": {
+                                            "Split_GB": 1
+                                        }
+                                    },
+                                    "Calcs": {
+                                        "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
+                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
+
+                                        "Ox_Level_Median": {"Calc": "Median", "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"], "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Ox_Level_Max":    {"Calc": "Max",    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"], "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Ox_Level_Min":    {"Calc": "Min",    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"], "Meta": {"VL_Type": "~VL_Channel"}},
+
+                                        "Ox_PT_Median":    {"Calc": "Median", "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],       "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Ox_PT_Max":       {"Calc": "Max",    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],       "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Ox_PT_Min":       {"Calc": "Min",    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],       "Meta": {"VL_Type": "~VL_Channel"}},
+
+                                        "Test_MR":         {"Calc": "Div", "Numerator": "OxFlow", "Denominator": "FuelFlow", "Meta": {"VL_Type": "~VL_Channel"}},
+
+                                        "Ox_Level_Tare": {
+                                            "Meta": {"VL_Type": "~VL_Channel"},
+                                            "Calc": "Tare",
+                                            "Count": 10,
+                                            "Channel": "Ox_Level_Median",
+                                            "Ox_Level_Offset":   {"Value": 0, "Meta": {"VL_Type": "~VL_Channel", "Tare_Type": "Offset"}},
+                                            "Ox_LeveL_Tare_Cmd": {"Value": 0, "Meta": {"VL_Type": "~VL_Channel", "Tare_Type": "Cmd"}}
                                         }
                                     }
                                 }
