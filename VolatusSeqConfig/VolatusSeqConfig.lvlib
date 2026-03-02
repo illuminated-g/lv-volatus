@@ -40,6 +40,8 @@
 			<Item Name="LowLimit Condition Config.lvclass" Type="LVClass" URL="../LowLimit Condition Config/LowLimit Condition Config.lvclass"/>
 			<Item Name="OutOfRange Condition Config.lvclass" Type="LVClass" URL="../OutOfRange Condition Config/OutOfRange Condition Config.lvclass"/>
 			<Item Name="Time Condition Config.lvclass" Type="LVClass" URL="../Time Condition Config/Time Condition Config.lvclass"/>
+			<Item Name="SeqLoaded Condition Config.lvclass" Type="LVClass" URL="../SeqLoaded Condition Config/SeqLoaded Condition Config.lvclass"/>
+			<Item Name="SeqRunning Condition Config.lvclass" Type="LVClass" URL="../SeqRunning Condition Config/SeqRunning Condition Config.lvclass"/>
 		</Item>
 		<Item Name="Transitions" Type="Folder">
 			<Item Name="Lookup Transition Type.vi" Type="VI" URL="../Lookup Transition Type.vi"/>

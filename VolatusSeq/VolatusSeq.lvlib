@@ -32,6 +32,8 @@
 			<Item Name="HighLimit Condition.lvclass" Type="LVClass" URL="../HighLimit Condition/HighLimit Condition.lvclass"/>
 			<Item Name="Time Condition.lvclass" Type="LVClass" URL="../Time Condition/Time Condition.lvclass"/>
 			<Item Name="Lookup Condition.vi" Type="VI" URL="../Condition/Lookup Condition.vi"/>
+			<Item Name="SeqLoaded Condition.lvclass" Type="LVClass" URL="../SeqLoaded Condition/SeqLoaded Condition.lvclass"/>
+			<Item Name="SeqRunning Condition.lvclass" Type="LVClass" URL="../SeqRunning Condition/SeqRunning Condition.lvclass"/>
 		</Item>
 		<Item Name="Iteration Actions.lvclass" Type="LVClass" URL="../Iteration Actions/Iteration Actions.lvclass"/>
 		<Item Name="Command.lvclass" Type="LVClass" URL="../Command/Command.lvclass"/>
@@ -74,6 +76,7 @@
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="Load Result Value.lvclass" Type="LVClass" URL="../Load Result Value/Load Result Value.lvclass"/>
+		<Item Name="Sequence Status Value.lvclass" Type="LVClass" URL="../Sequence Status Value/Sequence Status Value.lvclass"/>
 		<Item Name="Sequencing Status Value.lvclass" Type="LVClass" URL="../Sequencing Status Value/Sequencing Status Value.lvclass"/>
 		<Item Name="State Launch Result Value.lvclass" Type="LVClass" URL="../State Launch Result Value/State Launch Result Value.lvclass"/>
 	</Item>
