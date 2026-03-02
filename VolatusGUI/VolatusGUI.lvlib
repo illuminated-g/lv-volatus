@@ -28,7 +28,12 @@
 		<Item Name="Numeric Analog Panel.lvclass" Type="LVClass" URL="../Numeric Analog Panel/Numeric Analog Panel.lvclass"/>
 	</Item>
 	<Item Name="Data Types" Type="Folder">
-		<Item Name="Charting" Type="Folder"/>
+		<Item Name="Charting" Type="Folder">
+			<Item Name="JSON Chart Group.ctl" Type="VI" URL="../Historian Charting Manager/JSON Chart Group.ctl"/>
+			<Item Name="JSON Charting Config.ctl" Type="VI" URL="../Historian Charting Manager/JSON Charting Config.ctl"/>
+			<Item Name="JSON Plot Config.ctl" Type="VI" URL="../Historian Charting Manager/JSON Plot Config.ctl"/>
+			<Item Name="JSON Plot Group.ctl" Type="VI" URL="../Historian Charting Manager/JSON Plot Group.ctl"/>
+		</Item>
 		<Item Name="Messages" Type="Folder">
 			<Item Name="GUI Registration.ctl" Type="VI" URL="../GUI Registration.ctl"/>
 			<Item Name="Position Data.ctl" Type="VI" URL="../Position Data.ctl"/>
@@ -58,6 +63,7 @@
 		<Item Name="PluginGUI.lvclass" Type="LVClass" URL="../PluginGUI/PluginGUI.lvclass"/>
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
+		<Item Name="Charting Config Value.lvclass" Type="LVClass" URL="../Charting Config Value/Charting Config Value.lvclass"/>
 		<Item Name="GUIStateValue.lvclass" Type="LVClass" URL="../GUIStateValue/GUIStateValue.lvclass"/>
 		<Item Name="Plot Group Events Value.lvclass" Type="LVClass" URL="../Plot Group Events Value/Plot Group Events Value.lvclass"/>
 	</Item>

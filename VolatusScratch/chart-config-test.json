@@ -1,0 +1,56 @@
+{
+    "ChartGroups": [
+        {
+            "Name": "Alpha",
+            "PlotGroups": ["Ox", "Fuel"]
+        },
+        {
+            "Name": "Beta",
+            "PlotGroups": ["Fuel", "Fuel 10min"]
+        }
+    ],
+    "PlotGroups": [
+        {
+            "Name": "Ox",
+            "Plots": [
+                {
+                    "Channel": "Ox_1"
+                },
+                {
+                    "Channel": "Ox_2"
+                },
+                {
+                    "Channel": "Ox_3"
+                }
+            ]
+        },
+        {
+            "Name": "Fuel",
+            "Plots": [
+                {
+                    "Channel": "Fuel_1"
+                },
+                {
+                    "Channel": "Fuel_2"
+                },
+                {
+                    "Channel": "Fuel_2"
+                }
+            ]
+        },
+        {
+            "Name": "Fuel 10min",
+            "Plots": [
+                {
+                    "Channel": "Fuel_1"
+                },
+                {
+                    "Channel": "Fuel_2"
+                },
+                {
+                    "Channel": "Fuel_2"
+                }
+            ]
+        }
+    ]
+}
