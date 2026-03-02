@@ -476,23 +476,21 @@
                                         "Meta": {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
                                         "Multicast": {"Address": "239.0.0.11", "Port": 36987},
 
-                                        "Ox_Level_Median": {"Calc": "Median", "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"], "Meta": {"VL_Type": "~VL_Channel"}},
-                                        "Ox_Level_Max":    {"Calc": "Max",    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"], "Meta": {"VL_Type": "~VL_Channel"}},
-                                        "Ox_Level_Min":    {"Calc": "Min",    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"], "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Ox_Level_Median": {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Median"}, "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"]},
+                                        "Ox_Level_Max":    {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Max"},    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"]},
+                                        "Ox_Level_Min":    {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Min"},    "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"]},
 
-                                        "Ox_PT_Median":    {"Calc": "Median", "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],       "Meta": {"VL_Type": "~VL_Channel"}},
-                                        "Ox_PT_Max":       {"Calc": "Max",    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],       "Meta": {"VL_Type": "~VL_Channel"}},
-                                        "Ox_PT_Min":       {"Calc": "Min",    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"],       "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Ox_PT_Median":    {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Median"}, "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"]},
+                                        "Ox_PT_Max":       {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Max"},    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"]},
+                                        "Ox_PT_Min":       {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Min"},    "Channels": ["Ox_PT_01", "Ox_PT_02", "Ox_PT_03"]},
 
-                                        "Test_MR":         {"Calc": "Div", "Numerator": "OxFlow", "Denominator": "FuelFlow", "Meta": {"VL_Type": "~VL_Channel"}},
+                                        "Test_MR":         {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Div"}, "Numerator": "OxFlow", "Denominator": "FuelFlow"},
 
-                                        "Ox_Level_Tare": {
-                                            "Meta": {"VL_Type": "~VL_Channel"},
-                                            "Calc": "Tare",
+                                        "Ox_Level_Tare":   {"Meta": {"VL_Type": "~VL_Channel", "Calc": "Tare"},
                                             "Count": 10,
                                             "Channel": "Ox_Level_Median",
-                                            "Ox_Level_Offset":   {"Value": 0, "Meta": {"VL_Type": "~VL_Channel", "Tare_Type": "Offset"}},
-                                            "Ox_LeveL_Tare_Cmd": {"Value": 0, "Meta": {"VL_Type": "~VL_Channel", "Tare_Type": "Cmd"}}
+                                            "Ox_Level_Offset":   {"Value": 0, "Meta": {"VL_Type": "~VL_Channel", "Tare_Cmd": "Offset"}},
+                                            "Ox_LeveL_Tare_Cmd": {"Value": 0, "Meta": {"VL_Type": "~VL_Channel", "Tare_Cmd": "Tare"}}
                                         }
                                     }
                                 }

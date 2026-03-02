@@ -58,6 +58,7 @@
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>
+		<Item Name="VolatusCalcs.lvlib" Type="Library" URL="../VolatusCalcs/VolatusCalcs.lvlib"/>
 		<Item Name="VolatusConfig.lvlib" Type="Library" URL="../VolatusConfig/VolatusConfig.lvlib"/>
 		<Item Name="VolatusControl.lvlib" Type="Library" URL="../VolatusControl/VolatusControl.lvlib"/>
 		<Item Name="VolatusDAQ.lvlib" Type="Library" URL="../VolatusDAQ/VolatusDAQ.lvlib"/>
