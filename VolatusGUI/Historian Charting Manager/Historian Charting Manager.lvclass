@@ -65,6 +65,15 @@
 				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
 				<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
 			</Item>
+			<Item Name="Update Chart Selection.vi" Type="VI" URL="../Update Chart Selection.vi">
+				<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!)6!!!!$!!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!&amp;Z!=!!?!!!V%&amp;:P&lt;'&amp;U&gt;8.(65EO&lt;(:M;7)C3'FT&gt;'^S;7&amp;O)%.I98*U;7ZH)%VB&lt;G&amp;H:8)O&lt;(:D&lt;'&amp;T=Q!?3'FT&gt;'^S;7&amp;O)%.I98*U;7ZH)%VB&lt;G&amp;H:8)A&lt;X6U!!!A1&amp;!!!Q!!!!%!!B.F=H*P=C"J&lt;C!I&lt;G]A:8*S&lt;X)J!!^!!Q!*1WBB=H1A4H6N!"2!-0````]+5'RP&gt;#"(=G^V=!!!&lt;A$R!!!!!!!!!!-16G^M982V=U&gt;633ZM&gt;GRJ9C*);8.U&lt;X*J97YA1WBB=H2J&lt;G=A47&amp;O97&gt;F=CZM&gt;G.M98.T%U.I98*U)&amp;.F&lt;'6D&gt;'FP&lt;CZD&gt;'Q!(E"1!!)!"Q!)$U.I98*U)&amp;.F&lt;'6D&gt;'FP&lt;A"=1(!!(A!!.2"7&lt;WRB&gt;(6T2V6*,GRW&lt;'FC)EBJ=X2P=GFB&lt;C"$;'&amp;S&gt;'FO:S".97ZB:W6S,GRW9WRB=X-!(5BJ=X2P=GFB&lt;C"$;'&amp;S&gt;'FO:S".97ZB:W6S)'FO!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!#1!+!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!"!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!M!!!!!</Property>
+				<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+				<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+				<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+				<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
+				<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+				<Property Name="NI.ClassItem.State" Type="Int">1342710288</Property>
+			</Item>
 		</Item>
 		<Item Name="Data Types" Type="Folder">
 			<Item Name="Chart Info.ctl" Type="VI" URL="../Chart Info.ctl">
