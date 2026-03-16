@@ -50,6 +50,7 @@
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
 		<Item Name="Events Summary.ctl" Type="VI" URL="../Events Summary.ctl"/>
 		<Item Name="Hardware Type.ctl" Type="VI" URL="../Hardware Type.ctl"/>
+		<Item Name="HTTP Nav.ctl" Type="VI" URL="../HTTP Nav.ctl"/>
 		<Item Name="Launch Nested Message.ctl" Type="VI" URL="../Launch Nested Message.ctl"/>
 		<Item Name="Message Forward (ID).ctl" Type="VI" URL="../Message Forward (ID).ctl"/>
 		<Item Name="Message Registration.ctl" Type="VI" URL="../Message Registration.ctl"/>
