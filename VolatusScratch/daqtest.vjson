@@ -84,7 +84,7 @@
                                         "BoolTest": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
-                                "Logging": {
+                                "0-Logging": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "LogManager"},
                                     "Folder": "c:/logs",
                                     "Logging_Status": {
@@ -106,7 +106,7 @@
                                         "Auto_State":           {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "Auto"}}
                                     }
                                 },
-                                "SystemHealth": {
+                                "0-SystemHealth": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health": {
                                         "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
@@ -133,7 +133,7 @@
                                     },
                                     "CPU_Warning_Pct": 60
                                 },
-                                "TestAI": {
+                                "1-TestAI": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
                                     "Sampling": {"Rate": 1000, "ChunkSize": 100},
                                     "DataProc": {
@@ -213,7 +213,7 @@
                                         }
                                     }
                                 },
-                                "TestDO": {
+                                "1-TestDO": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDO"},
                                     "DataProc": {
                                         "Logging": {
@@ -259,7 +259,7 @@
                                         }
                                     }
                                 },
-                                "TestDI": {
+                                "1-TestDI": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDI"},
                                     "Sampling": {"Rate": 100, "ChunkSize": 10},
                                     "DataProc": {
@@ -339,7 +339,7 @@
                                         }
                                     }
                                 },
-                                "TestTC": {
+                                "1-TestTC": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
                                     "Sampling": {"Rate": 50, "ChunkSize": 10},
                                     "DataProc": {
@@ -370,7 +370,7 @@
                                         }
                                     }
                                 },
-                                "DigitalControl": {
+                                "2-DigitalControl": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DigitalControl"},
                                     "Period_ms": 10,
                                     "DataProc": {
@@ -469,7 +469,12 @@
                                         }
                                     }
                                 },
-                                "Calcs": {
+                                "Historian": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
+                                    "Memory_GB": 0.2
+                                },
+                                "Charting": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"}},
+                                "2-Calcs": {
                                     "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SlowCalcs"},
                                     "Period_ms": 100,
                                     "DataProc": {
