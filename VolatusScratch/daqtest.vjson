@@ -17,7 +17,8 @@
                     "Meta": {"VL_Type": "VL_Cluster"},
                     "Discovery": {"Address": "239.0.0.10", "Port": 36987},
                     "Telemetry": {
-                        "Routing": "Multicast"
+                        "Routing": "Unicast",
+                        "Endpoint": {"Address": "127.0.0.1", "Port": 36985}
                     },
                     "Groups": {
                         "Events": 5,
@@ -36,13 +37,17 @@
                             },
                             "Config": {},
                             "Network": {
-                                "Bind_Address": "0.0.0.0",
+                                "Bind_Address": "127.0.0.1",
                                 "Announce_Interval": 5,
                                 "TCP": {"Address": "localhost", "Port": 12082, "Server": true},
                                 "HTTP_Port": 13083
                             },
                             "Groups": ["Config", "Logging"],
                             "Tasks": {
+                                "Telem_Server": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "TelemetryServer"}
+
+                                },
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
                                     "Plugins": "gui"
@@ -507,7 +512,7 @@
                                 "LogFolder": "c:/logs"
                             },
                             "Network": {
-                                "Bind_Address": "0.0.0.0",
+                                "Bind_Address": "127.0.0.1",
                                 "Announce_Interval": 5,
                                 "TCP": {
                                     "Address": "localhost",
@@ -536,7 +541,7 @@
                                 },
                                 "Historian": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
-                                    "Memory_GB": 1.5,
+                                    "Memory_GB": 0.2,
                                     "Exclude": [],
                                     "~Logger": {
                                         "Rate": 1,
@@ -555,7 +560,7 @@
                             "Meta": {"VL_Type": "VL_Node"},
                             "Node_ID": 3,
                             "Network": {
-                                "Bind_Address": "10.42.0.0/16",
+                                "Bind_Address": "127.0.0.1",
                                 "Announce_Interval": 5,
                                 "TCP": {
                                     "Address": "localhost",
