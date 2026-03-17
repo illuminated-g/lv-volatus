@@ -119,4 +119,5 @@
 		<Item Name="System SAL.lvclass" Type="LVClass" URL="../System SAL/System SAL.lvclass"/>
 		<Item Name="Windows System SAL.lvclass" Type="LVClass" URL="../Windows System SAL/Windows System SAL.lvclass"/>
 	</Item>
+	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 </Library>
