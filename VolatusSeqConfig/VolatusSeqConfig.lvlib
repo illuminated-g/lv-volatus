@@ -52,5 +52,6 @@
 	<Item Name="Condition Config.lvclass" Type="LVClass" URL="../Condition Config/Condition Config.lvclass"/>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Sequence Config.lvclass" Type="LVClass" URL="../Sequence Config/Sequence Config.lvclass"/>
+	<Item Name="Sequence Constants.lvclass" Type="LVClass" URL="../Sequence Constants/Sequence Constants.lvclass"/>
 	<Item Name="Transition Config.lvclass" Type="LVClass" URL="../Transition Config/Transition Config.lvclass"/>
 </Library>

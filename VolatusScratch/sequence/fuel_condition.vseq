@@ -4,6 +4,10 @@
         "Version": "1",
         "Comment": "Control state machine for bottle heating/cooling.",
         "Period": 100,
+        "Constants": {
+            "Range_Low": 750,
+            "Range_High": 850
+        },
         "Entry": "Hold",
         "Abort": "Stop",
         "States": {
