@@ -26,6 +26,10 @@
 		<Item Name="Digital Command.lvclass" Type="LVClass" URL="../Digital Command/Digital Command.lvclass"/>
 		<Item Name="Numeric Command.lvclass" Type="LVClass" URL="../Numeric Command/Numeric Command.lvclass"/>
 	</Item>
+	<Item Name="Comms" Type="Folder">
+		<Item Name="Messaging Server Module.lvclass" Type="LVClass" URL="../Messaging Server Module/Messaging Server Module.lvclass"/>
+		<Item Name="Telemetry Server Module.lvclass" Type="LVClass" URL="../Telemetry Server Module/Telemetry Server Module.lvclass"/>
+	</Item>
 	<Item Name="Config Updaters" Type="Folder">
 		<Item Name="Git Updater Module.lvclass" Type="LVClass" URL="../Git Updater Module/Git Updater Module.lvclass"/>
 	</Item>
@@ -38,7 +42,6 @@
 		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
 		<Item Name="System Health Module.lvclass" Type="LVClass" URL="../System Health Module/System Health Module.lvclass"/>
-		<Item Name="Telemetry Server Module.lvclass" Type="LVClass" URL="../Telemetry Server Module/Telemetry Server Module.lvclass"/>
 		<Item Name="Timing Module.lvclass" Type="LVClass" URL="../Timing Module/Timing Module.lvclass"/>
 		<Item Name="Vecto Message Bridge.lvclass" Type="LVClass" URL="../Vecto Message Bridge/Vecto Message Bridge.lvclass"/>
 		<Item Name="VectoEventBridge.lvclass" Type="LVClass" URL="../VectoEventBridge/VectoEventBridge.lvclass"/>

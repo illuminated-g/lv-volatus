@@ -15,10 +15,12 @@
             "Clusters": {
                 "TestCluster": {
                     "Meta": {"VL_Type": "VL_Cluster"},
-                    "Discovery": {"Address": "239.0.0.10", "Port": 36987},
                     "Telemetry": {
                         "Routing": "Unicast",
                         "Endpoint": {"Address": "127.0.0.1", "Port": 36985}
+                    },
+                    "Messaging": {
+                        "Endpoint": {"Address": "127.0.0.1", "Port": 36989}
                     },
                     "Groups": {
                         "Events": 5,
@@ -44,16 +46,17 @@
                             },
                             "Groups": ["Config", "Logging"],
                             "Tasks": {
-                                "Telem_Server": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "TelemetryServer"}
-
+                                "Telem_Server": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "TelemetryServer"}},
+                                "Msg_Server":   {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "MessagingServer"}},
+                                "EventViewer":  {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}},
+                                "Historian": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
+                                    "Memory_GB": 0.2
                                 },
+                                "Charting": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"}},
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
                                     "Plugins": "gui"
-                                },
-                                "EventViewer": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"}
                                 },
                                 "0-SimValues": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
@@ -469,11 +472,6 @@
                                         }
                                     }
                                 },
-                                "Historian": {
-                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"},
-                                    "Memory_GB": 0.2
-                                },
-                                "Charting": {"Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"}},
                                 "2-Calcs": {
                                     "Meta": {"VL_Type": "~VL_Task", "VL_Task_Type": "SlowCalcs"},
                                     "Period_ms": 100,
