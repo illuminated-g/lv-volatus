@@ -5,8 +5,9 @@
         "Comment": "Control state machine for bottle heating/cooling.",
         "Period": 100,
         "Constants": {
-            "Range_Low": 750,
-            "Range_High": 850
+            "RangeLow": 775,
+            "Target": 800,
+            "RangeHigh": 825
         },
         "Entry": "Hold",
         "Abort": "Stop",
@@ -30,7 +31,7 @@
                         "Target": "Cool",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "HighLimit", "Channel": "FuelPSI", "Limit": 850}
+                            {"Type": "HighLimit", "Channel": "FuelPSI", "Limit": "{RangeHigh}"}
                         ]
                     },
                     {
@@ -38,7 +39,7 @@
                         "Target": "Heat",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "LowLimit", "Channel": "FuelPSI", "Limit": 750}
+                            {"Type": "LowLimit", "Channel": "FuelPSI", "Limit": "{RangeLow}"}
                         ]
                     }
                 ]
@@ -61,7 +62,7 @@
                         "Target": "Hold",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "LowLimit", "Channel": "FuelPSI", "Limit": 800}
+                            {"Type": "LowLimit", "Channel": "FuelPSI", "Limit": "{Target}"}
                         ]
                     }
                 ]
@@ -84,7 +85,7 @@
                         "Target": "Hold",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "HighLimit", "Channel": "FuelPSI", "Limit": 800}
+                            {"Type": "HighLimit", "Channel": "FuelPSI", "Limit": "{Target}"}
                         ]
                     }
                 ]
