@@ -11,6 +11,7 @@
 		<Item Name="Command Type.ctl" Type="VI" URL="../Command Type.ctl"/>
 		<Item Name="Condition Logic.ctl" Type="VI" URL="../Condition Logic.ctl"/>
 		<Item Name="Condition Type.ctl" Type="VI" URL="../Condition Type.ctl"/>
+		<Item Name="Events.ctl" Type="VI" URL="../Events.ctl"/>
 		<Item Name="State.ctl" Type="VI" URL="../State.ctl"/>
 		<Item Name="Step.ctl" Type="VI" URL="../Step.ctl"/>
 		<Item Name="Timer.ctl" Type="VI" URL="../Timer.ctl"/>

@@ -11,6 +11,10 @@
         },
         "Entry": "Hold",
         "Abort": "Stop",
+        "Debug": {
+            "States": true,
+            "Conditions": true
+        },
         "States": {
             "Hold": {
                 "Comment": "Fuel in range, controls off.",
