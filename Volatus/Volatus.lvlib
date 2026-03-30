@@ -28,7 +28,7 @@
 	</Item>
 	<Item Name="Comms" Type="Folder">
 		<Item Name="Messaging Server Module.lvclass" Type="LVClass" URL="../Messaging Server Module/Messaging Server Module.lvclass"/>
-		<Item Name="Telemetry Server Module.lvclass" Type="LVClass" URL="../Telemetry Server Module/Telemetry Server Module.lvclass"/>
+		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
 	</Item>
 	<Item Name="Config Updaters" Type="Folder">
 		<Item Name="Git Updater Module.lvclass" Type="LVClass" URL="../Git Updater Module/Git Updater Module.lvclass"/>
@@ -38,7 +38,6 @@
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="Plugin Splash.lvclass" Type="LVClass" URL="../Plugin Splash/Plugin Splash.lvclass"/>
-		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
 		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
 		<Item Name="System Health Module.lvclass" Type="LVClass" URL="../System Health Module/System Health Module.lvclass"/>
@@ -121,6 +120,9 @@
 		<Item Name="Linux System SAL.lvclass" Type="LVClass" URL="../Linux System SAL/Linux System SAL.lvclass"/>
 		<Item Name="System SAL.lvclass" Type="LVClass" URL="../System SAL/System SAL.lvclass"/>
 		<Item Name="Windows System SAL.lvclass" Type="LVClass" URL="../Windows System SAL/Windows System SAL.lvclass"/>
+	</Item>
+	<Item Name="Telemetry" Type="Folder">
+		<Item Name="Telemetry Server Module.lvclass" Type="LVClass" URL="../Telemetry Server Module/Telemetry Server Module.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 </Library>
