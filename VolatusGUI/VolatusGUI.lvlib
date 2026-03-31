@@ -54,6 +54,7 @@
 		<Item Name="Lookup Group.vi" Type="VI" URL="../Lookup Group.vi"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
+		<Item Name="Config Updater Identity.lvclass" Type="LVClass" URL="../Config Updater Identity/Config Updater Identity.lvclass"/>
 		<Item Name="Event Viewer Identity.lvclass" Type="LVClass" URL="../Event Viewer Identity/Event Viewer Identity.lvclass"/>
 		<Item Name="GUI Identity.lvclass" Type="LVClass" URL="../GUI Identity/GUI Identity.lvclass"/>
 		<Item Name="Historian Charting Manager ID.lvclass" Type="LVClass" URL="../Historian Charting Manager ID/Historian Charting Manager ID.lvclass"/>
@@ -71,6 +72,7 @@
 		<Item Name="Config Monitor Module.lvclass" Type="LVClass" URL="../../Volatus/Config Alert Module/Config Monitor Module.lvclass"/>
 		<Item Name="Debug GUI Module.lvclass" Type="LVClass" URL="../Debug GUI Module/Debug GUI Module.lvclass"/>
 		<Item Name="Event Viewer Module.lvclass" Type="LVClass" URL="../Event Viewer Module/Event Viewer Module.lvclass"/>
+		<Item Name="Git Updater Module.lvclass" Type="LVClass" URL="../Git Updater Module/Git Updater Module.lvclass"/>
 		<Item Name="System Status Module.lvclass" Type="LVClass" URL="../System Status Module/System Status Module.lvclass"/>
 		<Item Name="Telemetry Command Module.lvclass" Type="LVClass" URL="../Telemetry Command Module/Telemetry Command Module.lvclass"/>
 	</Item>

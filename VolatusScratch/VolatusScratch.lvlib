@@ -16,6 +16,7 @@
 	<Item Name="DAQmx Test.vi" Type="VI" URL="../DAQmx Test.vi"/>
 	<Item Name="Demo2.vi" Type="VI" URL="../Demo2.vi"/>
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
+	<Item Name="GitCredTest.vi" Type="VI" URL="../GitCredTest.vi"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
 	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
 	<Item Name="Sequence Control.vi" Type="VI" URL="../Sequence Control.vi"/>
