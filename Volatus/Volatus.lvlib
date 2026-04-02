@@ -37,6 +37,7 @@
 		<Item Name="Basic Splash.lvclass" Type="LVClass" URL="../Basic Splash/Basic Splash.lvclass"/>
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
+		<Item Name="HTTP Command Bridge.lvclass" Type="LVClass" URL="../HTTP Command Bridge/HTTP Command Bridge.lvclass"/>
 		<Item Name="Plugin Splash.lvclass" Type="LVClass" URL="../Plugin Splash/Plugin Splash.lvclass"/>
 		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
@@ -52,6 +53,8 @@
 		<Item Name="Event.ctl" Type="VI" URL="../Event.ctl"/>
 		<Item Name="Events Summary.ctl" Type="VI" URL="../Events Summary.ctl"/>
 		<Item Name="Hardware Type.ctl" Type="VI" URL="../Hardware Type.ctl"/>
+		<Item Name="Http Chan Cmd.ctl" Type="VI" URL="../Http Chan Cmd.ctl"/>
+		<Item Name="Http Cmd Type.ctl" Type="VI" URL="../Http Cmd Type.ctl"/>
 		<Item Name="HTTP Nav.ctl" Type="VI" URL="../HTTP Nav.ctl"/>
 		<Item Name="Launch Nested Message.ctl" Type="VI" URL="../Launch Nested Message.ctl"/>
 		<Item Name="Message Forward (ID).ctl" Type="VI" URL="../Message Forward (ID).ctl"/>
@@ -76,6 +79,7 @@
 		<Item Name="DebugHTTPController.lvclass" Type="LVClass" URL="../DebugHTTPController/DebugHTTPController.lvclass"/>
 		<Item Name="HardwareHTTPController.lvclass" Type="LVClass" URL="../HardwareHTTPController/HardwareHTTPController.lvclass"/>
 		<Item Name="HomeHTTPController.lvclass" Type="LVClass" URL="../HomeHTTPController/HomeHTTPController.lvclass"/>
+		<Item Name="HTTPCmdController.lvclass" Type="LVClass" URL="../HTTPCmdController/HTTPCmdController.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Config Monitor Identity.lvclass" Type="LVClass" URL="../Config Monitor Identity/Config Monitor Identity.lvclass"/>
