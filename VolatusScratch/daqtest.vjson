@@ -40,7 +40,6 @@
                             "Config": {},
                             "Network": {
                                 "Bind_Address": "127.0.0.1",
-                                "Announce_Interval": 5,
                                 "TCP": {"Address": "localhost", "Port": 12082, "Server": true},
                                 "HTTP_Port": 13083
                             },
@@ -57,6 +56,14 @@
                                 "GUI_Manager": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"},
                                     "Plugins": "gui"
+                                },
+                                "HttpCmd": {
+                                    "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HttpCmdBridge"},
+                                    "Channels": [
+                                        "Ox_Level_1",
+                                        "Ox_Level_2",
+                                        "Ox_Level_3"
+                                    ]
                                 },
                                 "0-SimValues": {
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
@@ -516,7 +523,6 @@
                             },
                             "Network": {
                                 "Bind_Address": "127.0.0.1",
-                                "Announce_Interval": 5,
                                 "TCP": {
                                     "Address": "localhost",
                                     "Port": 12082,
@@ -564,7 +570,6 @@
                             "Node_ID": 3,
                             "Network": {
                                 "Bind_Address": "127.0.0.1",
-                                "Announce_Interval": 5,
                                 "TCP": {
                                     "Address": "localhost",
                                     "Port": 12082,

@@ -810,7 +810,6 @@
 			<Item Name="provcom_Utility_IsEmptyOrWhiteSpace.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_Utility_IsEmptyOrWhiteSpace.vi"/>
 			<Item Name="ReplyOneDouble.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/proto/messages/ReplyOneDouble/ReplyOneDouble.lvlib"/>
 			<Item Name="RequestTwoDouble.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/proto/messages/RequestTwoDouble/RequestTwoDouble.lvlib"/>
-			<Item Name="Set Announce Interval.vi" Type="VI" URL="../VolatusConfig/Node/Set Announce Interval.vi"/>
 			<Item Name="Set Discovery Info.vi" Type="VI" URL="../../lv-vecto/Vecto/Node Config/Set Discovery Info.vi"/>
 			<Item Name="Type to Config.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Config-JSON/Type to Config.vim"/>
 		</Item>
