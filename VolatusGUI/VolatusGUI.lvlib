@@ -65,6 +65,7 @@
 	</Item>
 	<Item Name="Promise Values" Type="Folder">
 		<Item Name="Charting Config Value.lvclass" Type="LVClass" URL="../Charting Config Value/Charting Config Value.lvclass"/>
+		<Item Name="Git Path Status Value.lvclass" Type="LVClass" URL="../Git Path Status Value/Git Path Status Value.lvclass"/>
 		<Item Name="GUIStateValue.lvclass" Type="LVClass" URL="../GUIStateValue/GUIStateValue.lvclass"/>
 		<Item Name="Plot Group Events Value.lvclass" Type="LVClass" URL="../Plot Group Events Value/Plot Group Events Value.lvclass"/>
 	</Item>

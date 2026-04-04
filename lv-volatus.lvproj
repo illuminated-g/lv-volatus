@@ -889,7 +889,7 @@
 				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Generic Volatus Full PC/graphics</Property>
 				<Property Name="Destination[2].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="DestinationCount" Type="Int">3</Property>
-				<Property Name="Source[0].itemID" Type="Str">{C4DE4E80-CFAC-4755-89A0-C17F21C00911}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{35609210-1E6F-4496-A648-3F27DB91E292}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
 				<Property Name="Source[1].itemID" Type="Ref">/My Computer/Generic PC App.vi</Property>
