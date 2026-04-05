@@ -1,6 +1,0 @@
-syntax = "proto3";
-
-message StopLog {
-    string reason = 1;
-    repeated string groups = 2;
-}

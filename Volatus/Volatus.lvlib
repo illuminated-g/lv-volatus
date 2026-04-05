@@ -27,6 +27,12 @@
 		<Item Name="Numeric Command.lvclass" Type="LVClass" URL="../Numeric Command/Numeric Command.lvclass"/>
 	</Item>
 	<Item Name="Comms" Type="Folder">
+		<Item Name="Utility" Type="Folder">
+			<Item Name="Endpoint String.vi" Type="VI" URL="../Endpoint String.vi"/>
+			<Item Name="Read Sized TCP Payload.vi" Type="VI" URL="../Read Sized TCP Payload.vi"/>
+			<Item Name="Write Sized TCP Payload.vi" Type="VI" URL="../Write Sized TCP Payload.vi"/>
+		</Item>
+		<Item Name="Messaging Server Client.lvclass" Type="LVClass" URL="../Messaging Client/Messaging Server Client.lvclass"/>
 		<Item Name="Messaging Server Module.lvclass" Type="LVClass" URL="../Messaging Server Module/Messaging Server Module.lvclass"/>
 		<Item Name="Remote Messaging Module.lvclass" Type="LVClass" URL="../Remote Messaging Module/Remote Messaging Module.lvclass"/>
 	</Item>
@@ -68,6 +74,7 @@
 		<Item Name="Module Status Update.ctl" Type="VI" URL="../Module/Module Status Update.ctl"/>
 		<Item Name="Module Status.ctl" Type="VI" URL="../Module Status.ctl"/>
 		<Item Name="Module Substatus.ctl" Type="VI" URL="../Module Substatus.ctl"/>
+		<Item Name="Msg Client State.ctl" Type="VI" URL="../Msg Client State.ctl"/>
 		<Item Name="New Config.ctl" Type="VI" URL="../New Config.ctl"/>
 		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
 		<Item Name="Reload Options.ctl" Type="VI" URL="../Reload Options.ctl"/>
@@ -99,6 +106,7 @@
 	</Item>
 	<Item Name="Messaging" Type="Folder">
 		<Item Name="Common" Type="Folder">
+			<Item Name="Request Config Info.vi" Type="VI" URL="../Request Config Info.vi"/>
 			<Item Name="Send Hide GUI Message.vi" Type="VI" URL="../Send Hide GUI Message.vi"/>
 			<Item Name="Send Module Close Message.vi" Type="VI" URL="../Send Module Close Message.vi"/>
 			<Item Name="Send Show GUI Message.vi" Type="VI" URL="../Send Show GUI Message.vi"/>

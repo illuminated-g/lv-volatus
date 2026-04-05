@@ -1,5 +1,0 @@
-syntax = "proto3";
-
-message SyncTicks {
-    fixed32 value_on_trigger = 1;
-}
