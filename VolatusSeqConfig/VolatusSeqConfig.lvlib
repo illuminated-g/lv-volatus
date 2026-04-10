@@ -32,6 +32,8 @@
 			<Item Name="Event Command Config.lvclass" Type="LVClass" URL="../Event Command Config/Event Command Config.lvclass"/>
 			<Item Name="Error Command Config.lvclass" Type="LVClass" URL="../Error Command Config/Error Command Config.lvclass"/>
 			<Item Name="HTTP Command Config.lvclass" Type="LVClass" URL="../HTTP Command Config/HTTP Command Config.lvclass"/>
+			<Item Name="Reset Var Command Config.lvclass" Type="LVClass" URL="../Reset Var Command Config/Reset Var Command Config.lvclass"/>
+			<Item Name="Inc Var Command Config.lvclass" Type="LVClass" URL="../Inc Var Command Config/Inc Var Command Config.lvclass"/>
 		</Item>
 		<Item Name="Conditions" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>

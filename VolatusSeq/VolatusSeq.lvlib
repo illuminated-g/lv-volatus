@@ -21,6 +21,8 @@
 			<Item Name="Event Command.lvclass" Type="LVClass" URL="../Event Command/Event Command.lvclass"/>
 			<Item Name="Error Command.lvclass" Type="LVClass" URL="../Error Command/Error Command.lvclass"/>
 			<Item Name="HTTP Command.lvclass" Type="LVClass" URL="../HTTP Command/HTTP Command.lvclass"/>
+			<Item Name="Reset Var Command.lvclass" Type="LVClass" URL="../Reset Var Command/Reset Var Command.lvclass"/>
+			<Item Name="Inc Var Command.lvclass" Type="LVClass" URL="../Inc Var Command/Inc Var Command.lvclass"/>
 		</Item>
 		<Item Name="Transitions" Type="Folder">
 			<Item Name="State Transition.lvclass" Type="LVClass" URL="../State Transition/State Transition.lvclass"/>
@@ -35,6 +37,7 @@
 			<Item Name="SeqLoaded Condition.lvclass" Type="LVClass" URL="../SeqLoaded Condition/SeqLoaded Condition.lvclass"/>
 			<Item Name="SeqRunning Condition.lvclass" Type="LVClass" URL="../SeqRunning Condition/SeqRunning Condition.lvclass"/>
 		</Item>
+		<Item Name="Condition Value.lvclass" Type="LVClass" URL="../Condition Value/Condition Value.lvclass"/>
 		<Item Name="Iteration Actions.lvclass" Type="LVClass" URL="../Iteration Actions/Iteration Actions.lvclass"/>
 		<Item Name="Command.lvclass" Type="LVClass" URL="../Command/Command.lvclass"/>
 		<Item Name="Condition.lvclass" Type="LVClass" URL="../Condition/Condition.lvclass"/>
