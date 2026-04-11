@@ -9,21 +9,6 @@
 </Property>
 	<Item Name="Classes" Type="Folder">
 		<Property Name="NI.SortType" Type="Int">3</Property>
-		<Item Name="Commands" Type="Folder">
-			<Item Name="Digital Command.lvclass" Type="LVClass" URL="../Digital Command/Digital Command.lvclass"/>
-			<Item Name="Numeric Command.lvclass" Type="LVClass" URL="../Numeric Command/Numeric Command.lvclass"/>
-			<Item Name="Transition Command.lvclass" Type="LVClass" URL="../Transition Command/Transition Command.lvclass"/>
-			<Item Name="Start Log Command.lvclass" Type="LVClass" URL="../Start Log Command/Start Log Command.lvclass"/>
-			<Item Name="Stop Log Command.lvclass" Type="LVClass" URL="../Stop Log Command/Stop Log Command.lvclass"/>
-			<Item Name="Stop Seq Command.lvclass" Type="LVClass" URL="../Stop Seq Command/Stop Seq Command.lvclass"/>
-			<Item Name="Lookup Command.vi" Type="VI" URL="../Command/Lookup Command.vi"/>
-			<Item Name="Start Seq Command.lvclass" Type="LVClass" URL="../Start Seq Command/Start Seq Command.lvclass"/>
-			<Item Name="Event Command.lvclass" Type="LVClass" URL="../Event Command/Event Command.lvclass"/>
-			<Item Name="Error Command.lvclass" Type="LVClass" URL="../Error Command/Error Command.lvclass"/>
-			<Item Name="HTTP Command.lvclass" Type="LVClass" URL="../HTTP Command/HTTP Command.lvclass"/>
-			<Item Name="Reset Var Command.lvclass" Type="LVClass" URL="../Reset Var Command/Reset Var Command.lvclass"/>
-			<Item Name="Inc Var Command.lvclass" Type="LVClass" URL="../Inc Var Command/Inc Var Command.lvclass"/>
-		</Item>
 		<Item Name="Transitions" Type="Folder">
 			<Item Name="State Transition.lvclass" Type="LVClass" URL="../State Transition/State Transition.lvclass"/>
 			<Item Name="Lookup Transition.vi" Type="VI" URL="../Transition/Lookup Transition.vi"/>
@@ -39,7 +24,6 @@
 		</Item>
 		<Item Name="Condition Value.lvclass" Type="LVClass" URL="../Condition Value/Condition Value.lvclass"/>
 		<Item Name="Iteration Actions.lvclass" Type="LVClass" URL="../Iteration Actions/Iteration Actions.lvclass"/>
-		<Item Name="Command.lvclass" Type="LVClass" URL="../Command/Command.lvclass"/>
 		<Item Name="Condition.lvclass" Type="LVClass" URL="../Condition/Condition.lvclass"/>
 		<Item Name="Sequence.lvclass" Type="LVClass" URL="../Sequence/Sequence.lvclass"/>
 		<Item Name="State.lvclass" Type="LVClass" URL="../State/State.lvclass"/>
@@ -82,6 +66,9 @@
 		<Item Name="Sequence Status Value.lvclass" Type="LVClass" URL="../Sequence Status Value/Sequence Status Value.lvclass"/>
 		<Item Name="Sequencing Status Value.lvclass" Type="LVClass" URL="../Sequencing Status Value/Sequencing Status Value.lvclass"/>
 		<Item Name="State Launch Result Value.lvclass" Type="LVClass" URL="../State Launch Result Value/State Launch Result Value.lvclass"/>
+	</Item>
+	<Item Name="Utilities" Type="Folder">
+		<Item Name="Lookup Command Channel.vi" Type="VI" URL="../Lookup Command Channel.vi"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
 	<Item Name="Scratch.vi" Type="VI" URL="../Scratch.vi"/>

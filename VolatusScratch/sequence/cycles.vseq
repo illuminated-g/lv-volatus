@@ -1,0 +1,130 @@
+{
+    "Sequence": {
+        "Constants": {
+            "Seq_Name": "Cycles Test",
+            "On_S":  1,
+            "Off_S": 3
+        },
+        "Name": "{Seq_Name}",
+        "Version": "1",
+        "Comment": "Demonstrates Sequence Variables usage.",
+        "Period": 200,
+        "Variables": {
+            "Remaining": 0,
+            "Done": 0
+        },
+        "Entry": "Start",
+        "Abort": "Stop",
+        "States": {
+            "Start": {
+                "Comment": "Load Counts from Channels",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "LoadVar", "Var": "Remaining", "Channel": "Cycles_Left"},
+                            {"Type": "LoadVar", "Var": "Done",      "Channel": "Cycles_Done"},
+                            {"Type": "Transition", "Target": "On"}
+                        ]
+                    }
+                ]
+            },
+            "On": {
+                "Comment": "Command value on.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BoolTest", "Value": true}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Off",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "Time", "Timer": "State", "Time": "{On_S}"}
+                        ]
+                    }
+                ]
+            },
+            "Off": {
+                "Comment": "Command value off.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BoolTest", "Value": false}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Cycle",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "Time", "Timer": "State", "Time": "{Off_S}"}
+                        ]
+                    }
+                ]
+            },
+            "Cycle": {
+                "Comment": "Decrement remaining and check if done.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "DecVar",  "Var": "Remaining"},
+                            {"Type": "SaveVar", "Var": "Remaining", "Channel": "Cycles_Left"},
+                            {"Type": "IncVar",  "Var": "Done"},
+                            {"Type": "SaveVar", "Var": "Done",      "Channel": "Cycles_Done"}
+                        ]
+                    },
+                    {
+                        "Time": 0.1,
+                        "Commands": [
+                            {"Type": "Transition", "Target": "On"}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "Done",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "LowLimit", "Channel": "Cycles_Left", "Limit": 1}
+                        ]
+                    }
+                ]
+            },
+            "Done": {
+                "Comment": "Cycles completed.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Event", "Message": "{Seq_Name} completed."},
+                            {"Type": "Transition", "Target": "Stop"}
+                        ]
+                    }
+                ]
+            },
+            "Stop": {
+                "Comment": "Stopping, ensure controls off.",
+                "Steps": [
+                    {
+                        "Time": 0,
+                        "Commands": [
+                            {"Type": "Digital", "Channel": "BoolTest", "Value": false},
+                            {"Type": "Stop"}
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

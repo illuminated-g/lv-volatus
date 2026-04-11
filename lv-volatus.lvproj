@@ -728,11 +728,15 @@
 			<Item Name="CDK_sTypeDef_Languages.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_sTypeDef_Languages.ctl"/>
 			<Item Name="CDK_sTypeDef_ProductVersion.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_sTypeDef_ProductVersion.ctl"/>
 			<Item Name="CDK_Utility_GetSetStringVersion.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Builds/Installer/CDK_Utility_GetSetStringVersion.vi"/>
+			<Item Name="Digital Command.lvclass" Type="LVClass" URL="../VolatusSeq/Digital Command/Digital Command.lvclass"/>
 			<Item Name="Discovery Info.ctl" Type="VI" URL="../../lv-vecto/Vecto/Node Config/Discovery Info.ctl"/>
 			<Item Name="Element to Type.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Element to Type.vim"/>
+			<Item Name="Error Command.lvclass" Type="LVClass" URL="../VolatusSeq/Error Command/Error Command.lvclass"/>
+			<Item Name="Event Command.lvclass" Type="LVClass" URL="../VolatusSeq/Event Command/Event Command.lvclass"/>
 			<Item Name="Get Discovery Service.vi" Type="VI" URL="../../lv-vecto/Vecto/Vecto/Get Discovery Service.vi"/>
 			<Item Name="GetSymbols.vi" Type="VI" URL="/&lt;resource&gt;/plugins/Utility/IfDef.llb/GetSymbols.vi"/>
 			<Item Name="GetTemplatePathFromLib.vi" Type="VI" URL="/&lt;resource&gt;/ChannelSupport/_ChannelScriptingSupport/GetTemplatePathFromLib.vi"/>
+			<Item Name="HTTP Command.lvclass" Type="LVClass" URL="../VolatusSeq/HTTP Command/HTTP Command.lvclass"/>
 			<Item Name="ItemRef.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/ItemRef.ctl"/>
 			<Item Name="kernel32.dll" Type="Document" URL="kernel32.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -778,6 +782,10 @@
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="Numeric Command.lvclass" Type="LVClass" URL="../VolatusSeq/Numeric Command/Numeric Command.lvclass"/>
 			<Item Name="provcom_CallbackKeyedArray.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_CallbackKeyedArray.ctl"/>
 			<Item Name="provcom_CheckForInvalidCharacters.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_CheckForInvalidCharacters.vi"/>
 			<Item Name="provcom_DrawProjectItems.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_DrawProjectItems.vi"/>
@@ -806,6 +814,11 @@
 			<Item Name="ReplyOneDouble.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/proto/messages/ReplyOneDouble/ReplyOneDouble.lvlib"/>
 			<Item Name="RequestTwoDouble.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/proto/messages/RequestTwoDouble/RequestTwoDouble.lvlib"/>
 			<Item Name="Set Discovery Info.vi" Type="VI" URL="../../lv-vecto/Vecto/Node Config/Set Discovery Info.vi"/>
+			<Item Name="Start Log Command.lvclass" Type="LVClass" URL="../VolatusSeq/Start Log Command/Start Log Command.lvclass"/>
+			<Item Name="Start Seq Command.lvclass" Type="LVClass" URL="../VolatusSeq/Start Seq Command/Start Seq Command.lvclass"/>
+			<Item Name="Stop Log Command.lvclass" Type="LVClass" URL="../VolatusSeq/Stop Log Command/Stop Log Command.lvclass"/>
+			<Item Name="Stop Seq Command.lvclass" Type="LVClass" URL="../VolatusSeq/Stop Seq Command/Stop Seq Command.lvclass"/>
+			<Item Name="Transition Command.lvclass" Type="LVClass" URL="../VolatusSeq/Transition Command/Transition Command.lvclass"/>
 			<Item Name="Type to Config.vim" Type="VI" URL="../../lv-cdm/CDM-Config/Config-JSON/Type to Config.vim"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">

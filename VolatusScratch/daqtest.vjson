@@ -91,7 +91,10 @@
                                         "FuelHeat":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
                                         "FuelFlow":      {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
 
-                                        "BoolTest": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}}
+                                        "BoolTest": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
+
+                                        "Cycles_Left": {"Value": 100, "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Cycles_Done": {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
                                 "0-Logging": {

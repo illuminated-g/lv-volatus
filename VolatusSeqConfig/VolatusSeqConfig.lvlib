@@ -34,6 +34,10 @@
 			<Item Name="HTTP Command Config.lvclass" Type="LVClass" URL="../HTTP Command Config/HTTP Command Config.lvclass"/>
 			<Item Name="Reset Var Command Config.lvclass" Type="LVClass" URL="../Reset Var Command Config/Reset Var Command Config.lvclass"/>
 			<Item Name="Inc Var Command Config.lvclass" Type="LVClass" URL="../Inc Var Command Config/Inc Var Command Config.lvclass"/>
+			<Item Name="Dec Var Command Config.lvclass" Type="LVClass" URL="../Dec Var Command Config/Dec Var Command Config.lvclass"/>
+			<Item Name="Save Var Command Config.lvclass" Type="LVClass" URL="../Save Var Command Config/Save Var Command Config.lvclass"/>
+			<Item Name="Load Var Command Config.lvclass" Type="LVClass" URL="../Load Var Command Config/Load Var Command Config.lvclass"/>
+			<Item Name="Set Var Command Config.lvclass" Type="LVClass" URL="../Set Var Command Config/Set Var Command Config.lvclass"/>
 		</Item>
 		<Item Name="Conditions" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
