@@ -2,8 +2,8 @@
     "Sequence": {
         "Constants": {
             "Seq_Name": "Cycles Test",
-            "On_S":  1,
-            "Off_S": 3
+            "On_S":  0.2,
+            "Off_S": 0.8
         },
         "Name": "{Seq_Name}",
         "Version": "1",
@@ -23,8 +23,24 @@
                         "Time": 0,
                         "Commands": [
                             {"Type": "LoadVar", "Var": "Remaining", "Channel": "Cycles_Left"},
-                            {"Type": "LoadVar", "Var": "Done",      "Channel": "Cycles_Done"},
-                            {"Type": "Transition", "Target": "On"}
+                            {"Type": "LoadVar", "Var": "Done",      "Channel": "Cycles_Done"}
+                        ]
+                    },
+                    {
+                        "Time": 0.1,
+                        "Comment": "Stop if remaining hasn't been set.",
+                        "Commands": [
+                            {"Type": "Transition", "Target": "Stop"}
+                        ]
+                    }
+                ],
+                "Transitions": [
+                    {
+                        "Type": "State",
+                        "Target": "On",
+                        "Logic": "Any",
+                        "Conditions": [
+                            {"Type": "HighLimit", "Source": "Remaining", "Limit": 0}
                         ]
                     }
                 ]
@@ -57,6 +73,10 @@
                         "Time": 0,
                         "Commands": [
                             {"Type": "Digital", "Channel": "BoolTest", "Value": false}
+                            {"Type": "DecVar",  "Var": "Remaining"},
+                            {"Type": "SaveVar", "Var": "Remaining", "Channel": "Cycles_Left"},
+                            {"Type": "IncVar",  "Var": "Done"},
+                            {"Type": "SaveVar", "Var": "Done",      "Channel": "Cycles_Done"}
                         ]
                     }
                 ],
@@ -72,31 +92,22 @@
                 ]
             },
             "Cycle": {
-                "Comment": "Decrement remaining and check if done.",
+                "Comment": "Check if done.",
                 "Steps": [
-                    {
-                        "Time": 0,
-                        "Commands": [
-                            {"Type": "DecVar",  "Var": "Remaining"},
-                            {"Type": "SaveVar", "Var": "Remaining", "Channel": "Cycles_Left"},
-                            {"Type": "IncVar",  "Var": "Done"},
-                            {"Type": "SaveVar", "Var": "Done",      "Channel": "Cycles_Done"}
-                        ]
-                    },
                     {
                         "Time": 0.1,
                         "Commands": [
-                            {"Type": "Transition", "Target": "On"}
+                            {"Type": "Transition", "Target": "Done"}
                         ]
                     }
                 ],
                 "Transitions": [
                     {
                         "Type": "State",
-                        "Target": "Done",
+                        "Target": "On",
                         "Logic": "Any",
                         "Conditions": [
-                            {"Type": "LowLimit", "Channel": "Cycles_Left", "Limit": 1}
+                            {"Type": "HighLimit", "Source": "Remaining", "Limit": 0}
                         ]
                     }
                 ]
