@@ -22,6 +22,7 @@
 			<Item Name="SeqLoaded Condition.lvclass" Type="LVClass" URL="../SeqLoaded Condition/SeqLoaded Condition.lvclass"/>
 			<Item Name="SeqRunning Condition.lvclass" Type="LVClass" URL="../SeqRunning Condition/SeqRunning Condition.lvclass"/>
 		</Item>
+		<Item Name="Format String.lvclass" Type="LVClass" URL="../Format String/Format String.lvclass"/>
 		<Item Name="Condition Value.lvclass" Type="LVClass" URL="../Condition Value/Condition Value.lvclass"/>
 		<Item Name="Iteration Actions.lvclass" Type="LVClass" URL="../Iteration Actions/Iteration Actions.lvclass"/>
 		<Item Name="Condition.lvclass" Type="LVClass" URL="../Condition/Condition.lvclass"/>

@@ -72,7 +72,8 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Digital", "Channel": "BoolTest", "Value": false}
+                            {"Type": "Digital", "Channel": "BoolTest", "Value": false},
+
                             {"Type": "DecVar",  "Var": "Remaining"},
                             {"Type": "SaveVar", "Var": "Remaining", "Channel": "Cycles_Left"},
                             {"Type": "IncVar",  "Var": "Done"},
@@ -97,6 +98,7 @@
                     {
                         "Time": 0.1,
                         "Commands": [
+                            {"Type": "Event", "Message": "{Seq_Name} completed cycle {Done}, {Remaining} cycles remaining."}
                             {"Type": "Transition", "Target": "Done"}
                         ]
                     }
