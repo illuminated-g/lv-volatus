@@ -101,7 +101,7 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "LogManager"},
                                     "Folder": "c:/logs",
                                     "Logging_Status": {
-                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "String"},
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
                                         "Multicast": {"Address": "239.0.0.11", "Port": 36987},
                                         "Logging_State_Num":    {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"}},
                                         "Logging_Num_Loggers":  {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers"}},
@@ -110,13 +110,7 @@
                                         "Logging_Num_Ready":    {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Ready"}},
                                         "Logging_Num_Active":   {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Active"}},
                                         "Logging_Num_Stopping": {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"}},
-                                        "Logging_All_Active":   {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"}},
-                                        "Logging_State":        {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State"}},
-                                        "Logging_Series":       {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Series"}},
-                                        "Logging_Timestamp":    {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Timestamp"}},
-                                        "LowSpeed_State":       {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "LowSpeed"}},
-                                        "HighSpeed_State":      {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "HighSpeed"}},
-                                        "Auto_State":           {"Value": "", "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Group_State", "Group": "Auto"}}
+                                        "Logging_All_Active":   {"Value": 0,  "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"}}
                                     }
                                 },
                                 "0-SystemHealth": {
