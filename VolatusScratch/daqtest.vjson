@@ -94,7 +94,8 @@
                                         "BoolTest": {"Value": 0, "Meta": {"VL_Type": "VL_Channel"}},
 
                                         "Cycles_Left": {"Value": 100, "Meta": {"VL_Type": "VL_Channel"}},
-                                        "Cycles_Done": {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}}
+                                        "Cycles_Done": {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}},
+                                        "Cycles_SP":   {"Value": 0,   "Meta": {"VL_Type": "VL_Channel"}}
                                     }
                                 },
                                 "0-Logging": {

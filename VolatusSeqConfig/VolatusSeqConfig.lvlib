@@ -38,6 +38,7 @@
 			<Item Name="Save Var Command Config.lvclass" Type="LVClass" URL="../Save Var Command Config/Save Var Command Config.lvclass"/>
 			<Item Name="Load Var Command Config.lvclass" Type="LVClass" URL="../Load Var Command Config/Load Var Command Config.lvclass"/>
 			<Item Name="Set Var Command Config.lvclass" Type="LVClass" URL="../Set Var Command Config/Set Var Command Config.lvclass"/>
+			<Item Name="Add To Var Command Config.lvclass" Type="LVClass" URL="../Add To Var Command Config/Add To Var Command Config.lvclass"/>
 		</Item>
 		<Item Name="Conditions" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>

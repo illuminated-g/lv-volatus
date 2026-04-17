@@ -3,7 +3,8 @@
         "Constants": {
             "Seq_Name": "Cycles Test",
             "On_S":  0.2,
-            "Off_S": 0.8
+            "Off_S": 0.8,
+            "SP_Delta": 0.01
         },
         "Name": "{Seq_Name}",
         "Version": "1",
@@ -11,7 +12,8 @@
         "Period": 200,
         "Variables": {
             "Remaining": 0,
-            "Done": 0
+            "Done": 0,
+            "SP": 0
         },
         "Entry": "Start",
         "Abort": "Stop",
@@ -23,7 +25,8 @@
                         "Time": 0,
                         "Commands": [
                             {"Type": "LoadVar", "Var": "Remaining", "Channel": "Cycles_Left"},
-                            {"Type": "LoadVar", "Var": "Done",      "Channel": "Cycles_Done"}
+                            {"Type": "LoadVar", "Var": "Done",      "Channel": "Cycles_Done"},
+                            {"Type": "LoadVar", "Var": "SP",        "Channel": "Cycles_SP"}
                         ]
                     },
                     {
@@ -98,7 +101,9 @@
                     {
                         "Time": 0.1,
                         "Commands": [
-                            {"Type": "Event", "Message": "{Seq_Name} completed cycle {Done}, {Remaining} cycles remaining."}
+                            {"Type": "Event", "Message": "{Seq_Name} completed cycle {Done}, {Remaining} cycles remaining."},
+                            {"Type": "AddToVar", "Var": "SP", "Value": "{SP_Delta}"},
+                            {"Type": "SaveVar",  "Var": "SP", "Channel": "Cycles_SP"},
                             {"Type": "Transition", "Target": "Done"}
                         ]
                     }
