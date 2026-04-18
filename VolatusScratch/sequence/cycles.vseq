@@ -6,10 +6,15 @@
             "Off_S": 0.8,
             "SP_Delta": 0.01
         },
+        "Debug": {
+            "States": true,
+            "Conditions": true,
+            "Timing": true
+        },
         "Name": "{Seq_Name}",
         "Version": "1",
         "Comment": "Demonstrates Sequence Variables usage.",
-        "Period": 200,
+        "Period": 1,
         "Variables": {
             "Remaining": 0,
             "Done": 0,
@@ -99,11 +104,16 @@
                 "Comment": "Check if done.",
                 "Steps": [
                     {
-                        "Time": 0.1,
+                        "Time": 0.0,
                         "Commands": [
                             {"Type": "Event", "Message": "{Seq_Name} completed cycle {Done}, {Remaining} cycles remaining."},
                             {"Type": "AddToVar", "Var": "SP", "Value": "{SP_Delta}"},
-                            {"Type": "SaveVar",  "Var": "SP", "Channel": "Cycles_SP"},
+                            {"Type": "SaveVar",  "Var": "SP", "Channel": "Cycles_SP"}
+                        ]
+                    },
+                    {
+                        "Time": 0.1,
+                        "Commands": [
                             {"Type": "Transition", "Target": "Done"}
                         ]
                     }
