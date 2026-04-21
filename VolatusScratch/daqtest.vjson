@@ -383,7 +383,8 @@
                                     "Period_ms": 10,
                                     "DataProc": {
                                         "Logging": {
-                                            "Split_GB": 1
+                                            "Split_GB": 1,
+                                            "Group": "Auto"
                                         }
                                     },
                                     "ControlGroup": {
