@@ -146,7 +146,8 @@
                                     "Sampling": {"Rate": 1000, "ChunkSize": 100},
                                     "DataProc": {
                                         "Logging": {
-                                            "Split_GB": 1
+                                            "Split_GB": 1,
+                                            "Group": "Input"
                                         }
                                     },
                                     "TestAI": {
@@ -225,7 +226,8 @@
                                     "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDO"},
                                     "DataProc": {
                                         "Logging": {
-                                            "Split_GB": 1
+                                            "Split_GB": 1,
+                                            "Group": "Output"
                                         }
                                     },
                                     "TestDO": {
@@ -272,7 +274,8 @@
                                     "Sampling": {"Rate": 100, "ChunkSize": 10},
                                     "DataProc": {
                                         "Logging": {
-                                            "Split_GB": 1
+                                            "Split_GB": 1,
+                                            "Group": "Input"
                                         }
                                     },
                                     "TestDI": {
@@ -352,7 +355,8 @@
                                     "Sampling": {"Rate": 50, "ChunkSize": 10},
                                     "DataProc": {
                                         "Logging": {
-                                            "Split_GB": 1
+                                            "Split_GB": 1,
+                                            "Group": "Input"
                                         }
                                     },
                                     "TestTC": {
