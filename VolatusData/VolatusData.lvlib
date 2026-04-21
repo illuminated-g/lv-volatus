@@ -12,6 +12,7 @@
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="DataProc Options.ctl" Type="VI" URL="../DataProc Options.ctl"/>
 		<Item Name="Forwarded Data.ctl" Type="VI" URL="../Forwarded Data.ctl"/>
+		<Item Name="Group State.ctl" Type="VI" URL="../Group State.ctl"/>
 		<Item Name="Log Status.ctl" Type="VI" URL="../Log Status.ctl"/>
 		<Item Name="Logger Ready.ctl" Type="VI" URL="../Logger Ready.ctl"/>
 		<Item Name="Logger Started.ctl" Type="VI" URL="../Logger Started.ctl"/>
