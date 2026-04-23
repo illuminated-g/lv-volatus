@@ -43,6 +43,7 @@
 		</Item>
 		<Item Name="Control Event.ctl" Type="VI" URL="../Control Event.ctl"/>
 		<Item Name="Event Registration.ctl" Type="VI" URL="../Event Registration.ctl"/>
+		<Item Name="GUI Info.ctl" Type="VI" URL="../GUI Info.ctl"/>
 		<Item Name="GUI State.ctl" Type="VI" URL="../GUI State.ctl"/>
 	</Item>
 	<Item Name="Debug" Type="Folder">
