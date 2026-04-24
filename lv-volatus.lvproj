@@ -45,6 +45,9 @@
 			<Item Name="VectoConfig.lvlib" Type="Library" URL="../../lv-vecto/VectoConfig/VectoConfig.lvlib"/>
 			<Item Name="VectoScratch.lvlib" Type="Library" URL="../../lv-vecto/VectoScratch/VectoScratch.lvlib"/>
 		</Item>
+		<Item Name="Malleable" Type="Folder">
+			<Item Name="Request (Variant).vim" Type="VI" URL="../Volatus/MessageQ/Request (Variant).vim"/>
+		</Item>
 		<Item Name="messages" Type="Folder" URL="../messages">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
@@ -773,6 +776,9 @@
 			<Item Name="mxLvUpdateUI.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvUpdateUI.ctl"/>
 			<Item Name="mxLvUpdateUI.vi" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/API/mxLvUpdateUI.vi"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
+				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
+			</Item>
+			<Item Name="nisyscfg.dll" Type="Document" URL="nisyscfg.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="provcom_CallbackKeyedArray.ctl" Type="VI" URL="/&lt;resource&gt;/Framework/Providers/Common/provcom_CallbackKeyedArray.ctl"/>
