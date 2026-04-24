@@ -8,6 +8,9 @@
 
 </Property>
 	<Item Name="Controls" Type="Folder">
+		<Item Name="Base" Type="Folder">
+			<Item Name="DigitalControl.lvclass" Type="LVClass" URL="../DigitalControl/DigitalControl.lvclass"/>
+		</Item>
 		<Item Name="BangBangControl.lvclass" Type="LVClass" URL="../BangBangControl/BangBangControl.lvclass"/>
 		<Item Name="DiscreteRangeControl.lvclass" Type="LVClass" URL="../DiscreteRangeControl/DiscreteRangeControl.lvclass"/>
 		<Item Name="HitAndHoldControl.lvclass" Type="LVClass" URL="../HitAndHoldControl/HitAndHoldControl.lvclass"/>
@@ -25,11 +28,17 @@
 	<Item Name="Data Types" Type="Folder">
 		<Item Name="Control Action.ctl" Type="VI" URL="../Control Action.ctl"/>
 	</Item>
+	<Item Name="EStops" Type="Folder">
+		<Item Name="EStop Source.lvclass" Type="LVClass" URL="../EStop Source/EStop Source.lvclass"/>
+	</Item>
+	<Item Name="Identities" Type="Folder">
+		<Item Name="EStop Identity.lvclass" Type="LVClass" URL="../EStop Identity/EStop Identity.lvclass"/>
+	</Item>
 	<Item Name="Utilities" Type="Folder">
 		<Item Name="Lookup Channel Index.vi" Type="VI" URL="../Lookup Channel Index.vi"/>
 		<Item Name="PV Calc.lvclass" Type="LVClass" URL="../PV Calc/PV Calc.lvclass"/>
 	</Item>
 	<Item Name="Cube Drop.vi" Type="VI" URL="../Cube Drop.vi"/>
-	<Item Name="DigitalControl.lvclass" Type="LVClass" URL="../DigitalControl/DigitalControl.lvclass"/>
 	<Item Name="DigitalControlModule.lvclass" Type="LVClass" URL="../DigitalControlModule/DigitalControlModule.lvclass"/>
+	<Item Name="EStop Module.lvclass" Type="LVClass" URL="../EStop Module/EStop Module.lvclass"/>
 </Library>
