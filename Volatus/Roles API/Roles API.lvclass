@@ -59,6 +59,15 @@
 		<Property Name="NI.ClassItem.Priority" Type="Int">5</Property>
 		<Property Name="NI.ClassItem.State" Type="Int">1342709760</Property>
 	</Item>
+	<Item Name="Logout Role.vi" Type="VI" URL="../Logout Role.vi">
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!%[!!!!#1!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!$B!=!!?!!!B$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)25G^M:8-A16"*,GRW9WRB=X-!$6*P&lt;'6T)%&amp;133"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!Y1(!!(A!!)1V7&lt;WRB&gt;(6T,GRW&lt;'FC%6*P&lt;'6T)%&amp;133ZM&gt;G.M98.T!!R3&lt;WRF=S""5%EA;7Y!!'%!]!!-!!-!"!!%!!5!"!!%!!1!"!!'!!1!"!!(!Q!!?!!!$1A!!!!!!!!!!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!+!!!!!!!!!!!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!A!!!!!</Property>
+		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">16777344</Property>
+		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
+		<Property Name="NI.ClassItem.MethodScope" Type="UInt">1</Property>
+		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1115685392</Property>
+	</Item>
 	<Item Name="Roles Active.vi" Type="VI" URL="../Roles Active.vi">
 		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">)!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!&amp;-!!!!#A!-1#%'=X2B&gt;(6T!!!,1!-!"'.P:'5!!""!-0````]'=W^V=G.F!!!71&amp;!!!Q!!!!%!!AFF=H*P=C"P&gt;81!"!!!!"*!)1R3&lt;WRF=S""9X2J&gt;G5!!$B!=!!?!!!B$6:P&lt;'&amp;U&gt;8-O&lt;(:M;7)25G^M:8-A16"*,GRW9WRB=X-!$6*P&lt;'6T)%&amp;133"P&gt;81!)%"1!!-!!!!"!!)4:8*S&lt;X)A;7YA+'ZP)'6S=G^S+1!Y1(!!(A!!)1V7&lt;WRB&gt;(6T,GRW&lt;'FC%6*P&lt;'6T)%&amp;133ZM&gt;G.M98.T!!R3&lt;WRF=S""5%EA;7Y!!'%!]!!-!!-!"!!&amp;!!9!"!!%!!1!"!!(!!1!"!!)"!!!?!!!$1A!!!!!!!!*!!!!$1M!!!!!!!!!!!!!!!!!!!!!!!!)!!!!!!!!!!!!!!!1!!!.!!!!$!!!!!!!!!!!!!!"!!E!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
