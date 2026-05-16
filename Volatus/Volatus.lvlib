@@ -14,6 +14,7 @@
 		<Item Name="Simple QMH Template.vi" Type="VI" URL="../Simple QMH Template.vi"/>
 	</Item>
 	<Item Name="APIs" Type="Folder">
+		<Item Name="Roles API.lvclass" Type="LVClass" URL="../Roles API/Roles API.lvclass"/>
 		<Item Name="System Config Status API.lvclass" Type="LVClass" URL="../System Config Status API/System Config Status API.lvclass"/>
 		<Item Name="TimerAPI.lvclass" Type="LVClass" URL="../TimerAPI/TimerAPI.lvclass"/>
 		<Item Name="VolatusAPI.lvclass" Type="LVClass" URL="../VolatusAPI/VolatusAPI.lvclass"/>
@@ -45,6 +46,7 @@
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="HTTP Command Bridge.lvclass" Type="LVClass" URL="../HTTP Command Bridge/HTTP Command Bridge.lvclass"/>
 		<Item Name="Plugin Splash.lvclass" Type="LVClass" URL="../Plugin Splash/Plugin Splash.lvclass"/>
+		<Item Name="Role Manager.lvclass" Type="LVClass" URL="../Role Manager/Role Manager.lvclass"/>
 		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
 		<Item Name="System Config Module.lvclass" Type="LVClass" URL="../System Config Server/System Config Module.lvclass"/>
 		<Item Name="System Health Module.lvclass" Type="LVClass" URL="../System Health Module/System Health Module.lvclass"/>
@@ -79,6 +81,7 @@
 		<Item Name="Node Config Info.ctl" Type="VI" URL="../Config Alert Module/Node Config Info.ctl"/>
 		<Item Name="Reload Options.ctl" Type="VI" URL="../Reload Options.ctl"/>
 		<Item Name="Request Message.ctl" Type="VI" URL="../Request Message.ctl"/>
+		<Item Name="Role.ctl" Type="VI" URL="../Role.ctl"/>
 		<Item Name="Show GUI Options.ctl" Type="VI" URL="../Show GUI Options.ctl"/>
 	</Item>
 	<Item Name="HTTP" Type="Folder">
@@ -95,6 +98,7 @@
 		<Item Name="Hardware Info Identity.lvclass" Type="LVClass" URL="../Hardware Info Identity/Hardware Info Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
 		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>
+		<Item Name="Role Manager Identity.lvclass" Type="LVClass" URL="../Role Manager Identity/Role Manager Identity.lvclass"/>
 		<Item Name="Status Tree Identity.lvclass" Type="LVClass" URL="../Status Tree Identity/Status Tree Identity.lvclass"/>
 		<Item Name="System Config Identity.lvclass" Type="LVClass" URL="../System Config Identity/System Config Identity.lvclass"/>
 		<Item Name="Volatus Core Identity.lvclass" Type="LVClass" URL="../Volatus Core Identity/Volatus Core Identity.lvclass"/>

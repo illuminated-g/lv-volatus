@@ -3,6 +3,7 @@
         "Meta"      : {"VL_Config_Version": "0.1.0+1", "Foo": "Bar"},
         "TestSystem": {
             "Meta"    : {"VL_Type": "VL_System"},
+            "Roles"   : { "Sequencer": {"Hidden": true}, "Technician": {}, "Operator": { "Inherits": ["Technician", "Sequencer"] }, "Engineer": { "Inherits": ["Technician", "Sequencer"] } },
             "Sensors" : {
                 "Meta" : {"VL_Overlay_Type": "Sensors", "VL_Type": "VL_Sensor_List"},
                 "Value": [
@@ -394,7 +395,8 @@
                                 "EventViewer": { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"} },
                                 "Historian"  : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"}, "Memory_GB": 0.2, "Exclude": [], "~Logger": { "Rate": 1, "Folder": "c:/logs/historian", "Groups": ["TestTC", "TestAI"] } },
                                 "Charting"   : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"} },
-                                "Sequencing" : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"} }
+                                "Sequencing" : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"} },
+                                "Roles"      : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Roles"} }
                             }
                         },
                         "PyScript": { "Meta": {"VL_Type": "VL_Node"}, "Node_ID": 3, "Network": { "Bind_Address": "127.0.0.1", "TCP": {"Address": "localhost", "Port": 12082, "Server": false}, "HTTP_Port": 14080 }, "Events": {"LogFolder": "c:/logs"} }
