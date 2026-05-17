@@ -393,7 +393,8 @@
                             "Tasks"     : {
                                 "GUI_Manager": { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}, "Plugins": "gui", "Title": "Volatus Test" },
                                 "EventViewer": { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"} },
-                                "Historian"  : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"}, "Memory_GB": 0.2, "Exclude": [], "~Logger": { "Rate": 1, "Folder": "c:/logs/historian", "Groups": ["TestTC", "TestAI"] } },
+                                "Historian"  : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"}, "Memory_GB": 0.2, "Exclude": [],
+                                    "Logger": { "Rate": 1, "Folder": "c:/logs/historian", "Groups": ["TestTC", "TestAI"] } },
                                 "Charting"   : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"} },
                                 "Sequencing" : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"} },
                                 "Roles"      : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Roles"} }
