@@ -84,7 +84,7 @@
                                     "Meta"           : {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health"     : {
                                         "Meta"                : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast"           : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish"             : {"Address": "239.0.0.11", "Port": 36987},
                                         "Drives"              : [
                                             { "Path": "c:", "Warning_GB": 120, "Error_GB": 80, "DAQ_C_Available": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"} }, "DAQ_C_Used": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"} } },
                                             { "Path": "d:", "Warning_GB": 200, "Error_GB": 80, "DAQ_D_Available": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"} }, "DAQ_D_Used": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"} } }
@@ -393,8 +393,7 @@
                             "Tasks"     : {
                                 "GUI_Manager": { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "GUIManager"}, "Plugins": "gui", "Title": "Volatus Test" },
                                 "EventViewer": { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "EventViewer"} },
-                                "Historian"  : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"}, "Memory_GB": 0.2, "Exclude": [],
-                                    "Logger": { "Rate": 1, "Folder": "c:/logs/historian", "Groups": ["TestTC", "TestAI"] } },
+                                "Historian"  : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Historian", "Historian_Role": "Primary"}, "Memory_GB": 0.2, "Exclude": [], "Logger": { "Rate": 1, "Folder": "c:/logs/historian", "Groups": ["TestTC", "TestAI"] } },
                                 "Charting"   : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "HistorianCharting"} },
                                 "Sequencing" : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Sequencing"} },
                                 "Roles"      : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Roles"} }
