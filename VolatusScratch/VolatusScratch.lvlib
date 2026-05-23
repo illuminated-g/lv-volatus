@@ -17,6 +17,7 @@
 	<Item Name="Demo2.vi" Type="VI" URL="../Demo2.vi"/>
 	<Item Name="DemoClass.lvclass" Type="LVClass" URL="../DemoClass/DemoClass.lvclass"/>
 	<Item Name="GitCredTest.vi" Type="VI" URL="../GitCredTest.vi"/>
+	<Item Name="LinkedGUI.vi" Type="VI" URL="../gui/LinkedGUI.vi"/>
 	<Item Name="OtherModule.lvclass" Type="LVClass" URL="../OtherModule/OtherModule.lvclass"/>
 	<Item Name="ProtoDemo.vi" Type="VI" URL="../ProtoDemo.vi"/>
 	<Item Name="Sequence Control.vi" Type="VI" URL="../Sequence Control.vi"/>

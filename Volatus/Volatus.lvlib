@@ -45,6 +45,7 @@
 		<Item Name="Event Reporter Module.lvclass" Type="LVClass" URL="../Event Reporter Module/Event Reporter Module.lvclass"/>
 		<Item Name="Hardware Info Module.lvclass" Type="LVClass" URL="../Hardware Info Module/Hardware Info Module.lvclass"/>
 		<Item Name="HTTP Command Bridge.lvclass" Type="LVClass" URL="../HTTP Command Bridge/HTTP Command Bridge.lvclass"/>
+		<Item Name="HTTP Manager.lvclass" Type="LVClass" URL="../HTTP Manager/HTTP Manager.lvclass"/>
 		<Item Name="Plugin Splash.lvclass" Type="LVClass" URL="../Plugin Splash/Plugin Splash.lvclass"/>
 		<Item Name="Role Manager.lvclass" Type="LVClass" URL="../Role Manager/Role Manager.lvclass"/>
 		<Item Name="SoftVar Module.lvclass" Type="LVClass" URL="../SoftVar Module/SoftVar Module.lvclass"/>
@@ -90,12 +91,15 @@
 		<Item Name="HardwareHTTPController.lvclass" Type="LVClass" URL="../HardwareHTTPController/HardwareHTTPController.lvclass"/>
 		<Item Name="HomeHTTPController.lvclass" Type="LVClass" URL="../HomeHTTPController/HomeHTTPController.lvclass"/>
 		<Item Name="HTTPCmdController.lvclass" Type="LVClass" URL="../HTTPCmdController/HTTPCmdController.lvclass"/>
+		<Item Name="Nav Route.lvclass" Type="LVClass" URL="../Nav Route/Nav Route.lvclass"/>
+		<Item Name="VolatusApiHttpService.lvclass" Type="LVClass" URL="../VolatusApiHttpService/VolatusApiHttpService.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Config Monitor Identity.lvclass" Type="LVClass" URL="../Config Monitor Identity/Config Monitor Identity.lvclass"/>
 		<Item Name="Event Reporter Identity.lvclass" Type="LVClass" URL="../Event Reporter Identity/Event Reporter Identity.lvclass"/>
 		<Item Name="GUI Manager Identity.lvclass" Type="LVClass" URL="../GUI Manager Identity/GUI Manager Identity.lvclass"/>
 		<Item Name="Hardware Info Identity.lvclass" Type="LVClass" URL="../Hardware Info Identity/Hardware Info Identity.lvclass"/>
+		<Item Name="HTTP Manager Identity.lvclass" Type="LVClass" URL="../HTTP Manager Identity/HTTP Manager Identity.lvclass"/>
 		<Item Name="Module Identity.lvclass" Type="LVClass" URL="../Module Identity/Module Identity.lvclass"/>
 		<Item Name="Remote Messaging Identity.lvclass" Type="LVClass" URL="../Remote Messaging Identity/Remote Messaging Identity.lvclass"/>
 		<Item Name="Role Manager Identity.lvclass" Type="LVClass" URL="../Role Manager Identity/Role Manager Identity.lvclass"/>

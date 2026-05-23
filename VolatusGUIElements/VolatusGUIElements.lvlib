@@ -22,6 +22,7 @@
 		</Item>
 		<Item Name="Special" Type="Folder">
 			<Item Name="GroupLoggingControl.lvclass" Type="LVClass" URL="../GroupLoggingControl/GroupLoggingControl.lvclass"/>
+			<Item Name="GuiLinkButton.lvclass" Type="LVClass" URL="../GuiLinkButton/GuiLinkButton.lvclass"/>
 			<Item Name="LoggingControl.lvclass" Type="LVClass" URL="../LoggingControl/LoggingControl.lvclass"/>
 		</Item>
 		<Item Name="Valves" Type="Folder">
