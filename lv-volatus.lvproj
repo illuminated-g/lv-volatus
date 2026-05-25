@@ -55,6 +55,11 @@
 			<Item Name="proto" Type="Folder"/>
 		</Item>
 		<Item Name="Tools" Type="Folder"/>
+		<Item Name="web" Type="Folder">
+			<Item Name="volatus" Type="Folder" URL="../web/volatus">
+				<Property Name="NI.DISK" Type="Bool">true</Property>
+			</Item>
+		</Item>
 		<Item Name="Generic PC App.vi" Type="VI" URL="../_build/Generic PC App.vi"/>
 		<Item Name="Volatus.lvlib" Type="Library" URL="../Volatus/Volatus.lvlib"/>
 		<Item Name="VolatusBuild.lvlib" Type="Library" URL="../VolatusBuild/VolatusBuild.lvlib"/>

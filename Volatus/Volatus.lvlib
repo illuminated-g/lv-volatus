@@ -93,6 +93,7 @@
 		<Item Name="HTTPCmdController.lvclass" Type="LVClass" URL="../HTTPCmdController/HTTPCmdController.lvclass"/>
 		<Item Name="Nav Route.lvclass" Type="LVClass" URL="../Nav Route/Nav Route.lvclass"/>
 		<Item Name="VolatusApiHttpService.lvclass" Type="LVClass" URL="../VolatusApiHttpService/VolatusApiHttpService.lvclass"/>
+		<Item Name="VolatusVariableResolver.lvclass" Type="LVClass" URL="../VolatusVariableResolver/VolatusVariableResolver.lvclass"/>
 	</Item>
 	<Item Name="Identities" Type="Folder">
 		<Item Name="Config Monitor Identity.lvclass" Type="LVClass" URL="../Config Monitor Identity/Config Monitor Identity.lvclass"/>
