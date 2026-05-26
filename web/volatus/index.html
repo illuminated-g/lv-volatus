@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    {{include::inc/head.inc.html}}
+</head>
+
+<body>
+    {{include::inc/header.inc.html}}
+
+    <a href="config/download">Download Config</a><br>
+    <a href="debug/log">Download Event Log</a><br>
+    <br>
+    <form name="upload_config" method="POST" action="/config/upload" enctype="multipart/form-data">
+        <p>Upload Config</p><input type="file" name="config" accept=".vjson" />
+        <input type="submit" value="Upload" />
+    </form>
+
+    {{include::inc/footer.inc.html}}
+</body>
+
+</html>

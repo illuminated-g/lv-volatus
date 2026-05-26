@@ -1,0 +1,73 @@
+:root {
+    --volatus-bg: #282828;
+    --volatus-text: #cccccc;
+    --volatus-text-highlight: #eeeeee;
+    --volatus-accent: #a0a060;
+    --volatus-card-bg: #404040;
+    --volatus-shadow: #201616;
+    --volatus-link: #6690bc;
+}
+
+body {
+    background-color: var(--volatus-bg);
+    color: var(--volatus-text);
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--volatus-link);
+}
+
+header {
+    background-color: var(--volatus-card-bg);
+    box-shadow: var(--volatus-shadow) 3px 3px 6px;
+    padding: 0.5rem;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    color: var(--volatus-accent);
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.nav ul {
+    display: flex;
+    margin: 0;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.nav li a {
+    color: var(--volatus-text-highlight);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color: var(--volatus-accent);
+}
+
+.test {
+    background-color: var(--volatus-card-bg);
+    border-radius: 6px;
+    box-shadow: var(--volatus-shadow) 3px 3px 6px;
+    padding: 1rem;
+}
+
+.test h4 {
+    margin: 0;
+}

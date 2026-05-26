@@ -1,0 +1,14 @@
+<header>
+    <div>
+        <h1>{{volatus::system}} - {{volatus::node}}</h1>
+    </div>
+    <div class="nav">
+        <ul>
+            {{%each el in volatus::nav}}
+            <li>
+                <a href="{{::el.href}}">{{::el.text}}</a>
+            </li>
+            {{!each}}
+        </ul>
+    </div>
+</header>
