@@ -39,52 +39,52 @@
                                     "Meta"     : {"VL_Type": "VL_Task", "VL_Task_Type": "SoftVar"},
                                     "Period_s" : 0.1,
                                     "SimValues": {
-                                        "Meta"           : { "VL_Type": "VL_Group", "VL_Group_Type": "Double"                                                                                          },
-                                        "Multicast"      : {                                                   "Address": "239.0.0.11", "Port": 36987                                                  },
-                                        "Ox_PT_01"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Ox_PT_02"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Ox_PT_03"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Ox_Level_1"     : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Ox_Level_2"     : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Ox_Level_3"     : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxHighFillValve": {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxMidFillValve" : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxLowFillValve" : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxPSI"          : {                                                                                           "Value": 200, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxCool"         : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxHeat"         : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "OxFlow"         : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "FuelPSI"        : {                                                                                           "Value": 200, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "FuelCool"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "FuelHeat"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "FuelFlow"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "BoolTest"       : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Cycles_Left"    : {                                                                                           "Value": 100, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Cycles_Done"    : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Cycles_SP"      : {                                                                                           "Value":   0, "Meta": {"VL_Type": "VL_Channel"} }
+                                        "Meta"           : { "VL_Type": "VL_Group", "VL_Group_Type": "Double"                                                                                   },
+                                        "Multicast"      : {                                                   "Address": "0.0.0.0", "Port": 0                                                  },
+                                        "Ox_PT_01"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Ox_PT_02"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Ox_PT_03"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Ox_Level_1"     : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Ox_Level_2"     : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Ox_Level_3"     : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxHighFillValve": {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxMidFillValve" : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxLowFillValve" : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxPSI"          : {                                                                                    "Value": 200, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxCool"         : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxHeat"         : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "OxFlow"         : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "FuelPSI"        : {                                                                                    "Value": 200, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "FuelCool"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "FuelHeat"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "FuelFlow"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "BoolTest"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Cycles_Left"    : {                                                                                    "Value": 100, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Cycles_Done"    : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Cycles_SP"      : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} }
                                     }
                                 },
                                 "0-Logging"       : {
                                     "Meta"          : {"VL_Type": "VL_Task", "VL_Task_Type": "LogManager"},
                                     "Folder"        : "c:/logs",
                                     "Logging_Status": {
-                                        "Meta"                : { "VL_Type": "VL_Group", "VL_Group_Type": "Double"                                                                                                                       },
-                                        "Multicast"           : {                                                   "Address": "239.0.0.11", "Port": 36987                                                                               },
-                                        "Logging_State_Num"   : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"   } },
-                                        "Logging_Num_Loggers" : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers" } },
-                                        "Logging_Num_Idle"    : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"    } },
-                                        "Logging_Num_Prep"    : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Prep"    } },
-                                        "Logging_Num_Ready"   : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Ready"   } },
-                                        "Logging_Num_Active"  : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Active"  } },
-                                        "Logging_Num_Stopping": {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"} },
-                                        "Logging_All_Active"  : {                                                                                           "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"  } }
+                                        "Meta"                : { "VL_Type": "VL_Group", "VL_Group_Type": "Double"                                                                                                                },
+                                        "Multicast"           : {                                                   "Address": "0.0.0.0", "Port": 0                                                                               },
+                                        "Logging_State_Num"   : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "State_Num"   } },
+                                        "Logging_Num_Loggers" : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Loggers" } },
+                                        "Logging_Num_Idle"    : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Idle"    } },
+                                        "Logging_Num_Prep"    : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Prep"    } },
+                                        "Logging_Num_Ready"   : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Ready"   } },
+                                        "Logging_Num_Active"  : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Active"  } },
+                                        "Logging_Num_Stopping": {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"} },
+                                        "Logging_All_Active"  : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"  } }
                                     }
                                 },
                                 "0-SystemHealth"  : {
                                     "Meta"           : {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
                                     "DAQ_Health"     : {
                                         "Meta"                : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish"             : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish"             : {"Address": "0.0.0.0", "Port": 0},
                                         "Drives"              : [
                                             { "Path": "c:", "Warning_GB": 120, "Error_GB": 80, "DAQ_C_Available": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"} }, "DAQ_C_Used": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"} } },
                                             { "Path": "d:", "Warning_GB": 200, "Error_GB": 80, "DAQ_D_Available": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"} }, "DAQ_D_Used": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"} } }
@@ -101,7 +101,7 @@
                                     "DataProc": { "Logging": {"Split_GB": 1, "Group": "Input"} },
                                     "TestAI"  : {
                                         "Meta"    : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish" : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish" : {"Address": "0.0.0.0", "Port": 0},
                                         "Channels": {
                                             "AI00"     : { "Resource": "cDAQ1Mod1/ai0",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": { "Type": "Sensor",     "ID": "123456"                         }, "Meta": {"VL_Type": "VL_Channel"} },
                                             "AI01"     : { "Resource": "cDAQ1Mod1/ai1",  "Type": "Voltage_In", "Terminal": "RSE", "Min": -10, "Max": 10, "Scale": { "Type": "Sensor",     "ID": "234567"                         }, "Meta": {"VL_Type": "VL_Channel"} },
@@ -175,7 +175,7 @@
                                     "DataProc": { "Logging": {"Split_GB": 1, "Group": "Output"} },
                                     "TestDO"  : {
                                         "Meta"    : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish" : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish" : {"Address": "0.0.0.0", "Port": 0},
                                         "Channels": {
                                             "DO00": { "Resource": "cDAQ1Mod2/port0/line0",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"} },
                                             "DO01": { "Resource": "cDAQ1Mod2/port0/line1",  "Type": "Digital_Out", "Value": 0, "Meta": {"VL_Type": "VL_Channel"} },
@@ -218,7 +218,7 @@
                                     "DataProc": { "Logging": {"Split_GB": 1, "Group": "Input"} },
                                     "TestDI"  : {
                                         "Meta"    : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish" : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish" : {"Address": "0.0.0.0", "Port": 0},
                                         "Channels": {
                                             "DI00"  : { "Resource": "cDAQ1Mod3/port0/line0",  "Meta": {"VL_Type": "VL_Channel"} },
                                             "DI01"  : { "Resource": "cDAQ1Mod3/port0/line1",  "Meta": {"VL_Type": "VL_Channel"} },
@@ -293,7 +293,7 @@
                                     "DataProc": { "Logging": {"Split_GB": 1, "Group": "Input"} },
                                     "TestTC"  : {
                                         "Meta"    : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish" : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Publish" : {"Address": "0.0.0.0", "Port": 0},
                                         "Channels": {
                                             "TC00": { "Resource": "cDAQ1Mod6/ai0",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"} },
                                             "TC01": { "Resource": "cDAQ1Mod6/ai1",  "Type": "TC", "Temp_Units": "F", "TC_Type": "K", "Meta": {"VL_Type": "VL_Channel"} },
@@ -320,7 +320,7 @@
                                     "DataProc"    : { "Logging": {"Split_GB": 1, "Group": "Auto"} },
                                     "ControlGroup": {
                                         "Meta"     : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast": {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast": {"Address": "0.0.0.0", "Port": 0},
                                         "Status"   : { "DigitalControl_LastDt": { "Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastDt"} }, "DigitalControl_LastLate": { "Meta": {"VL_Type": "VL_Channel", "Control_Status": "LastLate"} } },
                                         "Controls" : {
                                             "DO08_Int"    : { "Meta": {"VL_Type": "VL_Channel"}, "Type": "Interlock", "Output": "DO08", "Conditions": {"DO09": true, "DO10": true}, "Logic": "Any", "Inhibit_Value": false, "DO08_Inhibit": { "Meta": {"VL_Type": "VL_Channel", "Control_Param": "PV"} } },
@@ -362,7 +362,7 @@
                                     "DataProc" : { "Logging": {"Split_GB": 1} },
                                     "Calcs"    : {
                                         "Meta"           : {"VL_Type": "~VL_Group", "VL_Group_Type": "Double"},
-                                        "Multicast"      : {"Address": "239.0.0.11", "Port": 36987},
+                                        "Multicast"      : {"Address": "0.0.0.0", "Port": 0},
                                         "Ox_Level_Median": { "Meta": {"VL_Type": "~VL_Channel", "Calc": "Median"}, "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"] },
                                         "Ox_Level_Max"   : { "Meta": {"VL_Type": "~VL_Channel", "Calc": "Max"}, "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"] },
                                         "Ox_Level_Min"   : { "Meta": {"VL_Type": "~VL_Channel", "Calc": "Min"}, "Channels": ["Ox_Level_1", "Ox_Level_2", "Ox_Level_3"] },
@@ -387,7 +387,7 @@
                             "Debug"     : true,
                             "Config"    : {"Updater": "GitUpdater"},
                             "Events"    : {"LogFolder": "c:/logs"},
-                            "Network"   : { "Bind_Address": "127.0.0.1", "TCP": {"Address": "localhost", "Port": 12082, "Server": false}, "Foo": "Baz", "HTTP_Port": 13084 },
+                            "Network"   : { "Bind_Address": "127.0.0.1", "TCP": {"Address": "localhost", "Port": 12082, "Server": false}, "HTTP_Port": 13084 },
                             "Groups"    : ["Config", "Events", "Clients"],
                             "Sequencing": {"Folder": "sequence"},
                             "Tasks"     : {
@@ -399,7 +399,19 @@
                                 "Roles"      : { "Meta": {"VL_Type": "VL_Task", "VL_Task_Type": "Roles"}, "Default": "Operator" }
                             }
                         },
-                        "PyScript": { "Meta": {"VL_Type": "VL_Node"}, "Node_ID": 3, "Network": { "Bind_Address": "127.0.0.1", "TCP": {"Address": "localhost", "Port": 12082, "Server": false}, "HTTP_Port": 14080 }, "Events": {"LogFolder": "c:/logs"} }
+                        "PyScript": {
+                            "Meta"   : {"VL_Type": "VL_Node"},
+                            "Node_ID": 3,
+                            "Groups" : ["Clients"],
+                            "Network": { "Bind_Address": "127.0.0.1", "TCP": {"Address": "localhost", "Port": 12082, "Server": false}, "HTTP_Port": 14080 },
+                            "Events" : {"LogFolder": "c:/logs"},
+                            "Tasks"  : {
+                                "PythonTest": {
+                                    "Meta"      : {"VL_Type": "VL_Task"},
+                                    "PythonData": { "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"}, "Publish": {"Address": "0.0.0.0", "Port": 0}, "Py00": { "Meta": {"VL_Type": "VL_Channel"} }, "Py01": { "Meta": {"VL_Type": "VL_Channel"} }, "Py02": { "Meta": {"VL_Type": "VL_Channel"} } }
+                                }
+                            }
+                        }
                     }
                 }
             }
