@@ -1,7 +1,6 @@
 {
     "Sequence": {
         "Constants": {
-            "Seq_Name": "Cycles Test",
             "On_S":  0.2,
             "Off_S": 0.8,
             "SP_Delta": 0.01
@@ -9,9 +8,8 @@
         "Debug": {
             "States": true,
             "Conditions": true,
-            "Timing": true
+            "Timing": false
         },
-        "Name": "{Seq_Name}",
         "Version": "1",
         "Comment": "Demonstrates Sequence Variables usage.",
         "Period": 1,
@@ -31,7 +29,8 @@
                         "Commands": [
                             {"Type": "LoadVar", "Var": "Remaining", "Channel": "Cycles_Left"},
                             {"Type": "LoadVar", "Var": "Done",      "Channel": "Cycles_Done"},
-                            {"Type": "LoadVar", "Var": "SP",        "Channel": "Cycles_SP"}
+                            {"Type": "LoadVar", "Var": "SP",        "Channel": "Cycles_SP"},
+                            {"Type": "Event", "Message": "Starting {seq_name}."}
                         ]
                     },
                     {
@@ -106,7 +105,7 @@
                     {
                         "Time": 0.0,
                         "Commands": [
-                            {"Type": "Event", "Message": "{Seq_Name} completed cycle {Done}, {Remaining} cycles remaining."},
+                            {"Type": "Event", "Message": "{seq_name} completed cycle {Done}, {Remaining} cycles remaining."},
                             {"Type": "AddToVar", "Var": "SP", "Value": "{SP_Delta}"},
                             {"Type": "SaveVar",  "Var": "SP", "Channel": "Cycles_SP"}
                         ]
@@ -135,7 +134,7 @@
                     {
                         "Time": 0,
                         "Commands": [
-                            {"Type": "Event", "Message": "{Seq_Name} completed."},
+                            {"Type": "Event", "Message": "{seq_name} completed."},
                             {"Type": "Transition", "Target": "Stop"}
                         ]
                     }

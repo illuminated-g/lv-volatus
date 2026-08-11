@@ -61,7 +61,10 @@
                                         "BoolTest"       : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
                                         "Cycles_Left"    : {                                                                                    "Value": 100, "Meta": {"VL_Type": "VL_Channel"} },
                                         "Cycles_Done"    : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
-                                        "Cycles_SP"      : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} }
+                                        "Cycles_SP"      : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "sum_a"      : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "sum_b"      : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} },
+                                        "avg_input"      : {                                                                                    "Value":   0, "Meta": {"VL_Type": "VL_Channel"} }
                                     }
                                 },
                                 "0-Logging"       : {
@@ -79,21 +82,6 @@
                                         "Logging_Num_Stopping": {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "Num_Stopping"} },
                                         "Logging_All_Active"  : {                                                                                    "Value": 0, "Meta": {"VL_Type": "VL_Channel", "Log_Channel": "All_Active"  } }
                                     }
-                                },
-                                "0-SystemHealth"  : {
-                                    "Meta"           : {"VL_Type": "VL_Task", "VL_Task_Type": "SystemHealth"},
-                                    "DAQ_Health"     : {
-                                        "Meta"                : {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
-                                        "Publish"             : {"Address": "0.0.0.0", "Port": 0},
-                                        "Drives"              : [
-                                            { "Path": "c:", "Warning_GB": 120, "Error_GB": 80, "DAQ_C_Available": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"} }, "DAQ_C_Used": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"} } },
-                                            { "Path": "d:", "Warning_GB": 200, "Error_GB": 80, "DAQ_D_Available": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Available"} }, "DAQ_D_Used": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Drive_Used"} } }
-                                        ],
-                                        "DAQ_CPU_Total_Pct"   : { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "CPU_Total"} },
-                                        "DAQ_Mem_Available_GB": { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Mem_Available"} },
-                                        "DAQ_Mem_Free_GB"     : { "Meta": {"VL_Type": "VL_Channel", "Health_Type": "Mem_Free"} }
-                                    },
-                                    "CPU_Warning_Pct": 60
                                 },
                                 "1-TestAI"        : {
                                     "Meta"    : {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxAI"},
@@ -408,7 +396,24 @@
                             "Tasks"  : {
                                 "PythonTest": {
                                     "Meta"      : {"VL_Type": "VL_Task"},
-                                    "PythonData": { "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"}, "Publish": {"Address": "0.0.0.0", "Port": 0}, "Py00": { "Meta": {"VL_Type": "VL_Channel"} }, "Py01": { "Meta": {"VL_Type": "VL_Channel"} }, "Py02": { "Meta": {"VL_Type": "VL_Channel"} } }
+                                    "CustomValue": 42.69,
+                                    "StringVal": "baz",
+                                    "PythonData": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "0.0.0.0", "Port": 0},
+                                        "Py00": { "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Py01": { "Meta": {"VL_Type": "VL_Channel"} },
+                                        "Py02": { "Meta": {"VL_Type": "VL_Channel"} }
+                                    }
+                                },
+                                "PyCalcs": {
+                                    "Meta": {"VL_Type": "VL_Task"},
+                                    "PyCalcs": {
+                                        "Meta": {"VL_Type": "VL_Group", "VL_Group_Type": "Double"},
+                                        "Publish": {"Address": "0.0.0.0", "Port": 0},
+                                        "sum_calc": {"Meta": {"VL_Type": "VL_Channel"}},
+                                        "avg_calc": {"Meta": {"VL_Type": "VL_Channel"}}
+                                    }
                                 }
                             }
                         }
