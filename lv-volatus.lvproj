@@ -77,6 +77,7 @@
 		<Item Name="VolatusGUIEditorCore.lvlib" Type="Library" URL="../../volatus-gui-controls/VolatusGUIEditorCore/VolatusGUIEditorCore.lvlib"/>
 		<Item Name="VolatusGUIElements.lvlib" Type="Library" URL="../VolatusGUIElements/VolatusGUIElements.lvlib"/>
 		<Item Name="VolatusHistorian.lvlib" Type="Library" URL="../VolatusHistorian/VolatusHistorian.lvlib"/>
+		<Item Name="VolatusPerspicio.lvlib" Type="Library" URL="../VolatusPerspicio/VolatusPerspicio.lvlib"/>
 		<Item Name="VolatusScratch.lvlib" Type="Library" URL="../VolatusScratch/VolatusScratch.lvlib"/>
 		<Item Name="VolatusSeq.lvlib" Type="Library" URL="../VolatusSeq/VolatusSeq.lvlib"/>
 		<Item Name="VolatusSeqConfig.lvlib" Type="Library" URL="../VolatusSeqConfig/VolatusSeqConfig.lvlib"/>
