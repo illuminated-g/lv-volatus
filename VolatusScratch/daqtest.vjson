@@ -202,6 +202,7 @@
                                 },
                                 "1-TestDI"        : {
                                     "Meta"    : {"VL_Type": "VL_Task", "VL_Task_Type": "DAQmxDI"},
+                                    "~On_Demand": 10,
                                     "Sampling": {"Rate": 100, "ChunkSize": 10},
                                     "DataProc": { "Logging": {"Split_GB": 1, "Group": "Input"} },
                                     "TestDI"  : {
